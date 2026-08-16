@@ -83,6 +83,24 @@
     text-transform: uppercase;
 }
 
+.goldfish-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.goldfish-download {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.goldfish-download small {
+    color: #6c757d;
+}
+
 .nova-service {
     padding-top: 1.25rem;
     border-top: 0.2rem solid #bd5d38;
