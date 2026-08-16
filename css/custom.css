@@ -1,0 +1,228 @@
+/* Small additions for the updated content. The original Resume theme remains unchanged. */
+
+.section-label {
+    margin-bottom: 0.75rem;
+    color: #bd5d38;
+    font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.intro-copy {
+    max-width: 56rem;
+}
+
+.language-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.language-toggle button {
+    padding: 0.25rem;
+    border: 0;
+    color: rgba(255, 255, 255, 0.55);
+    background: transparent;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.language-toggle button:hover,
+.language-toggle button:focus-visible,
+.language-toggle button[aria-pressed="true"] {
+    color: #fff;
+}
+
+.goldfish-heading {
+    gap: 0.4rem;
+}
+
+.goldfish-icon {
+    width: 4.5rem;
+    min-width: 4.5rem;
+}
+
+.feature-card {
+    padding: 1.5rem;
+    border-left: 0.25rem solid #bd5d38;
+    background: #f8f9fa;
+}
+
+.feature-card > svg {
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+}
+
+.feature-card h3,
+.nova-service h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.45rem;
+}
+
+.feature-card p,
+.nova-service p {
+    margin-bottom: 0;
+}
+
+.project-version {
+    display: inline-block;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid #bd5d38;
+    border-radius: 50rem;
+    color: #bd5d38;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.nova-service {
+    padding-top: 1.25rem;
+    border-top: 0.2rem solid #bd5d38;
+}
+
+.company-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.btn-primary {
+    border-color: #bd5d38;
+    background-color: #bd5d38;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    border-color: #974a2d;
+    background-color: #974a2d;
+}
+
+.btn-outline-primary {
+    border-color: #bd5d38;
+    color: #bd5d38;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    border-color: #bd5d38;
+    color: #fff;
+    background-color: #bd5d38;
+}
+
+.playground-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 62rem;
+}
+
+.playground-grid figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    background: #343a40;
+}
+
+.playground-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: transform 250ms ease;
+}
+
+.playground-grid figure:hover img {
+    transform: scale(1.025);
+}
+
+.playground-grid figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.instagram-link {
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.instagram-link:hover {
+    text-decoration: underline;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.8rem 1.1rem;
+    border-radius: 0.35rem;
+    color: #fff;
+    background: #495057;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.contact-links a:hover,
+.contact-links a:focus {
+    color: #fff;
+    background: #bd5d38;
+}
+
+@media (min-width: 992px) {
+    #sideNav .language-toggle {
+        margin-top: 1.25rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .playground-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .playground-grid img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .goldfish-heading {
+        align-items: flex-end !important;
+    }
+
+    .goldfish-icon {
+        width: 3.5rem;
+        min-width: 3.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .language-toggle {
+        justify-content: flex-start;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .playground-grid img {
+        transition: none;
+    }
+}
