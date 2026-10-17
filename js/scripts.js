@@ -26,12 +26,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const pageCopy = {
         da: {
-            description: "Søren Frost Staal — salg, 3D, kreativ teknologi og Goldfish til FreeCAD.",
+            description: "Søren Frost Staal — produktudvikling, 3D, kreativ teknologi og Goldfish til FreeCAD.",
             languageLabel: "Vælg sprog",
             navigationLabel: "Vis navigation"
         },
         en: {
-            description: "Søren Frost Staal — sales, 3D, creative technology and Goldfish for FreeCAD.",
+            description: "Søren Frost Staal — product development, 3D, creative technology and Goldfish for FreeCAD.",
             languageLabel: "Choose language",
             navigationLabel: "Show navigation"
         }
