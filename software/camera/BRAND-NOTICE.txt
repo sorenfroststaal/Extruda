@@ -1,1 +1,0 @@
-Visuel identitet: extruda 26A v1, leveret af projektejeren. Logo og brandmateriale er ikke omfattet af kodens MIT-licens. Nunito og Inter distribueres med OFL-licenser i public/fonts.
