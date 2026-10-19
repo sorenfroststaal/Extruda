@@ -1,0 +1,8 @@
+{
+  "name": "extruda-phone-camera",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node scripts/build-qr.mjs", "dev": "wrangler dev", "deploy": "wrangler deploy", "test": "node --test test/*.test.js" },
+  "devDependencies": { "wrangler": "^4.151.1", "qrcode": "^1.5.4", "esbuild": "^0.28.2", "ws": "^8.18.0" }
+}
