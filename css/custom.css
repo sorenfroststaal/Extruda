@@ -791,3 +791,7 @@ hr {
         transition: none;
     }
 }
+
+#camera { scroll-margin-top: 96px; }
+.camera-project { max-width: 680px; }
+.camera-project > img { display:block; margin-bottom:16px; }
