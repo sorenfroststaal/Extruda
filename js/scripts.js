@@ -20,6 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const languageButtons = document.querySelectorAll("[data-lang]");
     const translatedText = document.querySelectorAll("[data-da][data-en]");
     const translatedImages = document.querySelectorAll("[data-alt-da][data-alt-en]");
+    const projectMoreToggles = document.querySelectorAll(".project-more-toggle");
     const languageToggle = document.querySelector(".language-toggle");
     const metaDescription = document.querySelector('meta[name="description"]');
     const openGraphDescription = document.querySelector('meta[property="og:description"]');
@@ -37,9 +38,22 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    let currentLanguage = "da";
+
+    const updateProjectMoreLabels = () => {
+        projectMoreToggles.forEach((button) => {
+            const label = button.querySelector("[data-more-da]");
+            if (!label) return;
+            const isOpen = button.getAttribute("aria-expanded") === "true";
+            const key = `${isOpen ? "less" : "more"}${currentLanguage === "da" ? "Da" : "En"}`;
+            label.textContent = label.dataset[key];
+        });
+    };
+
     const setLanguage = (language, savePreference = true) => {
         const selectedLanguage = language === "en" ? "en" : "da";
         const copy = pageCopy[selectedLanguage];
+        currentLanguage = selectedLanguage;
 
         document.documentElement.lang = selectedLanguage;
         metaDescription?.setAttribute("content", copy.description);
@@ -59,6 +73,8 @@ window.addEventListener("DOMContentLoaded", () => {
             button.setAttribute("aria-pressed", String(button.dataset.lang === selectedLanguage));
         });
 
+        updateProjectMoreLabels();
+
         if (savePreference) {
             try {
                 localStorage.setItem("extruda-language", selectedLanguage);
@@ -70,6 +86,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     languageButtons.forEach((button) => {
         button.addEventListener("click", () => setLanguage(button.dataset.lang));
+    });
+
+    projectMoreToggles.forEach((button) => {
+        const target = document.querySelector(button.dataset.bsTarget);
+        target?.addEventListener("shown.bs.collapse", updateProjectMoreLabels);
+        target?.addEventListener("hidden.bs.collapse", updateProjectMoreLabels);
     });
 
     let initialLanguage = navigator.language?.toLowerCase().startsWith("da") ? "da" : "en";
