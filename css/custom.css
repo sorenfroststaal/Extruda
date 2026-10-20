@@ -476,6 +476,11 @@ hr {
     object-fit: contain;
 }
 
+.array-preview-icon img {
+    width: 78%;
+    height: 78%;
+}
+
 .project-preview-copy p:first-child {
     margin-bottom: 0.75rem;
     font-size: 1.05rem;
