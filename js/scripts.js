@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    const setLanguage = (language, savePreference = true) => {
+    const setLanguage = (language) => {
         const selectedLanguage = language === "en" ? "en" : "da";
         const copy = pageCopy[selectedLanguage];
         currentLanguage = selectedLanguage;
@@ -75,13 +75,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
         updateProjectMoreLabels();
 
-        if (savePreference) {
-            try {
-                localStorage.setItem("extruda-language", selectedLanguage);
-            } catch (_) {
-                // The language switch works even if local storage is unavailable.
-            }
-        }
     };
 
     languageButtons.forEach((button) => {
@@ -94,15 +87,9 @@ window.addEventListener("DOMContentLoaded", () => {
         target?.addEventListener("hidden.bs.collapse", updateProjectMoreLabels);
     });
 
-    let initialLanguage = navigator.language?.toLowerCase().startsWith("da") ? "da" : "en";
-    try {
-        const savedLanguage = localStorage.getItem("extruda-language");
-        if (savedLanguage === "da" || savedLanguage === "en") initialLanguage = savedLanguage;
-    } catch (_) {
-        // Browser language is a sufficient fallback.
-    }
-
-    setLanguage(initialLanguage, false);
+    // Every new page load starts in Danish. Visitors can switch to English
+    // for the current visit without changing the default for their next load.
+    setLanguage("da");
 
     const year = document.querySelector("#year");
     if (year) year.textContent = new Date().getFullYear();
