@@ -1,4 +1,4 @@
-import{REVISION,goals,families,variants,generate,replacePage,validateRecipe}from'./core.mjs?v=color-6';
+import{REVISION,goals,families,variants,generate,replacePage,validateRecipe}from'./core.mjs?v=scroll-7';
 const $=id=>document.getElementById(id);let book=null;let dirty=false;let previewBook=null;const selectedFamilies=new Set(families.map(f=>f.id));const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const radioKeys=['language','textLevel','visualSupport','style','repetition'];
 const choiceValue=key=>document.querySelector('input[name="'+key+'"]:checked').value;
@@ -26,7 +26,7 @@ function renderLive(){
  catch(e){previewBook=null;$('live-page').innerHTML='<div class="empty"><p>'+escape(e.message)+'</p></div>';$('preview-message').textContent='Tilpas valgene for at se en opgaveside.';$('preview-page').innerHTML='';}
 }
 function renderLivePage(){if(!previewBook)return;const o=previewBook.options,i=Number($('preview-page').value)||0,p=previewBook.pages[i],f=families.find(f=>f.id===p.familyId);$('live-page').className=o.style;setTheme($('live-page'),o);$('live-page').innerHTML='<article class="sheet live-sheet">'+heading(text('Matematik · side '+(i+1),'Mathematics · page '+(i+1),o))+'<h2>'+localized(f.da,f.en,o)+'</h2><p class="sheet-instruction">'+localized(instruction(f,{...o,language:'da'}),instruction(f,{...o,language:'en'}),o)+'</p><div class="questions">'+p.items.map((q,j)=>'<div class="question"><span class="question-number">'+(i+1)+'.'+(j+1)+'</span>'+question(p,q,o)+'</div>').join('')+'</div><div class="sheet-footer">Bogkode: '+escape(o.seed)+' · '+REVISION+'</div></article>';}
-function settingsChanged(){dirty=Boolean(book);renderLibrary();renderLive();if(book){$('book-summary').className='no-print dirty';$('book-summary').textContent='Indstillingerne er ændret. Lav bogen igen før print, så bogkode og indhold passer sammen.';for(const id of ['print','answers-print','export'])$(id).disabled=true;}}
+function settingsChanged(){dirty=Boolean(book);renderLibrary();renderLive();if(window.matchMedia('(min-width:701px)').matches)$('live-preview-panel').parentElement.scrollTop=0;if(book){$('book-summary').className='no-print dirty';$('book-summary').textContent='Indstillingerne er ændret. Lav bogen igen før print, så bogkode og indhold passer sammen.';for(const id of ['print','answers-print','export'])$(id).disabled=true;}}
 $('reset-colors').addEventListener('click',()=>{$('accent').value='#28645f';$('secondary').value='#e8b08e';settingsChanged();});
 $('preview-page').addEventListener('change',renderLivePage);
 $('library-list').addEventListener('change',e=>{const id=e.target.dataset.family;if(!id)return;if(e.target.checked)selectedFamilies.add(id);else selectedFamilies.delete(id);settingsChanged();});
