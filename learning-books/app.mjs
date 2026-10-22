@@ -1,4 +1,4 @@
-import{REVISION,goals,families,variants,generate,replacePage,validateRecipe}from'./core.mjs?v=palette-8';
+import{REVISION,goals,families,variants,generate,replacePage,validateRecipe}from'./core.mjs?v=palette-9';
 const $=id=>document.getElementById(id);let book=null;let dirty=false;let previewBook=null;const selectedFamilies=new Set(families.map(f=>f.id));const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const radioKeys=['language','textLevel','visualSupport','style','repetition'];
 const choiceValue=key=>document.querySelector('input[name="'+key+'"]:checked').value;
@@ -21,7 +21,7 @@ html+=book.pages.map((p,i)=>{const f=families.find(f=>f.id===p.familyId);return`
 for(let k=0;k<book.pages.length;k+=4){html+=`<article class="sheet answers">${heading(text('Facit · gemmes til den voksne','Answers · for the adult',o))}<h2>${text('Facit','Answer sheet',o)}</h2>${book.pages.slice(k,k+4).map((p,j)=>{const f=families.find(f=>f.id===p.familyId);return`<div class="answer-line"><h3>${text('Side','Page',o)} ${k+j+1} · ${localized(f.da,f.en,o)}</h3><p>${p.items.map((q,n)=>`${k+j+1}.${n+1}: <strong>${escape(q.answer)}</strong>`).join(' &nbsp; · &nbsp; ')}</p></div>`;}).join('')}<div class="sheet-footer">${text('Bogkode','Book code',o)}: ${escape(o.seed)} · ${REVISION} · ${text('Facit','Answers',o)} ${k/4+1} / ${answerPages}</div></article>`;}
 $('book').className=o.style;setTheme($('book'),o);$('book').innerHTML=html;document.body.classList.toggle('without-answers',!$('include-answers').checked);for(const id of ['print','answers-print','export'])$(id).disabled=dirty;}
 
-function renderLive(){setTheme($('settings'),options());
+function renderLive(){setTheme($('settings').parentElement,options());
  try{previewBook=generate(options());const selector=$('preview-page');const previous=Number(selector.value)||0;selector.innerHTML=previewBook.pages.map((p,i)=>'<option value="'+i+'">Side '+(i+1)+' · '+escape(text(families.find(f=>f.id===p.familyId).da,families.find(f=>f.id===p.familyId).en,previewBook.options))+'</option>').join('');selector.value=String(Math.min(previous,previewBook.pages.length-1));renderLivePage();$('preview-message').textContent='Opdateres straks. Ændringerne kommer med, når du trykker Lav arbejdsbog.';}
  catch(e){previewBook=null;$('live-page').innerHTML='<div class="empty"><p>'+escape(e.message)+'</p></div>';$('preview-message').textContent='Tilpas valgene for at se en opgaveside.';$('preview-page').innerHTML='';}
 }
