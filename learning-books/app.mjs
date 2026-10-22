@@ -1,4 +1,4 @@
-import{REVISION,goals,families,variants,generate,replacePage,validateRecipe}from'./core.mjs?v=live-3';
+import{REVISION,goals,families,variants,generate,replacePage,validateRecipe}from'./core.mjs?v=live-4';
 const $=id=>document.getElementById(id);let book=null;let dirty=false;let previewBook=null;const selectedFamilies=new Set(families.map(f=>f.id));const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const radioKeys=['language','textLevel','visualSupport','style','repetition'];
 const choiceValue=key=>document.querySelector('input[name="'+key+'"]:checked').value;
