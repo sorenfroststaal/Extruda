@@ -22,7 +22,7 @@
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <img class="brand-logo" src="Assets/Brand/extruda-logo-horizontal-white.svg" alt="extruda" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Vis navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Vis navigation"><span data-da="Menu" data-en="Menu">Menu</span><span class="navbar-toggler-icon" aria-hidden="true"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" data-da="Om mig" data-en="About">Om mig</a></li>
@@ -69,20 +69,20 @@
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-4" data-da="Projekter" data-en="Projects">Projekter</h2>
-                    <p class="section-intro mb-5" data-da="Produktudvikling og digitale værktøjer samlet ét sted. Åbn et projekt for en kort introduktion — og fold detaljerne ud, hvis du vil se mere." data-en="Product development and digital tools in one place. Open a project for a short introduction — then expand the details if you want to see more.">
-                        Produktudvikling og digitale værktøjer samlet ét sted. Åbn et projekt for en kort introduktion — og fold detaljerne ud, hvis du vil se mere.
+                    <p class="section-intro mb-5" data-da="Se hvad projekterne gør, og åbn det værktøj, du vil bruge. Baggrund og tekniske detaljer kan foldes ud." data-en="See what the projects do and open the tool you want to use. Background and technical details can be expanded.">
+                        Se hvad projekterne gør, og åbn det værktøj, du vil bruge. Baggrund og tekniske detaljer kan foldes ud.
                     </p>
 
                     <div class="project-list" id="projectsAccordion">
                     <article class="project-card" id="array-project">
                         <h3 class="project-heading">
-                            <button class="project-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#arrayPreview" aria-expanded="false" aria-controls="arrayPreview">
+                            <div class="project-summary">
                                 <span class="project-index">01</span>
                                 <span class="project-title"><strong>sorenfroststaal - array lamp shade</strong><small data-da="Produktudvikling · færdig E27-lampeskærm" data-en="Product development · finished E27 lampshade">Produktudvikling · færdig E27-lampeskærm</small></span>
-                                <span class="project-toggle-mark" aria-hidden="true"></span>
-                            </button>
+
+                            </div>
                         </h3>
-                        <div class="collapse" id="arrayPreview" data-bs-parent="#projectsAccordion">
+                        <div class="project-overview" id="arrayPreview">
                             <div class="project-panel">
                                 <div class="project-preview">
                                     <div class="project-preview-icon array-preview-icon">
@@ -93,7 +93,8 @@
                                         <p class="project-meta" data-da="Håndlavet · 3D-print · eg · messing" data-en="Handmade · 3D printing · oak · brass">Håndlavet · 3D-print · eg · messing</p>
                                     </div>
                                 </div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#arrayDetails" aria-expanded="false" aria-controls="arrayDetails"><span data-more-da="Vis mere" data-more-en="Show more" data-less-da="Vis mindre" data-less-en="Show less">Vis mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <div class="project-actions"><a class="btn btn-outline-primary" href="arraylampshade/" data-da="Se projektet" data-en="View the project">Se projektet</a></div>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#arrayDetails" aria-expanded="false" aria-controls="arrayDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="arrayDetails">
                                     <div class="project-details array-project" id="array-pendlen">
                         <div class="row g-5 align-items-center mb-5">
@@ -221,13 +222,13 @@
                     </article>
                     <article class="project-card" id="camera-project">
                         <h3 class="project-heading">
-                            <button class="project-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cameraPreview" aria-expanded="false" aria-controls="cameraPreview">
+                            <div class="project-summary">
                                 <span class="project-index">02</span>
                                 <span class="project-title"><strong>extruda - mobile as webcam</strong><small data-da="Digitalt værktøj · Windows" data-en="Digital tool · Windows">Digitalt værktøj · Windows</small></span>
-                                <span class="project-toggle-mark" aria-hidden="true"></span>
-                            </button>
+
+                            </div>
                         </h3>
-                        <div class="collapse" id="cameraPreview" data-bs-parent="#projectsAccordion">
+                        <div class="project-overview" id="cameraPreview">
                             <div class="project-panel">
                                 <div class="project-preview">
                                     <div class="project-preview-icon"><img src="Assets/Brand/extruda-camera.svg" width="144" height="144" alt="" /></div>
@@ -236,14 +237,15 @@
                                         <p class="project-meta">Windows 11 · x64 · 480p–4K</p>
                                     </div>
                                 </div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cameraDetails" aria-expanded="false" aria-controls="cameraDetails"><span data-more-da="Vis mere" data-more-en="Show more" data-less-da="Vis mindre" data-less-en="Show less">Vis mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <div class="project-actions">
+                                            <a class="btn btn-outline-primary" href="https://github.com/sorenfroststaal/Extruda-Mobile-As-Webcam/releases/download/mobile-as-webcam-v0.13.0/ExtrudaMobileAsWebcam-Setup-0.13.0-x64.exe"><span data-da="Hent til Windows (.exe)" data-en="Download for Windows (.exe)">Hent til Windows (.exe)</span></a>
+                                            <a class="btn btn-outline-primary" href="https://extruda-phone-camera.sorenfroststaal.workers.dev/" data-da="Åbn mobilkameraet" data-en="Open the phone camera">Åbn mobilkameraet</a>
+                                        </div>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cameraDetails" aria-expanded="false" aria-controls="cameraDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="cameraDetails">
                                     <div class="project-details camera-project" id="camera">
                                         <p data-da="Telefonens kamera sendes til desktop-appen, så det kan vælges som almindeligt kamera i Teams. Vælg den ønskede opløsning og kom hurtigt i gang." data-en="Your phone camera is sent to the desktop app, where it can be selected as a regular camera in Teams. Choose the resolution you need and get started quickly.">Telefonens kamera sendes til desktop-appen, så det kan vælges som almindeligt kamera i Teams. Vælg den ønskede opløsning og kom hurtigt i gang.</p>
-                                        <div class="project-actions">
-                                            <a class="btn btn-primary" href="https://github.com/sorenfroststaal/Extruda-Mobile-As-Webcam/releases/download/mobile-as-webcam-v0.13.0/ExtrudaMobileAsWebcam-Setup-0.13.0-x64.exe"><span data-da="Download til Windows" data-en="Download for Windows">Download til Windows</span></a>
-                                            <a class="btn btn-outline-primary" href="https://extruda-phone-camera.sorenfroststaal.workers.dev/" data-da="Åbn mobilkameraet" data-en="Open the phone camera">Åbn mobilkameraet</a>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -251,13 +253,13 @@
                     </article>
                     <article class="project-card" id="goldfish-project">
                         <h3 class="project-heading">
-                            <button class="project-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#goldfishPreview" aria-expanded="false" aria-controls="goldfishPreview">
+                            <div class="project-summary">
                                 <span class="project-index">03</span>
                                 <span class="project-title"><strong>extruda - goldfish (FreeCAD)</strong><small data-da="Addon · AI / vibecode" data-en="Addon · AI / vibecoding">Addon · AI / vibecode</small></span>
-                                <span class="project-toggle-mark" aria-hidden="true"></span>
-                            </button>
+
+                            </div>
                         </h3>
-                        <div class="collapse" id="goldfishPreview" data-bs-parent="#projectsAccordion">
+                        <div class="project-overview" id="goldfishPreview">
                             <div class="project-panel">
                                 <div class="project-preview">
                                     <div class="project-preview-icon goldfish-preview-icon">
@@ -268,7 +270,11 @@
                                         <p class="project-meta">FreeCAD · Open source · v0.2.9</p>
                                     </div>
                                 </div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#goldfishDetails" aria-expanded="false" aria-controls="goldfishDetails"><span data-more-da="Vis mere" data-more-en="Show more" data-less-da="Vis mindre" data-less-en="Show less">Vis mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <div class="goldfish-download">
+                                            <a class="btn btn-outline-primary" href="download/GoldfishSetup.exe" download><i class="fas fa-download me-2"></i><span data-da="Hent Goldfish (.exe)" data-en="Download Goldfish (.exe)">Hent Goldfish (.exe)</span></a>
+                                            <small data-da="Windows 10/11 · FreeCAD 1.1.3 hentes automatisk" data-en="Windows 10/11 · FreeCAD 1.1.3 downloads automatically">Windows 10/11 · FreeCAD 1.1.3 hentes automatisk</small>
+                                        </div>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#goldfishDetails" aria-expanded="false" aria-controls="goldfishDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="goldfishDetails">
                                     <div class="project-details" id="goldfish">
                                         <p data-da="Et AI- og vibecode-projekt, der gør 3D-modellering i FreeCAD mere direkte og tilgængelig. Form geometrien, behold almindelig Undo og kom hurtigere frem til en ren STEP-fil." data-en="An AI and vibecoding project that makes 3D modelling in FreeCAD more direct and accessible. Shape the geometry, keep regular Undo and reach a clean STEP file faster.">Et AI- og vibecode-projekt, der gør 3D-modellering i FreeCAD mere direkte og tilgængelig. Form geometrien, behold almindelig Undo og kom hurtigere frem til en ren STEP-fil.</p>
@@ -278,10 +284,7 @@
                                             <li data-da="Ren geometri med almindelig FreeCAD Undo" data-en="Clean geometry with regular FreeCAD Undo">Ren geometri med almindelig FreeCAD Undo</li>
                                             <li data-da="Udviklet med AI, nysgerrighed og løbende test" data-en="Developed through AI, curiosity and continuous testing">Udviklet med AI, nysgerrighed og løbende test</li>
                                         </ul>
-                                        <div class="goldfish-download">
-                                            <a class="btn btn-primary" href="download/GoldfishSetup.exe" download><i class="fas fa-download me-2"></i><span data-da="Prøv Goldfish" data-en="Try Goldfish">Prøv Goldfish</span></a>
-                                            <small data-da="Windows 10/11 · FreeCAD 1.1.3 hentes automatisk" data-en="Windows 10/11 · FreeCAD 1.1.3 downloads automatically">Windows 10/11 · FreeCAD 1.1.3 hentes automatisk</small>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -290,13 +293,13 @@
 
                     <article class="project-card" id="learning-books-project">
                         <h3 class="project-heading">
-                            <button class="project-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#learningBooksPreview" aria-expanded="false" aria-controls="learningBooksPreview">
+                            <div class="project-summary">
                                 <span class="project-index">04</span>
                                 <span class="project-title"><strong>extruda - learning books</strong><small data-da="Matematik · plan for 0.–4. klasse" data-en="Maths · grades 0–4 roadmap">Matematik · plan for 0.–4. klasse</small></span>
-                                <span class="project-toggle-mark" aria-hidden="true"></span>
-                            </button>
+
+                            </div>
                         </h3>
-                        <div class="collapse" id="learningBooksPreview" data-bs-parent="#projectsAccordion">
+                        <div class="project-overview" id="learningBooksPreview">
                             <div class="project-panel">
                                 <div class="project-preview">
                                     <div class="project-preview-icon"><img src="Assets/Brand/extruda-guides.svg" width="144" height="144" alt="" /></div>
@@ -305,7 +308,8 @@
                                         <p class="project-meta" data-da="Prøv matematik 0–20 · næste skridt: 0.–4. klasse" data-en="Try maths 0–20 · next: grades 0–4">Prøv matematik 0–20 · næste skridt: 0.–4. klasse</p>
                                     </div>
                                 </div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#learningBooksDetails" aria-expanded="false" aria-controls="learningBooksDetails"><span data-more-da="Vis mere" data-more-en="Show more" data-less-da="Vis mindre" data-less-en="Show less">Vis mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <div class="project-actions"><a class="btn btn-outline-primary" href="learning-books/app.html" data-da="Prøv generatoren" data-en="Try the generator">Prøv generatoren</a><a class="btn btn-outline-primary" href="learning-books/#klassetrin" data-da="Se matematik i 0.–4. klasse" data-en="View mathematics for grades 0–4">Se matematik i 0.–4. klasse</a></div>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#learningBooksDetails" aria-expanded="false" aria-controls="learningBooksDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="learningBooksDetails">
                                     <div class="project-details" id="learning-books">
                                         <p data-da="Samme læringsmål kan præsenteres med dansk eller engelsk tekst, korte instruktioner, billedstøtte, flere farver eller et roligt udtryk. Et bibliotek med tags skal gøre det nemt at finde og sammensætte de rette opgaver." data-en="The same learning goal can use Danish or English text, short instructions, visual support, more colour or a calm layout. A tagged library will make it easy to find and combine suitable exercises.">Samme læringsmål kan præsenteres med dansk eller engelsk tekst, korte instruktioner, billedstøtte, flere farver eller et roligt udtryk. Et bibliotek med tags skal gøre det nemt at finde og sammensætte de rette opgaver.</p>
@@ -315,7 +319,7 @@
                                             <li data-da="Forhåndsvisning og printklare A4-bøger med særskilt facit" data-en="Preview and printable A4 workbooks with separate answer sheets">Forhåndsvisning og printklare A4-bøger med særskilt facit</li>
                                         </ul>
                                         <p data-da="Prøveversionen er klar: lav din egen arbejdsbog og udskriv den direkte fra browseren." data-en="The pilot is ready: create your own workbook and print it directly from your browser.">Prøveversionen er klar: lav din egen arbejdsbog og udskriv den direkte fra browseren.</p>
-                                        <p data-da="Version 0.2 indeholder 40 nye opgavefamilier til 0.–4. klasse: blandt andet gange, division, brøker, geometri, måling og data. Vælg klassetrin, se opgaverne og lav en arbejdsbog med facit eller voksenguide. Forbindelser til danske Fælles Mål er foreløbige og afventer fagligt review." data-en="Version 0.2 includes 40 new exercise families for grades 0–4, including multiplication, division, fractions, geometry, measurement and data. Choose a grade and create a workbook with answers or adult guidance. Links to Danish national learning goals are provisional and await subject review.">Version 0.2 indeholder 40 nye opgavefamilier til 0.–4. klasse: blandt andet gange, division, brøker, geometri, måling og data. Vælg klassetrin, se opgaverne og lav en arbejdsbog med facit eller voksenguide. Forbindelser til danske Fælles Mål er foreløbige og afventer fagligt review.</p><div class="project-actions"><a class="btn btn-primary" href="learning-books/app.html" data-da="Prøv generatoren" data-en="Try the generator">Prøv generatoren</a><a class="btn btn-outline-primary" href="learning-books/#klassetrin" data-da="Se matematik i 0.–4. klasse" data-en="View mathematics for grades 0–4">Se matematik i 0.–4. klasse</a></div>
+                                        <p data-da="Version 0.2 indeholder 40 nye opgavefamilier til 0.–4. klasse: blandt andet gange, division, brøker, geometri, måling og data. Vælg klassetrin, se opgaverne og lav en arbejdsbog med facit eller voksenguide. Forbindelser til danske Fælles Mål er foreløbige og afventer fagligt review." data-en="Version 0.2 includes 40 new exercise families for grades 0–4, including multiplication, division, fractions, geometry, measurement and data. Choose a grade and create a workbook with answers or adult guidance. Links to Danish national learning goals are provisional and await subject review.">Version 0.2 indeholder 40 nye opgavefamilier til 0.–4. klasse: blandt andet gange, division, brøker, geometri, måling og data. Vælg klassetrin, se opgaverne og lav en arbejdsbog med facit eller voksenguide. Forbindelser til danske Fælles Mål er foreløbige og afventer fagligt review.</p>
                                     </div>
                                 </div>
                             </div>
@@ -324,13 +328,13 @@
 
                     <article class="project-card" id="open-planner-project">
                         <h3 class="project-heading">
-                            <button class="project-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openPlannerPreview" aria-expanded="false" aria-controls="openPlannerPreview">
+                            <div class="project-summary">
                                 <span class="project-index">05</span>
                                 <span class="project-title"><strong>extruda - open planner</strong><small data-da="Planlægningskort · printgenerator" data-en="Planning cards · print generator">Planlægningskort · printgenerator</small></span>
-                                <span class="project-toggle-mark" aria-hidden="true"></span>
-                            </button>
+
+                            </div>
                         </h3>
-                        <div class="collapse" id="openPlannerPreview" data-bs-parent="#projectsAccordion">
+                        <div class="project-overview" id="openPlannerPreview">
                             <div class="project-panel">
                                 <div class="project-preview">
                                     <div class="project-preview-icon"><img src="Assets/Brand/extruda-calendar.svg" width="144" height="144" alt="" /></div>
@@ -339,7 +343,8 @@
                                         <p class="project-meta" data-da="Kortgenerator · mål i mm · printklar A4" data-en="Card generator · dimensions in mm · print-ready A4">Kortgenerator · mål i mm · printklar A4</p>
                                     </div>
                                 </div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openPlannerDetails" aria-expanded="false" aria-controls="openPlannerDetails"><span data-more-da="Vis mere" data-more-en="Show more" data-less-da="Vis mindre" data-less-en="Show less">Vis mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <div class="project-actions"><a class="btn btn-outline-primary" href="open-planner/" data-da="Prøv Open Planner" data-en="Try Open Planner">Prøv Open Planner</a></div>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openPlannerDetails" aria-expanded="false" aria-controls="openPlannerDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="openPlannerDetails">
                                     <div class="project-details" id="open-planner">
                                         <p data-da="Open Planner laver udklipsark direkte i browseren. Vælg kortets mål, sammensæt kortene og brug kontrolstregen til at kontrollere, at printeren har beholdt den rigtige størrelse." data-en="Open Planner creates cut-out sheets directly in your browser. Choose the card dimensions, assemble your cards and use the control line to check that your printer preserved the correct size.">Open Planner laver udklipsark direkte i browseren. Vælg kortets mål, sammensæt kortene og brug kontrolstregen til at kontrollere, at printeren har beholdt den rigtige størrelse.</p>
@@ -349,7 +354,7 @@
                                             <li data-da="Forhåndsvisning og printvenlige A4-ark med skærekanter" data-en="Preview and print-friendly A4 sheets with cut lines">Forhåndsvisning og printvenlige A4-ark med skærekanter</li>
                                         </ul>
                                         <p data-da="QR-opskrifter og 3D-holdere kommer senere. Den første version fokuserer på kort, du kan printe og bruge med det samme." data-en="QR recipes and 3D holders will come later. The first version focuses on cards you can print and use right away.">QR-opskrifter og 3D-holdere kommer senere. Den første version fokuserer på kort, du kan printe og bruge med det samme.</p>
-                                        <div class="project-actions"><a class="btn btn-primary" href="open-planner/" data-da="Prøv Open Planner" data-en="Try Open Planner">Prøv Open Planner</a></div>
+
                                     </div>
                                 </div>
                             </div>
@@ -403,7 +408,7 @@
                         <a href="https://www.youtube.com/@Extruda3d" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a>
                         <a href="https://github.com/sorenfroststaal" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
                     </div>
-                    <p class="small mt-5 mb-2">© <span id="year">2026</span> Søren Frost Staal · extruda.dk</p>
+                    <details class="site-data-note"><summary data-da="Om siden: data og krav" data-en="About this site: data and requirements">Om siden: data og krav</summary><p data-da="Sikkerhedsvurdering: Denne forside har ingen formular, der indsamler oplysninger. Eksterne links og programdownloads åbnes kun, når du vælger dem. Et installationsprogram kan ændre din computer; læs projektets krav før installation." data-en="Safety assessment: This home page has no data-collection form. External links and program downloads open only when you choose them. An installer can change your computer; read the project requirements before installing.">Sikkerhedsvurdering: Denne forside har ingen formular, der indsamler oplysninger. Eksterne links og programdownloads åbnes kun, når du vælger dem. Et installationsprogram kan ændre din computer; læs projektets krav før installation.</p><p data-da="Dependencies: Lokal CSS, JavaScript og Inter/Nunito-skrifttyper. Eksisterende Bootstrap-JavaScript fra jsDelivr styrer mobilmenu, ekstra projektdetaljer og billedskift. Font Awesome fra sit CDN leverer ikoner. De eksterne tjenester modtager almindelige webanmodninger; uden dem kan ikoner eller interaktion mangle, men projektbeskrivelser og links er synlige." data-en="Dependencies: Local CSS, JavaScript and Inter/Nunito fonts. Existing Bootstrap JavaScript from jsDelivr controls the mobile menu, extra project details and image switching. Font Awesome supplies icons from its CDN. These external services receive normal web requests; without them icons or interactions may be unavailable, but project descriptions and links remain visible.">Dependencies: Lokal CSS, JavaScript og Inter/Nunito-skrifttyper. Eksisterende Bootstrap-JavaScript fra jsDelivr styrer mobilmenu, ekstra projektdetaljer og billedskift. Font Awesome fra sit CDN leverer ikoner. De eksterne tjenester modtager almindelige webanmodninger; uden dem kan ikoner eller interaktion mangle, men projektbeskrivelser og links er synlige.</p></details><p class="small mt-5 mb-2">© <span id="year">2026</span> Søren Frost Staal · extruda.dk</p>
                     <p class="small mb-0"><a href="design-system/" data-da="Visuel identitet og designsystem" data-en="Visual identity and design system">Visuel identitet og designsystem</a></p>
                     <p class="small mb-0"><a href="design-system/dummy/" data-da="Prøv dummy-appen og installationen" data-en="Try the dummy app and setup">Prøv dummy-appen og installationen</a></p>
                 </div>

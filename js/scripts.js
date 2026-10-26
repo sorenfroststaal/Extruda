@@ -17,6 +17,13 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    document.querySelector("#navbarResponsive")?.addEventListener("keydown", event => {
+        if (event.key === "Escape" && window.getComputedStyle(navbarToggler).display !== "none" && window.bootstrap) {
+            bootstrap.Collapse.getOrCreateInstance(document.querySelector("#navbarResponsive"), { toggle: false }).hide();
+            navbarToggler.focus();
+        }
+    });
+
     const languageButtons = document.querySelectorAll("[data-lang]");
     const translatedText = document.querySelectorAll("[data-da][data-en]");
     const translatedImages = document.querySelectorAll("[data-alt-da][data-alt-en]");
@@ -47,6 +54,8 @@ window.addEventListener("DOMContentLoaded", () => {
             const isOpen = button.getAttribute("aria-expanded") === "true";
             const key = `${isOpen ? "less" : "more"}${currentLanguage === "da" ? "Da" : "En"}`;
             label.textContent = label.dataset[key];
+            const projectName = button.closest("article")?.querySelector(".project-title strong")?.textContent || "";
+            button.setAttribute("aria-label", `${label.dataset[key]}: ${projectName}`);
         });
     };
 

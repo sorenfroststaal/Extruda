@@ -14,18 +14,23 @@ reference and fixed style. Follow this style rather than inventing a new one per
 tool. Existing screens can be migrated as they are changed; do not rewrite
 unrelated products merely to apply these rules.
 
-- Use the flow **Vælg → Tilpas → Hent** (Choose → Customise → Download). Preserve
-  input when changing steps. Simple tools can use one page in the same order.
-- Use a compact product heading. Desktop workspace: 320 px settings column,
+- Choose the pattern before the layout. Default small or repeated tasks to one
+  page with visible, logically grouped fields and one final action. Use a wizard
+  only for infrequent tasks with dependent choices. Use a task overview for
+  larger independent sections; lists/tables for many similar objects. Preserve
+  input across all navigation. Do not force Vælg → Tilpas → Hent onto every tool.
+- Use a compact product heading. For visual tools, use a 320 px settings column,
   flexible result column (minimum 480 px), 24 px gap, maximum content width
   1200 px including side padding. Below 960 px use one column, settings first.
-  Avoid nested scroll areas. Provide a clear way to reach the result on mobile.
-- Show one filled primary action in the active step, after its fields. Use
+  Avoid nested scroll areas. Ordinary forms use a readable single column with
+  no empty preview. Provide a clear way to reach visual results on mobile.
+- Show one filled primary action after the relevant fields. Use
   outlined buttons and text links for secondary actions. Name actions by their
   result (e.g. Hent PDF). Do not automatically download or print.
-- Start with useful defaults. Limit each basic settings group to five choices;
-  put additional options under a collapsed Avancerede indstillinger disclosure.
-  Keep export format, branding and colour mode visible in the final step.
+- Start with useful defaults and show every essential choice. Group by meaning,
+  not an arbitrary field count. Use disclosure only for optional settings or
+  supporting help. Never nest disclosures or hide required form sections in
+  tabs. Keep format, branding and colour mode visible before export.
 - Use the existing cream/graphite/petrol/apricot tokens and local Inter/Nunito
   fonts. Use 24 px panel padding (20 px mobile), 24 px between groups, 16 px
   between fields, 8 px from label to field, 12 px control radius and 20 px panel
@@ -86,3 +91,26 @@ unrelated products merely to apply these rules.
 - Keep the reference and dummy runnable both on the website and directly from
   local files. Use deferred classic scripts without module imports for these
   pages. Do not claim that a browser prototype installs anything on the OS.
+
+## Navigation and forms (reference 2.0)
+
+- Read `design-system/UX-RESEARCH.md` for rationale and primary sources. These
+  are design recommendations, not results of an Extruda user study.
+- Menus contain destinations, not commands or form steps. Use ordinary links
+  and `aria-current`. Start with few top-level destinations; a one-screen tool
+  may need no menu. Do not add an ARIA menu role to ordinary site navigation.
+- On mobile, use a labelled Menu disclosure and the same links in a vertical
+  in-flow list. Do not require horizontal scrolling or hover. Escape closes
+  and restores focus. Never obscure the form with a second navigation layer.
+- Tabs are only for alternate views of related information, never required
+  sequential questions or things users need to compare simultaneously.
+- Use labels, helpful examples/units, appropriate native controls and explicit
+  optional labels. Validate on the final action; preserve input on failure.
+  Focus a linked error summary and put the same error by the relevant field.
+- Wizards show a meaningful current step and total, a back link before content,
+  completed-step links where safe, and a review with direct Change links.
+  Browser Back works. Do not label arbitrary step buttons as tabs or require
+  users to repeat answered questions after making a correction.
+- Task overview statuses distinguish Not started, In progress and Ready.
+  Opening a section does not complete it; distinguish draft edits from saved
+  answers and explain whether anything survives reloading the page.

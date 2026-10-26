@@ -847,3 +847,9 @@ section.resume-section {
 #camera { scroll-margin-top: 96px; }
 .camera-project { max-width: 680px; }
 .camera-project > img { display:block; margin-bottom:16px; }
+
+/* Project summaries and primary destinations are visible without nested accordions. */
+.project-summary{display:grid;grid-template-columns:2.5rem minmax(0,1fr);gap:1rem;align-items:center;padding:1.25rem 0}.project-preview{grid-template-columns:6rem minmax(0,1fr);gap:1.5rem}.project-panel{padding-bottom:1.5rem}.project-panel>.project-actions,.project-panel>.goldfish-download{margin-top:1rem}.project-panel>.project-more-toggle{margin-top:1rem;padding:.5rem 0;border-color:transparent;background:transparent;color:var(--ex-petrol);font-size:.875rem;text-decoration:underline;text-underline-offset:4px}.project-panel>.project-more-toggle:hover{background:transparent;color:var(--ex-petrol-dark)}.navbar-toggler{display:flex;align-items:center;gap:10px;min-height:44px;font-size:14px}.site-data-note{margin-top:2rem;max-width:70ch;font-size:.875rem}.site-data-note summary{min-height:44px;cursor:pointer}.site-data-note p{margin:1rem 0;color:var(--ex-muted)}
+@media(min-width:992px){#sideNav .navbar-toggler{display:none}}@media(max-width:640px){.project-summary{grid-template-columns:1.75rem minmax(0,1fr);gap:.75rem}.project-panel{padding-left:0}.project-preview{grid-template-columns:4rem minmax(0,1fr);gap:1rem}.project-preview-copy p:first-child{font-size:1rem}.project-preview-icon{width:4rem}.project-title strong{font-size:1.125rem}}
+
+#sideNav .navbar-nav .nav-item .nav-link{min-height:44px;display:flex;align-items:center}@media(min-width:992px){#sideNav .navbar-nav .nav-item .nav-link{justify-content:center}}
