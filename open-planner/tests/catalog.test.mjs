@@ -27,7 +27,8 @@ test('en ret kan omdannes til et gyldigt printkort',async()=>{
   const card=dishToCard(database.retter[0]);
   const state=validate({version:1,cardWidth:69,cardHeight:66,orientation:'portrait',color:'petrol',copies:1,cards:[card]});
   assert.equal(state.cards[0].text,'Pasta med kødsovs');
-  assert.match(state.cards[0].image,/^\.\/data\/images\//);
+  assert.match(state.cards[0].image,/^\.\/assets\/food\//);
+  assert.equal(state.cards[0].kind,'food');
 });
 
 test('eksterne billedadresser afvises',()=>{

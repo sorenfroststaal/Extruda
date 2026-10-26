@@ -1,5 +1,6 @@
 import {DAYS,ICONS,DEFAULT,MAX_CARDS,validate,layout,escapeXml,fitText} from './model.mjs';
 import {validateDatabase,normalizeDish,slugify,dishToCard} from './catalog.mjs';
+import {foodMarkup} from './food.mjs';
 
 const $=id=>document.getElementById(id);
 const storageKey='extruda-open-planner-v1';
@@ -41,6 +42,8 @@ function renderList(){
 function measure(text,size){canvas.font=`800 ${size}px Nunito`;return canvas.measureText(text).width;}
 function cardMarkup(card,index,standalone=false){
   const w=state.cardWidth,h=state.cardHeight;
+  const imageHref=standalone?(imageCache.get(card.image)||card.image):card.image;
+  if(card.kind==='food'||card.image)return foodMarkup(card,w,h,measure,imageHref,index);
   const colors={petrol:['#edf4f1','#28645F'],apricot:['#f8e5d8','#343B3B'],mono:['#ffffff','#000000']};
   const [bg,ink]=colors[state.color];
   const padding=Math.min(4,w*.12,h*.12),innerW=w-padding*2,innerH=h-padding*2;
@@ -54,7 +57,6 @@ function cardMarkup(card,index,standalone=false){
   const top=(h-totalHeight)/2;
   const icon=hasIcon?`<g transform="translate(${(w-visualSize)/2} ${top}) scale(${visualSize/24})" color="${ink}">${symbols[card.icon]}</g>`:'';
   const clipId=`dish-photo-${index}`;
-  const imageHref=standalone?(imageCache.get(card.image)||card.image):card.image;
   const photo=hasImage?`<defs><clipPath id="${clipId}"><circle cx="${w/2}" cy="${top+visualSize/2}" r="${visualSize/2}"/></clipPath></defs><image href="${escapeXml(imageHref)}" x="${(w-visualSize)/2}" y="${top}" width="${visualSize}" height="${visualSize}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${clipId})"/><circle cx="${w/2}" cy="${top+visualSize/2}" r="${visualSize/2}" fill="none" stroke="${ink}" stroke-width="0.45"/>`:'';
   const text=fitted.lines.map((line,i)=>`<text x="${w/2}" y="${top+visualSize+visualGap+fitted.fontSize*(.94+i*1.25)}" text-anchor="middle" fill="${ink}" font-family="Nunito, sans-serif" font-size="${fitted.fontSize}" font-weight="800">${escapeXml(line)}</text>`).join('');
   return `<g transform="translate(${card.x} ${card.y})"><rect x="0" y="0" width="${w}" height="${h}" fill="${bg}" stroke="#343B3B" stroke-width="0.2"/>${photo}${icon}${text}</g>`;
@@ -62,7 +64,7 @@ function cardMarkup(card,index,standalone=false){
 function sheetMarkup(cards,index,plan,standalone=false){
   const font=standalone&&embeddedFont?`<style>@font-face{font-family:Nunito;src:url(data:font/woff2;base64,${embeddedFont}) format('woff2');font-weight:200 1000}</style>`:'';
   const {pageWidth:w,pageHeight:h,pages}=plan;
-  return `<svg xmlns="http://www.w3.org/2000/svg" class="sheet" width="${w}mm" height="${h}mm" viewBox="0 0 ${w} ${h}" role="img" aria-label="Printark ${index+1} af ${pages.length}, ${cards.length} kort">${font}<title>Open Planner · ark ${index+1} af ${pages.length}</title><rect width="${w}" height="${h}" fill="white"/>${cards.map((card,cardIndex)=>cardMarkup(card,cardIndex,standalone)).join('')}<g fill="#343B3B" font-family="Nunito, sans-serif" font-size="2.7"><text x="10" y="${h-13}">Open Planner · ${state.cardWidth} × ${state.cardHeight} mm</text><text x="10" y="${h-8}">Ark ${index+1} / ${pages.length} · A4 · print 100 %</text><path d="M${w-60} ${h-10}h50m-50-1.5v3m50-3v3" stroke="#343B3B" stroke-width=".25" fill="none"/><text x="${w-35}" y="${h-5}" text-anchor="middle">Kontrolmål: 50 mm</text></g></svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" class="sheet" width="${w}mm" height="${h}mm" viewBox="0 0 ${w} ${h}" role="img" aria-label="Printark ${index+1} af ${pages.length}, ${cards.length} kort">${font}<title>Open Planner · ark ${index+1} af ${pages.length}</title><rect width="${w}" height="${h}" fill="white"/>${cards.map((card,cardIndex)=>cardMarkup(card,`${index}-${cardIndex}`,standalone)).join('')}<g fill="#343B3B" font-family="Nunito, sans-serif" font-size="2.7"><text x="10" y="${h-13}">Open Planner · ${state.cardWidth} × ${state.cardHeight} mm</text><text x="10" y="${h-8}">Ark ${index+1} / ${pages.length} · A4 · print 100 %</text><path d="M${w-60} ${h-10}h50m-50-1.5v3m50-3v3" stroke="#343B3B" stroke-width=".25" fill="none"/><text x="${w-35}" y="${h-5}" text-anchor="middle">Kontrolmål: 50 mm</text></g></svg>`;
 }
 
 function render(){
@@ -82,7 +84,7 @@ function render(){
 
 function download(content,name,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
 function blobToDataUrl(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(new Error('Billedet kunne ikke læses.'));reader.readAsDataURL(blob);});}
-async function cacheImage(source){if(!source||imageCache.has(source))return;if(source.startsWith('data:')){imageCache.set(source,source);return;}const response=await fetch(source);if(!response.ok)throw new Error('Et kortbillede kunne ikke hentes. Prøv igen.');imageCache.set(source,await blobToDataUrl(await response.blob()));}
+async function cacheImage(source){if(!source||imageCache.has(source))return;if(source.startsWith('data:')){imageCache.set(source,source);return;}const response=await fetch(source);if(!response.ok)throw new Error('Et kortbillede kunne ikke hentes. Prøv igen.');let dataUrl=await blobToDataUrl(await response.blob());if(/\.webp$/i.test(source))dataUrl=dataUrl.replace(/^data:[^;]+;/,'data:image/webp;');imageCache.set(source,dataUrl);}
 async function downloadSheet(index){
   if(!latest)return;
   try{

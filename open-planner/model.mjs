@@ -2,7 +2,7 @@ export const DAYS = ['Mandag','Tirsdag','Onsdag','Torsdag','Fredag','Lørdag','S
 export const ICONS = {none:'Uden ikon',sun:'Sol / morgen',moon:'Måne / aften',home:'Hjem',tasks:'Opgaver',calendar:'Kalender',community:'Sammen',guides:'Læsning',tools:'Praktisk',images:'Billeder',notes:'Noter',play:'Pause / leg',check:'Færdig'};
 export const MAX_CARDS = 200;
 export const DEFAULT = {version:1,cardWidth:69,cardHeight:66,orientation:'portrait',color:'petrol',copies:1,cards:DAYS.map((text)=>({text,icon:'none'}))};
-const SAFE_IMAGE=/^(\.\/data\/images\/[a-z0-9-]+\.(png|jpe?g|webp)|data:image\/(png|jpeg|webp);base64,[a-zA-Z0-9+/=]+)$/;
+const SAFE_IMAGE=/^(\.\/(data\/images|assets\/food)\/[a-z0-9-]+\.(png|jpe?g|webp)|data:image\/(png|jpeg|webp);base64,[a-zA-Z0-9+/=]+)$/;
 export function validate(value) {
   if (!value || value.version !== 1) throw new Error('Filen skal være et Open Planner-kortsæt (version 1).');
   for (const field of ['cardWidth','cardHeight']) if (typeof value[field] !== 'number' || !Number.isFinite(value[field]) || value[field]<20 || value[field]>277) throw new Error('Kortmål skal være mellem 20 og 277 mm.');
@@ -14,7 +14,7 @@ export function validate(value) {
     const image=typeof c?.image==='string'?c.image:'';
     if(!c || typeof c.text!=='string' || c.text.length>80 || !Object.hasOwn(ICONS,c.icon) || (!c.text.trim() && c.icon==='none' && !image)) throw new Error('Hvert kort skal have tekst (højst 80 tegn), et gyldigt ikon eller et billede.');
     if(image&&!SAFE_IMAGE.test(image))throw new Error('Et kort indeholder en ugyldig billedreference.');
-    return {text:c.text.trim(),icon:c.icon,image};
+    return {text:c.text.trim(),icon:c.icon,image,kind:c.kind==='food'||image?'food':''};
   });
   return {version:1,cardWidth:value.cardWidth,cardHeight:value.cardHeight,orientation:value.orientation,color:value.color,copies:value.copies,cards};
 }
@@ -33,9 +33,9 @@ export function layout(value) {
 }
 export function escapeXml(text){return String(text).replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]));}
 // Actual text metrics are supplied by the browser canvas after local fonts load.
-export function fitText(text,width,height,measure) {
+export function fitText(text,width,height,measure,maxFontSize=7) {
   if (!text) return {fontSize:0,lines:[]};
-  for(let fontSize=Math.min(7,height/2.3);fontSize>=1.8;fontSize-=.15){
+  for(let fontSize=Math.min(maxFontSize,height/2.3);fontSize>=1.8;fontSize-=.15){
     const lines=[];let current='';
     for(const word of text.trim().split(/\s+/)){
       if(measure(word,fontSize)>width){

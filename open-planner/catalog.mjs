@@ -1,5 +1,5 @@
 const DATA_IMAGE=/^data:image\/(png|jpeg|webp);base64,[a-zA-Z0-9+/=]+$/;
-const PUBLIC_IMAGE=/^\.\/data\/images\/[a-z0-9-]+\.(png|jpe?g|webp)$/;
+const PUBLIC_IMAGE=/^\.\/(data\/images|assets\/food)\/[a-z0-9-]+\.(png|jpe?g|webp)$/;
 
 export function validImage(value){
   return value===null||value===''||(typeof value==='string'&&(PUBLIC_IMAGE.test(value)||DATA_IMAGE.test(value)));
@@ -16,7 +16,8 @@ export function normalizeDish(item){
   const ingredients=Array.isArray(item.ingredienser)?item.ingredienser:typeof item.ingredienser==='string'?item.ingredienser.split(/\r?\n/):[];
   const ingredienser=ingredients.map(value=>String(value).trim()).filter(Boolean);
   const fremgangsmaade=String(item.fremgangsmaade??item.opskrift??'').trim();
-  const billede=item.billede||null;
+  let billede=item.billede||null;
+  if(typeof billede==='string'&&/^\.\/data\/images\/[a-z0-9-]+-cirkel\.png$/.test(billede))billede=`./assets/food/${id}.webp`;
   if(!/^[a-z0-9-]{1,80}$/.test(id))throw new Error('En ret mangler et gyldigt id.');
   if(!navn||navn.length>120)throw new Error('En ret mangler et navn på højst 120 tegn.');
   if(ingredienser.length>200||ingredienser.some(value=>value.length>300))throw new Error(`Ingredienslisten til “${navn}” er for lang.`);
@@ -34,5 +35,5 @@ export function validateDatabase(value){
 
 export function dishToCard(dish){
   const item=normalizeDish(dish);
-  return {text:item.navn,icon:'none',image:item.billede||''};
+  return {text:item.navn,icon:'none',image:item.billede||'',kind:'food'};
 }
