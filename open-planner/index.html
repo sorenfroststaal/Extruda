@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F5F0E8">
+  <meta name="description" content="Lav kort til din fysiske planlægningstavle. Vælg ugedage, ikoner og egen tekst, og print udklipsark med dine kortmål.">
+  <title>Open Planner · extruda</title>
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/tokens/extruda.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header screen-only"><a href="https://extruda.dk/#projects" aria-label="Til extrudas projekter"><img src="./assets/logos/extruda-logo-horizontal-color.svg" alt="extruda" width="180" height="60"></a><a class="back-link" href="https://extruda.dk/#projects">Alle projekter <span aria-hidden="true">↗</span></a></header>
+  <main>
+    <section class="intro screen-only">
+      <div class="intro-title"><img src="./assets/icons/extruda-calendar.svg" alt="" width="80" height="80"><div><p class="eyebrow">Fra idé til hverdag</p><h1>Open Planner</h1></div><span class="version">Første version</span></div>
+      <p class="lead">Små kort. Mere overblik.</p><p>Lav ugedage og aktivitetskort til din planlægningstavle. Vælg mål, tilføj indhold, og print dine ark til udklip.</p>
+    </section>
+
+    <div class="workspace">
+      <aside class="editor screen-only" aria-label="Indstillinger og kort">
+        <section class="panel">
+          <h2><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#settings"></use></svg>1. Vælg kortmål</h2>
+          <p class="help">Dine nuværende indstik er 69 × 66 mm. Begge mål kan ændres til nye kort og holdere.</p>
+          <div class="two-fields"><label for="card-width">Bredde <span>mm</span><input id="card-width" type="number" min="20" max="277" step="0.1" value="69" inputmode="decimal" required></label><label for="card-height">Højde <span>mm</span><input id="card-height" type="number" min="20" max="277" step="0.1" value="66" inputmode="decimal" required></label></div>
+          <label for="orientation">A4-ark<select id="orientation"><option value="portrait">Stående · 210 × 297 mm</option><option value="landscape">Liggende · 297 × 210 mm</option></select></label>
+          <div class="two-fields"><label for="color">Kortfarve<select id="color"><option value="petrol">Petrol</option><option value="apricot">Abrikos</option><option value="mono">Sort / hvid</option></select></label><label for="copies">Sæt / kopier<input id="copies" type="number" min="1" max="20" step="1" value="1" required></label></div>
+        </section>
+        <section class="panel">
+          <h2><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#plus"></use></svg>2. Tilføj indhold</h2>
+          <fieldset><legend>Ugedage</legend><div id="weekdays" class="weekday-picker"></div></fieldset>
+          <button id="add-days" class="secondary full" type="button">Tilføj valgte ugedage</button>
+          <div class="divider"></div>
+          <label for="custom-text">Egen tekst <span>ét kort pr. linje</span><textarea id="custom-text" rows="3" maxlength="3000" placeholder="Aftensmad&#10;Gåtur&#10;Ryd op"></textarea></label>
+          <label for="icon">Ikon til nye kort<select id="icon"></select></label>
+          <p class="help">Lad tekstfeltet være tomt for at lave et kort kun med ikon.</p>
+          <button id="add-custom" class="secondary full" type="button">Tilføj kort</button>
+          <p id="add-status" class="feedback" role="status"></p>
+        </section>
+        <section class="panel">
+          <div class="section-heading"><h2>Din kortliste <span id="list-count" class="count">7</span></h2><button id="clear" type="button" class="text-button">Ryd liste</button></div>
+          <p class="help">Ret teksten direkte. Kortene gemmes automatisk i denne browser.</p>
+          <ol id="card-list" class="card-list"></ol>
+        </section>
+      </aside>
+
+      <section class="output" aria-labelledby="preview-heading">
+        <div class="preview-header screen-only"><div><p class="eyebrow">Klar til saksen</p><h2 id="preview-heading">Dine printark</h2><p id="summary" class="help" role="status"></p></div><button id="print" type="button" class="ex-primary"><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#pdf"></use></svg>Print / gem PDF</button></div>
+        <div class="print-help screen-only"><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#info"></use></svg><p>Print på A4 i <strong>100 % / faktisk størrelse</strong> uden sidehoved og sidefod. Vælg samme papirretning som her. Mål kontrolstregen før du klipper.</p></div>
+        <p id="error" class="error screen-only" role="alert" hidden></p>
+        <div id="sheets" class="sheets"></div>
+        <div class="output-footer screen-only"><button id="export-settings" type="button" class="secondary"><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#download"></use></svg>Gem kort og mål</button><label class="secondary file-button" for="import-settings"><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#upload"></use></svg>Åbn gemt sæt<input type="file" id="import-settings" accept=".json,application/json"></label></div>
+        <p class="help screen-only">Gem som JSON for at fortsætte senere. Kortmålene kan bruges som udgangspunkt for dine holdere i FreeCAD.</p>
+      </section>
+    </div>
+    <section class="next-step screen-only"><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#tools"></use></svg><div><h2>Fra papir til planlægningstavle</h2><p>Klip langs kortenes kanter og prøv pasformen i dine holdere. Parametriske 3D-modeller og QR-indhold er senere trin; denne version laver printkort.</p></div></section>
+  </main>
+  <footer class="site-footer screen-only"><span>Open Planner · et projekt hos extruda</span><a href="https://extruda.dk/#projects">Tilbage til projekter</a></footer>
+  <noscript><p>Slå JavaScript til for at bruge kortgeneratoren.</p></noscript>
+</body>
+</html>
