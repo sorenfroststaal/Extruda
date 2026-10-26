@@ -1,3 +1,4 @@
+(() => {
 const root=document.documentElement;
 const themeMeta=document.querySelector('meta[name="theme-color"]');
 const languageButtons=[...document.querySelectorAll('[data-lang]')];
@@ -18,6 +19,7 @@ function updateLanguage(language){
   document.querySelectorAll('[data-da][data-en]').forEach(element=>{element.textContent=element.dataset[selected];});
   document.querySelectorAll('[data-aria-da][data-aria-en]').forEach(element=>{element.setAttribute('aria-label',element.dataset[selected==='da'?'ariaDa':'ariaEn']);});
   languageButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.lang===selected)));
+  document.dispatchEvent(new Event('extruda:language'));
   document.title=selected==='da'?'Visuel identitet · extruda':'Visual identity · extruda';
   document.querySelector('meta[name="description"]')?.setAttribute('content',selected==='da'?'Extrudas visuelle identitet og fælles UI/UX-principper for farver, typografi, komponenter, temaer, sprog og tilgængelighed.':'Extruda’s visual identity and shared UI/UX principles for colour, typography, components, themes, language and accessibility.');
 }
@@ -41,3 +43,5 @@ const observer=new IntersectionObserver(entries=>{
 sections.forEach(section=>observer.observe(section));
 
 document.getElementById('year').textContent=new Date().getFullYear();
+
+})();

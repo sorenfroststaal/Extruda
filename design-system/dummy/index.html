@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="da" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F5F0E8">
+  <meta name="description" content="Generisk demo af Extrudas installationsproces og faste appstil, med sprog, tema, genveje og mål.">
+  <title>Dummy-app · Visuel identitet</title>
+  <link rel="icon" href="../../Assets/Brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a href="#demo-window" class="skip-link" data-da="Spring til demo" data-en="Skip to demo">Spring til demo</a>
+  <header class="demo-page-header">
+    <a href="../index.html#ui-ux" data-da="← Til designsystemet" data-en="← Back to the design system">← Til designsystemet</a>
+    <span data-da="Interaktiv reference · ingen rigtig installation" data-en="Interactive reference · no real installation">Interaktiv reference · ingen rigtig installation</span>
+  </header>
+  <main class="demo-main">
+    <div class="demo-intro">
+      <p class="eyebrow" data-da="Den faste stil i brug" data-en="The fixed style in use">Den faste stil i brug</p>
+      <h1 data-da="En lille app. Fra installation til første fil." data-en="A small app. From setup to the first file.">En lille app. Fra installation til første fil.</h1>
+      <p data-da="Prøv installationen, skift sprog og tema, og se hvor alting bor. Alle eksempler er generiske." data-en="Try the setup, switch language and theme, and see where everything belongs. All examples are generic.">Prøv installationen, skift sprog og tema, og se hvor alting bor. Alle eksempler er generiske.</p>
+    </div>
+    <nav class="demo-view-switch" aria-label="Demoens visninger" data-aria-da="Demoens visninger" data-aria-en="Demo views">
+      <button type="button" data-view="setup" aria-pressed="true" data-da="1. Installation" data-en="1. Setup">1. Installation</button>
+      <button type="button" data-view="app" aria-pressed="false" data-da="2. Prøv appen" data-en="2. Try the app">2. Prøv appen</button>
+      <a href="#measurements" data-da="3. Se mål og regler ↓" data-en="3. See dimensions and rules ↓">3. Se mål og regler ↓</a>
+    </nav>
+    <div class="demo-canvas">
+      <section id="demo-window" class="demo-window is-setup" aria-labelledby="window-name">
+        <div class="demo-titlebar">
+          <div class="demo-window-name"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M9 9v12"/></svg><span id="window-name">Mit værktøj · demo</span></div>
+          <span class="demo-titlebar-note" data-da="Foreslået klientområde · se mål nedenfor" data-en="Proposed client area · dimensions below">Foreslået klientområde · se mål nedenfor</span>
+        </div>
+        <header class="demo-app-header">
+          <div><strong data-da="Mit værktøj" data-en="My tool">Mit værktøj</strong><small id="window-context"></small></div>
+          <div class="demo-preferences">
+            <label for="demo-language"><span data-da="Sprog" data-en="Language">Sprog</span><select id="demo-language"><option value="da">Dansk</option><option value="en">English</option></select></label>
+            <label for="demo-theme"><span data-da="Udseende" data-en="Appearance">Udseende</span><select id="demo-theme"><option value="system" data-da="Følg system" data-en="Follow system">Følg system</option><option value="light" data-da="Lys" data-en="Light">Lys</option><option value="dark" data-da="Mørk" data-en="Dark">Mørk</option></select></label>
+          </div>
+        </header>
+        <div id="setup-view">
+          <ol class="demo-step-list" id="setup-steps" aria-label="Installationstrin" data-aria-da="Installationstrin" data-aria-en="Setup steps"></ol>
+          <div id="setup-body" class="demo-setup-body"></div>
+          <div class="demo-setup-actions"><button id="setup-back" class="button secondary" type="button" data-da="Tilbage" data-en="Back">Tilbage</button><button id="setup-next" class="button primary" type="button">Næste</button></div>
+          <p id="setup-status" class="demo-status" role="status" aria-atomic="true"></p>
+        </div>
+        <div id="app-view" hidden>
+          <div class="demo-product-heading"><h2 data-da="Lav et enkelt ark" data-en="Create a simple sheet">Lav et enkelt ark</h2><p data-da="Vælg en overskrift, tilpas farverne, og hent din fil." data-en="Choose a heading, customise the colours and download your file.">Vælg en overskrift, tilpas farverne, og hent din fil.</p></div>
+          <div class="demo-workspace">
+            <section class="demo-editor" aria-label="Indstillinger" data-aria-da="Indstillinger" data-aria-en="Settings">
+              <nav class="demo-workflow" aria-label="Arbejdstrin" data-aria-da="Arbejdstrin" data-aria-en="Work steps">
+                <button type="button" data-workstep="0" aria-current="step" data-da="1. Vælg" data-en="1. Choose">1. Vælg</button><button type="button" data-workstep="1" data-da="2. Tilpas" data-en="2. Customise">2. Tilpas</button><button type="button" data-workstep="2" data-da="3. Hent" data-en="3. Download">3. Hent</button>
+              </nav>
+              <div class="demo-editor-body">
+                <div data-workpanel="0">
+                  <h3 data-da="Vælg indhold" data-en="Choose content">Vælg indhold</h3>
+                  <label class="demo-field" for="content-title"><span data-da="Overskrift" data-en="Heading">Overskrift</span><input id="content-title" type="text" maxlength="40" value="Mit indhold" aria-describedby="title-help"></label>
+                  <p id="title-help" class="field-help" data-da="Op til 40 tegn. Dine ændringer vises til højre eller nedenfor." data-en="Up to 40 characters. Your changes appear on the right or below.">Op til 40 tegn. Dine ændringer vises til højre eller nedenfor.</p>
+                </div>
+                <div data-workpanel="1" hidden>
+                  <h3 data-da="Tilpas udseendet" data-en="Customise the appearance">Tilpas udseendet</h3>
+                  <label class="demo-field" for="output-mode"><span data-da="Farvetilstand" data-en="Colour mode">Farvetilstand</span><select id="output-mode"><option value="brand" data-da="Fælles farver" data-en="Shared colours">Fælles farver</option><option value="custom" data-da="Egne farver" data-en="Custom colours">Egne farver</option><option value="mono" data-da="Sort / hvid" data-en="Black / white">Sort / hvid</option></select></label>
+                  <fieldset id="output-colours" class="demo-colours" disabled><legend data-da="Indholdets tre farver" data-en="Three content colours">Indholdets tre farver</legend>
+                    <label for="output-primary"><span data-da="Hovedfarve" data-en="Primary">Hovedfarve</span><input type="color" id="output-primary" value="#28645f"></label>
+                    <label for="output-accent"><span data-da="Accentfarve" data-en="Accent">Accentfarve</span><input type="color" id="output-accent" value="#e8b08e"></label>
+                    <label for="output-paper"><span data-da="Papir" data-en="Paper">Papir</span><input type="color" id="output-paper" value="#ffffff"></label>
+                  </fieldset>
+                  <p class="field-help" data-da="Indholdets farver ændrer ikke appens knapper eller tema. Tekst bliver automatisk sort eller hvid." data-en="Content colours do not change the app controls or theme. Text is automatically black or white.">Indholdets farver ændrer ikke appens knapper eller tema. Tekst bliver automatisk sort eller hvid.</p>
+                </div>
+                <div data-workpanel="2" hidden>
+                  <h3 data-da="Hent din fil" data-en="Download your file">Hent din fil</h3>
+                  <dl class="demo-summary"><div><dt data-da="Format" data-en="Format">Format</dt><dd>SVG · 640 × 800</dd></div><div><dt data-da="Farver" data-en="Colours">Farver</dt><dd id="export-colour-summary"></dd></div></dl>
+                  <button class="demo-text-button" id="edit-colours" type="button" data-da="Skift farver eller vælg sort / hvid" data-en="Change colours or choose black / white">Skift farver eller vælg sort / hvid</button>
+                  <label class="check-row"><input type="checkbox" id="output-branding"><span data-da="Medtag Extruda-navn i filen" data-en="Include the Extruda name in the file">Medtag Extruda-navn i filen</span></label>
+                  <p class="field-help" data-da="Fra som standard. Uden branding indeholder filen ingen Extruda-navne, logoer eller metadata." data-en="Off by default. Without branding the file contains no Extruda names, logos or metadata.">Fra som standard. Uden branding indeholder filen ingen Extruda-navne, logoer eller metadata.</p>
+                </div>
+                <div class="demo-editor-actions"><button type="button" class="button secondary" id="work-back" data-da="Tilbage" data-en="Back">Tilbage</button><button type="button" class="button primary" id="work-next">Næste</button></div>
+                <a class="demo-result-link" href="#result" data-da="Se resultat ↓" data-en="View result ↓">Se resultat ↓</a>
+              </div>
+            </section>
+            <section id="result" class="demo-result" aria-labelledby="preview-heading">
+              <div class="demo-result-header"><h3 id="preview-heading" data-da="Forhåndsvisning" data-en="Preview">Forhåndsvisning</h3><span data-da="Klar" data-en="Ready">Klar</span></div>
+              <div id="output-preview" class="demo-output"></div>
+              <p class="field-help" data-da="Det her er også indholdet i din SVG-fil." data-en="This is also the content of your SVG file.">Det her er også indholdet i din SVG-fil.</p>
+            </section>
+          </div>
+          <p id="app-status" class="demo-status" role="status" aria-atomic="true"></p>
+          <details class="demo-pin-help"><summary data-da="Genveje og proceslinje" data-en="Shortcuts and taskbar">Genveje og proceslinje</summary><p id="shortcut-summary"></p><p data-da="Når en rigtig Windows-app er åben: Højreklik på dens ikon på proceslinjen, og vælg Fastgør til proceslinje. Fastgørelse i Start er også et separat valg i Windows." data-en="When a real Windows app is open: right-click its taskbar icon and choose Pin to taskbar. Pinning to Start is also a separate choice in Windows.">Når en rigtig Windows-app er åben: Højreklik på dens ikon på proceslinjen, og vælg Fastgør til proceslinje. Fastgørelse i Start er også et separat valg i Windows.</p><p data-da="I en rigtig app kan en understøttet Windows-funktion bede om din godkendelse efter første start. Installationen fastgør aldrig appen automatisk." data-en="In a real app, a supported Windows feature can ask for your approval after the first launch. Setup never pins the app automatically.">I en rigtig app kan en understøttet Windows-funktion bede om din godkendelse efter første start. Installationen fastgør aldrig appen automatisk.</p></details>
+        </div>
+        <footer class="demo-window-footer"><span data-da="Browserdemo · ændrer ikke din computer" data-en="Browser demo · does not change your computer">Browserdemo · ændrer ikke din computer</span><a href="#data-and-requirements" data-da="Om data og krav" data-en="About data and requirements">Om data og krav</a></footer>
+      </section>
+    </div>
+    <section id="measurements" class="demo-reference" aria-labelledby="measurements-heading">
+      <h2 id="measurements-heading" data-da="Mål, placering og adfærd" data-en="Dimensions, placement and behaviour">Mål, placering og adfærd</h2>
+      <p data-da="Dette er de foreslåede standardmål i logiske pixels. Demoen tilpasser sig pladsen i browseren. Windows’ egen titellinje og ydre vinduesramme kommer oveni og styres af Windows, skærmskalering og appteknologi." data-en="These are the proposed default dimensions in logical pixels. The demo fits the available browser space. The native title bar and outer window frame are additional and controlled by Windows, display scaling and app technology.">Dette er de foreslåede standardmål i logiske pixels. Demoen tilpasser sig pladsen i browseren. Windows’ egen titellinje og ydre vinduesramme kommer oveni og styres af Windows, skærmskalering og appteknologi.</p>
+      <dl class="demo-spec-list">
+        <div><dt data-da="Installationsvindue" data-en="Setup window">Installationsvindue</dt><dd data-da="720 × 640 px klientområde. Kan vokse i højden ved stor tekst. Ingen tvungen fuldskærm." data-en="720 × 640 px client area. Can grow vertically with large text. No forced full screen.">720 × 640 px klientområde. Kan vokse i højden ved stor tekst. Ingen tvungen fuldskærm.</dd></div>
+        <div><dt data-da="Appvindue" data-en="App window">Appvindue</dt><dd data-da="1200 × 800 px klientområde som start. Kan ændres og maksimeres. Husker størrelse og placering i en rigtig app, inden for de tilsluttede skærme." data-en="1200 × 800 px client area initially. Resizable and maximisable. A real app remembers size and position within the connected displays.">1200 × 800 px klientområde som start. Kan ændres og maksimeres. Husker størrelse og placering i en rigtig app, inden for de tilsluttede skærme.</dd></div>
+        <div><dt data-da="Mobil og smalle vinduer" data-en="Mobile and narrow windows">Mobil og smalle vinduer</dt><dd data-da="Under 960 px: én kolonne, indstillinger først. 20 px sidekant. Ved 320 px skal alt kunne bruges uden vandret siderul." data-en="Below 960 px: one column, settings first. 20 px side padding. Everything must work at 320 px without horizontal page scrolling.">Under 960 px: én kolonne, indstillinger først. 20 px sidekant. Ved 320 px skal alt kunne bruges uden vandret siderul.</dd></div>
+        <div><dt data-da="Sprog og tema" data-en="Language and theme">Sprog og tema</dt><dd data-da="Altid øverst til højre i appens egen header, også under installation. På mobil under appnavnet. Dansk som standard. Tema starter med Følg system. Valgene følger med fra installation til app." data-en="Always at the top right of the app header, including setup. Below the app name on mobile. Danish by default. Theme starts with Follow system. Choices carry over from setup to app.">Altid øverst til højre i appens egen header, også under installation. På mobil under appnavnet. Dansk som standard. Tema starter med Følg system. Valgene følger med fra installation til app.</dd></div>
+        <div><dt data-da="Arbejdsskærm" data-en="Workspace">Arbejdsskærm</dt><dd data-da="320 px indstillinger + 24 px mellemrum + mindst 480 px resultat, når der er plads. 32 px yderkant på desktop, 20 px mobil. Almindelig siderulning." data-en="320 px settings + 24 px gap + at least 480 px result when space allows. 32 px outer padding on desktop, 20 px mobile. Normal page scrolling.">320 px indstillinger + 24 px mellemrum + mindst 480 px resultat, når der er plads. 32 px yderkant på desktop, 20 px mobil. Almindelig siderulning.</dd></div>
+        <div><dt data-da="Radier og rammer" data-en="Radii and borders">Radier og rammer</dt><dd data-da="Paneler 20 px. Knapper og felter 12 px. Små mærker 8 px. Kanter 1 px. Demoens ydre ramme er 20 px; en rigtig OS-ramme styres af systemet." data-en="Panels 20 px. Buttons and fields 12 px. Small labels 8 px. Borders 1 px. The demo outer frame is 20 px; a real OS frame is system-controlled.">Paneler 20 px. Knapper og felter 12 px. Små mærker 8 px. Kanter 1 px. Demoens ydre ramme er 20 px; en rigtig OS-ramme styres af systemet.</dd></div>
+        <div><dt data-da="Luft og klikmål" data-en="Spacing and targets">Luft og klikmål</dt><dd data-da="24 px panelpadding, 20 px mobil. 24 px mellem grupper, 16 px mellem felter, 8 px fra label til felt. Knapper og felter mindst 48 px høje. Alle klikmål mindst 44 × 44 px." data-en="24 px panel padding, 20 px mobile. 24 px between groups, 16 px between fields, 8 px from label to field. Buttons and fields at least 48 px high. All targets at least 44 × 44 px.">24 px panelpadding, 20 px mobil. 24 px mellem grupper, 16 px mellem felter, 8 px fra label til felt. Knapper og felter mindst 48 px høje. Alle klikmål mindst 44 × 44 px.</dd></div>
+      </dl>
+      <div class="demo-shortcut-rules"><h3 data-da="Hvilke genveje spørger vi om?" data-en="Which shortcuts do we ask about?">Hvilke genveje spørger vi om?</h3><ul><li data-da="Start-menu: Ja, et tydeligt valg under installation. Slået til som standard. Det giver en appgenvej i listen, ikke automatisk fastgørelse i Start." data-en="Start menu: Yes, a clear setup choice. On by default. This adds an app shortcut to the list, not an automatically pinned Start tile.">Start-menu: Ja, et tydeligt valg under installation. Slået til som standard. Det giver en appgenvej i listen, ikke automatisk fastgørelse i Start.</li><li data-da="Skrivebord: Valgfrit under installation, slået fra som standard." data-en="Desktop: Optional during setup, off by default.">Skrivebord: Valgfrit under installation, slået fra som standard.</li><li data-da="Proceslinje: Ikke et løfte eller et flueben i installationen. Efter første start vises en rolig vejledning. En rigtig app kan kun bruge Windows’ godkendte forespørgsel, når funktionen er understøttet og brugeren selv beder om det." data-en="Taskbar: Not a promise or checkbox in setup. After first launch, show a calm guide. A real app may use the supported Windows approval request only when the feature is available and the user explicitly asks.">Proceslinje: Ikke et løfte eller et flueben i installationen. Efter første start vises en rolig vejledning. En rigtig app kan kun bruge Windows’ godkendte forespørgsel, når funktionen er understøttet og brugeren selv beder om det.</li><li data-da="Start med Windows: Slået fra. Det er noget andet end en Start-menu-genvej og kræver et separat, bevidst valg, hvis produktet har brug for det." data-en="Launch with Windows: Off. This differs from a Start menu shortcut and needs a separate, deliberate choice if the product requires it.">Start med Windows: Slået fra. Det er noget andet end en Start-menu-genvej og kræver et separat, bevidst valg, hvis produktet har brug for det.</li></ul><p><a href="https://learn.microsoft.com/en-us/windows/apps/develop/windows-integration/pin-to-taskbar" target="_blank" rel="noopener noreferrer" data-da="Microsoft: regler for fastgørelse til proceslinjen ↗" data-en="Microsoft: taskbar pinning rules ↗">Microsoft: regler for fastgørelse til proceslinjen ↗</a></p></div>
+    </section>
+    <section id="data-and-requirements" class="demo-reference">
+      <h2 data-da="Om data og krav" data-en="About data and requirements">Om data og krav</h2>
+      <p data-da="Sikkerhedsvurdering: Dette er en browserdemo. Den installerer intet, opretter ingen genveje og beder ikke om administratorrettigheder. Installationens trin og fremdrift er simulerede. Kun når du vælger Hent SVG, hentes en fil, som er genereret lokalt i browseren." data-en="Safety assessment: This is a browser demo. It installs nothing, creates no shortcuts and requests no administrator privileges. Setup steps and progress are simulated. Only when you choose Download SVG is a file downloaded, generated locally in the browser.">Sikkerhedsvurdering: Dette er en browserdemo. Den installerer intet, opretter ingen genveje og beder ikke om administratorrettigheder. Installationens trin og fremdrift er simulerede. Kun når du vælger Hent SVG, hentes en fil, som er genereret lokalt i browseren.</p>
+      <p data-da="Dine valg ligger kun i hukommelsen og nulstilles, når siden genindlæses. Intet uploades. Når siden bruges online, henter browseren sidens filer fra hjemmesidens hosting. Microsoft-linket åbner en ekstern side, når du vælger det." data-en="Your choices stay in memory and reset on reload. Nothing is uploaded. Online, the browser retrieves page files from the website hosting. The Microsoft link opens an external page when you choose it.">Dine valg ligger kun i hukommelsen og nulstilles, når siden genindlæses. Intet uploades. Når siden bruges online, henter browseren sidens filer fra hjemmesidens hosting. Microsoft-linket åbner en ekstern side, når du vælger det.</p>
+      <p data-da="Dependencies: Lokal HTML, CSS, JavaScript, SVG og de medfølgende Inter- og Nunito-skrifttyper. Ingen eksterne pakker, CDN eller konto. En moderne browser med JavaScript kræves til interaktionen og SVG-download. Uden JavaScript kan målene og reglerne stadig læses. Manglende skrifttyper erstattes af systemskrifter." data-en="Dependencies: Local HTML, CSS, JavaScript, SVG and the bundled Inter and Nunito fonts. No external packages, CDN or account. A modern browser with JavaScript is needed for interaction and SVG download. Without JavaScript, dimensions and rules remain readable. System fonts replace unavailable bundled fonts.">Dependencies: Lokal HTML, CSS, JavaScript, SVG og de medfølgende Inter- og Nunito-skrifttyper. Ingen eksterne pakker, CDN eller konto. En moderne browser med JavaScript kræves til interaktionen og SVG-download. Uden JavaScript kan målene og reglerne stadig læses. Manglende skrifttyper erstattes af systemskrifter.</p>
+    </section>
+    <noscript><p class="demo-nojs">Demoen kræver JavaScript. Mål, regler og forklaringer kan læses nedenfor. / The demo needs JavaScript. Dimensions, rules and explanations are readable below.</p></noscript>
+  </main>
+</body>
+</html>
