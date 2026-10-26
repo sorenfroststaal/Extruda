@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F5F0E8">
-  <meta name="description" content="Lav kort til din fysiske planlægningstavle. Vælg ugedage, ikoner og egen tekst, og print udklipsark med dine kortmål.">
+  <meta name="description" content="Lav kort til din fysiske planlægningstavle. Vælg retter fra databasen, ugedage, ikoner og egen tekst, og print udklipsark med dine kortmål.">
   <title>Open Planner · extruda</title>
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/tokens/extruda.css">
   <link rel="stylesheet" href="./styles.css">
-  <script type="module" src="./app.js"></script>
+  <link rel="stylesheet" href="./catalog.css">
+  <script type="module" src="./app-v2.js"></script>
 </head>
 <body>
   <header class="site-header screen-only"><a href="https://extruda.dk/#projects" aria-label="Til extrudas projekter"><img src="./assets/logos/extruda-logo-horizontal-color.svg" alt="extruda" width="180" height="60"></a><a class="back-link" href="https://extruda.dk/#projects">Alle projekter <span aria-hidden="true">↗</span></a></header>
   <main>
     <section class="intro screen-only">
       <div class="intro-title"><img src="./assets/icons/extruda-calendar.svg" alt="" width="80" height="80"><div><p class="eyebrow">Fra idé til hverdag</p><h1>Open Planner</h1></div><span class="version">Første version</span></div>
-      <p class="lead">Små kort. Mere overblik.</p><p>Lav ugedage og aktivitetskort til din planlægningstavle. Vælg mål, tilføj indhold, og print dine ark til udklip.</p>
+      <p class="lead">Små kort. Mere overblik.</p><p>Vælg retter fra databasen, lav ugedage og aktivitetskort, og print dine ark til udklip. Du kan også tilføje dine egne retter med billede og opskrift.</p>
     </section>
 
     <div class="workspace">
@@ -28,8 +29,30 @@
           <label for="orientation">A4-ark<select id="orientation"><option value="portrait">Stående · 210 × 297 mm</option><option value="landscape">Liggende · 297 × 210 mm</option></select></label>
           <div class="two-fields"><label for="color">Kortfarve<select id="color"><option value="petrol">Petrol</option><option value="apricot">Abrikos</option><option value="mono">Sort / hvid</option></select></label><label for="copies">Sæt / kopier<input id="copies" type="number" min="1" max="20" step="1" value="1" required></label></div>
         </section>
+        <section class="panel dish-panel">
+          <h2><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#images"></use></svg>2. Vælg retter</h2>
+          <p class="help">Tryk “Lav kort” for at bruge en ret. Retter og ændringer gemmes i denne browser.</p>
+          <label for="dish-search">Søg i databasen<input id="dish-search" type="search" placeholder="Søg efter en ret" autocomplete="off"></label>
+          <div class="section-heading dish-toolbar"><span id="dish-count" class="help"></span><button id="new-dish" type="button" class="text-button">+ Ny ret</button></div>
+          <div id="dish-list" class="dish-list" aria-live="polite"></div>
+          <details id="dish-editor" class="dish-editor">
+            <summary>Tilføj eller rediger en ret</summary>
+            <form id="dish-form">
+              <input id="dish-id" type="hidden">
+              <label for="dish-name">Navn<input id="dish-name" maxlength="120" required></label>
+              <label for="dish-image">Billede <span>PNG, JPEG eller WebP</span><input id="dish-image" type="file" accept="image/png,image/jpeg,image/webp"></label>
+              <div id="dish-image-preview" class="dish-image-preview" aria-live="polite"></div>
+              <label for="dish-ingredients">Ingredienser <span>én pr. linje</span><textarea id="dish-ingredients" rows="5" maxlength="60000" placeholder="500 g ...&#10;1 spsk ..."></textarea></label>
+              <label for="dish-method">Opskrift / fremgangsmåde<textarea id="dish-method" rows="7" maxlength="40000" placeholder="Beskriv trin for trin ..."></textarea></label>
+              <div class="dish-form-actions"><button class="secondary" type="submit">Gem ret</button><button id="delete-dish" class="text-button danger" type="button" hidden>Slet ret</button></div>
+            </form>
+          </details>
+          <div class="database-actions"><button id="export-dishes" class="secondary" type="button">Hent database</button><label class="secondary file-button" for="import-dishes">Åbn database<input type="file" id="import-dishes" accept=".json,application/json"></label><button id="reset-dishes" class="text-button" type="button">Nulstil lokalt</button></div>
+          <p id="dish-status" class="feedback" role="status"></p>
+          <p class="help database-note">Websiden kan ikke skrive direkte tilbage til GitHub. Hent JSON-filen, når ændringer skal lægges i repositoryet.</p>
+        </section>
         <section class="panel">
-          <h2><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#plus"></use></svg>2. Tilføj indhold</h2>
+          <h2><svg aria-hidden="true"><use href="./assets/icons/ui-sprite.svg#plus"></use></svg>3. Tilføj andet</h2>
           <fieldset><legend>Ugedage</legend><div id="weekdays" class="weekday-picker"></div></fieldset>
           <button id="add-days" class="secondary full" type="button">Tilføj valgte ugedage</button>
           <div class="divider"></div>

@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "sprog": "da",
+  "opdateret": "2026-10-26",
+  "standardkortMm": {
+    "bredde": 69,
+    "hoejde": 66
+  },
+  "retter": [
+    {
+      "id": "pasta-med-kodsovs",
+      "navn": "Pasta med kødsovs",
+      "billede": "./data/images/pasta-med-kodsovs-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "karbonader",
+      "navn": "Karbonader",
+      "billede": "./data/images/karbonader-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "boller-i-karry",
+      "navn": "Boller i karry",
+      "billede": "./data/images/boller-i-karry-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "tomatsuppe",
+      "navn": "Tomatsuppe",
+      "billede": "./data/images/tomatsuppe-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "frysepizza",
+      "navn": "Frysepizza",
+      "billede": "./data/images/frysepizza-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "pizzamands-pizza",
+      "navn": "Pizzamands pizza",
+      "billede": "./data/images/pizzamands-pizza-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "pasta-og-polser",
+      "navn": "Pasta og pølser",
+      "billede": "./data/images/pasta-og-polser-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "lasagne",
+      "navn": "Lasagne",
+      "billede": "./data/images/lasagne-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "kyllingelar",
+      "navn": "Kyllingelår",
+      "billede": "./data/images/kyllingelar-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "kyllingeburgere",
+      "navn": "Kyllingeburgere",
+      "billede": "./data/images/kyllingeburgere-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "rugbrod-toast",
+      "navn": "Rugbrød / toast",
+      "billede": "./data/images/rugbrod-toast-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "pokeballs",
+      "navn": "Pokeballs",
+      "billede": "./data/images/pokeballs-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "risengrod",
+      "navn": "Risengrød",
+      "billede": "./data/images/risengrod-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "hotdogs",
+      "navn": "Hotdogs",
+      "billede": "./data/images/hotdogs-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "panini",
+      "navn": "Panini",
+      "billede": "./data/images/panini-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "flodekartofler",
+      "navn": "Flødekartofler",
+      "billede": "./data/images/flodekartofler-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "tarteletter",
+      "navn": "Tarteletter",
+      "billede": "./data/images/tarteletter-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "braendende-kaerlighed",
+      "navn": "Brændende kærlighed",
+      "billede": "./data/images/braendende-kaerlighed-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "kartoffelmos-med-bacon-polse-flodesovs",
+      "navn": "Kartoffelmos med bacon, pølse og flødesovs",
+      "billede": null,
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "havregrod",
+      "navn": "Havregrød",
+      "billede": "./data/images/havregrod-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "indbagte-rejer-med-ris",
+      "navn": "Indbagte rejer med ris",
+      "billede": null,
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "vietnamesisk-oksekod-og-risret",
+      "navn": "Vietnamesisk oksekød og risret",
+      "billede": "./data/images/vietnamesisk-oksekod-og-risret-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "stegt-flaesk-og-persillesovs",
+      "navn": "Stegt flæsk og persillesovs",
+      "billede": "./data/images/stegt-flaesk-og-persillesovs-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "frikadeller-med-kartofler",
+      "navn": "Frikadeller med kartofler",
+      "billede": "./data/images/frikadeller-med-kartofler-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "forloren-hare",
+      "navn": "Forloren hare",
+      "billede": "./data/images/forloren-hare-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "ristaffel",
+      "navn": "Ristaffel",
+      "billede": "./data/images/ristaffel-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "macaroni-pa-panden",
+      "navn": "Macaroni på panden",
+      "billede": "./data/images/macaroni-pa-panden-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "frikadelle-burgere",
+      "navn": "Frikadelle burgere",
+      "billede": "./data/images/frikadelle-burgere-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "hakkebof-med-log",
+      "navn": "Hakkebøf med løg",
+      "billede": "./data/images/hakkebof-med-log-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "pastasalat",
+      "navn": "Pastasalat",
+      "billede": "./data/images/pastasalat-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "wraps",
+      "navn": "Wraps",
+      "billede": "./data/images/wraps-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "flaeskesteg",
+      "navn": "Flæskesteg",
+      "billede": "./data/images/flaeskesteg-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "millionbof",
+      "navn": "Millionbøf",
+      "billede": "./data/images/millionbof-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "pasta-carbonara",
+      "navn": "Pasta carbonara",
+      "billede": "./data/images/pasta-carbonara-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "hjemmelavede-burgere",
+      "navn": "Hjemmelavede burgere",
+      "billede": "./data/images/hjemmelavede-burgere-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "flaeskestegs-burgere",
+      "navn": "Flæskestegs burgere",
+      "billede": "./data/images/flaeskestegs-burgere-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "karrysuppe-med-ris-og-kylling",
+      "navn": "Karrysuppe med ris og kylling",
+      "billede": "./data/images/karrysuppe-med-ris-og-kylling-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "macaroni-cheese",
+      "navn": "Macaroni cheese",
+      "billede": "./data/images/macaroni-cheese-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "ris-pa-panden",
+      "navn": "Ris på panden",
+      "billede": "./data/images/ris-pa-panden-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    },
+    {
+      "id": "pommesfrites-og-nuggets",
+      "navn": "Pommesfrites og nuggets",
+      "billede": "./data/images/pommesfrites-og-nuggets-cirkel.png",
+      "ingredienser": [],
+      "fremgangsmaade": ""
+    }
+  ]
+}

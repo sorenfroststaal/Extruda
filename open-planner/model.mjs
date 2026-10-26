@@ -2,6 +2,7 @@ export const DAYS = ['Mandag','Tirsdag','Onsdag','Torsdag','Fredag','Lørdag','S
 export const ICONS = {none:'Uden ikon',sun:'Sol / morgen',moon:'Måne / aften',home:'Hjem',tasks:'Opgaver',calendar:'Kalender',community:'Sammen',guides:'Læsning',tools:'Praktisk',images:'Billeder',notes:'Noter',play:'Pause / leg',check:'Færdig'};
 export const MAX_CARDS = 200;
 export const DEFAULT = {version:1,cardWidth:69,cardHeight:66,orientation:'portrait',color:'petrol',copies:1,cards:DAYS.map((text)=>({text,icon:'none'}))};
+const SAFE_IMAGE=/^(\.\/data\/images\/[a-z0-9-]+\.(png|jpe?g|webp)|data:image\/(png|jpeg|webp);base64,[a-zA-Z0-9+/=]+)$/;
 export function validate(value) {
   if (!value || value.version !== 1) throw new Error('Filen skal være et Open Planner-kortsæt (version 1).');
   for (const field of ['cardWidth','cardHeight']) if (typeof value[field] !== 'number' || !Number.isFinite(value[field]) || value[field]<20 || value[field]>277) throw new Error('Kortmål skal være mellem 20 og 277 mm.');
@@ -10,8 +11,10 @@ export function validate(value) {
   if (!Number.isInteger(value.copies) || value.copies<1 || value.copies>20) throw new Error('Antal kopier skal være et helt tal fra 1 til 20.');
   if (!Array.isArray(value.cards) || value.cards.length>MAX_CARDS || value.cards.length*value.copies>MAX_CARDS) throw new Error('Der er plads til højst 200 kort inklusive kopier.');
   const cards = value.cards.map(c=>{
-    if(!c || typeof c.text!=='string' || c.text.length>80 || !Object.hasOwn(ICONS,c.icon) || (!c.text.trim() && c.icon==='none')) throw new Error('Hvert kort skal have tekst (højst 80 tegn) eller et gyldigt ikon.');
-    return {text:c.text.trim(),icon:c.icon};
+    const image=typeof c?.image==='string'?c.image:'';
+    if(!c || typeof c.text!=='string' || c.text.length>80 || !Object.hasOwn(ICONS,c.icon) || (!c.text.trim() && c.icon==='none' && !image)) throw new Error('Hvert kort skal have tekst (højst 80 tegn), et gyldigt ikon eller et billede.');
+    if(image&&!SAFE_IMAGE.test(image))throw new Error('Et kort indeholder en ugyldig billedreference.');
+    return {text:c.text.trim(),icon:c.icon,image};
   });
   return {version:1,cardWidth:value.cardWidth,cardHeight:value.cardHeight,orientation:value.orientation,color:value.color,copies:value.copies,cards};
 }
