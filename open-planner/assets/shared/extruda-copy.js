@@ -19,6 +19,7 @@
   ];
   const normalize = value => value.trim().replace(/\s+/g, ' ');
   pairs.push(
+    ['Opskrift kan tilføjes','A recipe can be added'],['Foto','Photo'],['Intet billede valgt','No image selected'],['Forhåndsvisning af rettens billede','Dish image preview'],['Print A4 i 100 % / faktisk størrelse uden sidehoved og sidefod. Mål 50 mm-kontrolstregen, før du klipper.','Print A4 at 100% / actual size without browser headers and footers. Measure the 50 mm scale before cutting.'],
     ['Hent kopi med billeder','Download copy with images'],['Ved import/download vælger du selv, hvor kopien gemmes. Originale standardretter bliver ikke ændret.','When importing or downloading, you choose where the copy is saved. The original included dishes stay unchanged.'],['valgfrit, én pr. linje','optional, one per line'],['valgfrit','optional'],['Opskrift','Recipe'],['Anvend ret','Apply dish'],
     ['Vælg retter, tilføj kort, og print på A4. Kortene starter på 69 × 66 mm.','Choose dishes, add cards and print on A4. Cards start at 69 × 66 mm.'],
     ['Hvilke retter vil du bruge?','Which dishes would you like to use?'],
@@ -54,6 +55,8 @@
     if (target === 'en') {
       if (toEnglish.has(key)) return toEnglish.get(key);
       const plannerPatterns = [
+        [/^Tekst på kort (\d+)$/, (_,a) => `Text on card ${a}`],
+        [/^Fjern kort (\d+): (.*)$/, (_,a,b) => `Remove card ${a}: ${b}`],
         [/^(\d+) af (\d+) retter$/, (_,a,b) => `${a} of ${b} dishes`],
         [/^(\d+) ingredienser$/, (_,a) => `${a} ingredients`],
         [/^(\d+) kort · (\d+) ark · (.*)$/, (_,a,b,c) => `${a} cards · ${b} sheets · ${c}`],
@@ -91,7 +94,7 @@
     }
     document.querySelectorAll('[data-da][data-en]').forEach(n => {if (!n.closest('.sheet,.ex-utilities')) n.textContent = n.dataset[language];});
     document.querySelectorAll('[placeholder],[aria-label],[title],[alt]').forEach(n => {
-      if(n.closest(excluded)) return;
+      if(n.closest('script,style,svg,.sheet,.ex-utilities,.ex-about-dialog,template')) return;
       let record = attributes.get(n);
       if (!record) {record = {}; attributes.set(n, record);}
       for (const attr of ['placeholder','aria-label','title','alt']) {
