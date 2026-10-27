@@ -14,7 +14,7 @@ Duration: 3.6 seconds. Frame rate: 50 fps. Thickness click: 3.1 seconds.
 
 Light uses original colours on #F5F0E8. Dark uses a white logo on #252C2C,
 as specified by the design system. Black/white uses black on white. The black version uses white on pure #000000.
-The backgrounds are opaque. Videos do not contain alpha transparency.
+These four background versions are opaque. The transparent version below has true alpha.
 No audio is included in the still images. No GIF is included because GIF
 cannot carry the approved sound.
 
@@ -43,3 +43,24 @@ All geometry is rendered from vectors at delivery resolution, not upscaled
 from the review video. The original 1200 × 480 framing is retained at 3.2×.
 Original final logo geometry, motion, frame rate, duration and click timing
 are retained. Audio is taken from the approved clean synthesis.
+
+## Transparent overlay version
+
+- `extruda-logo-transparent-4k.mov`: 3840 × 1536, 50 fps, ProRes 4444 with
+  16-bit encoded alpha, 48 kHz stereo PCM audio. Use in an editor supporting
+  ProRes 4444 alpha. Set compositing/alpha interpretation to straight if needed.
+- `extruda-logo-transparent-web.webm`: 1920 × 768, 50 fps, VP9 alpha and Opus.
+  WebM transparency is browser-dependent; a decoder ignoring alpha may show
+  a black rectangle. The browser preview was checked in Chrome.
+- `extruda-logo-transparent-poster.{png,svg}`: transparent still images.
+
+Original logo colours and graphite wordmark are retained. These are intended
+for light or medium backgrounds; contrast depends on the image underneath.
+The checkerboard on the website is only a CSS preview and is not encoded.
+Motion, framing, 3.6-second duration and 3.1-second click are unchanged.
+MOV's PCM samples are identical to the approved WAV. No green-screen removal
+or background colour key is used. MP4/H.264 is not provided for this variant
+because the existing delivery codec does not retain an alpha channel.
+
+Rebuild using `node source/export-transparent.cjs` with the same local
+requirements, plus FFmpeg prores_ks and VP9 alpha encoding support.

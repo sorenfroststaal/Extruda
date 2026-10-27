@@ -42,6 +42,18 @@
       "name": "extruda-logo-black-web.webm",
       "bytes": 293165,
       "sha256": "6a112826ff7aca5d7a20be1091b725ee7dd6d71fb2e1ea593d2e1604453bc11e"
+    },
+    {
+      "name": "extruda-logo-transparent-4k.mov",
+      "bytes": 45752046,
+      "sha256": "d4b6ea707fb37361474c6a14ea0a22faa490b1caeb0f228fd08f8da6b9237fdc",
+      "alpha": true
+    },
+    {
+      "name": "extruda-logo-transparent-web.webm",
+      "bytes": 483850,
+      "sha256": "04adf187b3628a87ee0942491d88e940be24fce821af130158d00ce5f2d0f751",
+      "alpha": true
     }
   ]
 }
