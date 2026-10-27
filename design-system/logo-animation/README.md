@@ -5,15 +5,15 @@ Duration: 3.6 seconds. Frame rate: 50 fps. Thickness click: 3.1 seconds.
 
 ## Files
 
-- `extruda-logo-{light,dark,bw}-4k.mp4`: 3840 × 1536, H.264, AAC 320 kbps.
-- `extruda-logo-{light,dark,bw}-web.webm`: 1920 × 768, VP9, Opus 192 kbps.
-- `extruda-logo-{light,dark,bw}-poster.png`: 3840 × 1536 still image.
-- `extruda-logo-{light,dark,bw}-poster.svg`: scalable still image.
+- `extruda-logo-{light,dark,bw,black}-4k.mp4`: 3840 × 1536, H.264, AAC 320 kbps.
+- `extruda-logo-{light,dark,bw,black}-web.webm`: 1920 × 768, VP9, Opus 192 kbps.
+- `extruda-logo-{light,dark,bw,black}-poster.png`: 3840 × 1536 still image.
+- `extruda-logo-{light,dark,bw,black}-poster.svg`: scalable still image.
 - `extruda-logo-audio.wav`: 48 kHz stereo, 16-bit PCM, lossless approved audio.
 - `extruda-logo-animation.zip`: complete delivery, including source and this guide.
 
 Light uses original colours on #F5F0E8. Dark uses a white logo on #252C2C,
-as specified by the design system. Black/white uses black on white.
+as specified by the design system. Black/white uses black on white. The black version uses white on pure #000000.
 The backgrounds are opaque. Videos do not contain alpha transparency.
 No audio is included in the still images. No GIF is included because GIF
 cannot carry the approved sound.
