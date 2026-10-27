@@ -1,0 +1,37 @@
+{
+  "durationSeconds": 3.6,
+  "fps": 50,
+  "clickSeconds": 3.1,
+  "files": [
+    {
+      "name": "extruda-logo-light-4k.mp4",
+      "bytes": 321518,
+      "sha256": "5734a51d6871b049fdef9296bfda3dcbe889d2b9dd2089144eec0c37cd1c0e09"
+    },
+    {
+      "name": "extruda-logo-light-web.webm",
+      "bytes": 235617,
+      "sha256": "1b932b77b9df7a94ee97a54fdd21d9952d5db679a13f4c647a199185919d22dc"
+    },
+    {
+      "name": "extruda-logo-dark-4k.mp4",
+      "bytes": 315272,
+      "sha256": "c92e91ac8d332fad696d221d0a13837b47ef3da4c91c03eb5da7f88506510f6c"
+    },
+    {
+      "name": "extruda-logo-dark-web.webm",
+      "bytes": 267728,
+      "sha256": "fe40801ef2427a54c3028f05ee899588cbd086508cbfd053c1d59201f4a65b1c"
+    },
+    {
+      "name": "extruda-logo-bw-4k.mp4",
+      "bytes": 315512,
+      "sha256": "531bafce6a838840de03eef4ce34d7150978389d904671d1a8294a614954e58a"
+    },
+    {
+      "name": "extruda-logo-bw-web.webm",
+      "bytes": 290912,
+      "sha256": "3b1259cca8b1b4e086835d985461bebfff70efc1773e33aa3286c58aa41f0555"
+    }
+  ]
+}
