@@ -482,6 +482,14 @@ section.resume-section {
     height: 78%;
 }
 
+.array-silhouette {
+    width: 78%;
+    height: 78%;
+    background: var(--ex-apricot);
+    -webkit-mask: url("../Assets/Brand/array-lampshade.svg") center / contain no-repeat;
+    mask: url("../Assets/Brand/array-lampshade.svg") center / contain no-repeat;
+}
+
 .project-preview-copy p:first-child {
     margin-bottom: 0.75rem;
     font-size: 1.05rem;
@@ -853,3 +861,66 @@ section.resume-section {
 @media(min-width:992px){#sideNav .navbar-toggler{display:none}}@media(max-width:640px){.project-summary{grid-template-columns:1.75rem minmax(0,1fr);gap:.75rem}.project-panel{padding-left:0}.project-preview{grid-template-columns:4rem minmax(0,1fr);gap:1rem}.project-preview-copy p:first-child{font-size:1rem}.project-preview-icon{width:4rem}.project-title strong{font-size:1.125rem}}
 
 #sideNav .navbar-nav .nav-item .nav-link{min-height:44px;display:flex;align-items:center}@media(min-width:992px){#sideNav .navbar-nav .nav-item .nav-link{justify-content:center}}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: var(--ex-cream);
+        background: #252c2c;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .lead {
+        color: var(--ex-cream);
+    }
+
+    #sideNav,
+    .bg-primary,
+    #sideNav .navbar-collapse {
+        background: var(--ex-graphite) !important;
+    }
+
+    #about,
+    #playground {
+        background: #252c2c;
+    }
+
+    #projects {
+        background: #2d3535;
+    }
+
+    .section-intro,
+    .meta-line,
+    .project-meta,
+    .site-data-note p {
+        color: #c1cbc7;
+    }
+
+    a,
+    .text-primary,
+    .project-panel > .project-more-toggle {
+        color: #9dc7ba !important;
+    }
+
+    a:hover,
+    a:focus,
+    .project-panel > .project-more-toggle:hover {
+        color: var(--ex-apricot) !important;
+    }
+
+    .project-card,
+    .project-preview-icon,
+    .project-preview-image {
+        border-color: #667371;
+        background: #252c2c;
+    }
+
+    .project-summary,
+    .project-card + .project-card {
+        border-color: #667371;
+    }
+}
