@@ -1,3 +1,5 @@
+import {imageReference} from './images.mjs?v=20261027-db1';
+import {DISH_BY_ID} from './dishes.mjs?v=20261027-db1';
 export const DAYS = ['Mandag','Tirsdag','Onsdag','Torsdag','Fredag','Lørdag','Søndag'];
 export const ICONS = {none:'Uden ikon',sun:'Sol / morgen',moon:'Måne / aften',home:'Hjem',tasks:'Opgaver',calendar:'Kalender',community:'Sammen',guides:'Læsning',tools:'Praktisk',images:'Billeder',notes:'Noter',play:'Pause / leg',check:'Færdig'};
 export const MAX_CARDS = 200;
@@ -7,16 +9,27 @@ export function validate(value) {
   if (!value || value.version !== 1) throw new Error('Filen skal være et Open Planner-kortsæt (version 1).');
   for (const field of ['cardWidth','cardHeight']) if (typeof value[field] !== 'number' || !Number.isFinite(value[field]) || value[field]<20 || value[field]>277) throw new Error('Kortmål skal være mellem 20 og 277 mm.');
   if (!['portrait','landscape'].includes(value.orientation)) throw new Error('Vælg stående eller liggende A4.');
-  if (!['petrol','apricot','mono'].includes(value.color)) throw new Error('Vælg en af kortfarverne.');
+  if (!['petrol','apricot','mono','custom'].includes(value.color)) throw new Error('Vælg en af kortfarverne.');
+  const exportStyle={};
+  for(const [key,fallback]of [['showBranding',true],['showQr',true],['showFooter',true],['includeMetadata',true]]){if(value[key]!==undefined&&typeof value[key]!=='boolean')throw new Error('Eksportindstillingerne er ugyldige.');exportStyle[key]=value[key]??fallback;}
+  if(!exportStyle.showBranding)exportStyle.showQr=false;
+  for(const [key,fallback]of [['paperColor','#F5F0E8'],['inkColor','#28645F']]){const hex=value[key]??fallback;if(typeof hex!=='string'||!/^#[0-9a-f]{6}$/i.test(hex))throw new Error('Vælg en gyldig kortfarve.');exportStyle[key]=hex;}
   if (!Number.isInteger(value.copies) || value.copies<1 || value.copies>20) throw new Error('Antal kopier skal være et helt tal fra 1 til 20.');
   if (!Array.isArray(value.cards) || value.cards.length>MAX_CARDS || value.cards.length*value.copies>MAX_CARDS) throw new Error('Der er plads til højst 200 kort inklusive kopier.');
   const cards = value.cards.map(c=>{
-    const image=typeof c?.image==='string'?c.image:'';
+    let image=typeof c?.image==='string'?c.image:'';
+    if(c?.dishId!==undefined){const legacyDish=DISH_BY_ID.get(c.dishId);if(!legacyDish)throw new Error('Kortsættet indeholder en ukendt ret.');if(!image&&legacyDish.image)image='./'+legacyDish.image;}
+    image=image.replace(/^\.\/data\/images\/([a-z0-9-]+)-cirkel\.png$/, './assets/food/$1.webp');
     if(!c || typeof c.text!=='string' || c.text.length>80 || !Object.hasOwn(ICONS,c.icon) || (!c.text.trim() && c.icon==='none' && !image)) throw new Error('Hvert kort skal have tekst (højst 80 tegn), et gyldigt ikon eller et billede.');
     if(image&&!SAFE_IMAGE.test(image))throw new Error('Et kort indeholder en ugyldig billedreference.');
-    return {text:c.text.trim(),icon:c.icon,image,kind:c.kind==='food'||image?'food':''};
+    if(image)imageReference(image);
+    if((c.kind==='food'||c.dishId||image)&&(value.cardWidth<50||value.cardHeight<50))throw new Error('Madkort kræver mindst 50 × 50 mm.');
+    const optional={};
+    if(c.dishId)optional.dishId=c.dishId;
+    for(const [key,max]of [['ingredients',5000],['recipe',10000]])if(c[key]!==undefined){if(typeof c[key]!=='string'||c[key].length>max)throw new Error('Noterne til kortet er ugyldige eller for lange.');optional[key]=c[key];}
+    return {text:c.text.trim(),icon:c.icon,image,kind:c.kind==='food'||c.dishId||image?'food':'',...optional};
   });
-  return {version:1,cardWidth:value.cardWidth,cardHeight:value.cardHeight,orientation:value.orientation,color:value.color,copies:value.copies,cards};
+  return {version:1,cardWidth:value.cardWidth,cardHeight:value.cardHeight,orientation:value.orientation,color:value.color,copies:value.copies,cards,...exportStyle};
 }
 export function layout(value) {
   const state = validate(value);

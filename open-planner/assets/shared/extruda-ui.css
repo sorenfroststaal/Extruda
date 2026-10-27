@@ -1,0 +1,31 @@
+/* Three shared header controls, matching the camera-app pattern. */
+:root{--ui-bg:#f5f0e8;--ui-surface:#fff;--ui-text:#343b3b;--ui-muted:#586361;--ui-border:#d9d5cd;--ui-action:#28645f;--ui-focus:#28645f}
+[data-theme=dark]{color-scheme:dark;--ui-bg:#252c2c;--ui-surface:#343b3b;--ui-text:#f5f0e8;--ui-muted:#c1cbc7;--ui-border:#667371;--ui-action:#9dc7ba;--ui-focus:#e8b08e}
+[data-theme=light]{color-scheme:light}
+.ex-utilities{display:flex;align-items:center;gap:8px;flex:none;margin-left:auto;position:relative;z-index:35;color:var(--ui-text);font:600 14px/1.4 Inter,system-ui,sans-serif}
+.ex-utility-wrap{position:relative}
+.ex-utilities .ex-utility-button{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:48px;height:48px;min-height:48px;margin:0;padding:11px;border:1px solid var(--ui-border);border-radius:8px;background:var(--ui-surface);color:var(--ui-text);font:600 14px/1.4 Inter,system-ui,sans-serif;cursor:pointer;text-decoration:none;box-shadow:none}
+.ex-utilities .ex-utility-button:hover,.ex-utilities .ex-utility-button[aria-expanded=true]{border-color:var(--ui-action);background:var(--ui-bg)}
+.ex-utilities svg{display:block;width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.ex-utilities :focus-visible,.ex-about-dialog :focus-visible{outline:3px solid var(--ui-focus);outline-offset:3px}
+.ex-utility-panel{position:absolute;top:calc(100% + 8px);right:0;width:208px;max-width:calc(100vw - 40px);padding:12px;border:1px solid var(--ui-border);border-radius:12px;background:var(--ui-surface);color:var(--ui-text);box-shadow:none;z-index:40}
+.ex-utility-panel[hidden]{display:none!important}
+.ex-utility-panel fieldset{margin:0;padding:0;border:0;min-width:0}
+.ex-utility-panel legend{float:none;width:auto;padding:0;margin:0 0 8px;font:600 14px/1.4 Inter,system-ui,sans-serif;color:var(--ui-text)}
+.ex-utility-panel label{display:flex;align-items:center;gap:10px;min-height:44px;margin:0;padding:8px 4px;font:400 14px/1.4 Inter,system-ui,sans-serif;color:var(--ui-text);cursor:pointer}
+.ex-utility-panel label>span:last-child:not(:only-child){margin-left:auto;color:var(--ui-muted)}
+.ex-utility-panel input[type=radio]{display:inline-block;appearance:auto;width:18px;height:18px;min-height:18px;margin:0;padding:0;flex:none;accent-color:var(--ui-action)}
+.ex-about-dialog{box-sizing:border-box;width:min(600px,calc(100% - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:24px;border:1px solid var(--ui-border);border-radius:12px;background:var(--ui-surface);color:var(--ui-text);font:400 16px/1.6 Inter,system-ui,sans-serif;overflow:auto;text-align:left}
+.ex-about-dialog::backdrop{background:rgb(0 0 0/.65)}
+.ex-about-heading{display:flex;align-items:start;gap:20px;justify-content:space-between;margin-bottom:24px}
+.ex-about-heading h2{margin:0;font:800 24px/1.25 Nunito,system-ui,sans-serif;color:var(--ui-text)}
+.ex-utility-close{min-height:44px;padding:8px 12px;flex:none;border:1px solid var(--ui-border);border-radius:8px;background:var(--ui-surface);color:var(--ui-text);font:600 14px/1.4 Inter,system-ui,sans-serif;cursor:pointer}
+.ex-about-dialog h3{margin:24px 0 8px;color:var(--ui-text);font:800 20px/1.3 Nunito,system-ui,sans-serif}
+.ex-about-dialog p{margin:0 0 16px;color:var(--ui-text);max-width:70ch}.ex-about-dialog a{color:var(--ui-action)}
+.ex-about-dialog .ex-preference-note{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--ui-border);font-size:13px;color:var(--ui-muted)}
+.ex-controls-header{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ex-home-header{display:flex;justify-content:flex-end;padding:16px 32px;position:relative;z-index:40;border-bottom:1px solid var(--ui-border);background:var(--ui-bg)}
+@media(min-width:992px){.ex-home-header{margin-left:17rem}}
+@media(max-width:991px){.ex-home-header{margin-top:0;padding-top:16px}}
+@media(max-width:640px){.ex-controls-header{gap:16px}.ex-controls-header>.ex-utilities{margin-left:0;flex-basis:100%;justify-content:flex-end}.ex-home-header{padding:12px 20px}.ex-utility-panel{position:fixed;top:auto;right:20px;margin-top:8px}.ex-about-dialog{padding:20px}.ex-about-heading{gap:12px}.ex-about-heading h2{font-size:22px}}
+@media print{.ex-utilities,.ex-home-header,.ex-about-dialog{display:none!important}}

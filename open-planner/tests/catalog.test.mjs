@@ -32,5 +32,5 @@ test('en ret kan omdannes til et gyldigt printkort',async()=>{
 });
 
 test('eksterne billedadresser afvises',()=>{
-  assert.throws(()=>validateDatabase({version:1,retter:[{id:'test',navn:'Test',billede:'https://example.com/a.png',ingredienser:[],fremgangsmaade:''}]}),/ikke et lokalt/);
+  assert.throws(()=>validateDatabase({version:1,retter:[{id:'test',navn:'Test',billede:'https://example.com/a.png',ingredienser:[],fremgangsmaade:''}]}),/Billedet/);
 });

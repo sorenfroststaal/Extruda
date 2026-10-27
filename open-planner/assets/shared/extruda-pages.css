@@ -1,0 +1,62 @@
+/* Theme migration for existing pages. Printed sheets retain their own colours. */
+[data-extruda-page=home],[data-extruda-page=books-info],[data-extruda-page=array],[data-extruda-page=books]{--ex-cream:var(--ui-bg);--ex-white:var(--ui-surface);--ex-graphite:var(--ui-text);--ex-muted:var(--ui-muted);--ex-border:var(--ui-border);--ex-petrol:var(--ui-action);--ex-text:var(--ui-text);--ex-bg:var(--ui-bg);--ex-surface:var(--ui-surface);--ex-action:var(--ui-action)}
+[data-extruda-page] body{background:var(--ui-bg);color:var(--ui-text)}
+[data-extruda-page=home] #sideNav{background:#343b3b!important}
+[data-extruda-page=home] #sideNav .navbar-collapse{background:#343b3b}
+[data-extruda-page=home] #sideNav .navbar-nav .nav-item .nav-link:hover,[data-extruda-page=home] #sideNav .navbar-nav .nav-item .nav-link.active{color:#fff}
+[data-extruda-page=home] .bg-primary{background:#343b3b!important}
+[data-extruda-page=home] .btn-primary,[data-extruda-page=home] .btn-outline-primary:hover,[data-extruda-page=home] .social-icon,[data-extruda-page=home] .download-button{color:var(--ui-surface)}
+[data-extruda-page=home][data-theme=dark] .playground-layout,[data-extruda-page=home][data-theme=dark] .contact-panel{background:#343b3b;color:#f5f0e8}
+[data-extruda-page=home][data-theme=dark] .btn-primary,[data-extruda-page=home][data-theme=dark] .btn-outline-primary:hover{color:#182625}
+[data-extruda-page=home][data-theme=dark] .text-primary{color:var(--ui-action)!important}
+[data-extruda-page=home] .ex-home-header{margin-left:0}
+[data-extruda-page=home] .ex-home-header .ex-utilities{margin-left:auto}
+[data-extruda-page=home][data-theme=dark] #contact{background:var(--ui-bg)}
+[data-extruda-page=home][data-theme=dark] #contact h2,[data-extruda-page=home][data-theme=dark] #contact p{color:var(--ui-text)}
+[data-extruda-page=dummy] .demo-app-header{flex-wrap:wrap}
+[data-extruda-page=books-info] .panel,[data-extruda-page=books-info] table{background:var(--ui-surface);border-radius:12px}
+[data-extruda-page=books-info] .example,[data-extruda-page=books-info] .status{color:#343b3b}
+[data-extruda-page=books-info] .example h2{color:#343b3b}
+[data-extruda-page=array] a{color:var(--ui-action)}
+[data-extruda-page=array] header span,[data-extruda-page=array] .eyebrow,[data-extruda-page=array] figcaption,[data-extruda-page=array] .small{color:var(--ui-muted)}
+[data-extruda-page=array] section,[data-extruda-page=array] footer,[data-extruda-page=array] .facts span,[data-extruda-page=array] .steps li{border-color:var(--ui-border)}
+[data-extruda-page=array] .button{color:#fff;background:#28645f;border-radius:8px}
+[data-extruda-page=array] .note{color:#343b3b}
+[data-extruda-page=array] .hero img{border-radius:16px}
+[data-extruda-page=array] .gallery img,[data-extruda-page=array] .note{border-radius:12px}
+[data-extruda-page=array] .together{border-radius:16px}
+[data-extruda-page=array] .together .eyebrow{color:#e8b08e}
+[data-extruda-page=planner] .site-header{flex-wrap:wrap}
+[data-extruda-page=planner] .panel,[data-extruda-page=planner] .dish-editor,[data-extruda-page=planner] .dish-image-preview{background:var(--ui-surface);border-color:var(--ui-border);border-radius:12px}
+[data-extruda-page=planner] input:not([type=checkbox]),[data-extruda-page=planner] textarea,[data-extruda-page=planner] select{background:var(--ui-surface);color:var(--ui-text);border-color:var(--ui-border);border-radius:8px}
+[data-extruda-page=planner] .output{background:var(--ui-bg);border-radius:12px}
+[data-extruda-page=planner] .print-help,[data-extruda-page=planner] .next-step{background:var(--ui-surface);color:var(--ui-text);border:1px solid var(--ui-border);border-radius:12px}
+[data-extruda-page=planner] .dish-row{border-radius:8px}
+[data-extruda-page=planner] .secondary{border-radius:8px}
+[data-extruda-page=planner] .text-button,[data-extruda-page=planner] .dish-edit,[data-extruda-page=planner] .sheet-heading button{color:var(--ui-action)}
+[data-extruda-page=planner] .dish-add{background:#28645f;color:#fff}
+[data-extruda-page=planner] .dish-thumb{background:var(--ui-surface);color:var(--ui-muted)}
+[data-extruda-page=books] .app-header{flex-wrap:wrap}
+[data-extruda-page=books] .settings,[data-extruda-page=books] .family,[data-extruda-page=books] .project-help,[data-extruda-page=books] .optional-settings,[data-extruda-page=books] .draft-recovery,[data-extruda-page=books] .toolbar,[data-extruda-page=books] .build-bar,[data-extruda-page=books] .mobile-dock{background:var(--ui-surface);color:var(--ui-text);border-color:var(--ui-border);border-radius:12px}
+[data-extruda-page=books] .settings input:not([type=radio]):not([type=checkbox]),[data-extruda-page=books] .settings select,[data-extruda-page=books] .settings textarea,[data-extruda-page=books] #search,[data-extruda-page=books] #preview-page{background:var(--ui-surface);color:var(--ui-text);border-color:var(--ui-border);border-radius:8px}
+[data-extruda-page=books] .choice-card{background:var(--ui-surface);color:var(--ui-text);border-color:var(--ui-border);border-radius:8px}
+[data-extruda-page=books] .choice-card:has(input:checked){background:var(--ui-bg);border-color:var(--ui-action)}
+[data-extruda-page=books] .family:has(.family-choice input:not(:checked)){background:var(--ui-bg)}
+[data-extruda-page=books] .settings-tabs button,[data-extruda-page=books] .view-switch button,[data-extruda-page=books] .history-actions button,[data-extruda-page=books] .actions button,[data-extruda-page=books] .toolbar button{color:var(--ui-text);border-color:var(--ui-border);background:var(--ui-surface);border-radius:8px}
+[data-extruda-page=books] .settings-tabs button[aria-selected=true],[data-extruda-page=books] .view-switch button[aria-pressed=true]{color:var(--ui-action);border-color:var(--ui-action)}
+[data-extruda-page=books] .sheet{background:#fff;color:#343b3b;color-scheme:light;--ex-graphite:#343b3b;--ex-petrol:#28645f;--ex-muted:#586361;--ex-border:#d9d5cd;--ex-white:#fff;--ex-cream:#f5f0e8}
+[data-extruda-page=books] .note,[data-extruda-page=books] .badge,[data-extruda-page=books] .choice-example{color:#343b3b}
+[data-extruda-page=books] .muted,[data-extruda-page=books] .project-help>p{color:var(--ui-muted)}
+[data-extruda-page=books] .settings-tabs,[data-extruda-page=books] .view-switch{background:var(--ui-surface)}
+[data-extruda-page=books] .settings .check:has(input:checked){background:var(--ui-bg);color:var(--ui-text);border-color:var(--ui-action)}
+[data-extruda-page=books] .panel-intro,[data-extruda-page=books] .settings small,[data-extruda-page=books] .optional-settings>summary span,[data-extruda-page=books] footer{color:var(--ui-muted)}
+[data-extruda-page=books] .project-help summary,[data-extruda-page=books] .optional-settings>summary,[data-extruda-page=books] .family summary,[data-extruda-page=books] .text-link{color:var(--ui-action)}
+[data-extruda-page=books] .build-bar #message{color:var(--ui-action)}
+[data-extruda-page=books][data-theme=dark] #message[data-tone=error]{color:#f0aaa6}
+[data-extruda-page=books][data-theme=dark] .workspace-utilities #draft-status[data-tone=warning]{color:#e8b08e}
+[data-extruda-page=books] .empty-library,[data-extruda-page=books] .preview-column{background:var(--ui-bg);color:var(--ui-text);border-color:var(--ui-border)}
+[data-extruda-page=books] .secondary,[data-extruda-page=books] .file-button{background:var(--ui-surface);color:var(--ui-action);border-color:var(--ui-action)}
+[data-extruda-page=books] .dirty{background:#fbe8d8;color:#343b3b}
+[data-extruda-page=books] .skip-link{background:var(--ui-surface);color:var(--ui-action)}
+@media(max-width:640px){[data-extruda-page=dummy] .demo-app-header .ex-utilities{margin-top:20px;justify-content:flex-end}[data-extruda-page] .ex-controls-header{align-items:center}}
+@media print{[data-extruda-page=books] .sheet{color:#343b3b;background:white}[data-extruda-page] body{background:white;color:#343b3b}}
