@@ -33,9 +33,10 @@ unrelated products merely to apply these rules.
   tabs. Keep format, branding and colour mode visible before export.
 - Use the existing cream/graphite/petrol/apricot tokens and local Inter/Nunito
   fonts. Use 24 px panel padding (20 px mobile), 24 px between groups, 16 px
-  between fields, 8 px from label to field, 12 px control radius and 20 px panel
-  radius. Main buttons and text fields are at least 48 px high. All interactive
-  targets are at least 44 × 44 px. Do not add decorative shadows or nested cards.
+  between fields, 8 px from label to field, 8 px control radius and 12 px panel
+  radius; small labels 4 px and large feature panels 16 px. Main buttons and
+  text fields are at least 48 px high. All interactive targets are at least
+  44 × 44 px. Do not add decorative shadows or nested cards.
 - Tool titles: Nunito 32 px desktop / 28 px mobile; section headings 24 / 22 px;
   body Inter 16 px; labels 14 px; help 13 px. Reserve large hero type for landing
   pages. Give buttons visible text; use SVG icons from the local library.
@@ -65,8 +66,10 @@ unrelated products merely to apply these rules.
   support Escape, keyboard arrows and focus restoration. Provide swipe as an
   enhancement, with buttons as the alternative. Do not wrap silently at ends.
 - Charts need clear titles, units, periods, source, visible values and accessible
-  data tables. Bar charts start at zero. Use line charts for ordered data and
-  pie charts only for a few positive shares of a whole. Use one chart per row on
+  data tables. Short line-chart values sit inside the point circles; place long
+  or crowded values beside points without overlap. Bar charts start at zero.
+  Use line charts for ordered data and pie charts only for a few positive shares
+  of a whole. Use one chart per row on
   mobile, at most two on desktop. Distinguish missing data, zero and loading.
 - Offer three output colour controls by default: primary, accent and paper /
   background. Derive readable black/white text automatically. Also offer shared
