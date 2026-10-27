@@ -28,7 +28,7 @@ const local=relative=>pathToFileURL(path.join(root,relative)).href;
     assert(await page.locator('#output-primary').isVisible(),'Custom colours open when chosen');
     await page.locator('#output-primary').fill('#ffffff');
     await page.locator('#output-paper').fill('#111111');
-    await page.locator('#demo-language').selectOption('en');
+    await page.evaluate(language=>window.ExtrudaUI.setPreferences({language}),'en');
     assert(await page.locator('#content-title').inputValue()==='A <test> & "title"','Input survives language change');
     assert(await page.locator('#output-preview svg title').textContent()==='A <test> & "title"','SVG content is escaped');
     assert(await page.locator('#output-preview script').count()===0,'No injected script');
@@ -113,9 +113,9 @@ const local=relative=>pathToFileURL(path.join(root,relative)).href;
     for(const width of [1440,1024,960,768,390,320]){
       await page.setViewportSize({width,height:1000});
       for(const lang of ['da','en']){
-        await page.locator('#demo-language').selectOption(lang);
+        await page.evaluate(language=>window.ExtrudaUI.setPreferences({language}),lang);
         for(const theme of ['light','dark']){
-          await page.locator('#demo-theme').selectOption(theme);
+          await page.evaluate(theme=>window.ExtrudaUI.setPreferences({theme}),theme);
           for(const route of ['app','tasks','setup-1']){
             await page.evaluate(route=>location.hash=route,route);
             await page.waitForFunction(route=>document.querySelector(route==='app'?'#app-view':route==='tasks'?'#tasks-view':'#setup-view').hidden===false,route);
@@ -127,13 +127,13 @@ const local=relative=>pathToFileURL(path.join(root,relative)).href;
     }
     if(process.env.EXTRUDA_SCREENSHOT_DIR){
       const out=process.env.EXTRUDA_SCREENSHOT_DIR;
-      await page.setViewportSize({width:1440,height:1000});await page.locator('#demo-language').selectOption('da');await page.locator('#demo-theme').selectOption('light');
+      await page.setViewportSize({width:1440,height:1000});await page.evaluate(language=>window.ExtrudaUI.setPreferences({language}),'da');await page.evaluate(theme=>window.ExtrudaUI.setPreferences({theme}),'light');
       for(const [route,name]of [['app','workspace'],['tasks','overview'],['setup-1','wizard']]){
         await page.evaluate(route=>location.hash=route,route);await page.waitForFunction(route=>document.querySelector(route==='app'?'#app-view':route==='tasks'?'#tasks-view':'#setup-view').hidden===false,route);
         await page.evaluate(()=>document.activeElement.blur());
         await page.locator('#demo-window').screenshot({path:path.join(out,`ux2-${name}.png`)});
       }
-      await page.setViewportSize({width:390,height:1000});await page.locator('#demo-theme').selectOption('dark');await page.evaluate(()=>location.hash='app');await page.locator('#app-view').waitFor();
+      await page.setViewportSize({width:390,height:1000});await page.evaluate(theme=>window.ExtrudaUI.setPreferences({theme}),'dark');await page.evaluate(()=>location.hash='app');await page.locator('#app-view').waitFor();
       await page.evaluate(()=>document.activeElement.blur());
       await page.locator('#demo-window').screenshot({path:path.join(out,'ux2-mobile.png')});
     }
@@ -144,7 +144,7 @@ const local=relative=>pathToFileURL(path.join(root,relative)).href;
     await page.goto(local('design-system/index.html'));
     assert(await page.locator('.section-nav a').count()===4,'Reference has four main destinations');
     assert(await page.locator('.gallery-thumbnail').count()===4,'Reference carousel retained');
-    await page.locator('[data-lang="en"]').click();
+    await page.evaluate(()=>window.ExtrudaUI.setPreferences({language:'en'}));
     assert(await page.locator('html').getAttribute('lang')==='en','Reference translation works');
     for(const width of [1440,390,320]){await page.setViewportSize({width,height:1000});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Reference reflows');}
     const anchors=await page.evaluate(()=>[...document.querySelectorAll('a[href^="#"]')].filter(a=>!document.getElementById(a.hash.slice(1))).map(a=>a.hash));

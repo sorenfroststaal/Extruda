@@ -98,7 +98,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Every new page load starts in Danish. Visitors can switch to English
     // for the current visit without changing the default for their next load.
-    setLanguage("da");
+    window.ExtrudaPage = { setLanguage };
+    if (window.ExtrudaUI) window.ExtrudaUI.setPreferences({}, false);
+    else setLanguage("da");
 
     const year = document.querySelector("#year");
     if (year) year.textContent = new Date().getFullYear();

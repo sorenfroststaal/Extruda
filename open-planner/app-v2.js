@@ -145,7 +145,7 @@ async function saveDish(event){
 }
 function deleteDish(){
   const item=database.retter.find(value=>value.id===activeDishId);if(!item)return;
-  if(!window.confirm(`Slet “${item.navn}” fra din lokale database?`))return;
+  if(!window.confirm(window.ExtrudaCopy?.text(`Slet “${item.navn}” fra din lokale database?`) ?? `Slet “${item.navn}” fra din lokale database?`))return;
   database.retter=database.retter.filter(value=>value.id!==activeDishId);saveDatabase(`“${item.navn}” er slettet lokalt.`);showDishEditor();$('dish-editor').open=false;renderDishes();
 }
 async function loadDishDatabase(){
@@ -175,6 +175,6 @@ async function init(){
   $('dish-image').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{pendingDishImage=await resizeDishImage(file);renderDishPreview();dishFeedback('Billedet er klar. Tryk “Gem ret” for at bevare det.');}catch(error){dishFeedback(error.message);event.target.value='';}});
   $('export-dishes').addEventListener('click',()=>{try{download(JSON.stringify(validateDatabase(database),null,2)+'\n','open-planner-retter.json','application/json');dishFeedback('Databasen er hentet som JSON.');}catch(error){dishFeedback(error.message);}});
   $('import-dishes').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{if(file.size>25000000)throw new Error('Vælg en database under 25 MB.');database=validateDatabase(JSON.parse(await file.text()));saveDatabase('Databasen er åbnet og gemt i denne browser.');renderDishes();}catch(error){dishFeedback(`Databasen kunne ikke åbnes: ${error.message}`);}finally{event.target.value='';}});
-  $('reset-dishes').addEventListener('click',()=>{if(!window.confirm('Nulstil dine lokale retter og ændringer til den offentlige database?'))return;localStorage.removeItem(dishStorageKey);database=structuredClone(seedDatabase);renderDishes();$('dish-editor').open=false;dishFeedback('Den offentlige database er indlæst igen.');});
+  $('reset-dishes').addEventListener('click',()=>{if(!window.confirm(window.ExtrudaCopy?.text('Nulstil dine lokale retter og ændringer til den offentlige database?') ?? 'Nulstil dine lokale retter og ændringer til den offentlige database?'))return;localStorage.removeItem(dishStorageKey);database=structuredClone(seedDatabase);renderDishes();$('dish-editor').open=false;dishFeedback('Den offentlige database er indlæst igen.');});
 }
 init().catch(error=>{showError(error.message);$('print').disabled=true;$('export-settings').disabled=true;});

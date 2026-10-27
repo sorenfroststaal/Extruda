@@ -8,6 +8,7 @@ Kør fra repositoryets rod:
 
 ```text
 node design-system/tests/browser.cjs
+node design-system/tests/header.cjs
 ```
 
 Valgfrie miljøvariabler:
@@ -22,3 +23,19 @@ Valgfrie miljøvariabler:
 Testen kontrollerer formularfejl, kladder, rettelser fra gennemgang,
 browserhistorik, wizard, mobilmenu, sprog/tema og reflow. Den er en teknisk
 regressionstest og erstatter ikke brugertest eller test med skærmlæser.
+
+`header.cjs` kontrollerer de tre fælles topknapper på alle ti HTML-sider:
+sprog, tema, systemtema, genindlæsning, tastatur, dialog og mobilbredder.
+Den kontrollerer også, at arbejdsark bevarer sprog og papirfarve ved skift af
+appens indstillinger. Siderne indlæses fra lokale projektfiler via browserens
+testrouting; der bruges ingen ekstern oversættelsestjeneste.
+
+Efter ændringer i fælles topknapper, tema-CSS eller UI-oversættelser køres:
+
+```text
+node design-system/tools/bundle-header.cjs
+```
+
+Det indlejrer de fælles kilder i Learning Books' fire selvstændige HTML-filer,
+så download stadig virker uden tilstødende filer. Andre sider bruger kilderne
+direkte fra `js/` og `css/`.

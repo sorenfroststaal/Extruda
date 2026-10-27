@@ -1,8 +1,8 @@
 (() => {
   'use strict';
   const root=document.documentElement;
-  const language=document.getElementById('demo-language');
-  const theme=document.getElementById('demo-theme');
+  const language={value:'da'};
+  const theme={value:'system'};
   const systemTheme=window.matchMedia('(prefers-color-scheme: dark)');
   const mobileMenu=window.matchMedia('(max-width: 640px)');
   const setupBody=document.getElementById('setup-body');
@@ -198,8 +198,7 @@
     const link=event.target.closest('a[href="#content-title"],a[href="#task-name"]');
     if(link){event.preventDefault();document.querySelector(link.getAttribute('href')).focus();}
   });
-  language.addEventListener('change',translate);
-  theme.addEventListener('change',updateTheme);
+  window.ExtrudaPage={setLanguage(value){language.value=value;translate();},setTheme(value){theme.value=value;updateTheme();}};
   systemTheme.addEventListener('change',()=>{if(theme.value==='system')updateTheme();});
   if(!location.hash)history.replaceState(null,'','#app');
   updateTheme();translate();applyRoute();

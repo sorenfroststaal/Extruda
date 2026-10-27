@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="da">
+<html data-extruda-page="planner" lang="da">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="./assets/tokens/extruda.css">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./catalog.css">
-  <script type="module" src="./app-v2.js"></script>
-</head>
+  <script type="module" src="./app-v2.js?v=2.2"></script>
+<link rel="stylesheet" href="../css/extruda-ui.css?v=2.2"><link rel="stylesheet" href="../css/extruda-pages.css?v=2.2"><script defer src="../js/extruda-copy.js?v=2.2"></script><script defer src="../js/extruda-ui.js?v=2.2"></script></head>
 <body>
-  <header class="site-header screen-only"><a href="https://extruda.dk/#projects" aria-label="Til extrudas projekter"><img src="./assets/logos/extruda-logo-horizontal-color.svg" alt="extruda" width="180" height="60"></a><a class="back-link" href="https://extruda.dk/#projects">Alle projekter <span aria-hidden="true">↗</span></a></header>
+  <header class="site-header screen-only ex-controls-header"><a href="https://extruda.dk/#projects" aria-label="Til extrudas projekter"><img src="./assets/logos/extruda-logo-horizontal-color.svg" alt="extruda" width="180" height="60"></a><a class="back-link" href="https://extruda.dk/#projects">Alle projekter <span aria-hidden="true">↗</span></a><div data-extruda-controls></div></header>
   <main>
     <section class="intro screen-only">
       <div class="intro-title"><img src="./assets/icons/extruda-calendar.svg" alt="" width="80" height="80"><div><p class="eyebrow">Fra idé til hverdag</p><h1>Open Planner</h1></div><span class="version">Første version</span></div>
@@ -82,5 +82,5 @@
   </main>
   <footer class="site-footer screen-only"><span>Open Planner · et projekt hos extruda</span><a href="https://extruda.dk/#projects">Tilbage til projekter</a></footer>
   <noscript><p>Slå JavaScript til for at bruge kortgeneratoren.</p></noscript>
-</body>
+<template id="extruda-about"><h3 data-da="Sikkerhed og data" data-en="Safety and data">Sikkerhed og data</h3><p data-da="Kort, retter og egne billeder gemmes i denne browser. Gem JSON, hvis du vil have en kopi. Rydning af browserdata kan slette arbejdet. Filer sendes ikke til en server. Navne på retter og kort bevares ved sprogskift. Kontrollér kortmål med kontrolstregen før klipning." data-en="Cards, dishes and your images are stored in this browser. Save JSON for a copy. Clearing browser data can delete your work. Files are not sent to a server. Dish and card names are preserved when changing language. Check card dimensions with the scale line before cutting.">Kort, retter og egne billeder gemmes i denne browser. Gem JSON, hvis du vil have en kopi. Rydning af browserdata kan slette arbejdet. Filer sendes ikke til en server. Navne på retter og kort bevares ved sprogskift. Kontrollér kortmål med kontrolstregen før klipning.</p><h3 data-da="Dependencies" data-en="Dependencies">Dependencies</h3><p data-da="Lokale JavaScript-moduler, skrifter, ikoner og en JSON-database. Første indlæsning kræver adgang til sidens filer; ingen konto eller ekstern API. Print og Gem PDF bruger browserens printdialog. Hvis indlæsning fejler, vises en fejl." data-en="Local JavaScript modules, fonts, icons and a JSON database. Initial loading requires access to site files; no account or external API. Print and Save PDF use the browser print dialog. Loading failures display an error.">Lokale JavaScript-moduler, skrifter, ikoner og en JSON-database. Første indlæsning kræver adgang til sidens filer; ingen konto eller ekstern API. Print og Gem PDF bruger browserens printdialog. Hvis indlæsning fejler, vises en fejl.</p></template></body>
 </html>

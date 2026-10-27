@@ -80,6 +80,19 @@ unrelated products merely to apply these rules.
   playful phrase in an intro or completion message. Use everyday words and
   precise action labels. Avoid corporate/sales language. No humour in errors,
   safety, permissions, pricing or destructive actions.
+- Header controls use the camera-app pattern everywhere, including websites:
+  exactly three buttons in this order: globe + current DA/EN, current sun/moon,
+  info. Language opens Dansk/English; appearance opens Light/Dark/Follow system
+  (default system); info opens a native About data and requirements dialog.
+  Use 48 px buttons, 24 px local SVG icons, 8 px gaps and 8 px radius, 1 px
+  borders, white/graphite theme surfaces and no shadow. Icons have descriptive
+  accessible names, tooltips and visible focus. Escape dismisses and restores
+  focus. Keep the group at the header right, below the name on mobile. Persist
+  explicit language/theme choices locally, explain blocked storage, preserve
+  form input and keep UI language/theme independent from generated output.
+  Read #header-controls; local implementation is js/extruda-ui.js and
+  css/extruda-ui.css. Do not replace these controls with dropdown fields or
+  separate language/theme button groups.
 - The generic interactive reference is `design-system/dummy/`. Keep language
   and theme controls at the top right of the app header throughout setup and
   use (below the app name on mobile). Default theme: follow system. Retain
