@@ -1,0 +1,12 @@
+{
+  "version": "26A-v1",
+  "format": "svg",
+  "counts": {
+    "logos": 15,
+    "appIcons": 45,
+    "uiIcons": 43,
+    "total": 103
+  },
+  "appIconVariants": ["color", "black", "white"],
+  "uiCategories": ["navigation", "actions", "content-tools", "status-safety-theme"]
+}
