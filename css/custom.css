@@ -1268,9 +1268,8 @@ section.resume-section {
 .cv-job summary small,
 .cv-disclosure summary small { color: var(--ex-muted); font-weight: 400; }
 .cv-job summary { display: grid; grid-template-columns: 7rem minmax(0, 1fr) 2.25rem; }
-.cv-job summary img,
-.cv-role-logo { width: 7rem; height: 3.5rem; display: block; object-fit: contain; padding: .5rem; border-radius: .5rem; background: #f5f0e8; }
-.cv-role-logo { margin-bottom: .5rem; }
+.cv-job summary img { width: 7rem; height: 3.5rem; display: block; object-fit: contain; padding: .5rem; }
+[data-theme="dark"] .cv-job summary img { filter: brightness(0) invert(1); }
 .profile-disclosure-content,
 .cv-job-content,
 .cv-disclosure-content { padding: 0 1.25rem 1.25rem; }
