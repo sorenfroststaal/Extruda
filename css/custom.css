@@ -252,6 +252,7 @@ section.resume-section {
 }
 
 .hero-copy {
+    min-width: 0;
     width: 100%;
     max-width: none;
 }
@@ -1218,6 +1219,7 @@ section.resume-section {
 .work-vision h3,
 .cv-block > h3 { font-size: 1rem; line-height: 1.5; }
 .work-vision { max-width: 64rem; margin: 0 0 2rem; }
+.work-vision p { max-width: none; }
 .work-tracks { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; max-width: 64rem; }
 .work-track { border: 1px solid var(--ex-border); border-radius: 1rem; background: rgba(255,255,255,.42); overflow: hidden; }
 .work-track:last-child { grid-column: 1 / -1; }
