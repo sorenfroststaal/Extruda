@@ -1365,3 +1365,19 @@ section.resume-section {
 }
 
 .work-aside-copy { min-width: 0; }
+
+/* Project index: icon, name and disclosure share one compact row. */
+#projects .project-summary { grid-template-columns: 48px minmax(0, 1fr) 44px; min-height: 80px; padding: 12px 0; gap: 16px; }
+#projects .project-summary-icon { width: 48px; border-radius: 12px; }
+#projects .project-summary-icon img,
+#projects .project-summary-icon .array-silhouette { width: 36px; height: 36px; }
+#projects .project-row-toggle { display: grid; place-items: center; width: 44px; height: 44px; min-height: 44px; padding: 0; margin: 0; border: 1px solid currentColor; border-radius: 50%; background: transparent; color: var(--ex-petrol); }
+.project-expand-glyph { position: relative; display: block; width: 20px; height: 20px; }
+.project-expand-glyph::before,
+.project-expand-glyph::after { content: ''; position: absolute; background: currentColor; width: 16px; height: 2px; left: 2px; top: 9px; }
+.project-expand-glyph::after { transform: rotate(90deg); }
+.project-row-toggle[aria-expanded="true"] .project-expand-glyph::after { transform: rotate(0); }
+#projects .project-panel { padding: 0; }
+#projects .project-teaser { padding: 16px 0 24px; }
+[data-theme="dark"] #projects .project-row-toggle { color: #9dc7ba; }
+@media (max-width: 720px) { #projects .project-summary { gap: 12px; } }
