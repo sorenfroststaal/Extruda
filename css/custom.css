@@ -1416,3 +1416,6 @@ section.resume-section {
  .work-group-disclosure > summary strong { font-size: 22px; }
  .work-group-content { padding: 0 20px 20px; }
 }
+
+.work-category-group .work-track summary strong { font-size: 24px; }
+@media (max-width: 720px) { .work-category-group .work-track summary strong { font-size: 22px; } }
