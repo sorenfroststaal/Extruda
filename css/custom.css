@@ -1222,7 +1222,7 @@ section.resume-section {
 .work-track:last-child { grid-column: 1 / -1; }
 .work-track summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 5.5rem; padding: 1.25rem 1.5rem; cursor: pointer; list-style: none; }
 .work-track summary::-webkit-details-marker { display: none; }
-.work-track summary > span:first-child { display: grid; gap: .3rem; }
+.work-track summary > .work-track-copy { display: grid; gap: .3rem; min-width: 0; }
 .work-track summary strong { font-family: var(--bs-font-sans-serif); font-size: 1rem; color: var(--ex-ink); }
 .work-track summary small { font-size: 1rem; color: var(--ex-muted); }
 .work-track-mark { position: relative; flex: 0 0 2.25rem; width: 2.25rem; height: 2.25rem; border: 1px solid var(--ex-petrol); border-radius: 50%; }
@@ -1351,3 +1351,13 @@ section.resume-section {
 .work-category-group,
 .work-profile-group { max-width: 64rem; }
 .work-profile-group > .profile-disclosure { margin-top: 0; }
+
+.work-track summary:has(.work-topic-icon),
+.profile-disclosure summary:has(.work-topic-icon) { display: grid; grid-template-columns: 64px minmax(0, 1fr) 2.25rem; gap: 16px; }
+.work-topic-icon { display: block; width: 64px; height: 64px; }
+.profile-disclosure summary > .work-track-copy { display: grid; gap: .3rem; min-width: 0; }
+@media (max-width: 720px) {
+    .work-track summary:has(.work-topic-icon),
+    .profile-disclosure summary:has(.work-topic-icon) { grid-template-columns: 44px minmax(0, 1fr) 2.25rem; gap: 12px; padding: 20px; }
+    .work-topic-icon { width: 44px; height: 44px; }
+}
