@@ -1391,3 +1391,6 @@ section.resume-section {
 @media (max-width: 720px) {
     .cv-disclosure summary:has(.work-topic-icon) { grid-template-columns: 44px minmax(0, 1fr) 2.25rem; gap: 12px; padding: 20px; }
 }
+
+.profile-records { display: grid; gap: 16px; margin-top: 16px; }
+.profile-records > .cv-disclosures { margin-top: 0; gap: 16px; }
