@@ -1394,3 +1394,7 @@ section.resume-section {
 
 .profile-records { display: grid; gap: 16px; margin-top: 16px; }
 .profile-records > .cv-disclosures { margin-top: 0; gap: 16px; }
+
+.work-profile-group .profile-disclosure { margin-top: 0; }
+.work-profile-group .profile-records { margin-top: 0; }
+.work-profile-group > h3 { margin-bottom: 16px; }
