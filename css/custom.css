@@ -1246,6 +1246,7 @@ section.resume-section {
 .cv-section > h4 { margin-bottom: 1rem; font-size: 1rem; }
 .cv-jobs,
 .cv-disclosures { display: grid; gap: .75rem; }
+.cv-disclosures { margin-top: 24px; }
 .profile-disclosure,
 .cv-job,
 .cv-disclosure { border: 1px solid var(--ex-border); border-radius: 1rem; background: rgba(255,255,255,.42); overflow: hidden; }
