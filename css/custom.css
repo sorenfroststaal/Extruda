@@ -1455,3 +1455,8 @@ section.resume-section {
 .work-group-disclosure > summary:focus-visible { background: rgba(38, 107, 105, .08); }
 [data-theme="dark"] .work-group-disclosure > summary:hover,
 [data-theme="dark"] .work-group-disclosure > summary:focus-visible { background: rgba(157, 199, 186, .1); }
+
+/* A shared 24px gap around the projects disclosure. */
+section.resume-section#about { padding-bottom: 0; }
+section.resume-section#projects { padding-top: 24px; padding-bottom: 24px; }
+section.resume-section#work { padding-top: 0; }
