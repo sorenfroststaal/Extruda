@@ -1090,6 +1090,41 @@ section.resume-section {
     color: var(--ex-petrol) !important;
 }
 
+[data-theme="light"] .social-icons .social-icon,
+[data-theme="light"] .btn-primary,
+[data-theme="light"] .btn-outline-primary:hover,
+[data-theme="light"] .btn-outline-primary:focus {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .project-teaser-copy .btn:hover,
+[data-theme="light"] .project-teaser-copy .btn:focus,
+[data-theme="light"] .project-teaser-copy .btn:focus-visible {
+    border-color: #28645f;
+    color: #ffffff !important;
+    background: #28645f;
+}
+
+[data-theme="light"] .project-teaser-copy .btn {
+    border-color: #28645f;
+    color: #ffffff !important;
+    background: #28645f;
+}
+
+[data-theme="light"] #contact a {
+    color: #9dc7ba !important;
+}
+
+[data-theme="light"] #contact a:hover,
+[data-theme="light"] #contact a:focus {
+    color: #182625 !important;
+}
+
+[data-theme="light"] #contact .site-data-note summary,
+[data-theme="light"] #contact .site-data-note p {
+    color: #f5f0e8;
+}
+
 [data-theme="light"] #about,
 [data-theme="light"] #work {
     color: var(--ex-graphite);
@@ -1149,6 +1184,32 @@ section.resume-section {
 [data-theme="dark"] .work-vision,
 [data-theme="dark"] .work-tracks,
 [data-theme="dark"] .work-aside {
+    color: #f5f0e8;
+}
+
+[data-theme="dark"] .social-icons .social-icon,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-outline-primary:hover,
+[data-theme="dark"] .btn-outline-primary:focus {
+    color: #182625 !important;
+}
+
+[data-theme="dark"] .project-teaser-copy .btn:hover,
+[data-theme="dark"] .project-teaser-copy .btn:focus,
+[data-theme="dark"] .project-teaser-copy .btn:focus-visible {
+    border-color: #9dc7ba;
+    color: #182625 !important;
+    background: #9dc7ba;
+}
+
+[data-theme="dark"] .project-teaser-copy .btn {
+    border-color: #9dc7ba;
+    color: #182625 !important;
+    background: #9dc7ba;
+}
+
+[data-theme="dark"] #contact .site-data-note summary,
+[data-theme="dark"] #contact .site-data-note p {
     color: #f5f0e8;
 }
 
