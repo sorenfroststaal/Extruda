@@ -252,11 +252,12 @@ section.resume-section {
 }
 
 .hero-copy {
-    max-width: 46rem;
+    width: 100%;
+    max-width: none;
 }
 
 .intro-copy {
-    max-width: 62ch;
+    max-width: none;
 }
 
 .profile-card {
