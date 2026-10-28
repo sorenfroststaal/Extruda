@@ -1398,3 +1398,5 @@ section.resume-section {
 .work-profile-group .profile-disclosure { margin-top: 0; }
 .work-profile-group .profile-records { margin-top: 0; }
 .work-profile-group > h3 { margin-bottom: 16px; }
+
+.array-summary-icon .array-silhouette { background: var(--ex-teal); }
