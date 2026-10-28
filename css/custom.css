@@ -1216,7 +1216,7 @@ section.resume-section {
 #work { background: var(--ex-cream); }
 .work-lead { max-width: 58rem; font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .work-vision { max-width: 58rem; margin: 0 0 2rem; }
-.work-tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; max-width: 64rem; }
+.work-tracks { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; max-width: 64rem; }
 .work-track { border: 1px solid var(--ex-border); border-radius: 1rem; background: rgba(255,255,255,.42); overflow: hidden; }
 .work-track:last-child { grid-column: 1 / -1; }
 .work-track summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 5.5rem; padding: 1.25rem 1.5rem; cursor: pointer; list-style: none; }
@@ -1252,7 +1252,6 @@ section.resume-section {
 [data-theme="dark"] .work-profile { border-color: #667371; }
 
 @media (max-width: 720px) {
-    .work-tracks { grid-template-columns: 1fr; }
     .work-track:last-child { grid-column: auto; }
     .work-track summary { padding: 1rem 1.1rem; }
     .work-track-details { padding: 0 1.1rem 1.1rem; }
