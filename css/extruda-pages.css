@@ -61,3 +61,10 @@
 [data-extruda-page=books] .skip-link{background:var(--ui-surface);color:var(--ui-action)}
 @media(max-width:640px){[data-extruda-page=dummy] .demo-app-header .ex-utilities{margin-top:20px;justify-content:flex-end}[data-extruda-page] .ex-controls-header{align-items:center}}
 @media print{[data-extruda-page=books] .sheet{color:#343b3b;background:white}[data-extruda-page] body{background:white;color:#343b3b}}
+
+/* The home page follows the explicit shared theme selection. */
+[data-extruda-page=home][data-theme=light] #sideNav,
+[data-extruda-page=home][data-theme=light] #sideNav .navbar-collapse,
+[data-extruda-page=home][data-theme=light] .bg-primary{background:#e9e4dc!important}
+[data-extruda-page=home][data-theme=light] #sideNav .navbar-nav .nav-item .nav-link:hover,
+[data-extruda-page=home][data-theme=light] #sideNav .navbar-nav .nav-item .nav-link.active{color:#28645f!important}

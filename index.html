@@ -24,14 +24,15 @@
     <body id="page-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <img class="brand-logo" src="Assets/Brand/extruda-dk-logo-horizontal-white.svg" alt="extruda.dk" />
+                <img class="brand-logo brand-logo-color" src="Assets/Brand/extruda-dk-logo-horizontal-color.svg" alt="extruda.dk" />
+                <img class="brand-logo brand-logo-white" src="Assets/Brand/extruda-dk-logo-horizontal-white.svg" alt="" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Vis navigation"><span data-da="Menu" data-en="Menu">Menu</span><span class="navbar-toggler-icon" aria-hidden="true"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" data-da="Om mig" data-en="About">Om mig</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects" data-da="Projekter" data-en="Projects">Projekter</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#playground" data-da="3D legeplads" data-en="3D playground">3D legeplads</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work" data-da="Arbejdsliv" data-en="Working life">Arbejdsliv</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact" data-da="Kontakt" data-en="Contact">Kontakt</a></li>
                 </ul>
             </div>
@@ -43,11 +44,8 @@
                     <div class="hero-layout">
                         <div class="hero-copy">
                             <h1>Søren Frost <span class="text-primary">Staal</span></h1>
-                            <p class="meta-line mb-4" data-da="Produktudvikling · 3D · kreativ teknologi · Randers" data-en="Product development · 3D · creative technology · Randers">
-                                Produktudvikling · 3D · kreativ teknologi · Randers
-                            </p>
-                            <p class="lead mb-5 intro-copy" data-da="Jeg får tit en idé, der er lige lidt for besværlig til bare at lade ligge. Så ryger den gennem Blender, FreeCAD, 3D-printeren og som regel et par forsøg, der ikke helt gik efter planen. Her samler jeg det, der kom ud på den anden side — produkter, værktøjer og andet 3D-gøgl, som faktisk blev til noget." data-en="I often get an idea that is just a little too awkward to leave alone. So it goes through Blender, FreeCAD, the 3D printer and usually a couple of attempts that did not quite go to plan. This is where I collect what made it out the other side — products, tools and other 3D tinkering that actually turned into something.">
-                                Jeg får tit en idé, der er lige lidt for besværlig til bare at lade ligge. Så ryger den gennem Blender, FreeCAD, 3D-printeren og som regel et par forsøg, der ikke helt gik efter planen. Her samler jeg det, der kom ud på den anden side — produkter, værktøjer og andet 3D-gøgl, som faktisk blev til noget.
+                            <p class="lead mb-5 intro-copy" data-da="Her deler jeg fysiske produkter og digitale værktøjer, der er vokset ud af min nysgerrighed på 3D, form og teknologi." data-en="Here I share physical products and digital tools shaped by my curiosity about 3D, form and technology.">
+                                Her deler jeg fysiske produkter og digitale værktøjer, der er vokset ud af min nysgerrighed på 3D, form og teknologi.
                             </p>
                             <div class="social-icons">
                                 <a class="social-icon" href="https://www.linkedin.com/in/sorenfroststaal/?locale=da" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -68,16 +66,16 @@
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-4" data-da="Projekter" data-en="Projects">Projekter</h2>
-                    <p class="section-intro mb-5" data-da="Se hvad projekterne gør, og åbn det værktøj, du vil bruge. Baggrund og tekniske detaljer kan foldes ud." data-en="See what the projects do and open the tool you want to use. Background and technical details can be expanded.">
-                        Se hvad projekterne gør, og åbn det værktøj, du vil bruge. Baggrund og tekniske detaljer kan foldes ud.
+                    <p class="section-intro mb-5" data-da="Fysiske produkter og digitale værktøjer. Åbn et projekt for en kort introduktion." data-en="Physical products and digital tools. Open a project for a short introduction.">
+                        Fysiske produkter og digitale værktøjer. Åbn et projekt for en kort introduktion.
                     </p>
 
                     <div class="project-list" id="projectsAccordion">
                     <article class="project-card" id="array-project">
                         <h3 class="project-heading">
                             <div class="project-summary">
-                                <span class="project-index">01</span>
-                                <span class="project-title"><strong>sorenfroststaal - array lamp shade</strong><small data-da="Produktudvikling · færdig E27-lampeskærm" data-en="Product development · finished E27 lampshade">Produktudvikling · færdig E27-lampeskærm</small></span>
+                                <span class="project-summary-icon array-summary-icon"><span class="array-silhouette" aria-hidden="true"></span></span>
+                                <span class="project-title"><strong>sorenfroststaal - array lamp shade</strong></span>
 
                             </div>
                         </h3>
@@ -92,9 +90,26 @@
                                         <p class="project-meta" data-da="Håndlavet · 3D-print · eg · messing" data-en="Handmade · 3D printing · oak · brass">Håndlavet · 3D-print · eg · messing</p>
                                     </div>
                                 </div>
-                                <div class="project-actions"><a class="btn btn-outline-primary" href="arraylampshade/" data-da="Se projektet" data-en="View the project">Se projektet</a></div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#arrayDetails" aria-expanded="false" aria-controls="arrayDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <div class="project-actions"><a class="btn btn-outline-primary" href="array/" data-da="Se projektet" data-en="View the project">Se projektet</a></div>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#arrayDetails" aria-expanded="false" aria-controls="arrayDetails"><span data-more-da="Læs mere" data-more-en="Read more" data-less-da="Luk" data-less-en="Close">Læs mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="arrayDetails">
+                                    <div class="project-teaser">
+                                        <div class="project-teaser-grid">
+                                            <div id="arrayTeaserCarousel" class="carousel slide" data-bs-ride="false">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active"><img src="Assets/Img/array-gallery-01-renderweekly.jpg" loading="lazy" alt="Den oprindelige Array-rendering" data-alt-da="Den oprindelige Array-rendering" data-alt-en="The original Array rendering" /></div>
+                                                    <div class="carousel-item"><img src="Assets/Img/array-gallery-06-workshop.jpg" loading="lazy" alt="Array lampeskærmen under fremstilling" data-alt-da="Array lampeskærmen under fremstilling" data-alt-en="The Array lampshade during production" /></div>
+                                                    <div class="carousel-item"><img src="Assets/Img/array-gallery-14-finished-pendants.jpg" loading="lazy" alt="Færdige Array lampeskærme" data-alt-da="Færdige Array lampeskærme" data-alt-en="Finished Array lampshades" /></div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#arrayTeaserCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Forrige" data-en="Previous">Forrige</span></button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#arrayTeaserCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Næste" data-en="Next">Næste</span></button>
+                                            </div>
+                                            <div class="project-teaser-copy">
+                                                <p data-da="En rendering blev gennem mange iterationer til en håndlavet lampeskærm i egetræ, messing og 3D-printede dele." data-en="A rendering evolved through many iterations into a handmade lampshade in oak, brass and 3D-printed parts.">En rendering blev gennem mange iterationer til en håndlavet lampeskærm i egetræ, messing og 3D-printede dele.</p>
+                                                <a class="btn btn-outline-primary" href="array/" data-da="Læs videre om projektet" data-en="Continue to the project">Læs videre om projektet</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="project-details array-project" id="array-pendlen">
                         <div class="row g-5 align-items-center mb-5">
                             <div class="col-lg-6">
@@ -222,8 +237,8 @@
                     <article class="project-card" id="camera-project">
                         <h3 class="project-heading">
                             <div class="project-summary">
-                                <span class="project-index">02</span>
-                                <span class="project-title"><strong>extruda - mobile as webcam</strong><small data-da="Digitalt værktøj · Windows" data-en="Digital tool · Windows">Digitalt værktøj · Windows</small></span>
+                                <span class="project-summary-icon"><img src="Assets/Brand/extruda-camera.svg" alt="" /></span>
+                                <span class="project-title"><strong>extruda - mobile as webcam</strong></span>
 
                             </div>
                         </h3>
@@ -240,8 +255,21 @@
                                             <a class="btn btn-outline-primary" href="https://github.com/sorenfroststaal/Extruda-Mobile-As-Webcam/releases/download/mobile-as-webcam-v0.15.0/ExtrudaMobileAsWebcam-Setup-0.15.0-x64.exe"><span data-da="Hent til Windows (.exe)" data-en="Download for Windows (.exe)">Hent til Windows (.exe)</span></a>
                                             <a class="btn btn-outline-primary" href="https://extruda-phone-camera.sorenfroststaal.workers.dev/" data-da="Åbn mobilkameraet" data-en="Open the phone camera">Åbn mobilkameraet</a>
                                         </div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cameraDetails" aria-expanded="false" aria-controls="cameraDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cameraDetails" aria-expanded="false" aria-controls="cameraDetails"><span data-more-da="Læs mere" data-more-en="Read more" data-less-da="Luk" data-less-en="Close">Læs mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="cameraDetails">
+                                    <div class="project-teaser">
+                                        <div class="project-teaser-grid">
+                                            <div id="cameraTeaserCarousel" class="carousel slide" data-bs-ride="false">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active project-logo-slide"><img src="Assets/Brand/extruda-camera.svg" loading="lazy" alt="Mobile as Webcam-ikon" /></div>
+                                                    <div class="carousel-item"><img src="Assets/Img/project-camera-screen.png" loading="lazy" alt="Mobile as Webcam-projektsiden" data-alt-da="Mobile as Webcam-projektsiden" data-alt-en="The Mobile as Webcam project page" /></div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#cameraTeaserCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Forrige" data-en="Previous">Forrige</span></button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#cameraTeaserCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Næste" data-en="Next">Næste</span></button>
+                                            </div>
+                                            <div class="project-teaser-copy"><p data-da="Et enkelt Windows-værktøj, der gør telefonen til webcam uden OBS eller en tung opsætning." data-en="A simple Windows tool that turns a phone into a webcam without OBS or a complicated setup.">Et enkelt Windows-værktøj, der gør telefonen til webcam uden OBS eller en tung opsætning.</p><a class="btn btn-outline-primary" href="mobile-as-webcam/" data-da="Læs videre om projektet" data-en="Continue to the project">Læs videre om projektet</a></div>
+                                        </div>
+                                    </div>
                                     <div class="project-details camera-project" id="camera">
                                         <p data-da="Kamera, mikrofon, lokal lydrensning og videooptagelse. Enkel betjening med lydmåler og flere indstillinger nederst. Enkel parringsvisning på telefonen. Scan en ny QR-kode efter afbrydelse." data-en="Camera, microphone, local noise reduction and video recording. Simple controls with an input meter and more settings below. Simple pairing view on the phone. Scan a fresh QR code after disconnecting.">Kamera, mikrofon, lokal lydrensning og videooptagelse. Enkel betjening med lydmåler og flere indstillinger nederst. Enkel parringsvisning på telefonen. Scan en ny QR-kode efter afbrydelse.</p>
                                         <p><a href="https://github.com/sorenfroststaal/Extruda-Mobile-As-Webcam/blob/main/docs/FAQ.da.md" data-da="FAQ og vejledning" data-en="FAQ and guides">FAQ og vejledning</a> · <a href="https://github.com/sorenfroststaal/Extruda-Mobile-As-Webcam/blob/main/docs/SECURITY.da.md" data-da="Sikkerhedsrisici" data-en="Security risks">Sikkerhedsrisici</a> · <a href="https://github.com/sorenfroststaal/Extruda-Mobile-As-Webcam">GitHub</a></p>
@@ -253,8 +281,8 @@
                     <article class="project-card" id="goldfish-project">
                         <h3 class="project-heading">
                             <div class="project-summary">
-                                <span class="project-index">03</span>
-                                <span class="project-title"><strong>extruda - goldfish (FreeCAD)</strong><small data-da="Addon · AI / vibecode" data-en="Addon · AI / vibecoding">Addon · AI / vibecode</small></span>
+                                <span class="project-summary-icon"><img src="Assets/Brand/goldfish-logo.svg" alt="" /></span>
+                                <span class="project-title"><strong>extruda - goldfish (FreeCAD)</strong></span>
 
                             </div>
                         </h3>
@@ -273,8 +301,21 @@
                                             <a class="btn btn-outline-primary" href="download/GoldfishSetup.exe" download><i class="fas fa-download me-2"></i><span data-da="Hent Goldfish (.exe)" data-en="Download Goldfish (.exe)">Hent Goldfish (.exe)</span></a>
                                             <small data-da="Windows 10/11 · FreeCAD 1.1.3 hentes automatisk" data-en="Windows 10/11 · FreeCAD 1.1.3 downloads automatically">Windows 10/11 · FreeCAD 1.1.3 hentes automatisk</small>
                                         </div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#goldfishDetails" aria-expanded="false" aria-controls="goldfishDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#goldfishDetails" aria-expanded="false" aria-controls="goldfishDetails"><span data-more-da="Læs mere" data-more-en="Read more" data-less-da="Luk" data-less-en="Close">Læs mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="goldfishDetails">
+                                    <div class="project-teaser">
+                                        <div class="project-teaser-grid">
+                                            <div id="goldfishTeaserCarousel" class="carousel slide" data-bs-ride="false">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active project-logo-slide"><img src="Assets/Brand/goldfish-logo.svg" loading="lazy" alt="Goldfish-ikon" /></div>
+                                                    <div class="carousel-item"><img src="Assets/Img/project-goldfish-screen.png" loading="lazy" alt="Goldfish-projektsiden" data-alt-da="Goldfish-projektsiden" data-alt-en="The Goldfish project page" /></div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#goldfishTeaserCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Forrige" data-en="Previous">Forrige</span></button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#goldfishTeaserCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Næste" data-en="Next">Næste</span></button>
+                                            </div>
+                                            <div class="project-teaser-copy"><p data-da="Et AI- og vibecode-projekt, der gør direkte modellering i FreeCAD mere tilgængelig." data-en="An AI and vibecoding project that makes direct modelling in FreeCAD more accessible.">Et AI- og vibecode-projekt, der gør direkte modellering i FreeCAD mere tilgængelig.</p><a class="btn btn-outline-primary" href="goldfish/" data-da="Læs videre om projektet" data-en="Continue to the project">Læs videre om projektet</a></div>
+                                        </div>
+                                    </div>
                                     <div class="project-details" id="goldfish">
                                         <p data-da="Et AI- og vibecode-projekt, der gør 3D-modellering i FreeCAD mere direkte og tilgængelig. Form geometrien, behold almindelig Undo og kom hurtigere frem til en ren STEP-fil." data-en="An AI and vibecoding project that makes 3D modelling in FreeCAD more direct and accessible. Shape the geometry, keep regular Undo and reach a clean STEP file faster.">Et AI- og vibecode-projekt, der gør 3D-modellering i FreeCAD mere direkte og tilgængelig. Form geometrien, behold almindelig Undo og kom hurtigere frem til en ren STEP-fil.</p>
                                         <ul class="simple-feature-list mb-4">
@@ -293,8 +334,8 @@
                     <article class="project-card" id="learning-books-project">
                         <h3 class="project-heading">
                             <div class="project-summary">
-                                <span class="project-index">04</span>
-                                <span class="project-title"><strong>extruda - learning books</strong><small data-da="Matematik · plan for 0.–4. klasse" data-en="Maths · grades 0–4 roadmap">Matematik · plan for 0.–4. klasse</small></span>
+                                <span class="project-summary-icon"><img src="Assets/Brand/extruda-guides.svg" alt="" /></span>
+                                <span class="project-title"><strong>extruda - learning books</strong></span>
 
                             </div>
                         </h3>
@@ -308,8 +349,21 @@
                                     </div>
                                 </div>
                                 <div class="project-actions"><a class="btn btn-outline-primary" href="learning-books/app.html" data-da="Prøv generatoren" data-en="Try the generator">Prøv generatoren</a><a class="btn btn-outline-primary" href="learning-books/#klassetrin" data-da="Se matematik i 0.–4. klasse" data-en="View mathematics for grades 0–4">Se matematik i 0.–4. klasse</a></div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#learningBooksDetails" aria-expanded="false" aria-controls="learningBooksDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#learningBooksDetails" aria-expanded="false" aria-controls="learningBooksDetails"><span data-more-da="Læs mere" data-more-en="Read more" data-less-da="Luk" data-less-en="Close">Læs mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="learningBooksDetails">
+                                    <div class="project-teaser">
+                                        <div class="project-teaser-grid">
+                                            <div id="booksTeaserCarousel" class="carousel slide" data-bs-ride="false">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active project-logo-slide"><img src="Assets/Brand/extruda-guides.svg" loading="lazy" alt="Learning Books-ikon" /></div>
+                                                    <div class="carousel-item"><img src="Assets/Img/project-learning-books-screen.png" loading="lazy" alt="Learning Books-generatoren" data-alt-da="Learning Books-generatoren" data-alt-en="The Learning Books generator" /></div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#booksTeaserCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Forrige" data-en="Previous">Forrige</span></button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#booksTeaserCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Næste" data-en="Next">Næste</span></button>
+                                            </div>
+                                            <div class="project-teaser-copy"><p data-da="Tilpas arbejdsbøger til barnets niveau, sprog og måde at arbejde på, og print dem direkte fra browseren." data-en="Adapt workbooks to a child's level, language and way of working, then print them directly from the browser.">Tilpas arbejdsbøger til barnets niveau, sprog og måde at arbejde på, og print dem direkte fra browseren.</p><a class="btn btn-outline-primary" href="learning-books/" data-da="Læs videre om projektet" data-en="Continue to the project">Læs videre om projektet</a></div>
+                                        </div>
+                                    </div>
                                     <div class="project-details" id="learning-books">
                                         <p data-da="Samme læringsmål kan præsenteres med dansk eller engelsk tekst, korte instruktioner, billedstøtte, flere farver eller et roligt udtryk. Et bibliotek med tags skal gøre det nemt at finde og sammensætte de rette opgaver." data-en="The same learning goal can use Danish or English text, short instructions, visual support, more colour or a calm layout. A tagged library will make it easy to find and combine suitable exercises.">Samme læringsmål kan præsenteres med dansk eller engelsk tekst, korte instruktioner, billedstøtte, flere farver eller et roligt udtryk. Et bibliotek med tags skal gøre det nemt at finde og sammensætte de rette opgaver.</p>
                                         <ul class="simple-feature-list mb-4">
@@ -328,8 +382,8 @@
                     <article class="project-card" id="open-planner-project">
                         <h3 class="project-heading">
                             <div class="project-summary">
-                                <span class="project-index">05</span>
-                                <span class="project-title"><strong>extruda - open planner</strong><small data-da="Planlægningskort · printgenerator" data-en="Planning cards · print generator">Planlægningskort · printgenerator</small></span>
+                                <span class="project-summary-icon"><img src="Assets/Brand/extruda-calendar.svg" alt="" /></span>
+                                <span class="project-title"><strong>extruda - open planner</strong></span>
 
                             </div>
                         </h3>
@@ -343,8 +397,21 @@
                                     </div>
                                 </div>
                                 <div class="project-actions"><a class="btn btn-outline-primary" href="open-planner/" data-da="Prøv Open Planner" data-en="Try Open Planner">Prøv Open Planner</a></div>
-                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openPlannerDetails" aria-expanded="false" aria-controls="openPlannerDetails"><span data-more-da="Læs om projektet" data-more-en="Read about the project" data-less-da="Skjul detaljer" data-less-en="Hide details">Læs om projektet</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                                <button class="project-more-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openPlannerDetails" aria-expanded="false" aria-controls="openPlannerDetails"><span data-more-da="Læs mere" data-more-en="Read more" data-less-da="Luk" data-less-en="Close">Læs mere</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
                                 <div class="collapse" id="openPlannerDetails">
+                                    <div class="project-teaser">
+                                        <div class="project-teaser-grid">
+                                            <div id="plannerTeaserCarousel" class="carousel slide" data-bs-ride="false">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active project-logo-slide"><img src="Assets/Brand/extruda-calendar.svg" loading="lazy" alt="Open Planner-ikon" /></div>
+                                                    <div class="carousel-item"><img src="Assets/Img/project-open-planner-screen.png" loading="lazy" alt="Open Planner-generatoren" data-alt-da="Open Planner-generatoren" data-alt-en="The Open Planner generator" /></div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#plannerTeaserCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Forrige" data-en="Previous">Forrige</span></button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#plannerTeaserCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden" data-da="Næste" data-en="Next">Næste</span></button>
+                                            </div>
+                                            <div class="project-teaser-copy"><p data-da="Lav planlægningskort og madkort i dine egne mål, og print dem som færdige udklipsark." data-en="Create planning and meal cards in your own dimensions, then print them as ready-to-cut sheets.">Lav planlægningskort og madkort i dine egne mål, og print dem som færdige udklipsark.</p><a class="btn btn-outline-primary" href="open-planner/" data-da="Læs videre om projektet" data-en="Continue to the project">Læs videre om projektet</a></div>
+                                        </div>
+                                    </div>
                                     <div class="project-details" id="open-planner">
                                         <p data-da="Open Planner laver udklipsark direkte i browseren. Vælg kortets mål, sammensæt kortene og brug kontrolstregen til at kontrollere, at printeren har beholdt den rigtige størrelse." data-en="Open Planner creates cut-out sheets directly in your browser. Choose the card dimensions, assemble your cards and use the control line to check that your printer preserved the correct size.">Open Planner laver udklipsark direkte i browseren. Vælg kortets mål, sammensæt kortene og brug kontrolstregen til at kontrollere, at printeren har beholdt den rigtige størrelse.</p>
                                         <ul class="simple-feature-list mb-4">
@@ -365,31 +432,28 @@
 
             <hr class="m-0" />
 
-            <section class="resume-section" id="playground">
+            <section class="resume-section" id="work">
                 <div class="resume-section-content">
-                    <h2 class="mb-4" data-da="3D legeplads" data-en="3D playground">3D legeplads</h2>
-                    <p class="section-intro mb-4" data-da="Visualiseringer, produktstudier og digitale eksperimenter." data-en="Visualisations, product studies and digital experiments.">
-                        Visualiseringer, produktstudier og digitale eksperimenter.
-                    </p>
-                    <div id="playgroundCarousel" class="carousel slide project-carousel mb-4" aria-label="Udvalgte 3D-arbejder">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active"><figure class="carousel-figure"><img src="Assets/Img/vr-experiment.jpg" loading="lazy" alt="3D-rendering af en træfigur med VR-headset" data-alt-da="3D-rendering af en træfigur med VR-headset" data-alt-en="3D rendering of a wooden figure wearing a VR headset" /><figcaption><span>1 / 12</span><strong data-da="Nye verdener" data-en="New worlds">Nye verdener</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/instagram-render-01-kitchen.jpg" loading="lazy" alt="3D-rendering af et lyst køkken med brød og en gul kop" data-alt-da="3D-rendering af et lyst køkken med brød og en gul kop" data-alt-en="3D rendering of a bright kitchen with bread and a yellow mug" /><figcaption><span>2 / 12</span><strong data-da="Hverdagsmaterialer" data-en="Everyday materials">Hverdagsmaterialer</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/metal-lamps.jpg" loading="lazy" alt="3D-rendering af blanke pendellamper" data-alt-da="3D-rendering af blanke pendellamper" data-alt-en="3D rendering of reflective pendant lamps" /><figcaption><span>3 / 12</span><strong data-da="Lys og form" data-en="Light and form">Lys og form</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/instagram-render-02-museum.jpg" loading="lazy" alt="3D-rendering af et dinosaurskelet i et museum" data-alt-da="3D-rendering af et dinosaurskelet i et museum" data-alt-en="3D rendering of a dinosaur skeleton in a museum" /><figcaption><span>4 / 12</span><strong data-da="På museum" data-en="At the museum">På museum</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/character-study.jpg" loading="lazy" alt="Farverige 3D-figurer i et produktstudie" data-alt-da="Farverige 3D-figurer i et produktstudie" data-alt-en="Colourful 3D characters in a product study" /><figcaption><span>5 / 12</span><strong data-da="Figurer med personlighed" data-en="Characters with personality">Figurer med personlighed</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/instagram-render-03-trex.jpg" loading="lazy" alt="3D-rendering af en mekanisk T-rex" data-alt-da="3D-rendering af en mekanisk T-rex" data-alt-en="3D rendering of a mechanical T-rex" /><figcaption><span>6 / 12</span><strong data-da="Mekanik med tænder" data-en="Mechanics with teeth">Mekanik med tænder</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/instagram-render-04-watering-can.jpg" loading="lazy" alt="3D-rendering af en sort vandkande ved en plante" data-alt-da="3D-rendering af en sort vandkande ved en plante" data-alt-en="3D rendering of a black watering can beside a plant" /><figcaption><span>7 / 12</span><strong data-da="Produktidé" data-en="Product idea">Produktidé</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/instagram-render-05-car.jpg" loading="lazy" alt="Mørk 3D-lysstudie med en rød sportsvogn" data-alt-da="Mørk 3D-lysstudie med en rød sportsvogn" data-alt-en="Dark 3D lighting study featuring a red sports car" /><figcaption><span>8 / 12</span><strong data-da="Lysstudie" data-en="Lighting study">Lysstudie</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/instagram-render-06-stingray.jpg" loading="lazy" alt="3D-rendering af en organisk gyngestol i træ" data-alt-da="3D-rendering af en organisk gyngestol i træ" data-alt-en="3D rendering of an organic wooden rocking chair" /><figcaption><span>9 / 12</span><strong data-da="Møbelstudie" data-en="Furniture study">Møbelstudie</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/instagram-render-07-interior.jpg" loading="lazy" alt="3D-rendering af et interiør med en klassisk lænestol" data-alt-da="3D-rendering af et interiør med en klassisk lænestol" data-alt-en="3D rendering of an interior with a classic lounge chair" /><figcaption><span>10 / 12</span><strong data-da="Interiør og lys" data-en="Interior and light">Interiør og lys</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/eagle-landscape.jpg" loading="lazy" alt="3D-landskab med en ørn på en træstamme" data-alt-da="3D-landskab med en ørn på en træstamme" data-alt-en="3D landscape with an eagle perched on a tree trunk" /><figcaption><span>11 / 12</span><strong data-da="Digital natur" data-en="Digital nature">Digital natur</strong></figcaption></figure></div>
-                            <div class="carousel-item"><figure class="carousel-figure"><img src="Assets/Img/instagram-render-08-planter.jpg" loading="lazy" alt="Eksploderet 3D-visning af en selvvandende plantekrukke" data-alt-da="Eksploderet 3D-visning af en selvvandende plantekrukke" data-alt-en="Exploded 3D view of a self-watering planter" /><figcaption><span>12 / 12</span><strong data-da="Fra dele til helhed" data-en="From parts to whole">Fra dele til helhed</strong></figcaption></figure></div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#playgroundCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Forrige billede</span></button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#playgroundCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Næste billede</span></button>
+                    <p class="eyebrow" data-da="Jeg leder efter arbejde nu" data-en="I am currently looking for work">Jeg leder efter arbejde nu</p>
+                    <h2 class="mb-4" data-da="Arbejdsliv" data-en="Working life">Arbejdsliv</h2>
+                    <p class="work-lead" data-da="Jeg er stærk, når mennesker, produkter og teknologi skal give mening sammen. Jeg lærer hurtigt, spørger ind til det, der ikke hænger sammen, og ender som regel med både en praktisk løsning og en bedre struktur omkring den." data-en="I do my best work where people, products and technology need to make sense together. I learn quickly, question what does not add up, and usually end up with both a practical solution and a better structure around it.">Jeg er stærk, når mennesker, produkter og teknologi skal give mening sammen. Jeg lærer hurtigt, spørger ind til det, der ikke hænger sammen, og ender som regel med både en praktisk løsning og en bedre struktur omkring den.</p>
+                    <p data-da="Min baggrund spænder fra faglært salg og kundekontakt til produktdata, datarens, M365, Power Platform, D365, CAD, 3D-print og egne digitale værktøjer. Jeg er ikke typen, der bliver imponeret af en proces, bare fordi den har fået et langt navn. Jeg vil hellere forstå den, rydde op i den og få den til at virke for de mennesker, der faktisk skal bruge den." data-en="My background ranges from qualified retail sales and customer contact to product data, data cleaning, M365, Power Platform, D365, CAD, 3D printing and my own digital tools. I am not impressed by a process simply because it has a long name. I would rather understand it, clean it up and make it work for the people who actually use it.">Min baggrund spænder fra faglært salg og kundekontakt til produktdata, datarens, M365, Power Platform, D365, CAD, 3D-print og egne digitale værktøjer. Jeg er ikke typen, der bliver imponeret af en proces, bare fordi den har fået et langt navn. Jeg vil hellere forstå den, rydde op i den og få den til at virke for de mennesker, der faktisk skal bruge den.</p>
+
+                    <div class="work-vision">
+                        <h3 data-da="Den retning, jeg går efter" data-en="The direction I am heading">Den retning, jeg går efter</h3>
+                        <p data-da="Mit bedste bud er, at jeg om fem år arbejder med unge, der har det svært, og lærer dem om lokal produktion – både digitalt og fysisk. 3D-print, CNC og almindeligt håndværk, men også ADL-færdigheder, diagnoseforståelse og det at få en hverdag til at hænge sammen." data-en="My best guess is that in five years I will be working with young people who are struggling, teaching them about local production both digitally and physically: 3D printing, CNC and general craft skills, but also activities of daily living, understanding diagnoses and making everyday life work.">Mit bedste bud er, at jeg om fem år arbejder med unge, der har det svært, og lærer dem om lokal produktion – både digitalt og fysisk. 3D-print, CNC og almindeligt håndværk, men også ADL-færdigheder, diagnoseforståelse og det at få en hverdag til at hænge sammen.</p>
+                        <p data-da="Derfor søger jeg ikke kun én bestemt jobtitel. Jeg søger roller, der kan gøre mig dygtigere til forskellige dele af den opgave." data-en="That is why I am not looking for one particular job title. I am looking for roles that can make me better at different parts of that work.">Derfor søger jeg ikke kun én bestemt jobtitel. Jeg søger roller, der kan gøre mig dygtigere til forskellige dele af den opgave.</p>
                     </div>
-                    <a class="text-primary instagram-link" href="https://www.instagram.com/sorenfroststaal/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram me-2"></i><span data-da="Se mere på Instagram" data-en="See more on Instagram">Se mere på Instagram</span></a>
+
+                    <div class="work-tracks">
+                        <article><h3 data-da="Socialfagligt og pædagogisk" data-en="Social and educational work">Socialfagligt og pædagogisk</h3><p data-da="Her kan jeg blive bedre til relationer, motivation, tydelige rammer og til at omsætte viden om diagnoser til en hverdag, der faktisk fungerer." data-en="This can strengthen my skills in relationships, motivation, clear boundaries and turning knowledge about diagnoses into an everyday life that actually works.">Her kan jeg blive bedre til relationer, motivation, tydelige rammer og til at omsætte viden om diagnoser til en hverdag, der faktisk fungerer.</p></article>
+                        <article><h3 data-da="Håndværk og produktion" data-en="Craft and production">Håndværk og produktion</h3><p data-da="Det giver mere materialeforståelse, sikkerhed, arbejdsgange og den praktiske troværdighed, der skal til, når man selv skal lære fra sig." data-en="This builds knowledge of materials, safety, workflows and the practical credibility needed when teaching others.">Det giver mere materialeforståelse, sikkerhed, arbejdsgange og den praktiske troværdighed, der skal til, når man selv skal lære fra sig.</p></article>
+                        <article><h3 data-da="Data og processer" data-en="Data and processes">Data og processer</h3><p data-da="Jeg kan lide at finde mønstre i rod, ensrette data og gøre viden brugbar. Det er den stille motor under alt fra en produktion til et godt læringsforløb." data-en="I like finding patterns in messy information, standardising data and making knowledge useful. It is the quiet engine beneath both production and a good learning process.">Jeg kan lide at finde mønstre i rod, ensrette data og gøre viden brugbar. Det er den stille motor under alt fra en produktion til et godt læringsforløb.</p></article>
+                        <article><h3 data-da="Adfærdsdesign" data-en="Behavioural design">Adfærdsdesign</h3><p data-da="Her handler det om at forme omgivelser, valg og værktøjer, så det bliver lettere at gøre det rigtige – uden at tale ned til mennesker." data-en="This is about shaping environments, choices and tools so the helpful action becomes easier without talking down to people.">Her handler det om at forme omgivelser, valg og værktøjer, så det bliver lettere at gøre det rigtige – uden at tale ned til mennesker.</p></article>
+                        <article><h3 data-da="IT og digitale værktøjer" data-en="IT and digital tools">IT og digitale værktøjer</h3><p data-da="IT giver mig systemforståelse, tilgængelighed og mulighed for hurtigt at bygge og afprøve løsninger, der forbinder det digitale med det fysiske." data-en="IT gives me systems thinking, accessibility skills and the ability to build and test solutions that connect the digital and physical worlds.">IT giver mig systemforståelse, tilgængelighed og mulighed for hurtigt at bygge og afprøve løsninger, der forbinder det digitale med det fysiske.</p></article>
+                    </div>
+
+                    <blockquote class="work-aside"><p data-da="Om det ender præcis sådan, er jeg på ingen måde sikker på. I 2008 sagde jeg: “Ronaldo til spansk fodbold?! Han kommer da til at falde helt igennem der.” Så mine langtidsprognoser skal måske læses med et mindre forbehold." data-en="I am by no means certain that this is exactly where I will end up. In 2008 I said: “Ronaldo in Spanish football?! He is going to fail completely there.” So my long-term forecasts may deserve a small disclaimer.">Om det ender præcis sådan, er jeg på ingen måde sikker på. I 2008 sagde jeg: “Ronaldo til spansk fodbold?! Han kommer da til at falde helt igennem der.” Så mine langtidsprognoser skal måske læses med et mindre forbehold.</p></blockquote>
                 </div>
             </section>
 
@@ -410,7 +474,6 @@
                     <details class="site-data-note"><summary data-da="Om siden: data og krav" data-en="About this site: data and requirements">Om siden: data og krav</summary><p data-da="Sikkerhedsvurdering: Denne forside har ingen formular, der indsamler oplysninger. Eksterne links og programdownloads åbnes kun, når du vælger dem. Et installationsprogram kan ændre din computer; læs projektets krav før installation." data-en="Safety assessment: This home page has no data-collection form. External links and program downloads open only when you choose them. An installer can change your computer; read the project requirements before installing.">Sikkerhedsvurdering: Denne forside har ingen formular, der indsamler oplysninger. Eksterne links og programdownloads åbnes kun, når du vælger dem. Et installationsprogram kan ændre din computer; læs projektets krav før installation.</p><p data-da="Dependencies: Lokal CSS, JavaScript og Inter/Nunito-skrifttyper. Eksisterende Bootstrap-JavaScript fra jsDelivr styrer mobilmenu, ekstra projektdetaljer og billedskift. Font Awesome fra sit CDN leverer ikoner. De eksterne tjenester modtager almindelige webanmodninger; uden dem kan ikoner eller interaktion mangle, men projektbeskrivelser og links er synlige." data-en="Dependencies: Local CSS, JavaScript and Inter/Nunito fonts. Existing Bootstrap JavaScript from jsDelivr controls the mobile menu, extra project details and image switching. Font Awesome supplies icons from its CDN. These external services receive normal web requests; without them icons or interactions may be unavailable, but project descriptions and links remain visible.">Dependencies: Lokal CSS, JavaScript og Inter/Nunito-skrifttyper. Eksisterende Bootstrap-JavaScript fra jsDelivr styrer mobilmenu, ekstra projektdetaljer og billedskift. Font Awesome fra sit CDN leverer ikoner. De eksterne tjenester modtager almindelige webanmodninger; uden dem kan ikoner eller interaktion mangle, men projektbeskrivelser og links er synlige.</p></details><p class="small mt-5 mb-2">© <span id="year">2026</span> Søren Frost Staal · extruda.dk</p>
                     <p class="small mb-0"><a href="design-system/" data-da="Visuel identitet og designsystem" data-en="Visual identity and design system">Visuel identitet og designsystem</a></p>
                     <p class="small mb-0"><a href="design-system/#domain-logo" data-da="Logoer med .dk og LinkedIn-banner" data-en="Logos with .dk and LinkedIn banner">Logoer med .dk og LinkedIn-banner</a></p>
-                    <p class="small mb-0"><a href="design-system/dummy/" data-da="Prøv dummy-appen og installationen" data-en="Try the dummy app and setup">Prøv dummy-appen og installationen</a></p>
                 </div>
             </section>
         </div>

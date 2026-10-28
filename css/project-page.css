@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("../Assets/Fonts/Nunito-Variable.woff2") format("woff2");
+    font-weight: 200 1000;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../Assets/Fonts/Inter-Variable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+.project-page {
+    margin: 0;
+    color: var(--ui-text, #343b3b);
+    background: var(--ui-bg, #f5f0e8);
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+.project-page h1,
+.project-page h2,
+.project-page h3 {
+    font-family: "Nunito", system-ui, sans-serif;
+    font-weight: 800;
+}
+
+.project-page a { color: var(--ui-action, #28645f); }
+
+.project-page main {
+    width: min(72rem, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 6rem 0 4rem;
+}
+
+.project-page .back-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.project-page .project-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 28rem);
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.project-page h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2.35rem, 6vw, 5rem);
+    line-height: .98;
+}
+
+.project-page .project-lead {
+    max-width: 38rem;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.55;
+}
+
+.project-page .project-mark {
+    display: grid;
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 2rem;
+    background: var(--ui-surface, #fff);
+}
+
+.project-page .project-mark img {
+    width: 62%;
+    height: 62%;
+    object-fit: contain;
+}
+
+.project-page .project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 4rem 0;
+}
+
+.project-page .project-gallery img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.project-page .project-section {
+    max-width: 48rem;
+    margin: 4rem 0;
+}
+
+.project-page .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.project-page .safety-note {
+    margin-top: 3rem;
+    padding: 1.25rem;
+    border: 1px solid var(--ui-border, #d9d5cd);
+    border-radius: 1rem;
+    background: var(--ui-surface, #fff);
+}
+
+.project-page .ex-button {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: .7rem 1rem;
+    border: 1px solid var(--ui-action, #28645f);
+    border-radius: .5rem;
+    color: var(--ui-surface, #fff);
+    background: var(--ui-action, #28645f);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.project-page .ex-button-secondary {
+    color: var(--ui-action, #28645f);
+    background: transparent;
+}
+
+@media (max-width: 760px) {
+    .project-page main { padding-top: 5rem; }
+    .project-page .project-hero { grid-template-columns: 1fr; }
+    .project-page .project-mark { max-width: 20rem; }
+    .project-page .project-gallery { grid-template-columns: 1fr; }
+}
