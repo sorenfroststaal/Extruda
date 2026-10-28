@@ -1385,3 +1385,9 @@ section.resume-section {
 #projects .project-teaser { padding: 16px 0 24px; }
 [data-theme="dark"] #projects .project-row-toggle { color: #9dc7ba; }
 @media (max-width: 720px) { #projects .project-summary { gap: 12px; } }
+
+.cv-disclosure summary:has(.work-topic-icon) { display: grid; grid-template-columns: 64px minmax(0, 1fr) 2.25rem; gap: 16px; }
+.cv-disclosure summary > .work-track-copy { display: grid; gap: .2rem; min-width: 0; }
+@media (max-width: 720px) {
+    .cv-disclosure summary:has(.work-topic-icon) { grid-template-columns: 44px minmax(0, 1fr) 2.25rem; gap: 12px; padding: 20px; }
+}
