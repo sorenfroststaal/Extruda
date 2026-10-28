@@ -9,6 +9,7 @@ Kør fra repositoryets rod:
 ```text
 node design-system/tests/browser.cjs
 node design-system/tests/header.cjs
+node design-system/tests/contrast.cjs
 ```
 
 Valgfrie miljøvariabler:
@@ -29,6 +30,13 @@ sprog, tema, systemtema, genindlæsning, tastatur, dialog og mobilbredder.
 Den kontrollerer også, at arbejdsark bevarer sprog og papirfarve ved skift af
 appens indstillinger. Siderne indlæses fra lokale projektfiler via browserens
 testrouting; der bruges ingen ekstern oversættelsestjeneste.
+
+`contrast.cjs` starter en midlertidig lokal server og scanner synlig tekst,
+links, knapper, labels og overskrifter på hovedsiderne i både lyst og mørkt
+tema. Almindelig tekst kræver mindst 4,5:1; stor tekst mindst 3:1. Testen
+åbner alle fold-ud-afsnit og forstår også CSS `color(srgb ...)` fra
+`color-mix()`. Kør den efter enhver
+ændring af farvetokens, temaer, knapper, links, ikoner eller flader.
 
 Efter ændringer i fælles topknapper, tema-CSS eller UI-oversættelser køres:
 
