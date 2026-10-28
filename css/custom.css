@@ -1267,8 +1267,10 @@ section.resume-section {
 .profile-disclosure summary small,
 .cv-job summary small,
 .cv-disclosure summary small { color: var(--ex-muted); font-weight: 400; }
-.cv-job summary { display: grid; grid-template-columns: 3rem minmax(0, 1fr) 2.25rem; }
-.cv-job summary img { width: 3rem; height: 3rem; display: block; }
+.cv-job summary { display: grid; grid-template-columns: 7rem minmax(0, 1fr) 2.25rem; }
+.cv-job summary img,
+.cv-role-logo { width: 7rem; height: 3.5rem; display: block; object-fit: contain; padding: .5rem; border-radius: .5rem; background: #f5f0e8; }
+.cv-role-logo { margin-bottom: .5rem; }
 .profile-disclosure-content,
 .cv-job-content,
 .cv-disclosure-content { padding: 0 1.25rem 1.25rem; }
@@ -1334,6 +1336,8 @@ section.resume-section {
 [data-theme="dark"] .cv-disclosure summary:focus-visible { background: rgba(157, 199, 186, .1); }
 
 @media (max-width: 720px) {
+    .cv-job summary { grid-template-columns: 4.5rem minmax(0, 1fr) 2.25rem; gap: .65rem; padding: 1rem; }
+    .cv-job summary img { width: 4.5rem; height: 3.5rem; padding: .35rem; }
     .work-track:last-child { grid-column: auto; }
     .work-track summary { padding: 1rem 1.1rem; }
     .work-track-details { padding: 0 1.1rem 1.1rem; }
