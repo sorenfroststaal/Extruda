@@ -226,7 +226,7 @@ section.resume-section {
 }
 
 #projects {
-    background: var(--ex-white);
+    background: var(--ex-cream);
 }
 
 #playground {
@@ -1135,7 +1135,7 @@ section.resume-section {
 
 [data-theme="light"] #projects {
     color: var(--ex-graphite);
-    background: var(--ex-white);
+    background: var(--ex-cream);
 }
 
 [data-theme="light"] .project-card,
