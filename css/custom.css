@@ -1426,3 +1426,27 @@ section.resume-section {
 .projects-group > summary small { font-size: 16px; font-weight: 400; color: var(--ex-muted); }
 #projects .projects-group .project-list { max-width: none; }
 @media (max-width: 720px) { .projects-group > summary h2 { font-size: 22px; } }
+
+/* Shared typography levels across the homepage. */
+:root { --home-heading: 24px; --home-subheading: 18px; --home-body: 16px; }
+.social-icons .social-icon { background: var(--ex-teal); }
+.resume-section-content p,
+.resume-section-content .lead,
+.resume-section-content .section-intro,
+.resume-section-content .cv-skill-list li { font-size: var(--home-body); line-height: 1.6; }
+.resume-section-content h2,
+.resume-section-content h3,
+.work-vision h3,
+.work-group-disclosure > summary strong,
+.projects-group > summary h2,
+.work-category-group .work-track summary strong { font-size: var(--home-heading); line-height: 1.25; }
+.resume-section-content h4,
+.work-track-details h4,
+.work-interests .work-track summary strong,
+.cv-disclosure summary strong,
+.profile-disclosure summary strong,
+.cv-job summary strong,
+#projects .project-title strong { font-size: var(--home-subheading); line-height: 1.4; }
+@media (max-width: 720px) { :root { --home-heading: 22px; } }
+
+.resume-section-content .project-preview-copy p:first-child { font-size: var(--home-body); }
