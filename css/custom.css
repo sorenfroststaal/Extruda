@@ -389,6 +389,7 @@ section.resume-section {
 }
 
 .project-index {
+    padding-left: 0.75rem;
     color: var(--ex-muted);
     font-family: "Inter", system-ui, sans-serif;
     font-size: 0.78rem;
@@ -895,9 +896,15 @@ section.resume-section {
 
     .section-intro,
     .meta-line,
+    .project-index,
+    .project-title small,
     .project-meta,
     .site-data-note p {
         color: #c1cbc7;
+    }
+
+    .project-preview-copy p:first-child {
+        color: #f5f0e8;
     }
 
     a,
