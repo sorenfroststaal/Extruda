@@ -1419,3 +1419,10 @@ section.resume-section {
 
 .work-category-group .work-track summary strong { font-size: 24px; }
 @media (max-width: 720px) { .work-category-group .work-track summary strong { font-size: 22px; } }
+
+.projects-group.work-group-disclosure { margin-top: 0; }
+.projects-group > summary h2 { font-size: 24px; margin: 0; }
+.projects-group > summary .work-track-copy { display: grid; gap: 8px; min-width: 0; }
+.projects-group > summary small { font-size: 16px; font-weight: 400; color: var(--ex-muted); }
+#projects .projects-group .project-list { max-width: none; }
+@media (max-width: 720px) { .projects-group > summary h2 { font-size: 22px; } }
