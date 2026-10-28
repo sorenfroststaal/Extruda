@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const key = 'lantern-road-reader-v1';
-  const allowed = ['01-the-man-beneath-the-wisteria.html','02-the-fight-that-changes-nothing.html','03-a-name-he-cannot-say.html'];
+  const allowed = ['01-the-man-beneath-the-wisteria.html','02-the-fight-that-changes-nothing.html','03-a-name-he-cannot-say.html','04-the-house-of-perfect-family.html','05-someone-who-can-leave.html','06-supper-for-two.html'];
   let state = {}, available = true, language = 'en';
   const applyCopy = lang => {
     language = lang;
