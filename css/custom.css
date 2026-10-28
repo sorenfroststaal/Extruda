@@ -1450,3 +1450,8 @@ section.resume-section {
 @media (max-width: 720px) { :root { --home-heading: 22px; } }
 
 .resume-section-content .project-preview-copy p:first-child { font-size: var(--home-body); }
+
+.work-group-disclosure > summary:hover,
+.work-group-disclosure > summary:focus-visible { background: rgba(38, 107, 105, .08); }
+[data-theme="dark"] .work-group-disclosure > summary:hover,
+[data-theme="dark"] .work-group-disclosure > summary:focus-visible { background: rgba(157, 199, 186, .1); }
