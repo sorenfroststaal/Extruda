@@ -1,6 +1,6 @@
 # The Man Beneath the Wisteria
 
-The first thing the old woman said was that she had lost a sandal.
+The first thing the old woman said was that one of her sandals had fallen into the river.
 
 She stood halfway across the bridge, gripping both ropes, with one bare foot lifted indignantly above the planks. Wind worried at her sleeves. Far below, the river struck the black sides of the gorge with a sound like trees being torn out by their roots.
 
@@ -30,7 +30,7 @@ She stared.
 
 “No. But it will keep the splinters out.”
 
-He loosened the fastening, placed it around her foot and offered his arm. She accepted it with the air of someone allowing a useful piece of furniture to exist.
+He loosened the fastening of his boot, helped her slip her bare foot inside it and offered his arm. She accepted it with the air of someone allowing a useful piece of furniture to exist.
 
 Together, they crossed.
 
@@ -58,6 +58,10 @@ Rengoku had stopped trying to count the days.
 
 He had not stopped noticing arrivals.
 
+The bridge brought travellers from the forest to Nao's inn. It was a crossing on the way through the afterlife, not the end of the journey. Beyond the inn, each person had a different road to find.
+
+Rengoku had begun by helping people over the planks. Then he had learned to stay beside them afterwards, listening when they could not explain where they needed to go. He could light the crossing and offer a steady arm. He could not choose their destination for them.
+
 Some travellers knew at once where they were. Others asked for directions to a village, a battlefield, a room where someone was still waiting. Nao gave them tea. Rengoku listened. Sometimes a path appeared among the trees while they spoke, and the traveller stood up before either of them had pointed it out.
 
 He liked those departures.
@@ -78,7 +82,7 @@ The woman looked at it. Her face changed so suddenly that Rengoku felt as though
 
 “Oh,” she said. “She has kept the ugly house.”
 
-She stood, leaving his boot neatly beside the slippers.
+She stood, leaving Rengoku's borrowed boot neatly beside the slippers.
 
 At the path, she turned back.
 
@@ -120,13 +124,31 @@ Not with the wind. Their branches bent away from the road, opening a space where
 
 Rengoku put down the bowl.
 
-A young man stumbled out of the trees.
+A young man emerged from the trees in a torn brown coat. He held a cloth bundle against his chest. Pale wood shavings clung to his cuffs.
 
-He wore a torn brown coat and held a bundle against his chest. He looked behind him, then ran towards the bridge, stopped and looked down.
+He approached the bridge, looked down into the gorge and stopped.
 
-“Come across!” Rengoku called. “One step at a time. Hold the ropes.”
+Rengoku went to the near end, where the traveller could see him clearly.
 
-The man shook his head. His mouth moved, but the river swallowed the words.
+“My name is Kyojuro Rengoku! The bridge leads to the inn. There is somewhere to sit, and someone who will listen. What is your name?”
+
+“Toma.” The young man raised his voice above the river. “I am looking for my younger brother.”
+
+“Has he crossed here?”
+
+“I don't know. He died before I did.” Toma looked back at the empty forest. “I thought I would know where to find him when my turn came.”
+
+He loosened the cloth just enough to reveal a little wooden horse.
+
+“I worked with wood. He used to sit beside me and ask what I was making.” His thumb rested on the horse's mane. “I brought him some things.”
+
+Rengoku did not tell him that his brother would be at the inn. He could not promise that.
+
+“Come across, Toma. We can help you look for your next road.”
+
+Toma stepped onto the bridge. With the bundle held in both arms, he had no hand free for the ropes. The planks shifted under him, and he froze.
+
+“One step at a time,” Rengoku said. “I will come and carry the bundle, so you can hold on.”
 
 Rengoku was reaching for his lantern when another figure stepped onto the far bank.
 

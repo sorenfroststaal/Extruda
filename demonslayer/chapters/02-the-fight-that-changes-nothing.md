@@ -1,8 +1,8 @@
 # The Fight That Changes Nothing
 
-The traveller's name was Toma.
+Six planks from the far bank, Rengoku reached Toma. The woodworker stood with his bundle pressed against his chest, caught between the two men staring at one another across the bridge.
 
-Rengoku learned this six planks from the far bank, when the man tried to apologise for being in the way.
+“I'm sorry,” Toma said. “I didn't mean to be in the way.”
 
 “You are exactly where someone who needs help should be,” Rengoku said. “Now, Toma. Give me the bundle.”
 
