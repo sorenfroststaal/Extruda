@@ -1343,3 +1343,6 @@ section.resume-section {
     .work-track-details { padding: 0 1.1rem 1.1rem; }
     .cv-compact-list > div { grid-template-columns: 1fr; gap: .25rem; }
 }
+
+.work-interests { max-width: 64rem; margin-top: 24px; margin-bottom: 24px; }
+.work-interests > h3 { margin: 0 0 16px; font-size: 1.5rem; }
