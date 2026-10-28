@@ -1,0 +1,282 @@
+{
+  "brand": "extruda.dk",
+  "wordmark": "Manrope 800, outlined",
+  "variants": [
+    "color",
+    "black",
+    "white",
+    "cream",
+    "graphite",
+    "petrol",
+    "teal",
+    "apricot"
+  ],
+  "files": [
+    {
+      "file": "extruda-dk-horizontal-color.svg",
+      "layout": "horizontal",
+      "variant": "color",
+      "viewBox": [
+        0,
+        0,
+        1466,
+        256
+      ]
+    },
+    {
+      "file": "extruda-dk-wordmark-color.svg",
+      "layout": "wordmark",
+      "variant": "color",
+      "viewBox": [
+        0,
+        0,
+        1198,
+        220
+      ]
+    },
+    {
+      "file": "extruda-dk-stacked-color.svg",
+      "layout": "stacked",
+      "variant": "color",
+      "viewBox": [
+        0,
+        0,
+        1206,
+        470
+      ]
+    },
+    {
+      "file": "extruda-dk-horizontal-black.svg",
+      "layout": "horizontal",
+      "variant": "black",
+      "viewBox": [
+        0,
+        0,
+        1466,
+        256
+      ]
+    },
+    {
+      "file": "extruda-dk-wordmark-black.svg",
+      "layout": "wordmark",
+      "variant": "black",
+      "viewBox": [
+        0,
+        0,
+        1198,
+        220
+      ]
+    },
+    {
+      "file": "extruda-dk-stacked-black.svg",
+      "layout": "stacked",
+      "variant": "black",
+      "viewBox": [
+        0,
+        0,
+        1206,
+        470
+      ]
+    },
+    {
+      "file": "extruda-dk-horizontal-white.svg",
+      "layout": "horizontal",
+      "variant": "white",
+      "viewBox": [
+        0,
+        0,
+        1466,
+        256
+      ]
+    },
+    {
+      "file": "extruda-dk-wordmark-white.svg",
+      "layout": "wordmark",
+      "variant": "white",
+      "viewBox": [
+        0,
+        0,
+        1198,
+        220
+      ]
+    },
+    {
+      "file": "extruda-dk-stacked-white.svg",
+      "layout": "stacked",
+      "variant": "white",
+      "viewBox": [
+        0,
+        0,
+        1206,
+        470
+      ]
+    },
+    {
+      "file": "extruda-dk-horizontal-cream.svg",
+      "layout": "horizontal",
+      "variant": "cream",
+      "viewBox": [
+        0,
+        0,
+        1466,
+        256
+      ]
+    },
+    {
+      "file": "extruda-dk-wordmark-cream.svg",
+      "layout": "wordmark",
+      "variant": "cream",
+      "viewBox": [
+        0,
+        0,
+        1198,
+        220
+      ]
+    },
+    {
+      "file": "extruda-dk-stacked-cream.svg",
+      "layout": "stacked",
+      "variant": "cream",
+      "viewBox": [
+        0,
+        0,
+        1206,
+        470
+      ]
+    },
+    {
+      "file": "extruda-dk-horizontal-graphite.svg",
+      "layout": "horizontal",
+      "variant": "graphite",
+      "viewBox": [
+        0,
+        0,
+        1466,
+        256
+      ]
+    },
+    {
+      "file": "extruda-dk-wordmark-graphite.svg",
+      "layout": "wordmark",
+      "variant": "graphite",
+      "viewBox": [
+        0,
+        0,
+        1198,
+        220
+      ]
+    },
+    {
+      "file": "extruda-dk-stacked-graphite.svg",
+      "layout": "stacked",
+      "variant": "graphite",
+      "viewBox": [
+        0,
+        0,
+        1206,
+        470
+      ]
+    },
+    {
+      "file": "extruda-dk-horizontal-petrol.svg",
+      "layout": "horizontal",
+      "variant": "petrol",
+      "viewBox": [
+        0,
+        0,
+        1466,
+        256
+      ]
+    },
+    {
+      "file": "extruda-dk-wordmark-petrol.svg",
+      "layout": "wordmark",
+      "variant": "petrol",
+      "viewBox": [
+        0,
+        0,
+        1198,
+        220
+      ]
+    },
+    {
+      "file": "extruda-dk-stacked-petrol.svg",
+      "layout": "stacked",
+      "variant": "petrol",
+      "viewBox": [
+        0,
+        0,
+        1206,
+        470
+      ]
+    },
+    {
+      "file": "extruda-dk-horizontal-teal.svg",
+      "layout": "horizontal",
+      "variant": "teal",
+      "viewBox": [
+        0,
+        0,
+        1466,
+        256
+      ]
+    },
+    {
+      "file": "extruda-dk-wordmark-teal.svg",
+      "layout": "wordmark",
+      "variant": "teal",
+      "viewBox": [
+        0,
+        0,
+        1198,
+        220
+      ]
+    },
+    {
+      "file": "extruda-dk-stacked-teal.svg",
+      "layout": "stacked",
+      "variant": "teal",
+      "viewBox": [
+        0,
+        0,
+        1206,
+        470
+      ]
+    },
+    {
+      "file": "extruda-dk-horizontal-apricot.svg",
+      "layout": "horizontal",
+      "variant": "apricot",
+      "viewBox": [
+        0,
+        0,
+        1466,
+        256
+      ]
+    },
+    {
+      "file": "extruda-dk-wordmark-apricot.svg",
+      "layout": "wordmark",
+      "variant": "apricot",
+      "viewBox": [
+        0,
+        0,
+        1198,
+        220
+      ]
+    },
+    {
+      "file": "extruda-dk-stacked-apricot.svg",
+      "layout": "stacked",
+      "variant": "apricot",
+      "viewBox": [
+        0,
+        0,
+        1206,
+        470
+      ]
+    }
+  ],
+  "runtimeDependencies": [],
+  "externalReferences": false
+}

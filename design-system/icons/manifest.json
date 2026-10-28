@@ -1,12 +1,31 @@
 {
-  "version": "26A-v1",
+  "version": "26A-v2",
   "format": "svg",
   "counts": {
-    "logos": 15,
+    "logos": 39,
     "appIcons": 45,
     "uiIcons": 43,
-    "total": 103
+    "total": 127
   },
-  "appIconVariants": ["color", "black", "white"],
-  "uiCategories": ["navigation", "actions", "content-tools", "status-safety-theme"]
+  "appIconVariants": [
+    "color",
+    "black",
+    "white"
+  ],
+  "uiCategories": [
+    "navigation",
+    "actions",
+    "content-tools",
+    "status-safety-theme"
+  ],
+  "domainLogoVariants": [
+    "color",
+    "black",
+    "white",
+    "cream",
+    "graphite",
+    "petrol",
+    "teal",
+    "apricot"
+  ]
 }

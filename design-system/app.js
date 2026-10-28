@@ -7,6 +7,7 @@ const logoFiles=[
   'extruda-symbol-micro-black','extruda-symbol-micro-color','extruda-symbol-micro-white',
   'extruda-wordmark-black','extruda-wordmark-color','extruda-wordmark-white'
 ];
+const domainLogoFiles=['horizontal','wordmark','stacked'].flatMap(layout=>['color','black','white','cream','graphite','petrol','teal','apricot'].map(variant=>`extruda-dk-${layout}-${variant}`));
 const appIconNames=['archive','calculator','calendar','camera','code','convert','files','goldfish','guides','hub','images','notes','pdf','tasks','tools'];
 const uiIconGroups=[
   {da:'Navigation',en:'Navigation',names:['arrow-left','arrow-right','chevron-down','chevron-right','external-link','globe','grid','home','menu','search']},
@@ -15,7 +16,7 @@ const uiIconGroups=[
   {da:'Status, sikkerhed og tema',en:'Status, safety and theme',names:['help','info','lock','moon','sun','warning']}
 ];
 
-function humanise(name){return name.replace(/^extruda-/,'').replaceAll('-',' ');}
+function humanise(name){return name.replace(/^extruda-dk-/,'extruda.dk · ').replace(/^extruda-/,'').replaceAll('-',' ');}
 function makeIconCard({path,name,tone='light'}){
   const card=document.createElement('article');
   card.className=`icon-asset-card ${tone==='dark'?'dark-preview':''}`;
@@ -60,6 +61,7 @@ function renderIconLibrary(){
   const container=document.getElementById('icon-library-content');
   if(!container)return;
   container.append(makeLibraryGroup({da:'Logoer og symboler',en:'Logos and symbols',items:logoFiles.map(name=>({name,path:`./icons/logos/${name}.svg`,tone:name.endsWith('-white')?'dark':'light'}))}));
+  container.append(makeLibraryGroup({da:'extruda.dk · logoer',en:'extruda.dk · logos',items:domainLogoFiles.map(name=>({name,path:`./icons/logos/${name}.svg`,tone:/-(white|cream|apricot)$/.test(name)?'dark':'light'}))}));
   const variants=[{key:'color',da:'Programikoner · farve',en:'App icons · colour'},{key:'black',da:'Programikoner · sort',en:'App icons · black'},{key:'white',da:'Programikoner · hvid',en:'App icons · white'}];
   variants.forEach(variant=>container.append(makeLibraryGroup({da:variant.da,en:variant.en,items:appIconNames.map(icon=>({name:`extruda-${icon}-${variant.key}`,path:`./icons/apps/${variant.key}/extruda-${icon}.svg`,tone:variant.key==='white'?'dark':'light'}))})));
   uiIconGroups.forEach(group=>container.append(makeLibraryGroup({da:`UI · ${group.da}`,en:`UI · ${group.en}`,items:group.names.map(name=>({name,path:`./icons/ui/${name}.svg`}))})));
@@ -70,6 +72,7 @@ function updateLanguage(language){
   root.lang=selected;
   document.querySelectorAll('[data-da][data-en]').forEach(element=>{element.textContent=element.dataset[selected];});
   document.querySelectorAll('[data-aria-da][data-aria-en]').forEach(element=>{element.setAttribute('aria-label',element.dataset[selected==='da'?'ariaDa':'ariaEn']);});
+  document.querySelectorAll('[data-alt-da][data-alt-en]').forEach(element=>{element.alt=element.dataset[selected==='da'?'altDa':'altEn'];});
   document.dispatchEvent(new Event('extruda:language'));
   document.title=selected==='da'?'Visuel identitet · extruda':'Visual identity · extruda';
   document.querySelector('meta[name="description"]')?.setAttribute('content',selected==='da'?'Extrudas visuelle identitet og fælles UI/UX-principper for farver, typografi, komponenter, temaer, sprog og tilgængelighed.':'Extruda’s visual identity and shared UI/UX principles for colour, typography, components, themes, language and accessibility.');
