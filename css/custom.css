@@ -1345,4 +1345,9 @@ section.resume-section {
 }
 
 .work-interests { max-width: 64rem; margin-top: 24px; margin-bottom: 24px; }
-.work-interests > h3 { margin: 0 0 16px; font-size: 1.5rem; }
+.work-category-group > h3,
+.work-interests > h3,
+.work-profile-group > h3 { margin: 0 0 16px; font-size: 1.5rem; }
+.work-category-group,
+.work-profile-group { max-width: 64rem; }
+.work-profile-group > .profile-disclosure { margin-top: 0; }
