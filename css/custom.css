@@ -1214,10 +1214,8 @@ section.resume-section {
 }
 
 #work { background: var(--ex-cream); }
-.work-lead { max-width: 58rem; font-size: 1rem; }
 .work-vision h3,
-.work-profile h3,
-.cv-block > h3 { font-size: 1.25rem; line-height: 1.35; }
+.cv-block > h3 { font-size: 1rem; line-height: 1.5; }
 .work-vision { max-width: 58rem; margin: 0 0 2rem; }
 .work-tracks { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; max-width: 64rem; }
 .work-track { border: 1px solid var(--ex-border); border-radius: 1rem; background: rgba(255,255,255,.42); overflow: hidden; }
@@ -1241,17 +1239,57 @@ section.resume-section {
 .work-track-details p { margin: 0; }
 .work-aside { max-width: 58rem; margin: 1.5rem 0 0; padding-left: 1.5rem; border-left: 4px solid var(--ex-apricot); font-size: 1rem; }
 .work-aside p { margin: 0; }
-.work-profile { max-width: 58rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--ex-border); }
+.profile-disclosure { max-width: 64rem; margin-top: 3rem; }
 .cv-block { max-width: 64rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--ex-border); }
 .cv-intro { max-width: 58rem; color: var(--ex-muted); }
 .cv-section { margin-top: 2rem; }
 .cv-section > h4 { margin-bottom: 1rem; font-size: 1rem; }
-.cv-timeline { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ex-border); }
-.cv-timeline li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.5rem; padding: 1.25rem 0; border-bottom: 1px solid var(--ex-border); }
-.cv-timeline time { color: var(--ex-muted); font-weight: 700; }
-.cv-timeline strong { display: block; margin-bottom: .25rem; color: var(--ex-ink); }
-.cv-timeline p { max-width: 48rem; margin: 0; }
-.cv-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
+.cv-jobs,
+.cv-disclosures { display: grid; gap: .75rem; }
+.profile-disclosure,
+.cv-job,
+.cv-disclosure { border: 1px solid var(--ex-border); border-radius: 1rem; background: rgba(255,255,255,.42); overflow: hidden; }
+.profile-disclosure summary,
+.cv-job summary,
+.cv-disclosure summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.75rem; padding: 1rem 1.25rem; cursor: pointer; list-style: none; }
+.profile-disclosure summary::-webkit-details-marker,
+.cv-job summary::-webkit-details-marker,
+.cv-disclosure summary::-webkit-details-marker { display: none; }
+.profile-disclosure summary > span:first-child,
+.cv-job summary > span:nth-child(2),
+.cv-disclosure summary > span:first-child { display: grid; gap: .2rem; min-width: 0; }
+.profile-disclosure summary strong,
+.profile-disclosure summary small,
+.cv-job summary strong,
+.cv-job summary small,
+.cv-disclosure summary strong,
+.cv-disclosure summary small { font-size: 1rem; }
+.profile-disclosure summary small,
+.cv-job summary small,
+.cv-disclosure summary small { color: var(--ex-muted); font-weight: 400; }
+.cv-job summary { display: grid; grid-template-columns: 3rem minmax(0, 1fr) 2.25rem; }
+.cv-job summary img { width: 3rem; height: 3rem; display: block; }
+.profile-disclosure-content,
+.cv-job-content,
+.cv-disclosure-content { padding: 0 1.25rem 1.25rem; }
+.profile-disclosure-content,
+.cv-job-content > p,
+.cv-disclosure-content { padding-top: 1rem; border-top: 1px solid var(--ex-border); }
+.profile-disclosure-content p:last-child,
+.cv-job-content p,
+.cv-disclosure-content p { margin-bottom: 0; }
+.profile-disclosure[open] .work-track-mark::after,
+.cv-job[open] .work-track-mark::after,
+.cv-disclosure[open] .work-track-mark::after { transform: translate(-50%, -50%) rotate(0); }
+.profile-disclosure summary:hover,
+.profile-disclosure summary:focus-visible,
+.cv-job summary:hover,
+.cv-job summary:focus-visible,
+.cv-disclosure summary:hover,
+.cv-disclosure summary:focus-visible { background: rgba(38, 107, 105, .08); }
+.profile-disclosure summary:focus-visible,
+.cv-job summary:focus-visible,
+.cv-disclosure summary:focus-visible { outline: 3px solid var(--ex-focus); outline-offset: -3px; }
 .cv-compact-list { display: grid; gap: 0; margin: 0; }
 .cv-compact-list > div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; padding: .8rem 0; border-top: 1px solid var(--ex-border); }
 .cv-compact-list > div:last-child { border-bottom: 1px solid var(--ex-border); }
@@ -1270,23 +1308,34 @@ section.resume-section {
 [data-theme="dark"] .work-track-mark::before,
 [data-theme="dark"] .work-track-mark::after { background: #9dc7ba; }
 [data-theme="dark"] .work-track-details section,
-[data-theme="dark"] .work-profile,
 [data-theme="dark"] .cv-block,
-[data-theme="dark"] .cv-timeline,
-[data-theme="dark"] .cv-timeline li,
+[data-theme="dark"] .profile-disclosure,
+[data-theme="dark"] .cv-job,
+[data-theme="dark"] .cv-disclosure,
+[data-theme="dark"] .profile-disclosure-content,
+[data-theme="dark"] .cv-job-content > p,
+[data-theme="dark"] .cv-disclosure-content,
 [data-theme="dark"] .cv-compact-list > div,
 [data-theme="dark"] .cv-skill-list li { border-color: #667371; }
-[data-theme="dark"] .cv-timeline strong { color: #f5f0e8; }
 [data-theme="dark"] .cv-intro,
-[data-theme="dark"] .cv-timeline time,
+[data-theme="dark"] .profile-disclosure summary small,
+[data-theme="dark"] .cv-job summary small,
+[data-theme="dark"] .cv-disclosure summary small,
 [data-theme="dark"] .cv-compact-list dt { color: #c8d3d0; }
+[data-theme="dark"] .profile-disclosure,
+[data-theme="dark"] .cv-job,
+[data-theme="dark"] .cv-disclosure,
 [data-theme="dark"] .cv-skill-list li { background: #2d3535; }
+[data-theme="dark"] .profile-disclosure summary:hover,
+[data-theme="dark"] .profile-disclosure summary:focus-visible,
+[data-theme="dark"] .cv-job summary:hover,
+[data-theme="dark"] .cv-job summary:focus-visible,
+[data-theme="dark"] .cv-disclosure summary:hover,
+[data-theme="dark"] .cv-disclosure summary:focus-visible { background: rgba(157, 199, 186, .1); }
 
 @media (max-width: 720px) {
     .work-track:last-child { grid-column: auto; }
     .work-track summary { padding: 1rem 1.1rem; }
     .work-track-details { padding: 0 1.1rem 1.1rem; }
-    .cv-columns { grid-template-columns: 1fr; gap: 0; }
-    .cv-timeline li,
     .cv-compact-list > div { grid-template-columns: 1fr; gap: .25rem; }
 }
