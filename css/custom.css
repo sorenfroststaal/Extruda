@@ -1232,7 +1232,7 @@ section.resume-section {
 .work-track-mark::before,
 .work-track-mark::after { content: ""; position: absolute; top: 50%; left: 50%; width: .9rem; height: 2px; background: var(--ex-petrol); transform: translate(-50%, -50%); transition: transform .2s ease; }
 .work-track-mark::after { transform: translate(-50%, -50%) rotate(90deg); }
-.work-track[open] .work-track-mark::after { transform: translate(-50%, -50%) rotate(0); }
+.work-track[open] > summary > .work-track-mark::after { transform: translate(-50%, -50%) rotate(0); }
 .work-track summary:hover,
 .work-track summary:focus-visible { background: rgba(38, 107, 105, .08); }
 .work-track summary:focus-visible { outline: 3px solid var(--ex-focus); outline-offset: -3px; }
@@ -1285,9 +1285,9 @@ section.resume-section {
 .profile-disclosure-content p:last-child,
 .cv-job-content p,
 .cv-disclosure-content p { margin-bottom: 0; }
-.profile-disclosure[open] .work-track-mark::after,
-.cv-job[open] .work-track-mark::after,
-.cv-disclosure[open] .work-track-mark::after { transform: translate(-50%, -50%) rotate(0); }
+.profile-disclosure[open] > summary > .work-track-mark::after,
+.cv-job[open] > summary > .work-track-mark::after,
+.cv-disclosure[open] > summary > .work-track-mark::after { transform: translate(-50%, -50%) rotate(0); }
 .profile-disclosure summary:hover,
 .profile-disclosure summary:focus-visible,
 .cv-job summary:hover,
