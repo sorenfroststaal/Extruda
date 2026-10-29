@@ -79,3 +79,8 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .short-home-navigation { grid-row: 2; }
  .short-home-navigation > .short-choices { margin-top: 0; }
 }
+
+.short-intro p + p { margin-top: 12px; }
+.compact-destination .cv-job-content p + p,
+.compact-destination .profile-disclosure-content p + p,
+.compact-destination .work-track-details p + p { margin-top: 16px; }
