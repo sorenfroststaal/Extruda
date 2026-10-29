@@ -57,3 +57,9 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .compact-site #contact { padding: 40px 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .intro-dialog { display: none!important; } }
+
+.compact-destination .work-aside { background: #619b98; color: #fff; padding: 24px; border: 0; border-radius: 12px; box-sizing: border-box; }
+.compact-destination .work-aside p,
+.compact-destination .work-aside em { color: #fff; }
+.compact-destination .work-aside-icon { filter: brightness(0) invert(1); }
+@media (max-width: 650px) { .compact-destination .work-aside { padding: 20px; } }
