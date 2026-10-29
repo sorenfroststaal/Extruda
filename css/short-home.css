@@ -71,3 +71,11 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 
 .compact-destination .work-aside .quote-attribution { margin-top: 8px; }
 .compact-destination .work-aside .quote-reflection { margin-top: 24px; }
+
+/* Separate the introduction from the centered navigation on tall screens. */
+@media (min-width: 760px) and (min-height: 1400px) {
+ .compact-site > .short-home-main { display: grid; grid-template-rows: minmax(160px, 1fr) auto minmax(160px, 1fr); padding-top: 0; padding-bottom: 0; }
+ .short-home-main > .short-intro { grid-row: 1; align-self: center; }
+ .short-home-navigation { grid-row: 2; }
+ .short-home-navigation > .short-choices { margin-top: 0; }
+}
