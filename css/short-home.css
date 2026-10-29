@@ -63,3 +63,8 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-destination .work-aside em { color: #fff; }
 .compact-destination .work-aside-icon { filter: brightness(0) invert(1); }
 @media (max-width: 650px) { .compact-destination .work-aside { padding: 20px; } }
+
+.compact-destination .work-aside { flex-direction: row; align-items: center; }
+.compact-destination .work-aside-copy { flex: 1; width: auto; }
+.compact-destination .work-aside-icon { align-self: center; }
+@media (max-width: 650px) { .compact-destination .work-aside-icon { width: 72px; } }
