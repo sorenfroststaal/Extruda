@@ -1,4 +1,4 @@
-/* One silent introduction per page load; no cookies or browser storage. */
+/* Silent introduction on entry, never on returning; no browser storage. */
 (() => {
  'use strict';
  const destinations = {
@@ -10,7 +10,11 @@
   return;
  }
  const dialog = document.querySelector('.intro-dialog');
- if (!dialog || location.hash || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ const navigation = performance.getEntriesByType('navigation')[0];
+ let internalReturn = false;
+ try { internalReturn = Boolean(document.referrer) && new URL(document.referrer).origin === location.origin; }
+ catch { /* An unavailable referrer does not prevent normal navigation. */ }
+ if (!dialog || location.hash || navigation?.type === 'back_forward' || internalReturn || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
  const video = dialog.querySelector('video');
  const skip = dialog.querySelector('button');
  let closed = false;
@@ -28,6 +32,7 @@
  dialog.addEventListener('close', finish);
  video.addEventListener('ended', finish);
  video.addEventListener('error', finish);
+ window.addEventListener('pagehide', finish, {once: true});
  video.muted = true;
  const dark = document.documentElement.dataset.theme === 'dark';
  video.src = 'design-system/logo-animation/extruda-logo-' + (dark ? 'dark' : 'light') + '-web.webm';
