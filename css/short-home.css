@@ -1,4 +1,8 @@
-body.compact-site { padding: 0; }
+body.compact-site { padding: 0; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+.compact-site > .compact-header { flex: 0 0 auto; }
+.compact-site > .short-home-main { flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; }
+.compact-site > .compact-destination { flex: 1 0 auto; }
+.compact-site > #contact { flex: 0 0 auto; }
 .compact-header { border-bottom: 1px solid var(--ui-border); background: var(--ui-bg); }
 .compact-header-inner { max-width: 1024px; padding: 20px 32px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .compact-brand { display: inline-flex; min-height: 48px; align-items: center; }
