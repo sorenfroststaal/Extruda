@@ -147,3 +147,12 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-site .contact-email:hover { border-color: #619B98; color: #182625; background: #619B98; }
 .compact-site .contact-email:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
 .compact-site .contact-email:disabled { opacity: .6; }
+.cv-education-list { display: grid; gap: .75rem; }
+.cv-education-row { display: grid; grid-template-columns: 7rem minmax(0,1fr); align-items: center; gap: 1rem; min-height: 4.75rem; padding: 1rem 1.25rem; border: 1px solid var(--ex-border); border-radius: 1rem; background: rgba(255,255,255,.42); }
+.cv-education-row img { width: 7rem; height: 3.5rem; object-fit: contain; padding: .5rem; }
+.cv-education-row > div { display: grid; gap: .2rem; min-width: 0; }
+.cv-education-row strong { font: 800 18px/1.4 Nunito,sans-serif; }
+.cv-education-row small { font-size: 16px; color: var(--ui-muted); }
+[data-theme="dark"] .cv-education-row { background: #2d3535; border-color: #667371; }
+[data-theme="dark"] .cv-education-row img { filter: brightness(0) invert(1); }
+@media(max-width:720px) { .cv-education-row { grid-template-columns: 4.5rem minmax(0,1fr); gap: .65rem; padding: 1rem; } .cv-education-row img { width: 4.5rem; padding: .35rem; } }
