@@ -134,3 +134,8 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 
 .profile-disclosure-content h4 { margin: 24px 0 8px; }
 .profile-disclosure-content h4:first-child { margin-top: 0; }
+
+/* Shared reading rhythm for the professional tracks. */
+.compact-destination .work-track-details h4 { margin: 24px 0 8px; }
+.compact-destination .work-track-details section > h4:first-child { margin-top: 0; }
+.compact-destination .work-track-details p + p { margin-top: 16px; }
