@@ -119,3 +119,8 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-destination #work .work-vision > .work-aside { margin: 0; }
 .cv-job-skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 16px 0 0; }
 .cv-job-skills > li { padding: 6px 12px; border: 1px solid var(--ui-border); border-radius: 8px; color: var(--ui-text); background: var(--ui-bg); font: 400 14px/1.5 Inter,sans-serif; }
+
+.cv-job-skills > li { padding: 0; }
+.cv-job-skills a { display: flex; align-items: center; min-height: 44px; padding: 6px 12px; color: var(--ui-action); text-underline-offset: 3px; }
+.cv-skill-ratings > li { scroll-margin-top: 24px; }
+.cv-skill-ratings > li:target, .cv-skill-ratings > li:focus { outline: 3px solid var(--ui-focus); outline-offset: 3px; }

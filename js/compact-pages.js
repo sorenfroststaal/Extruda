@@ -9,7 +9,7 @@
   for (let node = target; node; node = node.parentElement) {
    if (node.tagName === 'DETAILS') node.open = true;
   }
-  requestAnimationFrame(() => target.scrollIntoView({block: 'start'}));
+  requestAnimationFrame(() => { target.scrollIntoView({block: 'start'}); if (target.matches('.cv-skill-ratings > li')) target.focus({preventScroll: true}); });
  }
  window.addEventListener('hashchange', revealHash);
  revealHash();
