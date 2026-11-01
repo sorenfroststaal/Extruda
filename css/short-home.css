@@ -88,3 +88,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-destination .cv-job-content p + p,
 .compact-destination .profile-disclosure-content p + p,
 .compact-destination .work-track-details p + p { margin-top: 16px; }
+
+/* Give the quotation the full text column beside the illustration. */
+.compact-destination .work-aside-copy > p:first-child { font-size: 24px; line-height: 1.4; }
+@media (max-width: 650px) { .compact-destination .work-aside-copy > p:first-child { font-size: 22px; } .compact-destination .work-aside { align-items: flex-start; } }
