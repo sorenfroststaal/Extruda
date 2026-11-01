@@ -76,6 +76,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
         translatedImages.forEach((image) => {
             image.alt = image.dataset[selectedLanguage === "da" ? "altDa" : "altEn"];
+            const source = image.dataset[selectedLanguage === "da" ? "srcDa" : "srcEn"];
+            if (source) image.src = source;
+        });
+        document.querySelectorAll('[data-srcset-da][data-srcset-en]').forEach((source) => {
+            source.srcset = source.dataset[selectedLanguage === "da" ? "srcsetDa" : "srcsetEn"];
         });
 
         languageButtons.forEach((button) => {

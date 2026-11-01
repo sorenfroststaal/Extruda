@@ -15,6 +15,8 @@ body.compact-site { padding: 0; min-height: 100vh; min-height: 100dvh; display: 
 .short-portrait { display: block; width: 112px; height: 112px; object-fit: cover; border-radius: 12px; filter: grayscale(1); }
 .short-intro h1 { font-size: 36px; line-height: 1.15; margin: 0 0 12px; }
 .short-intro p { font-size: 16px; line-height: 1.6; margin: 0; max-width: none; }
+.short-slogan { display: block; width: 100%; max-width: 640px; }
+.short-slogan img { display: block; width: 100%; height: auto; }
 .short-choices { margin-top: 40px; }
 .short-choices h2 { font-size: 24px; margin: 0 0 16px; }
 .short-choice { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; gap: 16px; align-items: center; min-height: 112px; padding: 20px 0; border-top: 1px solid var(--ui-border); color: var(--ui-text); text-decoration: none; }
@@ -49,9 +51,12 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .compact-header-inner { padding: 16px 20px; flex-wrap: wrap; gap: 16px; }
  .compact-header-inner .ex-utilities { margin-left: 0; }
  .short-home-main, .compact-destination { width: calc(100% - 40px); padding-top: 24px; }
- .short-intro { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; }
+ .short-intro { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; align-items: start; }
  .short-portrait { width: 80px; height: 80px; }
  .short-intro h1 { font-size: 28px; }
+ .short-intro > div { min-width: 0; }
+ .short-slogan { width: calc(100% + 96px); margin-left: -96px; margin-top: 48px; max-width: none; }
+ .short-slogan img { aspect-ratio: 230 / 156; }
  .short-choice { grid-template-columns: 44px minmax(0, 1fr) 32px; gap: 12px; }
  .short-choice img { width: 44px; height: 44px; }
  .short-choice strong { font-size: 20px; }
