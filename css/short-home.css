@@ -142,3 +142,8 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 
 .compact-site .contact-links a { width: 48px; height: 48px; min-height: 48px; padding: 0; justify-content: center; border-radius: 50%; gap: 0; }
 .compact-site .contact-links a svg, .compact-site .contact-links a i { width: 20px; height: 20px; font-size: 20px; }
+
+.compact-site .contact-email { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; border: 1px solid rgba(245,240,232,.24); border-radius: 50%; color: #f5f0e8; background: transparent; }
+.compact-site .contact-email:hover { border-color: #619B98; color: #182625; background: #619B98; }
+.compact-site .contact-email:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
+.compact-site .contact-email:disabled { opacity: .6; }
