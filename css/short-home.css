@@ -92,3 +92,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 /* Give the quotation the full text column beside the illustration. */
 .compact-destination .work-aside-copy > p:first-child { font-size: 18px; line-height: 1.4; }
 @media (max-width: 650px) { .compact-destination .work-aside-copy > p:first-child { font-size: 18px; } .compact-destination .work-aside { align-items: flex-start; } }
+
+/* Match the heading-to-CV spacing around the vision section. */
+.compact-destination #work .work-vision { margin-block: 48px; display: flow-root; }
+.compact-destination #work .work-vision > :last-child { margin-bottom: 0; }
