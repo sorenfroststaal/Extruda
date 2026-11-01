@@ -108,3 +108,5 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .skill-hex.filled { fill: #28645F; stroke: #28645F; }
 [data-theme="dark"] .skill-hex.filled { fill: #9DC7BA; stroke: #9DC7BA; }
 @media(max-width: 650px) { .cv-skill-ratings > li { flex-wrap: wrap; padding: 8px 12px; gap: 4px 16px; } .skill-name { flex-basis: 100%; } }
+.compact-destination .work-aside-future { margin-top: 24px; }
+.compact-destination .work-aside-future p + p { margin-top: 16px; }
