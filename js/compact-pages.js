@@ -26,3 +26,18 @@
  resetDisclosures();
  if (!location.hash.startsWith('#skill-')) revealHash();
 })();
+
+/* Birthday is evaluated in Denmark, including for visitors in other time zones. */
+(() => {
+ const field = document.querySelector('[data-person-age]');
+ if (!field) return;
+ function updateAge() {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en', {timeZone: 'Europe/Copenhagen', year: 'numeric', month: 'numeric', day: 'numeric'}).formatToParts(new Date()).map(part => [part.type, part.value]));
+  const year = Number(parts.year), month = Number(parts.month), day = Number(parts.day);
+  field.textContent = String(year - 1985 - (month === 1 && day < 4 ? 1 : 0));
+ }
+ updateAge();
+ window.addEventListener('pageshow', updateAge);
+ document.addEventListener('visibilitychange', () => { if (!document.hidden) updateAge(); });
+ setInterval(updateAge, 60000);
+})();
