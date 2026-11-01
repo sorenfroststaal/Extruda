@@ -110,3 +110,10 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 @media(max-width: 650px) { .cv-skill-ratings > li { flex-wrap: wrap; padding: 8px 12px; gap: 4px 16px; } .skill-name { flex-basis: 100%; } }
 .compact-destination .work-aside-future { margin-top: 24px; }
 .compact-destination .work-aside-future p + p { margin-top: 16px; }
+
+/* One spacing rule for the working-life heading and its three main panels. */
+.compact-destination:has(> #work) > h1 { margin-bottom: 48px; }
+.compact-destination #work > .resume-section-content { display: grid; gap: 48px; }
+.compact-destination #work > .resume-section-content > .work-group-disclosure,
+.compact-destination #work > .resume-section-content > .work-vision,
+.compact-destination #work .work-vision > .work-aside { margin: 0; }
