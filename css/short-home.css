@@ -7,12 +7,13 @@ body.compact-site { padding: 0; min-height: 100vh; min-height: 100dvh; display: 
 .compact-header-inner { max-width: 1024px; padding: 20px 32px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .compact-brand { display: inline-flex; min-height: 48px; align-items: center; }
 .compact-brand img { display: block; width: 224px; height: auto; }
+.short-home-header .compact-brand img { width: 256px; }
 .compact-brand .brand-logo-white { display: none; }
 [data-theme="dark"] .compact-brand .brand-logo-color { display: none; }
 [data-theme="dark"] .compact-brand .brand-logo-white { display: block; }
 .short-home-main, .compact-destination { width: min(960px, calc(100% - 64px)); margin: 0 auto; padding: 40px 0 48px; }
 .short-intro { width: 100%; max-width: 640px; container-type: inline-size; }
-.short-intro h1 { width: 100%; font-size: clamp(28px, 10.1cqi, 64.64px); line-height: 1.15; margin: 0 0 24px; color: #28645F; }
+.short-intro h1 { width: 100%; font-size: clamp(28px, 7.5cqi, 48px); line-height: 1.15; margin: 0 0 24px; color: #28645F; }
 .short-intro p { font-size: 16px; line-height: 1.6; margin: 0; max-width: none; }
 .short-slogan { display: block; width: 100%; max-width: 640px; }
 .short-slogan img { display: block; width: 100%; height: auto; }
