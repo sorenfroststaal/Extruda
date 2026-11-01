@@ -124,3 +124,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .cv-job-skills a { display: flex; align-items: center; min-height: 44px; padding: 6px 12px; color: var(--ui-action); text-underline-offset: 3px; }
 .cv-skill-ratings > li { scroll-margin-top: 24px; }
 .cv-skill-ratings > li:target, .cv-skill-ratings > li:focus { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
+
+.cv-job-skills a { text-decoration: none; border-radius: 8px; }
+.cv-job-skills a:hover { color: var(--ui-text); background: color-mix(in srgb, #619B98 18%, var(--ui-bg)); }
+.cv-job-skills a:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
