@@ -31,7 +31,7 @@ body.compact-site { padding: 0; min-height: 100vh; min-height: 100dvh; display: 
 .short-facts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 104px; }
 .short-fact { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; align-items: start; }
 .short-fact-icon { display: block; width: 40px; height: 40px; color: #619B98; }
-.short-facts h2 { font-size: 18px; margin: 0 0 8px; color: #28645F; }
+.short-facts h2 { font-size: 18px; margin: 0 0 8px; color: #619B98; }
 .short-facts p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ui-muted); }
 .compact-back { display: inline-flex; align-items: center; min-height: 48px; margin-bottom: 24px; }
 .compact-site .compact-destination section.resume-section { padding: 0; }
