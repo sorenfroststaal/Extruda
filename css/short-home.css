@@ -156,3 +156,18 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 [data-theme="dark"] .cv-education-row { background: #2d3535; border-color: #667371; }
 [data-theme="dark"] .cv-education-row img { filter: brightness(0) invert(1); }
 @media(max-width:720px) { .cv-education-row { grid-template-columns: 4.5rem minmax(0,1fr); gap: .65rem; padding: 1rem; } .cv-education-row img { width: 4.5rem; padding: .35rem; } }
+.compact-destination .cv-job > summary { grid-template-columns: 6.5rem 7rem minmax(0,1fr) 2.25rem; }
+.compact-destination .cv-job > summary > .cv-row-period { display: block; }
+.cv-row-period { font-size: 14px; font-weight: 400; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--ui-muted); }
+.compact-destination .cv-job > summary > .cv-row-copy { display: grid; gap: .2rem; min-width: 0; }
+.cv-education-row { grid-template-columns: 6.5rem 7rem minmax(0,1fr); }
+@media(max-width:720px) {
+ .compact-destination .cv-job > summary { grid-template-columns: 5.5rem 4.5rem minmax(0,1fr) 2.25rem; gap: .65rem; }
+ .cv-education-row { grid-template-columns: 5.5rem 4.5rem minmax(0,1fr); }
+}
+@media(max-width:500px) {
+ .compact-destination .cv-job > summary { grid-template-columns: 4.5rem minmax(0,1fr) 2.25rem; }
+ .compact-destination .cv-job > summary > .cv-row-period { grid-column: 1 / -1; }
+ .cv-education-row { grid-template-columns: 4.5rem minmax(0,1fr); }
+ .cv-education-row > .cv-row-period { grid-column: 1 / -1; }
+}
