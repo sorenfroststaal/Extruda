@@ -128,3 +128,6 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .cv-job-skills a { text-decoration: none; border-radius: 8px; }
 .cv-job-skills a:hover { color: var(--ui-text); background: color-mix(in srgb, #619B98 18%, var(--ui-bg)); }
 .cv-job-skills a:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
+
+.cv-skill-categories { display: grid; gap: 32px; }
+.compact-destination .cv-skill-category > h3 { font: 800 20px/1.3 Nunito,sans-serif; margin: 0 0 16px; color: var(--ui-text); }
