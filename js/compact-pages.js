@@ -12,5 +12,17 @@
   requestAnimationFrame(() => { target.scrollIntoView({block: 'start'}); if (target.matches('.cv-skill-ratings > li')) target.focus({preventScroll: true}); });
  }
  window.addEventListener('hashchange', revealHash);
- revealHash();
+ function resetDisclosures() {
+  const experience = document.querySelector('.cv-experience');
+  const skills = document.querySelector('.cv-skill-ratings')?.closest('details');
+  if (experience) experience.open = true;
+  if (skills) skills.open = false;
+ }
+ document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#skill-"]');
+  if (link && link.hash === location.hash) revealHash();
+ });
+ window.addEventListener('pageshow', resetDisclosures);
+ resetDisclosures();
+ if (!location.hash.startsWith('#skill-')) revealHash();
 })();
