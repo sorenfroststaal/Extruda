@@ -83,3 +83,11 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 /* Appearance switches preserve content, spacing and pagination. */
 .sheet.no-section-boxes .section-card{background:transparent;border-color:transparent}
 .sheet.no-item-boxes .skill-row,.sheet.no-item-boxes .job-row,.sheet.no-item-boxes .cv-compact-list>div{background:transparent;border-color:transparent}
+#settings .secondary{display:block;width:100%;min-height:48px;margin:12px 0;padding:10px;border:1px solid var(--action);border-radius:8px;background:var(--surface);color:var(--action);font-weight:600}
+.sheet-content .share-brand{display:block;width:calc(150px * var(--fit));height:auto;margin-bottom:calc(8px * var(--space,var(--fit)))}
+.sheet-content .share-card-body{display:flex;gap:calc(12px * var(--space,var(--fit)));align-items:center;min-width:0}
+.sheet-content .share-card-body>div:first-child{min-width:0;flex:1}
+.sheet-content .share-card p,.sheet-content .share-card a{font-size:calc(11px * var(--fit));line-height:1.5}
+.sheet-content .share-qr{width:calc(86px * var(--fit));height:calc(86px * var(--fit));flex-shrink:0;background:white}
+.sheet-content .share-qr svg{display:block;width:100%;height:100%;fill:initial;stroke:none}
+.sheet-content .share-qr{width:86px;height:86px}

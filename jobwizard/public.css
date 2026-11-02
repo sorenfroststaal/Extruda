@@ -1,0 +1,15 @@
+/* Shared job pages contain the selected content, with no editing controls. */
+.shared-application main{max-width:1100px;padding:32px 20px}
+.shared-application .sheet{width:100%;height:auto;min-height:0;transform:none;padding:24px;border:1px solid var(--border);border-radius:12px;margin-bottom:24px;overflow:visible}
+.shared-application .sheet-content{width:100%;--fit:1!important;--space:1!important}
+.shared-application .cv-columns{grid-template-columns:minmax(260px,1fr) minmax(0,1.8fr)!important}
+.shared-application .identity>div{max-width:calc(100% - 142px)}
+.shared-application .identity h1{font-size:26px}
+.shared-application .identity .slogan{width:100%;max-width:290px}
+.shared-application .sheet .footer{position:static;margin-top:24px}
+.shared-application .full-site{text-align:center;margin:32px 0}
+.shared-application .full-site a{display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;border-radius:8px;background:var(--action);color:var(--action-text);text-decoration:none;font-weight:700}
+@media(max-width:700px){.shared-application .cv-columns{grid-template-columns:minmax(0,1fr)!important}.shared-application .identity{flex-wrap:wrap}.shared-application .identity>div{max-width:100%}.shared-application .sheet{padding:16px}.shared-application .footer{flex-wrap:wrap}.shared-application .job-row{grid-template-columns:58px 44px minmax(0,1fr)}.shared-application .job-row>img{width:42px}}
+.shared-application .cv-columns .skill-row,.shared-application .cv-columns .profile-part p,.shared-application .cv-columns .job-row small,.shared-application .cv-columns .period,.shared-application .cv-columns .cv-row-period,.shared-application .cv-columns dt,.shared-application .cv-columns dd,.shared-application .share-card p,.shared-application .share-card a{font-size:14px}
+.shared-application .sheet h2{font-size:20px}
+.shared-application .job-row strong{font-size:16px}
