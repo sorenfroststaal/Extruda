@@ -62,7 +62,7 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet .footer time{flex:0 1 auto;text-align:right;max-width:160px}
 /* Keep the name and the three-part slogan on the same two alignment lines. */
 .sheet-content .identity>div{flex:0 1 auto;width:max-content;max-width:calc(100% - 142px * var(--fit));display:grid;grid-template-columns:max-content}
-.sheet-content .identity h1{font-size:calc(26px * var(--fit));white-space:nowrap;margin-bottom:calc(14px * var(--space, var(--fit)))}
+.sheet-content .identity h1{font-size:calc(33.8px * var(--fit));white-space:nowrap;margin-bottom:calc(14px * var(--space, var(--fit)))}
 .sheet-content .identity .slogan{width:100%;min-width:0;max-width:100%;grid-column:1;height:auto}
 .sheet-content .identity>div:only-child{max-width:100%}
 .sheet-content .identity>div{grid-template-columns:minmax(0,1fr)}
@@ -165,3 +165,5 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 #tracks label img{width:32px;height:32px;flex-shrink:0}
 .mono .application-template .application-vision{background:#343b3b;color:#fff}
 .application-template .application-vision{margin-right:calc(16px * var(--fit))}
+
+.application-template .application-vision,.application-template.vision-dark-ink .application-vision{color:#fff}

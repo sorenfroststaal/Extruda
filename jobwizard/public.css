@@ -4,7 +4,7 @@
 .shared-application .sheet-content{width:100%;--fit:1!important;--space:1!important}
 .shared-application .cv-columns{grid-template-columns:minmax(260px,1fr) minmax(0,1.8fr)!important}
 .shared-application .identity>div{max-width:calc(100% - 142px)}
-.shared-application .identity h1{font-size:26px}
+.shared-application .identity h1{font-size:33.8px}
 .shared-application .identity .slogan{width:100%;max-width:290px}
 .shared-application .sheet .footer{position:static;margin-top:24px}
 .shared-application .full-site{text-align:center;margin:32px 0}
@@ -33,3 +33,7 @@
  .shared-application .application-template .application-ronaldo{position:static;float:right;width:100px;height:auto;max-width:100%;margin-top:12px}
 }
 @media(max-width:700px){.shared-application .application-template .application-vision{margin-right:0}}
+
+.shared-application .identity .slogan{max-width:none}
+.shared-application .identity .slogan{width:0;min-width:100%}
+@media(max-width:380px){.shared-application .identity h1{font-size:clamp(24px,8.4vw,33.8px)}}
