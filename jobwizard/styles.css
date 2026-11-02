@@ -115,3 +115,5 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet-content .profile-part h4{margin-top:0}
 .sheet-content .profile-part p:last-child{margin-bottom:0}
 .sheet.no-item-boxes .profile-part{background:transparent;border-color:transparent}
+/* Centre the QR vertically in the remaining space below the link. */
+.sheet-content .share-qr{margin-top:auto;margin-bottom:auto}
