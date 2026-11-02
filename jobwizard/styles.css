@@ -73,3 +73,5 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet .footer-contact img{width:13px;height:13px;flex-shrink:0}
 .sheet .footer-contact span{overflow-wrap:anywhere;min-width:0}
 .sheet-content .cv-page-heading{font-size:calc(26px * var(--fit));margin-bottom:calc(18px * var(--space, var(--fit)))}
+
+.sheet-content .cv-page-heading{text-align:center;width:100%}
