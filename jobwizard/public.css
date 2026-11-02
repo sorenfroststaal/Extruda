@@ -26,3 +26,10 @@
  .shared-application .application-track span{font-size:12px}
  .shared-application .application-vision-copy p{font-size:14px}
 }
+@media(max-width:700px){
+ .shared-application .application-template .application-vision{margin-left:0}
+ .shared-application .application-template .application-vision.has-portrait::before{display:none}
+ .shared-application .application-template .application-vision.has-ronaldo .application-vision-copy{margin-right:0}
+ .shared-application .application-template .application-ronaldo{position:static;float:right;width:100px;height:auto;max-width:100%;margin-top:12px}
+}
+@media(max-width:700px){.shared-application .application-template .application-vision{margin-right:0}}
