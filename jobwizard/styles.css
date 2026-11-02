@@ -99,3 +99,12 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 #publish-confirm{background:var(--action)!important;color:var(--action-text)!important;width:100%;margin-top:16px}
 #publish-dialog details{margin:16px 0}#publish-dialog summary{min-height:44px;cursor:pointer}
 #publish-dialog button:disabled{opacity:.55;cursor:wait}
+/* The last cards share a baseline; the QR stays below the explanation. */
+.sheet-content .cv-columns.has-share-box{align-items:stretch}
+.sheet-content .cv-columns.has-share-box>div{display:flex;flex-direction:column}
+.sheet-content .cv-columns.has-share-box>div:first-child>div:last-child{flex:1;display:flex;flex-direction:column}
+.sheet-content .cv-columns.has-share-box>div:first-child>div:last-child>.section-card{flex:1;margin-bottom:0}
+.sheet-content .share-card{display:flex;flex-direction:column;flex:1;margin-bottom:0}
+.sheet-content .share-card-body{flex:1;flex-direction:column;align-items:stretch}
+.sheet-content .share-card-body>div:first-child{flex:0 0 auto}
+.sheet-content .share-qr{align-self:center;max-width:100%}

@@ -67,6 +67,7 @@ function measure(){
    content.style.setProperty('--fit',density);
    content.style.setProperty('--space',density*(on('shrink')?0.8:1));
    alignIdentity();
+   window.JobSharing?.alignColumns(content);
    if(columns)columns.style.gridTemplateColumns=hasLeft&&hasRight?`${width}px minmax(0,1fr)`:'minmax(0,1fr)';
   }
   const footer=content.parentElement.querySelector('.footer');

@@ -12,7 +12,7 @@
   const section=document.createElement('section');section.className='section-card share-card';
   if(on('share-logo')){const img=document.createElement('img');img.className='share-brand';img.src='../Assets/Brand/extruda-dk-logo-horizontal-color.svg';img.alt='extruda.dk';section.append(img)}
   const row=document.createElement('div');row.className='share-card-body';const copy=document.createElement('div');
-  if(on('share-copy-show')){const p=document.createElement('p');p.textContent=$('#share-copy').value;copy.append(p)}
+  if(on('share-copy-show')){const p=document.createElement('p');p.textContent=$('#share-copy').value.replaceAll('{link}',url().replace('https://',''));copy.append(p)}
   if(on('share-link')&&valid()){const a=document.createElement('a');a.href=url();a.textContent=url().replace('https://','');copy.append(a)}
   row.append(copy);
   if(on('share-qr')&&valid()&&typeof qrcode==='function'){
@@ -31,7 +31,7 @@
    copy.querySelectorAll('img').forEach(img=>img.src=img.src);
    return copy.outerHTML;
   }).join('');
-  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><base href="https://extruda.dk/jobwizard/"><title>Søren Frost Staal · ${codeField.value}</title><link rel="stylesheet" href="../design-system/styles.css"><link rel="stylesheet" href="../css/extruda-ui.css"><link rel="stylesheet" href="styles.css?v=15"><link rel="stylesheet" href="public.css?v=1"><script defer src="../js/extruda-ui.js"></script><script defer src="public-refresh.js?v=1"></script></head><body class="shared-application"><header class="site-header"><a href="https://extruda.dk/">Søren Frost Staal</a><div data-extruda-controls></div></header><main>${parts}${on('share-home')?`<p class="full-site"><a href="https://extruda.dk/">${lang==='da'?'Se hele hjemmesiden':'See the full website'} →</a></p>`:''}</main><template id="extruda-about"><p>Dette er et udvalgt udsnit af Sørens ansøgning og CV. Alle med linket kan se siden. Ingen cookies ud over lokale sprog- og temavalg.</p></template></body></html>`;
+  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><base href="https://extruda.dk/jobwizard/"><title>Søren Frost Staal · ${codeField.value}</title><link rel="stylesheet" href="../design-system/styles.css"><link rel="stylesheet" href="../css/extruda-ui.css"><link rel="stylesheet" href="styles.css?v=17"><link rel="stylesheet" href="public.css?v=1"><script defer src="../js/extruda-ui.js"></script><script defer src="public-refresh.js?v=1"></script></head><body class="shared-application"><header class="site-header"><a href="https://extruda.dk/">Søren Frost Staal</a><div data-extruda-controls></div></header><main>${parts}${on('share-home')?`<p class="full-site"><a href="https://extruda.dk/">${lang==='da'?'Se hele hjemmesiden':'See the full website'} →</a></p>`:''}</main><template id="extruda-about"><p>Dette er et udvalgt udsnit af Sørens ansøgning og CV. Alle med linket kan se siden. Ingen cookies ud over lokale sprog- og temavalg.</p></template></body></html>`;
  }
  function download(value,name,type){const blob=new Blob([value],{type}),link=document.createElement('a'),href=URL.createObjectURL(blob);link.href=href;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(href),60000)}
  function buildDraft(){
@@ -40,7 +40,17 @@
   const settings={};$('#settings').querySelectorAll('input:not([type=file]),textarea,select').forEach(n=>settings[n.id]=n.type==='checkbox'?n.checked:n.value);
   return {format:'extruda-job-page-v1',code:codeField.value,url:url(),createdAt:new Date().toISOString(),settings,html:draftHtml()};
  }
- window.JobSharing={buildDraft,render(parent){
+ window.JobSharing={buildDraft,alignColumns(content){
+  const card=content.querySelector('.share-card'),qr=card?.querySelector('.share-qr');if(!qr)return;
+  qr.style.width='86px';qr.style.height='86px';
+  const body=card.querySelector('.share-card-body'),copy=body.firstElementChild;
+  const available=body.clientHeight-copy.offsetHeight-parseFloat(getComputedStyle(body).gap||0);
+  const size=Math.max(86,Math.min(body.clientWidth,available));
+  qr.style.width=size+'px';qr.style.height=size+'px';
+ },render(parent){
+  parent.closest('.cv-columns').classList.toggle('has-share-box',on('share-box'));
+  if($('#share-copy').value==='Her har jeg valgt det, jeg finder relevant for stillingen. Er du nysgerrig på hele mig, kan du se resten på extruda.dk. Denne version finder du via linket eller QR-koden.')$('#share-copy').value='I denne ansøgning har jeg udvalgt de elementer som jeg finder relevante for min ansøgning til Jer. Skulle i være interesseret i hele mig, kan i læse videre på {link} eller ved at scanne QR koden herunder.';
+
   codeField.removeAttribute('aria-invalid');$('#share-url').textContent=valid()?url()+' · kladde, ikke publiceret':'Brug 4–12 bogstaver eller tal til sidekoden.';
   $('#share-preview').disabled=!valid();$('#share-download').disabled=!valid();
   if(on('share-box'))parent.append(box());
