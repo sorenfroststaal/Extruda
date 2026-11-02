@@ -12,20 +12,57 @@ function fit(){document.querySelectorAll('.sheet-wrap').forEach(w=>{const scale=
 function measure(){
  let blocked=false;const messages=[];
  document.querySelectorAll('.sheet-content').forEach((content,i)=>{
+  // Reflow at the fixed paper width. Reduce typography and spacing, never the canvas.
   content.style.transform='none';
-  const height=Math.max(content.scrollHeight,content.offsetHeight);
-  const width=Math.max(content.scrollWidth,748);
-  const ratio=Math.min(1,1077/Math.max(height,1),748/width);
-  const overflow=ratio<0.999;
-  const scale=on('shrink')?ratio:1;
-  content.style.transform=`scale(${scale})`;
+  const columns=content.querySelector('.cv-columns');
+  columns?.querySelectorAll(':scope > div').forEach(n=>n.style.removeProperty('--fit'));
+  const hasLeft=columns?.children[0].children.length>0;
+  const hasRight=columns?.children[1].children.length>0;
+  if(columns){columns.classList.toggle('one-column',!hasLeft||!hasRight);}
+  function apply(density,width){
+   content.style.setProperty('--fit',density);
+   if(columns)columns.style.gridTemplateColumns=hasLeft&&hasRight?`${width}px minmax(0,1fr)`:'minmax(0,1fr)';
+  }
+  function fits(){return content.scrollHeight<=1077&&content.scrollWidth<=748;}
+  apply(1,245);
+  const overflow=!fits();
+  let scale=1;
+  if(on('shrink')){
+   let best={density:0,width:245,height:Infinity};
+   const widths=columns&&hasLeft&&hasRight?[230,250,270,290,310,330,350,370,390,410]:[245];
+   for(const width of widths){
+    apply(1,width);
+    let low=0.1,high=1;
+    if(fits())low=1;
+    else for(let pass=0;pass<10;pass++){
+     const mid=(low+high)/2;apply(mid,width);
+     if(fits())low=mid;else high=mid;
+    }
+    apply(low,width);
+    const height=content.scrollHeight;
+    if(low>best.density+0.001||(Math.abs(low-best.density)<=0.001&&height<best.height))best={density:low,width,height};
+   }
+   scale=best.density;apply(scale,best.width);
+   // Each column may use larger type if it has spare vertical space.
+   if(columns)for(const column of columns.children){
+    let low=scale,high=1;
+    column.style.setProperty('--fit',1);
+    if(fits())low=1;
+    else for(let pass=0;pass<10;pass++){
+     const mid=(low+high)/2;column.style.setProperty('--fit',mid);
+     if(fits())low=mid;else high=mid;
+    }
+    column.style.setProperty('--fit',low);
+   }
+  }
+  const unresolved=!fits();
   content.dataset.scale=scale.toFixed(4);
-  const page=content.closest('.sheet');page.classList.toggle('overfull',overflow&&!on('shrink'));
+  const page=content.closest('.sheet');page.classList.toggle('overfull',unresolved);
   const label=i===0?tr('Ansøgning','Application'):'CV';
   const status=document.getElementById(i===0?'application-status':'cv-status');
-  const message=overflow?(on('shrink')?tr(`${label}: skaleret til ${Math.floor(scale*100)} % for at passe på én A4-side.`,`${label}: scaled to ${Math.floor(scale*100)}% to fit one A4 page.`):tr(`${label}: for meget indhold til én A4-side. Vælg noget fra, eller slå skalering til.`,`${label}: too much content for one A4 page. Remove content or enable scaling.`)):tr(`${label}: passer på én A4-side.`,`${label}: fits on one A4 page.`);
+  const message=unresolved?tr(`${label}: for meget indhold. Vælg noget fra.`,`${label}: too much content. Remove some content.`):overflow?(on('shrink')?tr(`${label}: skaleret til ${Math.floor(scale*100)} % for at passe på én A4-side.`,`${label}: scaled to ${Math.floor(scale*100)}% to fit one A4 page.`):tr(`${label}: for meget indhold til én A4-side. Vælg noget fra, eller slå skalering til.`,`${label}: too much content for one A4 page. Remove content or enable scaling.`)):tr(`${label}: passer på én A4-side.`,`${label}: fits on one A4 page.`);
   status.textContent=message;status.classList.toggle('overflow-message',overflow);messages.push(message);
-  if(overflow&&!on('shrink'))blocked=true;
+  if(unresolved)blocked=true;
  });
  $('#print').disabled=blocked;
  $('#page-status').textContent=blocked?tr('PDF er ikke klar: indholdet overskrider A4-grænsen.','PDF is not ready: content exceeds the A4 boundary.'):tr('2 A4-sider i alt · ansøgning og CV','2 A4 pages total · application and CV');
