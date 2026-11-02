@@ -79,3 +79,7 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet-content .skill-row,.sheet-content .job-row{background:#fff}
 .sheet-content .cv-compact-list{display:grid;gap:calc(6px * var(--space, var(--fit)))}
 .sheet-content .cv-compact-list > div{border:1px solid #d9d5cd;border-radius:9px;background:#fff;padding:calc(7px * var(--space, var(--fit)));margin:0}
+
+/* Appearance switches preserve content, spacing and pagination. */
+.sheet.no-section-boxes .section-card{background:transparent;border-color:transparent}
+.sheet.no-item-boxes .skill-row,.sheet.no-item-boxes .job-row,.sheet.no-item-boxes .cv-compact-list>div{background:transparent;border-color:transparent}
