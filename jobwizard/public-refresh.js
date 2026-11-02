@@ -3,7 +3,7 @@
  try{
   const response=await fetch('../arbejdsliv/',{cache:'no-cache'});if(!response.ok)return;
   const source=new DOMParser().parseFromString(await response.text(),'text/html');
-  const language=document.documentElement.lang;
+  const language=document.body.dataset.outputLanguage||document.documentElement.lang;
   const text=node=>node?.getAttribute('data-'+language)||node?.textContent.trim()||'';
   document.querySelectorAll('[data-source-skill]').forEach(row=>{
    const skill=source.getElementById(row.dataset.sourceSkill);if(!skill)return;

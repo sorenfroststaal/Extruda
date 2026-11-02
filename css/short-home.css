@@ -182,3 +182,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-destination .cv-compact-list{gap:12px}
 .compact-destination .cv-compact-list > div{padding:12px 16px;border:1px solid var(--ui-border);border-radius:8px;background:var(--ui-surface)}
 @media(max-width:650px){.compact-destination .cv-compact-list > div{grid-template-columns:5.5rem minmax(0,1fr);gap:12px;padding:12px}}
+.compact-destination .person-section{padding:16px;border:1px solid var(--ui-border);border-radius:8px;background:var(--ui-surface)}
+.compact-destination .person-section+.person-section{margin-top:12px}
+.compact-destination .person-section>h4{margin:0 0 8px}
+.compact-destination .person-section>p:last-child{margin-bottom:0}

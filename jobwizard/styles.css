@@ -110,3 +110,8 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet-content .share-qr{align-self:center;max-width:100%}
 /* Match QR framing to the other inset cards, keeping a white quiet zone. */
 .sheet-content .share-qr{align-self:flex-start;border:1px solid #d9d5cd;border-radius:9px;overflow:hidden;background:#fff}
+.sheet-content .profile-part{padding:calc(7px * var(--space,var(--fit)));border:1px solid #d9d5cd;border-radius:9px;background:#fff;margin-bottom:calc(6px * var(--space,var(--fit)))}
+.sheet-content .profile-part:last-child{margin-bottom:0}
+.sheet-content .profile-part h4{margin-top:0}
+.sheet-content .profile-part p:last-child{margin-bottom:0}
+.sheet.no-item-boxes .profile-part{background:transparent;border-color:transparent}
