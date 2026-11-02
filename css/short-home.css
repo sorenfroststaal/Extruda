@@ -177,4 +177,8 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-destination .cv-job > summary .cv-job-title,
 .compact-destination .cv-education-row .cv-row-period { font-family: Inter, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.5; text-transform: none; letter-spacing: normal; }
 .compact-destination .cv-job > summary .cv-row-copy strong,
-.compact-destination .cv-education-row strong { font-family: Nunito, sans-serif; font-size: 18px; font-weight: 800; line-height: 1.4; text-transform: none; letter-spacing: normal; }
+.compact-destination .cv-education-row strong { font-family: Nunito, sans-serif; font-size: 18px; font-weight: 800; line-height: 1.4; text-transform: none; letter-spacing: normal; }/* Repeated CV items share the same surface as the employment cards. */
+.compact-destination .cv-skill-ratings > li{background:var(--ui-surface)}
+.compact-destination .cv-compact-list{gap:12px}
+.compact-destination .cv-compact-list > div{padding:12px 16px;border:1px solid var(--ui-border);border-radius:8px;background:var(--ui-surface)}
+@media(max-width:650px){.compact-destination .cv-compact-list > div{grid-template-columns:5.5rem minmax(0,1fr);gap:12px;padding:12px}}
