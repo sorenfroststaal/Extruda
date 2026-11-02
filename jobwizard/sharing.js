@@ -10,7 +10,11 @@
  function error(message){status.textContent=message;codeField.setAttribute('aria-invalid','true');codeField.focus()}
  function box(){
   const section=document.createElement('section');section.className='section-card share-card';
-  if(on('share-logo')){const img=document.createElement('img');img.className='share-brand';img.src='../Assets/Brand/extruda-dk-logo-horizontal-color.svg';img.alt='extruda.dk';section.append(img)}
+  if(on('share-logo')){
+   const heading=document.createElement('div');heading.className='section-title share-heading';
+   const img=document.createElement('img');img.src='../Assets/Icons/work/extruda.svg';img.alt='';
+   const title=document.createElement('h2');title.textContent='extruda.dk';heading.append(img,title);section.append(heading);
+  }
   const row=document.createElement('div');row.className='share-card-body';const copy=document.createElement('div');
   if(on('share-copy-show')){const p=document.createElement('p');p.textContent=$('#share-copy').value.replaceAll('{link}',url().replace('https://',''));copy.append(p)}
   if(on('share-link')&&valid()){const a=document.createElement('a');a.href=url();a.textContent=url().replace('https://','');copy.append(a)}
@@ -31,7 +35,7 @@
    copy.querySelectorAll('img').forEach(img=>img.src=img.src);
    return copy.outerHTML;
   }).join('');
-  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><base href="https://extruda.dk/jobwizard/"><title>Søren Frost Staal · ${codeField.value}</title><link rel="stylesheet" href="../design-system/styles.css"><link rel="stylesheet" href="../css/extruda-ui.css"><link rel="stylesheet" href="styles.css?v=17"><link rel="stylesheet" href="public.css?v=1"><script defer src="../js/extruda-ui.js"></script><script defer src="public-refresh.js?v=1"></script></head><body class="shared-application"><header class="site-header"><a href="https://extruda.dk/">Søren Frost Staal</a><div data-extruda-controls></div></header><main>${parts}${on('share-home')?`<p class="full-site"><a href="https://extruda.dk/">${lang==='da'?'Se hele hjemmesiden':'See the full website'} →</a></p>`:''}</main><template id="extruda-about"><p>Dette er et udvalgt udsnit af Sørens ansøgning og CV. Alle med linket kan se siden. Ingen cookies ud over lokale sprog- og temavalg.</p></template></body></html>`;
+  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><base href="https://extruda.dk/jobwizard/"><title>Søren Frost Staal · ${codeField.value}</title><link rel="stylesheet" href="../design-system/styles.css"><link rel="stylesheet" href="../css/extruda-ui.css"><link rel="stylesheet" href="styles.css?v=18"><link rel="stylesheet" href="public.css?v=1"><script defer src="../js/extruda-ui.js"></script><script defer src="public-refresh.js?v=1"></script></head><body class="shared-application"><header class="site-header"><a href="https://extruda.dk/">Søren Frost Staal</a><div data-extruda-controls></div></header><main>${parts}${on('share-home')?`<p class="full-site"><a href="https://extruda.dk/">${lang==='da'?'Se hele hjemmesiden':'See the full website'} →</a></p>`:''}</main><template id="extruda-about"><p>Dette er et udvalgt udsnit af Sørens ansøgning og CV. Alle med linket kan se siden. Ingen cookies ud over lokale sprog- og temavalg.</p></template></body></html>`;
  }
  function download(value,name,type){const blob=new Blob([value],{type}),link=document.createElement('a'),href=URL.createObjectURL(blob);link.href=href;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(href),60000)}
  function buildDraft(){
