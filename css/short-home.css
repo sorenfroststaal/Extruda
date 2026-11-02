@@ -192,3 +192,48 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .short-home-main .short-slogan{width:min(100%,260px);max-width:260px}
  .short-home-main .short-slogan img{aspect-ratio:232 / 156;object-fit:contain}
 }
+/* Compact career layout on phones; summaries remain large touch targets. */
+@media(max-width:650px){
+ .work-page .compact-destination{width:calc(100% - 32px);padding-top:20px;padding-bottom:32px}
+ .work-page .compact-destination>h1{font-size:26px;line-height:1.25;margin-bottom:24px}
+ .work-page #work>.resume-section-content{gap:24px}
+ .work-page .work-group-content{padding:0 10px 10px}
+ .work-page .work-group-disclosure>summary,
+ .work-page .cv-disclosure>summary:has(.work-topic-icon),
+ .work-page .profile-disclosure>summary:has(.work-topic-icon),
+ .work-page .work-track>summary:has(.work-topic-icon){grid-template-columns:36px minmax(0,1fr) 32px;gap:10px;padding:12px;min-height:68px}
+ .work-page .work-topic-icon{width:36px;height:36px}
+ .work-page .work-track-mark{width:32px;height:32px;flex-basis:32px}
+ .work-page .work-group-disclosure>summary strong{font-size:18px;line-height:1.3}
+ .work-page .cv-disclosure>summary strong,
+ .work-page .profile-disclosure>summary strong,
+ .work-page .work-track>summary strong{font-size:16px;line-height:1.3}
+ .work-page summary small{font-size:13px;line-height:1.4;overflow-wrap:anywhere}
+ .work-page summary .work-track-copy{min-width:0}
+ .work-page .cv-disclosure-content,.work-page .profile-disclosure-content{padding:10px 8px}
+ .work-page .profile-records>.cv-disclosures,.work-page .cv-jobs,.work-page .work-tracks{gap:8px}
+ .work-page .compact-destination .cv-job>summary{grid-template-columns:48px minmax(0,1fr) 32px;gap:6px 10px;padding:10px;min-height:76px;align-items:center}
+ .work-page .compact-destination .cv-job>summary>.cv-row-period{grid-column:1 / 3;grid-row:1;font-size:12px;line-height:1.4}
+ .work-page .compact-destination .cv-job>summary>.work-track-mark{grid-column:3;grid-row:1;justify-self:end}
+ .work-page .compact-destination .cv-job>summary>img{grid-column:1;grid-row:2;width:48px;height:36px;padding:0;object-fit:contain}
+ .work-page .compact-destination .cv-job>summary>.cv-row-copy{grid-column:2 / -1;grid-row:2;gap:3px;overflow-wrap:anywhere}
+ .work-page .compact-destination .cv-job>summary .cv-row-copy strong{font-size:16px;line-height:1.3}
+ .work-page .compact-destination .cv-job>summary .cv-job-title{font-size:13px;line-height:1.4;white-space:normal;overflow-wrap:anywhere}
+ .work-page .compact-destination .cv-job>summary .cv-row-copy small{font-size:13px;line-height:1.4}
+ .work-page .cv-education-row{grid-template-columns:48px minmax(0,1fr);padding:10px;gap:6px 10px;min-height:76px}
+ .work-page .cv-education-row>.cv-row-period{grid-column:1 / -1;font-size:12px}
+ .work-page .cv-education-row img{width:48px;height:36px;padding:0}
+ .work-page .compact-destination .cv-education-row strong{font-size:16px;line-height:1.3}
+ .work-page .person-section{padding:12px;font-size:14px;line-height:1.5}
+ .work-page .person-section>h4{font-size:16px}
+ .work-page .cv-compact-list>div{grid-template-columns:70px minmax(0,1fr);padding:10px;gap:10px;font-size:13px;overflow-wrap:anywhere}
+ .work-page .cv-skill-ratings{gap:8px}
+ .work-page .cv-skill-ratings>li{flex-wrap:nowrap;gap:10px;padding:6px 10px;font-size:13px;min-height:36px}
+ .work-page .cv-skill-ratings .skill-name{flex:1;min-width:0;overflow-wrap:anywhere}
+ .work-page .skill-rating{gap:3px}
+ .work-page .skill-hex{width:18px;height:20px}
+ .work-page .work-track-details{padding:0 12px 12px;font-size:14px;line-height:1.5}
+ .work-page .compact-destination .work-aside{padding:16px;gap:12px;font-size:14px}
+ .work-page .compact-destination .work-aside-copy>p:first-child{font-size:15px}
+ .work-page .compact-destination #work .work-vision{margin-block:24px}
+}
