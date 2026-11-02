@@ -55,3 +55,8 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet-content .cv-columns .cv-row-period,
 .sheet-content .cv-columns dt,
 .sheet-content .cv-columns dd{font-size:calc(11px * var(--fit))}
+.sheet .footer{left:23px;right:23px;bottom:15px;display:flex;align-items:center;gap:12px;border-top:1px solid #d9d5cd;padding-top:9px;font:11px/1.4 Inter;color:#343b3b;overflow-wrap:anywhere}
+.sheet .footer>img{width:32px;height:36px;object-fit:contain;flex-shrink:0}
+.sheet .footer-copy{display:grid;gap:2px;flex:1;min-width:0}
+.sheet .footer-contact{white-space:pre-wrap}
+.sheet .footer time{flex:0 1 auto;text-align:right;max-width:160px}
