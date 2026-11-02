@@ -186,3 +186,9 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-destination .person-section+.person-section{margin-top:12px}
 .compact-destination .person-section>h4{margin:0 0 8px}
 .compact-destination .person-section>p:last-child{margin-bottom:0}
+/* Keep the stacked mobile mark at a readable size rather than stretching it. */
+@media(max-width:650px){
+ .short-home-header .compact-brand img{width:180px;max-width:100%}
+ .short-home-main .short-slogan{width:min(100%,260px);max-width:260px}
+ .short-home-main .short-slogan img{aspect-ratio:232 / 156;object-fit:contain}
+}
