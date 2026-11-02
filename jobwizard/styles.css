@@ -21,27 +21,37 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 @media print{#application-pages,#cv-pages{padding:0!important;border:0!important;border-radius:0!important;margin:0!important;background:none!important}#application-status,#cv-status{display:none!important}.sheet-wrap{outline:0;break-after:auto!important}.sheet{width:794px!important;height:1123px!important}.sheet-content{width:748px}.sheet.overfull::after{display:none}#application-pages{break-after:page}.sheet.overfull{outline:0}.overflow-message{display:none}}
 /* Reflow to fit: the 748 px writing area always retains its full width. */
 .sheet-content{--fit:1;font-size:calc(12px * var(--fit))}
-.sheet-content h1{font-size:calc(38px * var(--fit));margin-bottom:calc(14px * var(--fit))}
+.sheet-content h1{font-size:calc(38px * var(--fit));margin-bottom:calc(14px * var(--space, var(--fit)))}
 .sheet-content h2{font-size:calc(16px * var(--fit))}
-.sheet-content h3{font-size:calc(13px * var(--fit));margin:calc(8px * var(--fit)) 0 calc(4px * var(--fit))}
-.sheet-content h4{font-size:calc(14px * var(--fit));margin:calc(12px * var(--fit)) 0 calc(6px * var(--fit))}
-.sheet-content p{margin:calc(8px * var(--fit)) 0}
-.sheet-content .section-card{padding:calc(10px * var(--fit));margin-bottom:calc(10px * var(--fit))}
-.sheet-content .section-title{gap:calc(10px * var(--fit));margin-bottom:calc(8px * var(--fit))}
+.sheet-content h3{font-size:calc(13px * var(--fit));margin:calc(8px * var(--space, var(--fit))) 0 calc(4px * var(--space, var(--fit)))}
+.sheet-content h4{font-size:calc(14px * var(--fit));margin:calc(12px * var(--space, var(--fit))) 0 calc(6px * var(--space, var(--fit)))}
+.sheet-content p{margin:calc(8px * var(--space, var(--fit))) 0}
+.sheet-content .section-card{padding:calc(10px * var(--space, var(--fit)));margin-bottom:calc(10px * var(--space, var(--fit)))}
+.sheet-content .section-title{gap:calc(10px * var(--space, var(--fit)));margin-bottom:calc(8px * var(--space, var(--fit)))}
 .sheet-content .section-title img{width:calc(30px * var(--fit));height:calc(32px * var(--fit))}
-.sheet-content .cv-columns{gap:calc(14px * var(--fit))}
+.sheet-content .cv-columns{gap:calc(14px * var(--space, var(--fit)))}
 .sheet-content .one-column>div:empty{display:none}
-.sheet-content .skill-row{padding:calc(3px * var(--fit)) calc(5px * var(--fit));margin:calc(3px * var(--fit)) 0;gap:calc(8px * var(--fit));font-size:calc(9px * var(--fit))}
-.sheet-content .skill-rating{gap:calc(3px * var(--fit))}
+.sheet-content .skill-row{padding:calc(3px * var(--space, var(--fit))) calc(5px * var(--space, var(--fit)));margin:calc(3px * var(--space, var(--fit))) 0;gap:calc(8px * var(--space, var(--fit)));font-size:calc(9px * var(--fit))}
+.sheet-content .skill-rating{gap:calc(3px * var(--space, var(--fit)))}
 .sheet-content .skill-rating svg{width:calc(10px * var(--fit));height:calc(12px * var(--fit))}
-.sheet-content .job-row{grid-template-columns:calc(68px * var(--fit)) calc(60px * var(--fit)) minmax(0,1fr);gap:calc(8px * var(--fit));padding:calc(7px * var(--fit));margin-bottom:calc(6px * var(--fit))}
+.sheet-content .job-row{grid-template-columns:calc(68px * var(--fit)) calc(60px * var(--fit)) minmax(0,1fr);gap:calc(8px * var(--space, var(--fit)));padding:calc(7px * var(--space, var(--fit)));margin-bottom:calc(6px * var(--space, var(--fit)))}
 .sheet-content .job-row>img{width:calc(58px * var(--fit));height:calc(29px * var(--fit))}
 .sheet-content .job-row strong{font-size:calc(12px * var(--fit))}
 .sheet-content .job-row small,.sheet-content .period,.sheet-content .cv-row-period,.sheet-content dt{font-size:calc(10px * var(--fit))}
-.sheet-content .profile-part{margin-bottom:calc(12px * var(--fit))}
-.sheet-content .profile-part h4{font-size:calc(13px * var(--fit));margin:calc(6px * var(--fit)) 0}
+.sheet-content .profile-part{margin-bottom:calc(12px * var(--space, var(--fit)))}
+.sheet-content .profile-part h4{font-size:calc(13px * var(--fit));margin:calc(6px * var(--space, var(--fit))) 0}
 .sheet-content .profile-part p{font-size:calc(11px * var(--fit))}
-.sheet-content dl>div{grid-template-columns:calc(65px * var(--fit)) 1fr;gap:calc(8px * var(--fit));padding:calc(5px * var(--fit)) 0}
-.sheet-content .identity{gap:calc(18px * var(--fit));margin-bottom:calc(24px * var(--fit))}
+.sheet-content dl>div{grid-template-columns:calc(65px * var(--fit)) 1fr;gap:calc(8px * var(--space, var(--fit)));padding:calc(5px * var(--space, var(--fit))) 0}
+.sheet-content .identity{gap:calc(18px * var(--space, var(--fit)));margin-bottom:calc(24px * var(--space, var(--fit)))}
 .sheet-content .identity .portrait{width:calc(124px * var(--fit));height:calc(140px * var(--fit));border-width:calc(4px * var(--fit))}
-.sheet-content .letter{font-size:calc(14px * var(--fit));margin-bottom:calc(24px * var(--fit))}
+.sheet-content .letter{font-size:calc(14px * var(--fit));margin-bottom:calc(24px * var(--space, var(--fit)))}
+
+/* Matching text roles use the same size in both CV columns. */
+.sheet-content .cv-columns{font-size:calc(11px * var(--fit))}
+.sheet-content .cv-columns .skill-row,
+.sheet-content .cv-columns .profile-part p,
+.sheet-content .cv-columns .job-row small,
+.sheet-content .cv-columns .period,
+.sheet-content .cv-columns .cv-row-period,
+.sheet-content .cv-columns dt,
+.sheet-content .cv-columns dd{font-size:calc(11px * var(--fit))}

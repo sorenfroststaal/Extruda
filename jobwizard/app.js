@@ -21,6 +21,7 @@ function measure(){
   if(columns){columns.classList.toggle('one-column',!hasLeft||!hasRight);}
   function apply(density,width){
    content.style.setProperty('--fit',density);
+   content.style.setProperty('--space',density*(on('shrink')?0.8:1));
    if(columns)columns.style.gridTemplateColumns=hasLeft&&hasRight?`${width}px minmax(0,1fr)`:'minmax(0,1fr)';
   }
   function fits(){return content.scrollHeight<=1077&&content.scrollWidth<=748;}
@@ -43,24 +44,14 @@ function measure(){
     if(low>best.density+0.001||(Math.abs(low-best.density)<=0.001&&height<best.height))best={density:low,width,height};
    }
    scale=best.density;apply(scale,best.width);
-   // Each column may use larger type if it has spare vertical space.
-   if(columns)for(const column of columns.children){
-    let low=scale,high=1;
-    column.style.setProperty('--fit',1);
-    if(fits())low=1;
-    else for(let pass=0;pass<10;pass++){
-     const mid=(low+high)/2;column.style.setProperty('--fit',mid);
-     if(fits())low=mid;else high=mid;
-    }
-    column.style.setProperty('--fit',low);
-   }
+
   }
   const unresolved=!fits();
   content.dataset.scale=scale.toFixed(4);
   const page=content.closest('.sheet');page.classList.toggle('overfull',unresolved);
   const label=i===0?tr('Ansøgning','Application'):'CV';
   const status=document.getElementById(i===0?'application-status':'cv-status');
-  const message=unresolved?tr(`${label}: for meget indhold. Vælg noget fra.`,`${label}: too much content. Remove some content.`):overflow?(on('shrink')?tr(`${label}: skaleret til ${Math.floor(scale*100)} % for at passe på én A4-side.`,`${label}: scaled to ${Math.floor(scale*100)}% to fit one A4 page.`):tr(`${label}: for meget indhold til én A4-side. Vælg noget fra, eller slå skalering til.`,`${label}: too much content for one A4 page. Remove content or enable scaling.`)):tr(`${label}: passer på én A4-side.`,`${label}: fits on one A4 page.`);
+  const message=unresolved?tr(`${label}: for meget indhold. Vælg noget fra, eller slå skalering til.`,`${label}: too much content. Remove some content or enable scaling.`):overflow?(on('shrink')?tr(`${label}: skaleret til ${Math.floor(scale*100)} % for at passe på én A4-side.`,`${label}: scaled to ${Math.floor(scale*100)}% to fit one A4 page.`):tr(`${label}: for meget indhold til én A4-side. Vælg noget fra, eller slå skalering til.`,`${label}: too much content for one A4 page. Remove content or enable scaling.`)):tr(`${label}: passer på én A4-side.`,`${label}: fits on one A4 page.`);
   status.textContent=message;status.classList.toggle('overflow-message',overflow);messages.push(message);
   if(unresolved)blocked=true;
  });
@@ -75,4 +66,3 @@ measure();requestAnimationFrame(measure);
 document.querySelectorAll('.sheet img').forEach(img=>{if(!img.complete)img.addEventListener('load',measure,{once:true})});
 save()}
 let jobs=[],tracks=[],personParts=[];async function start(){try{const response=await fetch('../arbejdsliv/');if(!response.ok)throw Error();$('#print').disabled=false;personParts=[];source=new DOMParser().parseFromString(await response.text(),'text/html');source.querySelectorAll('img').forEach(n=>{const src=n.getAttribute('src');if(src)n.setAttribute('src',new URL(src,location.href.replace(/jobwizard\/.*$/,'arbejdsliv/')).href)});jobs=[...source.querySelectorAll('.cv-job')];tracks=[...source.querySelectorAll('details.work-track')].filter(n=>n.querySelector('.work-track-details'));const box=$('#choices');box.replaceChildren();heading('Erhvervserfaring',box);jobs.forEach((n,i)=>check('job-'+i,text(n.querySelector('strong'))+' · '+text(n.querySelector('.cv-row-period')),box));heading('Færdigheder',box);source.querySelectorAll('.cv-skill-category').forEach(n=>{heading(text(n.querySelector('h3,h4')),box);n.querySelectorAll('[id^="skill-"]').forEach(s=>check(s.id,text(s.querySelector('.skill-name')),box,Number(s.id.replace('skill-',''))<=22))});heading('Personen Søren',box);const personal=source.querySelector('.profile-disclosure-content');if(personal){[...personal.children].forEach(n=>{if(n.tagName==='H4'||!personParts.length)personParts.push([]);personParts.at(-1).push(n)});personParts.forEach((nodes,i)=>check('person-'+i,text(nodes[0]),box,i===0));}check('education','Uddannelse',box);check('roles','Andre roller',box);tracks.forEach((n,i)=>check('track-'+i,text(n.querySelector('summary strong')),$('#tracks'),false));$('#settings').querySelectorAll('input:not([type=file]),textarea,select').forEach(n=>{if(n.type!=='checkbox'&&saved[n.id]!==undefined)n.value=saved[n.id]});render()}catch{$('#choices').innerHTML='<p>Indholdet kunne ikke hentes. Dine gemte valg bevares.</p><button type="button" id="retry">Prøv igen</button>';$('#retry').onclick=start;$('#print').disabled=true}}$('#settings').addEventListener('input',render);$('#settings').addEventListener('submit',e=>e.preventDefault());$('#upload').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;if(!/^image\/(jpeg|png|webp)$/.test(f.type)||f.size>8e6){$('#status').textContent='Vælg et JPG-, PNG- eller WebP-billede under 8 MB.';return}const reader=new FileReader();reader.onload=()=>{photo=reader.result;render()};reader.readAsDataURL(f)});$('#print').onclick=()=>{measure();if(!$('#print').disabled)window.print()};window.addEventListener('beforeprint',measure);document.fonts.ready.then(()=>{if(source)measure()});document.addEventListener('extruda:preferences',e=>{ui=e.detail.language;document.querySelectorAll('[data-da][data-en]').forEach(n=>n.textContent=n.getAttribute('data-'+ui));if(source)render()});new ResizeObserver(fit).observe($('#preview'));start()})();
-
