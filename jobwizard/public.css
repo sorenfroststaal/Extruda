@@ -13,3 +13,16 @@
 .shared-application .cv-columns .skill-row,.shared-application .cv-columns .profile-part p,.shared-application .cv-columns .job-row small,.shared-application .cv-columns .period,.shared-application .cv-columns .cv-row-period,.shared-application .cv-columns dt,.shared-application .cv-columns dd,.shared-application .share-card p,.shared-application .share-card a{font-size:14px}
 .shared-application .sheet h2{font-size:20px}
 .shared-application .job-row strong{font-size:16px}
+.shared-application .application-template{min-height:0!important}
+@media(max-width:700px){
+ .shared-application .application-template .identity.has-portrait{padding-left:0;min-height:0}
+ .shared-application .application-template .identity .portrait{position:static}
+ .shared-application .application-vision.has-portrait{padding-left:16px}
+ .shared-application .application-vision.has-ronaldo .application-vision-copy{margin-right:0}
+ .shared-application .application-ronaldo{position:static;float:right;width:100px;margin-top:12px}
+ .shared-application .application-position-row{flex-direction:column}
+ .shared-application .application-tracks{width:100%;gap:12px}
+ .shared-application .application-track strong{font-size:13px}
+ .shared-application .application-track span{font-size:12px}
+ .shared-application .application-vision-copy p{font-size:14px}
+}

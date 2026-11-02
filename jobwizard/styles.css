@@ -117,3 +117,38 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet.no-item-boxes .profile-part{background:transparent;border-color:transparent}
 /* Centre the QR vertically in the remaining space below the link. */
 .sheet-content .share-qr{margin-top:auto;margin-bottom:auto}
+/* Application template: portrait, introduction, position, then five answers. */
+.application-template{display:flex;flex-direction:column;gap:calc(12px * var(--space,var(--fit)))}
+.application-hero{position:relative}
+.application-template .identity{padding-left:0;min-height:calc(64px * var(--fit));margin-bottom:calc(10px * var(--space,var(--fit)))}
+.application-template .identity.has-portrait{padding-left:calc(142px * var(--fit));min-height:calc(76px * var(--fit))}
+.application-template .identity .portrait{position:absolute;top:0;left:0;z-index:1}
+.application-hero:has(.portrait){min-height:calc(124px * var(--fit))}
+.application-vision{position:relative;background:var(--output-primary);color:white;border-radius:12px;padding:calc(14px * var(--space,var(--fit)));overflow:visible;display:flow-root}
+.application-vision.has-portrait{padding-left:calc(142px * var(--fit))}
+.application-vision.has-ronaldo .application-vision-copy{margin-right:calc(116px * var(--fit))}
+.application-vision-copy p{font-size:calc(11px * var(--fit));line-height:1.45;margin:0 0 calc(10px * var(--space,var(--fit)))}
+.application-vision-copy p:first-child{font-style:italic}
+.application-vision-copy p:last-child{margin-bottom:0}
+.application-vision-copy .quote-attribution{font-size:calc(10px * var(--fit))}
+.application-ronaldo{position:absolute;right:calc(12px * var(--fit));bottom:0;width:calc(110px * var(--fit));height:auto;max-height:95%;object-fit:contain;object-position:bottom}
+.application-position-row{display:flex;gap:calc(12px * var(--space,var(--fit)));align-items:stretch}
+.application-tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(5px * var(--fit));width:calc(170px * var(--fit));flex-shrink:0}
+.application-track{display:flex;flex-direction:column;align-items:center;gap:calc(2px * var(--fit));text-align:center;line-height:1.2}
+.application-track img{width:calc(32px * var(--fit));height:calc(32px * var(--fit))}
+.application-track strong{font-size:calc(9px * var(--fit))}
+.application-track span{font-size:calc(8px * var(--fit))}
+.application-track.is-muted{opacity:.45}
+.application-position{flex:1;min-width:0;padding:calc(10px * var(--space,var(--fit)));border:1px solid #d9d5cd;border-radius:12px;background:var(--output-accent)}
+.sheet-content .application-position h2{font-size:calc(16px * var(--fit))}
+.sheet-content .application-position p{font-size:calc(11px * var(--fit));line-height:1.45;margin:calc(4px * var(--space,var(--fit))) 0 0}
+.application-answer-area{flex:1;padding:calc(16px * var(--space,var(--fit)));background:#fff;border:1px solid #d9d5cd;border-radius:12px;color:#343b3b}
+.sheet-content .application-answer-area h3{font-size:calc(14px * var(--fit));margin:0 0 calc(6px * var(--space,var(--fit)))}
+.sheet-content .application-answer-area p{font-size:calc(13px * var(--fit));line-height:1.55;margin:0 0 calc(12px * var(--space,var(--fit)))}
+.application-answer+.application-answer{margin-top:calc(18px * var(--space,var(--fit)))}
+.sheet-content .application-document-title{font-size:calc(18px * var(--fit));margin-bottom:calc(16px * var(--space,var(--fit)))}
+.sheet.no-section-boxes .application-answer-area,.sheet.no-section-boxes .application-position{background:transparent;border-color:transparent}
+.application-vision.has-ronaldo .application-vision-copy{margin-right:calc(151px * var(--fit))}
+.application-ronaldo{width:calc(145px * var(--fit))}
+.application-template.vision-dark-ink .application-vision{color:#182625}
+.application-template.accent-light-ink .application-position{color:#fff}
