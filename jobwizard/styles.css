@@ -108,3 +108,5 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet-content .share-card-body{flex:1;flex-direction:column;align-items:stretch}
 .sheet-content .share-card-body>div:first-child{flex:0 0 auto}
 .sheet-content .share-qr{align-self:center;max-width:100%}
+/* Match QR framing to the other inset cards, keeping a white quiet zone. */
+.sheet-content .share-qr{align-self:flex-start;border:1px solid #d9d5cd;border-radius:9px;overflow:hidden;background:#fff}
