@@ -60,3 +60,9 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .sheet .footer-copy{display:grid;gap:2px;flex:1;min-width:0}
 .sheet .footer-contact{white-space:pre-wrap}
 .sheet .footer time{flex:0 1 auto;text-align:right;max-width:160px}
+/* Keep the name and the three-part slogan on the same two alignment lines. */
+.sheet-content .identity>div{flex:0 1 auto;width:max-content;max-width:calc(100% - 142px * var(--fit));display:grid;grid-template-columns:max-content}
+.sheet-content .identity h1{font-size:calc(30px * var(--fit));white-space:nowrap;margin-bottom:calc(14px * var(--space, var(--fit)))}
+.sheet-content .identity .slogan{width:100%;min-width:0;max-width:100%;grid-column:1;height:auto}
+.sheet-content .identity>div:only-child{max-width:100%}
+.sheet-content .identity>div{grid-template-columns:minmax(0,1fr)}
