@@ -4,20 +4,21 @@ Materialer,Egetræslameller,16,stk.,"3 mm tykke; skæres efter CAD-profilen. Ref
 Materialer,Messingstang som råmateriale,2,m,Cirka 2 m Ø5 mm messingstang til de otte stænger i grunddesignet. Tilskæres og gevindskæres efter CAD-geometrien; råmaterialet omfatter tillæg til spild og efterbearbejdning.
 Materialer,Magneter til lameller og ringe,64,stk.,"Nominelt Ø6 × 3 mm. 32 i trælamellerne (to i hver), 16 i topringen og 16 i bundringen."
 Materialer,Tynde magneter til toplåget,8,stk.,"Fire magnetpar til det store toplåg. CAD-reference cirka Ø6,2 × 1,21 mm; vælg den faktiske magnet efter CAD-pasformen frem for at opfatte modelmålet som et varenummer."
-Materialer,M5-gevindindsatse med rifling,8,stk.,Fire smeltes i bundringen; fire skrues på gevindstængernes øverste ender som stoppere. De øverste fire smeltes ikke i topringen. Den udvendige krop skal passe til CAD.
+Materialer,M5-gevindindsatse med rifling,8,stk.,Fire smeltes i bundringen; fire skrues på gevindstængernes øverste ender som stoppere. De øverste fire smeltes ikke i topringen.
 Materialer,CA-lim / sekundlim,Efter behov,,"Til den opdelte ring, dyvelsamlingen og limede komponenter. Mængden afhænger af samlingerne og påføringen."
 Materialer,Grunder,Efter behov,,"Til de malede printdele i den nuværende arbejdsgang; brug et produkt, der passer til printmaterialet."
 Materialer,Maling,Efter behov,,"Overflade til printdelene i den nuværende version; forbrug afhænger af dækning, farve og antal lag."
 Materialer,Sandpapir,Efter behov,,"Til efterbearbejdning af printsamlinger, messingender og trælameller efter behov."
+Materialer,Messing til pins ved topring/fatning,0.5,m,"Ekstra råmateriale; CAD-reference Ø5,2 mm, otte pins på cirka 56,1 mm. Afsæt tillæg til skæring og efterbearbejdning."
 Printede dele,Bundringens kvartdele,4,stk.,Limes sammen med styredyvlerne.
 Printede dele,Halve styredyvler,8,stk.,Limes parvis til fire hele dyvler.
 Printede dele,Bærende topring,1,stk.,Øverste bærende ring og magnetsæder.
 Printede dele,Magnetisk toplåg,1,stk.,Stort låg med fire magnetpar.
 Printede dele,Fatningsbærende ring,1,stk.,Bærer den indkøbte E27-fatning.
 Printede dele,Låg til fatningsbærende ring,1,stk.,Låg til den fatningsbærende ring.
-Printede dele,Skydestifter i topringen,8,stk.,Printede låsestifter med mål fra CAD-geometrien.
 Messing-skæreliste,Glatte afstandsstænger i messing,4,stk.,"Ø5 mm; aksialt CAD-mål cirka 203,0 mm. Færdiggøres efter CAD-geometrien."
 Messing-skæreliste,Messingstænger med M5-gevind i enderne,4,stk.,"Ø5 mm; aksialt CAD-mål cirka 203,8 mm. Gevindstykker og endelig pasform følger CAD."
+Messing-skæreliste,Messingpins til topring/fatning,8,stk.,"Otte låsepins i messing mellem topring og fatningsbærer. CAD-reference cirka Ø5,2 × 56,1 mm; skæres og efterbearbejdes efter pin-geometrien."
 Valgfri adapter,Printede forbindelsesdele til bord-/gulvlampe,4,stk.,Til den alternative adaptersamling.
 Valgfri adapter,Printet beslag til bord-/gulvlampe,1,stk.,Bruges sammen med de fire forbindelsesdele.
 Valgfri adapter,Ekstra messingstænger til adapteren,4,stk.,Ø5 mm; skæres efter den valgte adapters CAD. Afsæt ekstra råmateriale.
