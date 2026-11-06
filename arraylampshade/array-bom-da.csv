@@ -1,11 +1,11 @@
 Gruppe,Del,Antal,Enhed,Specifikation / noter
 Materialer,Filament til alle printede dele,200,g,"Samlet forbrug til lampeskærmens printede dele nedenfor. De 200 g gælder tilsammen, ikke pr. del. Materiale og printindstillinger skal følge den endelige testede specifikation."
-Materialer,Egetræslameller,16,stk.,"3 mm tykke; skæres efter CAD-profilen. Referencelamellens plane omsluttende mål er cirka 300,4 × 48,2 mm; afsæt ekstra råmateriale til skæring og efterbearbejdning."
-Materialer,Messingstang som råmateriale,"2,5",m,"Cirka 2,5 m Ø5 mm messingstang til otte stænger og otte pins ved topring/fatning, inklusive tillæg til skæring og efterbearbejdning."
-Materialer,Magneter til lameller og ringe,64,stk.,"Nominelt Ø6 × 3 mm. 32 i trælamellerne (to i hver), 16 i topringen og 16 i bundringen."
-Materialer,Tynde magneter til toplåget,8,stk.,"Fire magnetpar til det store toplåg. CAD-reference cirka Ø6,2 × 1,21 mm; vælg den faktiske magnet efter CAD-pasformen frem for at opfatte modelmålet som et varenummer."
+Materialer,Lameller,16,stk.,"Nuværende version: 3 mm eg; CAD-profil cirka 300,4 × 48,2 mm. Andre egnede, skærbare materialer eller 3D-printede lameller kan bruges. Printede lameller kræver ekstra filament. Afsæt materiale til skæring og efterbearbejdning."
+Materialer,Messingstang som råmateriale,"2,5",m,"Cirka 2,5 m Ø5 mm messingstang til otte stænger og otte pins ved topring/fatning."
+Materialer,Magneter til lameller og ringe,64,stk.,"Ø6 × 3 mm. 32 i lamellerne (to i hver), 16 i topringen og 16 i bundringen."
+Materialer,Tynde magneter til toplåget,8,stk.,Fire par Ø6 × 1 mm magneter til toplåget.
 Materialer,M5-gevindindsatse med rifling,8,stk.,Fire smeltes i bundringen; fire skrues på gevindstængernes øverste ender som stoppere. De øverste fire smeltes ikke i topringen.
-Materialer,CA-lim / sekundlim,Efter behov,,"Til den opdelte ring, dyvelsamlingen og limede komponenter. Mængden afhænger af samlingerne og påføringen."
+Materialer,CA-lim / sekundlim,Efter behov,,"Til samling af den opdelte ring, styredyvler og andre komponenter med CA-lim. Mængden afhænger af samlingerne og påføringen."
 Materialer,Grunder,Efter behov,,"Til de malede printdele i den nuværende arbejdsgang; brug et produkt, der passer til printmaterialet."
 Materialer,Maling,Efter behov,,"Overflade til printdelene i den nuværende version; forbrug afhænger af dækning, farve og antal lag."
 Materialer,Sandpapir,Efter behov,,"Til efterbearbejdning af printsamlinger, messingender og trælameller efter behov."
