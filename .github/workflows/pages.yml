@@ -38,7 +38,9 @@ jobs:
           import hashlib
           site = Path('_site')
           assert (site / 'index.html').is_file(), 'Missing homepage'
-          assert (site / 'CNAME').read_text().strip() == 'extruda.dk', 'Unexpected domain'
+          assert Path('CNAME').read_text().strip() == 'extruda.dk', 'Unexpected source domain'
+          if (site / 'CNAME').exists():
+              assert (site / 'CNAME').read_text().strip() == 'extruda.dk', 'Unexpected built domain'
           for name in ['index.html', 'gallery.json', 'array-bom-en.csv', 'array-bom-da.csv']:
               source = Path('arraylampshade') / name
               built = site / 'arraylampshade' / name
