@@ -15,3 +15,5 @@ html[data-extruda-page=array] main :is(h1,h2,h3){font-family:Nunito,system-ui,sa
 @media(max-width:370px){.archive-grid{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.project-jumps,.gallery-filters,.gallery-more,.film-grid video,#gallery-viewer{display:none}#gallery .archive-grid figure:nth-child(n+13){display:none}section{padding-block:24px}.archive-grid{grid-template-columns:repeat(3,1fr)}}
 
 html[data-extruda-page=array]{--array-action-text:#fff}html[data-extruda-page=array][data-theme=dark]{--array-action-text:#182625}html[data-theme=dark] .array-mark{filter:brightness(1.7)}
+
+.archive-grid figcaption:empty,.image-type[data-en="Photograph"]{display:none}

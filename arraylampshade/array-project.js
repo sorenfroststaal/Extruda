@@ -37,7 +37,8 @@
     image.src = figure.querySelector('a').href;
     image.alt = figure.querySelector('img').alt;
     const text = figure.querySelector('figcaption');
-    caption.textContent = `${current + 1} / ${chosen.length} · ${text.dataset[lang()] || text.textContent}`;
+    const description = text.dataset[lang()] || text.textContent;
+    caption.textContent = `${current + 1} / ${chosen.length}${description ? ' · ' + description : ''}`;
     prev.disabled = current === 0; next.disabled = current === chosen.length - 1;
     stage.classList.remove('full-size'); scale.textContent = '100%';
     stage.scrollTo(0,0);
@@ -70,3 +71,4 @@
   document.addEventListener('extruda:preferences',refresh);
   refresh();
 })();
+
