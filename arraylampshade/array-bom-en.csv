@@ -1,0 +1,28 @@
+﻿Group,Item,Quantity,Unit,Specification / notes
+Materials,Filament for all printed parts,200,g,"Total allowance for the complete printed shade set listed below. The 200 g is shared across those parts, not per part. Material and print settings must follow the final tested specification."
+Materials,Oak slats,16,pcs,3 mm thick; cut to the CAD profile. The reference slat has a planar envelope of approximately 300.4 × 48.2 mm; allow extra stock for cutting and finishing.
+Materials,Brass rod stock,2,m,Approximately 2 m of Ø5 mm brass stock for the eight core rods. Cut and thread to the CAD geometry; stock allowance includes cutting/finishing waste.
+Materials,Slat and ring magnets,64,pcs,"Nominal Ø6 × 3 mm. 32 in the wooden slats (two each), 16 in the top ring and 16 in the bottom ring."
+Materials,Thin top-cover magnets,8,pcs,Four magnet pairs for the large top cover. CAD reference approximately Ø6.2 × 1.21 mm; select the matching actual magnet against the CAD fit rather than treating this model measurement as a catalogue part number.
+Materials,M5 knurled threaded inserts,8,pcs,Four heat-set into the bottom ring; four screw onto the upper ends of the threaded rods as stoppers. The upper four are not heat-set into the top ring. Match the outer body to CAD.
+Materials,CA / superglue,As needed,,For the split-ring and dowel assembly and bonded components. Quantity depends on joints and application.
+Materials,Primer,As needed,,For the current painted printed-part workflow; use a product compatible with the printed material.
+Materials,Paint,As needed,,"Finish for the printed parts in the current version; consumption depends on coverage, colour and number of coats."
+Materials,Sandpaper,As needed,,"For smoothing printed joints, brass ends and wooden slats as appropriate."
+Printed parts,Bottom-ring quarters,4,pcs,Bond together with the alignment dowels.
+Printed parts,Alignment dowel halves,8,pcs,Bond in pairs to make four complete dowels.
+Printed parts,Structural top ring,1,pcs,Upper structural ring and magnet seats.
+Printed parts,Magnetic top cover,1,pcs,Large cover with four magnet pairs.
+Printed parts,Socket carrier ring,1,pcs,Carrier for the purchased E27 fitting.
+Printed parts,Socket carrier cover,1,pcs,Cover for the socket carrier.
+Printed parts,Sliding top pins,8,pcs,"Printed locking pins, sized to the CAD geometry."
+Brass cut list,Plain brass spacer rods,4,pcs,Ø5 mm; CAD axial span approximately 203.0 mm. Finish to the CAD geometry.
+Brass cut list,Brass rods with M5 threaded ends,4,pcs,Ø5 mm; CAD axial span approximately 203.8 mm. Threaded portions and final fit follow CAD.
+Optional adapter,Printed table/floor-lamp connectors,4,pcs,For the alternative adapter assembly.
+Optional adapter,Printed table/floor-lamp mount,1,pcs,Use with the four connectors.
+Optional adapter,Additional adapter brass rods,4,pcs,Ø5 mm; cut to the selected adapter CAD. Allow additional stock.
+Separate lamp equipment,Suitable E27 pendant set OR existing lamp base,1,set,"Complete purchased assembly; includes retaining ring, wiring and strain relief."
+Separate lamp equipment,Compatible LED bulb,1,pcs,See the published safety scope and pending thermal validation.
+Tools,Current workshop tools,,,3D printer; wood saw/plane; metal saw/cutter; file; sandpaper; M5 die; heat-insert tool.
+Scope,,,,Reference BOM for one lampshade: the current 16-slat CAD design with magnetic top cover.
+Note,200 g filament total,,,The printed parts and brass cutting list use the raw material above. Optional adapter quantities are additional only when required.
