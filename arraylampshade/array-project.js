@@ -12,7 +12,7 @@
   const next = document.querySelector('#viewer-next');
   const stage = dialog.querySelector('.viewer-stage');
   const scale = document.querySelector('#viewer-scale');
-  let filter = 'all', limit = 12, current = 0, opener = null;
+  let filter = 'finished', limit = 12, current = 0, opener = null;
   const lang = () => document.documentElement.lang === 'da' ? 'da' : 'en';
   const tr = (en, da) => lang() === 'da' ? da : en;
   const selected = () => figures.filter(f => filter === 'all' || f.dataset.category === filter);
