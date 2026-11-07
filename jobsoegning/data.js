@@ -60,7 +60,7 @@ window.JobSearchData = {
       "next_action": "Afklar om jobbet primært er nat eller blandede vagter; teksten er uklar. Spørg om meritvej på sigt.",
       "application_url": "https://jobnet.dk/find-job/c92744ab-7c36-405a-8f9a-480b511bc3dd",
       "deadline_source": "Jobnet",
-      "workload": "full",
+      "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
     },
     {
@@ -130,7 +130,7 @@ window.JobSearchData = {
       "next_action": "Start 1/1 2027. Samtaler løbende. Afklar aldersgruppe og mulighed for senere uddannelse.",
       "application_url": "https://jobnet.dk/find-job/c1db7548-3ee7-4ea4-9262-d4fca5e5f2aa",
       "deadline_source": "Jobnet",
-      "workload": "full",
+      "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
     },
     {
@@ -200,7 +200,7 @@ window.JobSearchData = {
       "next_action": "Samtaler løbende. Jobnets Høvejen-adresse er administration; arbejdsadressen er kontrolleret på essenbaekken.randers.dk.",
       "application_url": "https://jobnet.dk/find-job/e029c3ac-c796-4799-964c-f422644fc8e9",
       "deadline_source": "Jobnet",
-      "workload": "full",
+      "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
     },
     {
@@ -445,7 +445,7 @@ window.JobSearchData = {
       "next_action": "Ring om omsorgsmedhjælper-/meritvej. Tværfagligt team har omsorgsmedhjælpere, men denne stilling er slået op til pædagog.",
       "application_url": "https://jobnet.dk/find-job/648dc687-6bbf-4774-bb6a-17a1e3f8a63b",
       "deadline_source": "Jobnet",
-      "workload": "full",
+      "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
     },
     {
@@ -480,7 +480,7 @@ window.JobSearchData = {
       "next_action": "Uddannelseskravet er udtrykkeligt. Undersøg alternativ ansættelse/uddannelsessamarbejde før ansøgning.",
       "application_url": "https://jobnet.dk/find-job/785aa41a-0b18-4aaa-9883-78665e541dc8",
       "deadline_source": "Jobnet",
-      "workload": "full",
+      "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
     },
     {
@@ -585,7 +585,7 @@ window.JobSearchData = {
       "next_action": "Informationsmøde 17/11 kl. 15.30–17. Spørg om uddannelsesvej; ekstra kørsel mellem borgere.",
       "application_url": "https://jobnet.dk/find-job/d68a9e9c-71b4-4716-a4d2-26193c1ebc4c",
       "deadline_source": "Jobnet",
-      "workload": "full",
+      "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
     },
     {
@@ -1116,7 +1116,7 @@ window.JobSearchData = {
       "next_action": "Ring om erfaringsbaseret ansættelse eller meritvej. Uddannelse er et udtrykkeligt krav i opslaget. Start 1/2 2027.",
       "application_url": "https://jobnet.dk/find-job/06946d4e-2d26-4611-b622-2e2d2f05d7e1",
       "deadline_source": "Jobnet",
-      "workload": "full",
+      "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
     },
     {
@@ -1186,7 +1186,7 @@ window.JobSearchData = {
       "next_action": "Undersøg mulighed for omsorgsmedhjælper-/meritvej. Der er ikke annonceret en sådan aftale.",
       "application_url": "https://jobnet.dk/find-job/3909945d-0c04-4523-badb-863c9eed72c3",
       "deadline_source": "Jobnet",
-      "workload": "full",
+      "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
     },
     {
