@@ -27,7 +27,7 @@ window.WorkshopData = {
     purpose:'Udvikle enkle hverdagshjælpemidler sammen med de mennesker, der skal bruge dem, og gøre løsningerne mulige at fremstille og tilpasse lokalt.',
     people:'Første afprøvning: 5–8 brugere med konkrete udfordringer i hverdagen. Den endelige målgruppe og behovene afklares med en projektvært.',
     activities:'Et foreslået forløb på tre måneder: behovssamtaler, udvikling af tre løsninger, afprøvning med brugerne og vejledninger til fremstilling. Ét skolehold eller en lille gruppe hjemmeproducenter afprøver vejledningerne.',
-    role:'En lønnet rolle med ansvar for brugerinddragelse, design, prototyper, dokumentation og koordinering. Projektvært og faglig sparring skal afklares.',
+    role:'Jeg forbinder teknologi med konkrete behov, taler med brugerne og underviser. Løsningerne skal deles open source med filer og vejledninger. En lønnet rolle hos en projektvært skal give tid til udvikling, afprøvning og overdragelse.',
     outcomes:'Undersøg om løsningerne bliver brugt, hvilken forskel brugerne oplever, og om andre kan fremstille dem ud fra vejledningen. Registrér tilpasninger, fejl, tidsforbrug og materialeforbrug.',
     budget:'Budget mangler: udviklingstid/løn inkl. arbejdsgiveromkostninger, faglig sparring, brugerdeltagelse, materialer, udstyr, transport, dokumentation og administration. Beløb og støtteberettigelse skal afklares.',
     questions:'Hvem vil være projektvært? Hvilke behov er vigtigst? Hvem står for faglig vurdering og afprøvning? Hvordan deles design og vejledninger? Hvilken finansiering kan dække løn, og hvordan kan arbejdet fortsætte bagefter?'
