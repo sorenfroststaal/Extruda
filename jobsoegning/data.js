@@ -88,7 +88,8 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "both",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0001"
     },
     {
       "id": "62b11090-860c-4a55-b7d0-bc7c394845ce",
@@ -124,7 +125,8 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "full",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0007"
     },
     {
       "id": "c1db7548-3ee7-4ea4-9262-d4fca5e5f2aa",
@@ -1102,7 +1104,8 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "part",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0002"
     },
     {
       "id": "f04423ab-5de7-4bbb-ad5a-1e95090730f4",
@@ -1757,7 +1760,8 @@ window.JobSearchData = {
       "workload": "full",
       "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
       "source_portal": "Randers Kommune",
-      "batch": "other-portals-2026-11-07"
+      "batch": "other-portals-2026-11-07",
+      "application_id": "0006"
     },
     {
       "id": "external-lene-aktivitet",
@@ -1796,7 +1800,8 @@ window.JobSearchData = {
       "workload": "part",
       "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
       "source_portal": "Randers Kommune",
-      "batch": "other-portals-2026-11-07"
+      "batch": "other-portals-2026-11-07",
+      "application_id": "0008"
     },
     {
       "id": "external-jobranders",
@@ -1950,7 +1955,8 @@ window.JobSearchData = {
       "workload": "full",
       "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
       "source_portal": "Jobindex",
-      "batch": "other-portals-2026-11-07"
+      "batch": "other-portals-2026-11-07",
+      "application_id": "0009"
     },
     {
       "id": "external-baader",
@@ -2065,7 +2071,8 @@ window.JobSearchData = {
       "workload": "full",
       "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
       "source_portal": "JKS",
-      "batch": "other-portals-2026-11-07"
+      "batch": "other-portals-2026-11-07",
+      "application_id": "0010"
     },
     {
       "id": "external-jks-metal-hobro",
@@ -3053,7 +3060,8 @@ window.JobSearchData = {
       "priority": "apply",
       "rank": 1.66,
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
-      "batch": "recheck-2026-11-07"
+      "batch": "recheck-2026-11-07",
+      "application_id": "0003"
     },
     {
       "id": "recheck-mynd-psykiatri",
@@ -3169,7 +3177,8 @@ window.JobSearchData = {
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
       "batch": "recheck-2026-11-07",
       "education_opportunity_confirmed": true,
-      "education_opportunity": "Opslaget tilbyder mulighed for merituddannelsen til pædagog. Adgang og vilkår skal aftales individuelt."
+      "education_opportunity": "Opslaget tilbyder mulighed for merituddannelsen til pædagog. Adgang og vilkår skal aftales individuelt.",
+      "application_id": "0004"
     },
     {
       "id": "recheck-kirsch",
@@ -3359,7 +3368,8 @@ window.JobSearchData = {
       "priority": "apply",
       "rank": 1.74,
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
-      "batch": "recheck-2026-11-07"
+      "batch": "recheck-2026-11-07",
+      "application_id": "0005"
     },
     {
       "id": "recheck-kanon-fast",

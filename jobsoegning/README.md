@@ -12,4 +12,6 @@ Recheck: all 103 displayed Randers Municipality titles were screened, with relev
 
 jobs.json and data.js contain the same public object. The UI uses existing shared fonts, logo and header controls. Private saved jobs, status, notes and filters stay in localStorage under extruda-jobsearch-private-v1. These are not published or included in JSON exports. No analytics, server database, application submission or recurring automation exists. Public noindex/nofollow is not access control. No personal health information is included.
 
+The first ten jobs in the recommended priority order have stable four-digit application_id references 0001–0010. These are shown in the title and detail dialog and included in text search. Original source IDs remain unchanged so saved jobs and notes survive. Application documents and local folder paths are not published in this repository.
+
 Validation for this expansion: Node checks cover SQLite integrity and data.js/JSON consistency, stable unique IDs, travel/track/text/new filters, empty state, ongoing deadlines, preserved language filters and public-only JSON exports. Browser checks cover the new-only filter and detail dialog for ongoing recruitment; the existing responsive layout and DA/EN controls are retained. Native download completion remains unverified.
