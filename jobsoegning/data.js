@@ -5,7 +5,7 @@ window.JobSearchData = {
     "origin": "Spentrup by – ingen privat gadeadresse",
     "max_drive_minutes": 45,
     "recurring_automation": false,
-    "scope": "Udvidet, prioriteret screening af Jobnet med direkte kontrol af udvalgte arbejdsgiversider. 46 opslag og tre faglige spor. Ikke en garanti for fuldstændig dækning.",
+    "scope": "Udvidet screening af Jobnet, Jobindex, Computerworld it-jobbank, Midtjob, JKS og arbejdsgiversider. Kun unikke stillinger tilføjes. Ikke en garanti for alle relevante opslag på nettet.",
     "profile_source": "https://extruda.dk/arbejdsliv/",
     "rating": "5 = meget stærkt match; 4 = godt match; 3 = relevant med væsentlig afklaring; 2 = reserve med stort kompetencegab; 1 = svagt. Scoren vurderer nuværende dokumenterede erfaring og adgangskrav, ikke ansættelseschance.",
     "tracks": {
@@ -24,8 +24,21 @@ window.JobSearchData = {
       "https://lommepenge.sparkron.dk/-/media/sparekassenkronjylland/pdf-filer/tilgaengelighed/tilgngelighedserklring_sparekassen_kronjylland.pdf?rev=a670ab4e96814cf793f75621d3c1d5fa"
     ],
     "schema": "extruda-jobsearch-v1",
-    "count": 46,
-    "publication": "Offentlig side med noindex/nofollow. Alle med linket og GitHub-adgang til det offentlige repo kan læse data. Ingen adgangsbeskyttelse."
+    "count": 64,
+    "publication": "Offentlig side med noindex/nofollow. Alle med linket og GitHub-adgang til det offentlige repo kan læse data. Ingen adgangsbeskyttelse.",
+    "expansion": {
+      "date": "2026-11-07",
+      "added": 18,
+      "batch": "other-portals-2026-11-07",
+      "coverage": [
+        "Jobindex: Randers-resultatsider og udvalgte regionale fund",
+        "Computerworld it-jobbank: Aarhus, 25 viste opslag",
+        "Midtjob, JKS og Randers Kommune: konkrete opslag kontrolleret",
+        "Rekrut.dk og Arbejd.com: supplerende discovery/dubletkontrol",
+        "Ofir: siden meddeler lukket. Jobbsafari videresender til Jobindex."
+      ],
+      "limitations": "Geografiske portalfiltre er discovery, ikke bevis for 45 minutters køretid. Ingen komplet kontrol af LinkedIn eller alle arbejdsgivere. Ukendt slutdato vises som løbende frist."
+    }
   },
   "jobs": [
     {
@@ -61,7 +74,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/c92744ab-7c36-405a-8f9a-480b511bc3dd",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "62b11090-860c-4a55-b7d0-bc7c394845ce",
@@ -96,7 +110,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/62b11090-860c-4a55-b7d0-bc7c394845ce",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "c1db7548-3ee7-4ea4-9262-d4fca5e5f2aa",
@@ -131,7 +146,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/c1db7548-3ee7-4ea4-9262-d4fca5e5f2aa",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "f4b69e10-26ee-4116-91c5-647563e53035",
@@ -166,7 +182,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/f4b69e10-26ee-4116-91c5-647563e53035",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "e029c3ac-c796-4799-964c-f422644fc8e9",
@@ -201,7 +218,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/e029c3ac-c796-4799-964c-f422644fc8e9",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "c9d25167-890c-4c1f-9c79-adca9b03a363",
@@ -236,7 +254,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/c9d25167-890c-4c1f-9c79-adca9b03a363",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "9336376f-defd-4ebe-8d92-0e52cea7767b",
@@ -271,7 +290,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/9336376f-defd-4ebe-8d92-0e52cea7767b",
       "deadline_source": "Jobnet",
       "workload": "part",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "1dd119cb-e857-4da3-980d-a6576d728224",
@@ -306,7 +326,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/1dd119cb-e857-4da3-980d-a6576d728224",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "649251b9-af1a-4944-a493-147a563dd8e8",
@@ -341,7 +362,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/649251b9-af1a-4944-a493-147a563dd8e8",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "20844863-05cc-4478-8ff8-0bbb8f826cc4",
@@ -376,7 +398,8 @@ window.JobSearchData = {
       "application_url": "mailto:kf@domusnovaboligbyg.dk",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "https://finanskandidaten.dk/kandidat/soeg-job/it-supporter-1283",
@@ -411,7 +434,8 @@ window.JobSearchData = {
       "application_url": "https://finanskandidaten.dk/kandidat/soeg-job/it-supporter-1283",
       "deadline_source": "Arbejdsgiverside / Jobnet – se afklaring",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Arbejdsgiver / oprindelig screening"
     },
     {
       "id": "648dc687-6bbf-4774-bb6a-17a1e3f8a63b",
@@ -446,7 +470,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/648dc687-6bbf-4774-bb6a-17a1e3f8a63b",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "785aa41a-0b18-4aaa-9883-78665e541dc8",
@@ -481,7 +506,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/785aa41a-0b18-4aaa-9883-78665e541dc8",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "30e0a8d7-7750-4d12-a03c-662a1e881321",
@@ -516,7 +542,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/30e0a8d7-7750-4d12-a03c-662a1e881321",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "0069e249-6434-4717-8eef-e17e658ce8e1",
@@ -551,7 +578,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/0069e249-6434-4717-8eef-e17e658ce8e1",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "d68a9e9c-71b4-4716-a4d2-26193c1ebc4c",
@@ -586,7 +614,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/d68a9e9c-71b4-4716-a4d2-26193c1ebc4c",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "53ae478d-75ab-4e0c-9770-3a527507f8aa",
@@ -621,7 +650,8 @@ window.JobSearchData = {
       "application_url": "mailto:ledsager@lobpa.dk",
       "deadline_source": "Jobnet",
       "workload": "part",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "5bb89e63-873a-43bf-9325-e3f0b7c7275b",
@@ -656,7 +686,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/5bb89e63-873a-43bf-9325-e3f0b7c7275b",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "23dc878a-3927-4478-87a1-9714b9f62fdc",
@@ -692,7 +723,8 @@ window.JobSearchData = {
       "application_url": "mailto:kk@avl.dk",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "45a0fa93-7173-487f-a878-9b797caa6175",
@@ -728,7 +760,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/45a0fa93-7173-487f-a878-9b797caa6175",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "8389d340-f506-4521-b8e4-7294d7d3c924",
@@ -764,7 +797,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/8389d340-f506-4521-b8e4-7294d7d3c924",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "ebbfcf7e-cc58-411b-bb29-2bd222214d76",
@@ -799,7 +833,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/ebbfcf7e-cc58-411b-bb29-2bd222214d76",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "061f5851-6a73-4b48-89e8-8eaa791330af",
@@ -834,7 +869,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/061f5851-6a73-4b48-89e8-8eaa791330af",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "1e372152-d7af-4ba4-8f16-171fde091baa",
@@ -869,7 +905,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/1e372152-d7af-4ba4-8f16-171fde091baa",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "24e46c0e-8f32-4ce2-980c-d9b1058025dc",
@@ -904,7 +941,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/24e46c0e-8f32-4ce2-980c-d9b1058025dc",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "6a63f1a1-d6a7-4cb8-91b0-f32ffd54e43b",
@@ -939,7 +977,8 @@ window.JobSearchData = {
       "application_url": "mailto:go@crocus.dk",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "b6b91db1-2f49-4463-b2ff-1cd2cc0fb066",
@@ -974,7 +1013,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/b6b91db1-2f49-4463-b2ff-1cd2cc0fb066",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "c1d35b7f-48fe-4196-b4e9-e0ff1267714d",
@@ -1010,7 +1050,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/c1d35b7f-48fe-4196-b4e9-e0ff1267714d",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "83d62761-d8b4-44fe-8749-1d6aebdc5bf2",
@@ -1047,7 +1088,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/83d62761-d8b4-44fe-8749-1d6aebdc5bf2",
       "deadline_source": "Jobnet",
       "workload": "part",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "f04423ab-5de7-4bbb-ad5a-1e95090730f4",
@@ -1082,7 +1124,8 @@ window.JobSearchData = {
       "application_url": "mailto:info@sansebo.dk",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "06946d4e-2d26-4611-b622-2e2d2f05d7e1",
@@ -1117,7 +1160,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/06946d4e-2d26-4611-b622-2e2d2f05d7e1",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "2dff29eb-154a-465f-97b9-1796e5f35c07",
@@ -1152,7 +1196,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/2dff29eb-154a-465f-97b9-1796e5f35c07",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "3909945d-0c04-4523-badb-863c9eed72c3",
@@ -1187,7 +1232,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/3909945d-0c04-4523-badb-863c9eed72c3",
       "deadline_source": "Jobnet",
       "workload": "both",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "6b9af1aa-779b-4537-873e-11fc9bb5e07e",
@@ -1222,7 +1268,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/6b9af1aa-779b-4537-873e-11fc9bb5e07e",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "c3767c92-05b3-4dc7-acb9-56db71a69ce2",
@@ -1258,7 +1305,8 @@ window.JobSearchData = {
       "application_url": "mailto:info@dandecor.dk",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "44c9ff0b-4fdd-4337-a38e-75aa6906e572",
@@ -1293,7 +1341,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/44c9ff0b-4fdd-4337-a38e-75aa6906e572",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "7d48f861-a8d4-46b3-8b3b-2a5b03d3c741",
@@ -1328,7 +1377,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/7d48f861-a8d4-46b3-8b3b-2a5b03d3c741",
       "deadline_source": "Jobnet",
       "workload": "training",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "80df107f-f556-49dc-8e9a-d987b8ec1581",
@@ -1363,7 +1413,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/80df107f-f556-49dc-8e9a-d987b8ec1581",
       "deadline_source": "Jobnet",
       "workload": "part",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "a107a4de-a96a-424d-be61-934036c21166",
@@ -1399,7 +1450,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/a107a4de-a96a-424d-be61-934036c21166",
       "deadline_source": "Jobnet",
       "workload": "part",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "9ec182be-bf84-4c19-9e4b-0215a1b11b6d",
@@ -1434,7 +1486,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/9ec182be-bf84-4c19-9e4b-0215a1b11b6d",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "0e05972e-29c6-4765-a8de-dc0300b0bc36",
@@ -1469,7 +1522,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/0e05972e-29c6-4765-a8de-dc0300b0bc36",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "b3c47ca5-6d63-4915-b599-23a5ec388403",
@@ -1504,7 +1558,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/b3c47ca5-6d63-4915-b599-23a5ec388403",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "ac56c45a-a91c-4b75-bbe1-dbf954ed23f8",
@@ -1540,7 +1595,8 @@ window.JobSearchData = {
       "application_url": "https://jobnet.dk/find-job/ac56c45a-a91c-4b75-bbe1-dbf954ed23f8",
       "deadline_source": "Jobnet",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Jobnet"
     },
     {
       "id": "https://danskecommodities.com/vacancies/ai-tooling-enablement-specialist",
@@ -1575,7 +1631,8 @@ window.JobSearchData = {
       "application_url": "https://danskecommodities.com/vacancies/ai-tooling-enablement-specialist",
       "deadline_source": "Arbejdsgiverside / Jobnet – se afklaring",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Arbejdsgiver / oprindelig screening"
     },
     {
       "id": "https://sallinggroup.com/job/ledige-stillinger/ecebd1a0-ec0f-4044-a6d6-e7d226bcadea",
@@ -1610,7 +1667,8 @@ window.JobSearchData = {
       "application_url": "https://sallinggroup.com/job/ledige-stillinger/ecebd1a0-ec0f-4044-a6d6-e7d226bcadea",
       "deadline_source": "Arbejdsgiverside / Jobnet – se afklaring",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Arbejdsgiver / oprindelig screening"
     },
     {
       "id": "https://careers.orifarm.com/job/Hobro-Produktionsmedarbejder-9500/1368595155/",
@@ -1645,7 +1703,705 @@ window.JobSearchData = {
       "application_url": "https://careers.orifarm.com/job/Hobro-Produktionsmedarbejder-9500/1368595155/",
       "deadline_source": "Arbejdsgiverside / Jobnet – se afklaring",
       "workload": "full",
-      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen"
+      "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
+      "source_portal": "Arbejdsgiver / oprindelig screening"
+    },
+    {
+      "id": "external-treklover-pau",
+      "title": "PAU eller pædagogmedhjælper · flyver",
+      "company": "Trekløverskolen · Borup Byvej",
+      "place": "Randers NV",
+      "address": "Borup Byvej 14, Randers",
+      "drive_minutes": 9,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Borup%20Byvej%2014%2C%20Randers&travelmode=driving",
+      "deadline": "2026-11-16",
+      "deadline_label": "",
+      "hours": "Fuldtid · præcist timetal ikke oplyst",
+      "employment": "Vikariat til 30/6 2027",
+      "shifts": "6.30–17 · skift mellem teams",
+      "application_method": "Portal",
+      "contact": "Benny Petsch · 24 98 25 79 / David Holm Kowalski · 24 64 64 93",
+      "match": 4,
+      "tracks": [
+        1,
+        2,
+        3
+      ],
+      "match_reason": "Relationsarbejde, struktur og dokumentation passer til støttekontakterfaringen. Skolens praktiske og digitale læringsmiljøer giver flere berøringsflader.",
+      "requirements": "Erfaring med diagnoser, arousal og konflikter ønskes. Fleksibel intern vikardækning samt lift-/skifteopgaver.",
+      "clarify": "Søg med konkrete eksempler fra støttearbejdet. Afklar oplæring, plejeopgaver og hvor ofte teamet skifter.",
+      "next_action": "Søg med konkrete eksempler fra støttearbejdet. Afklar oplæring, plejeopgaver og hvor ofte teamet skifter.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.randers.dk/job/job-i-kommunen/pau-eller-paedagogmedhjaelper-167430/",
+      "application_url": "https://www.randers.dk/job/job-i-kommunen/pau-eller-paedagogmedhjaelper-167430/",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 2,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Randers Kommune",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-lene-aktivitet",
+      "title": "Medarbejder i aktivitets- og samværstilbud",
+      "company": "Boligerne Lene Bredahls Gade",
+      "place": "Randers C",
+      "address": "Lene Bredahls Gade 9, Randers",
+      "drive_minutes": 12,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Lene%20Bredahls%20Gade%209%2C%20Randers&travelmode=driving",
+      "deadline": "2026-12-01",
+      "deadline_label": "",
+      "hours": "25 t · deltid",
+      "employment": "6 måneders vikariat",
+      "shifts": "Mandag–fredag",
+      "application_method": "Portal",
+      "contact": "Mie Nybroe · 51 56 20 47 / Anette Astrup · 89 15 67 07",
+      "match": 5,
+      "tracks": [
+        1,
+        2
+      ],
+      "match_reason": "Meningsfulde aktiviteter, relationsarbejde, praktisk støtte og struktur ligger tæt på din ønskede retning og erfaring.",
+      "requirements": "Ingen bestemt uddannelse angivet. Selvstændig gruppeaktivitet og støtte til borgere med omfattende funktionsnedsættelser.",
+      "clarify": "Søg eller besøg stedet. Afklar plejeandel og de konkrete dagtimer. Start januar, eventuelt december.",
+      "next_action": "Søg eller besøg stedet. Afklar plejeandel og de konkrete dagtimer. Start januar, eventuelt december.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.randers.dk/job/job-i-kommunen/er-du-vores-nye-kollega-i-aktivitets-og-samvaerstilbuddet-167843/",
+      "application_url": "https://portal.signatur.dk/ExtJobs/DefaultHosting/JobApplication.aspx?ClientId=1518&ERId=134694",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 2.01,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "part",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Randers Kommune",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-jobranders",
+      "title": "Jobkonsulenter · Jobparate & Integration",
+      "company": "JOBRanders",
+      "place": "Randers",
+      "address": "",
+      "drive_minutes": 20,
+      "drive_status": "Foreløbigt byskøn; faktisk arbejdsadresse skal bekræftes",
+      "route_url": "",
+      "deadline": "2026-11-22",
+      "deadline_label": "",
+      "hours": "37 t · fuldtid",
+      "employment": "Fast",
+      "shifts": "Dag · virksomhedsbesøg",
+      "application_method": "Portal",
+      "contact": "Anna Krogh · 21 63 24 67",
+      "match": 3,
+      "tracks": [
+        1,
+        3
+      ],
+      "match_reason": "Kundekontakt, relationsarbejde og formidling af digitale jobsøgningsværktøjer er relevante.",
+      "requirements": "Relevant uddannelse og beskæftigelseserfaring efterspørges; myndighedsarbejde, Fasit, egen bil og kørekort.",
+      "clarify": "Ring om din kombinerede erfaring kan bruges. Myndighedsarbejde og regler er et væsentligt erfaringsgab. Bekræft arbejdsadresse.",
+      "next_action": "Ring om din kombinerede erfaring kan bruges. Myndighedsarbejde og regler er et væsentligt erfaringsgab. Bekræft arbejdsadresse.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.randers.dk/job/job-i-kommunen/jobkonsulenter-til-jobparate-integration-jobranders-167811/",
+      "application_url": "https://portal.signatur.dk/ExtJobs/DefaultHosting/JobApplication.aspx?ClientId=1518&ERId=134669",
+      "drive_verified": false,
+      "priority": "clarify",
+      "rank": 102,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Randers Kommune",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-kristrup",
+      "title": "Pædagog · specialklasser og SFO",
+      "company": "Kristrup Skole",
+      "place": "Randers SØ",
+      "address": "Skolegade 4, Randers",
+      "drive_minutes": 16,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Skolegade%204%2C%20Randers&travelmode=driving",
+      "deadline": "2026-11-22",
+      "deadline_label": "",
+      "hours": "35 t · deltid",
+      "employment": "Fast",
+      "shifts": "6.30–17 · skoleferier · et aftenmøde/md.",
+      "application_method": "Portal",
+      "contact": "Nicolaj Boie · 20 27 83 64 / Mark Gandrup Skougaard · 20 47 06 70",
+      "match": 3,
+      "tracks": [
+        1,
+        2
+      ],
+      "match_reason": "Relationsarbejde, læring og egne praktiske aktiviteter kan bruges i et specialpædagogisk miljø.",
+      "requirements": "Uddannet pædagog kræves; klasserumsledelse og selvstændige undervisningsopgaver.",
+      "clarify": "Kontakt om medhjælper- eller uddannelsesvej, før du søger som pædagog. Ingen aftale er annonceret.",
+      "next_action": "Kontakt om medhjælper- eller uddannelsesvej, før du søger som pædagog. Ingen aftale er annonceret.",
+      "education_dialogue": true,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.randers.dk/job/job-i-kommunen/paedagog-til-vores-specialklasseraekke-og-sfo-167897/",
+      "application_url": "https://www.randers.dk/job/job-i-kommunen/paedagog-til-vores-specialklasseraekke-og-sfo-167897/",
+      "drive_verified": true,
+      "priority": "clarify",
+      "rank": 103,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "part",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Randers Kommune",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-hoevejen",
+      "title": "Pædagog · Hus 4",
+      "company": "Bostedet Høvejen",
+      "place": "Randers SV",
+      "address": "Høvejen 23, Randers",
+      "drive_minutes": 15,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=H%C3%B8vejen%2023%2C%20Randers&travelmode=driving",
+      "deadline": "2026-11-16",
+      "deadline_label": "",
+      "hours": "30–37 t · efter aftale",
+      "employment": "Fast",
+      "shifts": "Dag/aften · hver 2. eller 3. weekend",
+      "application_method": "Portal",
+      "contact": "Emil Blak Olesen · 30 56 78 39 · emil.blak.olesen@randers.dk",
+      "match": 3,
+      "tracks": [
+        1
+      ],
+      "match_reason": "ADL, små konkrete udviklingsskridt og opfølgning passer til din støtteerfaring.",
+      "requirements": "Uddannet pædagog er et udtrykkeligt krav. Personlig pleje, KRAP og kommende LA2U-forløb.",
+      "clarify": "Spørg om alternativ indgang eller meritvej. Start 1/1 2027; ingen uddannelsesaftale annonceret.",
+      "next_action": "Spørg om alternativ indgang eller meritvej. Start 1/1 2027; ingen uddannelsesaftale annonceret.",
+      "education_dialogue": true,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.randers.dk/job/job-i-kommunen/paedagog-til-hus-4-paa-hoevejen-165933/",
+      "application_url": "https://www.randers.dk/job/job-i-kommunen/paedagog-til-hus-4-paa-hoevejen-165933/",
+      "drive_verified": true,
+      "priority": "clarify",
+      "rank": 104,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "both",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Randers Kommune",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-shoe",
+      "title": "IT Supporter · butikkernes første kontakt",
+      "company": "Shoe-d-vision / Skoringen",
+      "place": "Skødstrup",
+      "address": "Mod Skoven 12, Skødstrup",
+      "drive_minutes": 40,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Mod%20Skoven%2012%2C%20Sk%C3%B8dstrup&travelmode=driving",
+      "deadline": "2026-12-11",
+      "deadline_label": "",
+      "hours": "Fuldtid",
+      "employment": "Fast",
+      "shifts": "Dag + fordelt weekend-/helligdagstilkald 9–15",
+      "application_method": "Mail: hr@shoe-d-vision.com",
+      "contact": "Asger Simonsen · asi@shoe-d-vision.com",
+      "match": 4,
+      "tracks": [
+        3
+      ],
+      "match_reason": "Butiksbaggrund, kundeservice, IT/AV, test og formidling giver et stærkt samlet match.",
+      "requirements": "Microsoft 365, retailforståelse og forståelse af norsk kræves. Netværk, SQL og specifikke værktøjer er fordele.",
+      "clarify": "Send ansøgning mærket IT Supporter. Afklar norsk og vagtturnus samt trafik på hverdage. Få rejsedage om året.",
+      "next_action": "Send ansøgning mærket IT Supporter. Afklar norsk og vagtturnus samt trafik på hverdage. Få rejsedage om året.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jobindex.dk/jobannonce/h1714132/it-supporter-butikkernes-foerste-kontakt",
+      "application_url": "mailto:hr@shoe-d-vision.com",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 2.05,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Jobindex",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-baader",
+      "title": "IT Technician · IT Project & Service",
+      "company": "BAADER Logistix",
+      "place": "Risskov",
+      "address": "Sindalsvej 44, Risskov",
+      "drive_minutes": 38,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Sindalsvej%2044%2C%20Risskov&travelmode=driving",
+      "deadline": "",
+      "deadline_label": "Snarest muligt · løbende samtaler",
+      "hours": "Fuldtid",
+      "employment": "Fast",
+      "shifts": "Dag · op til ca. 20 rejsedage/år · hjemmearbejde muligt",
+      "application_method": "Portal",
+      "contact": "Ingen navngiven kontakt i opslaget",
+      "match": 3,
+      "tracks": [
+        2,
+        3
+      ],
+      "match_reason": "Teknisk kundeservice, produktionsforståelse og systematisk fejlfinding passer til flere af dine erfaringer.",
+      "requirements": "Teknisk baggrund eller tilsvarende, grundlæggende SQL, kørekort og rejser i ind-/udland.",
+      "clarify": "Afklar SQL-niveau og rejser. Din erfaring med data og D365 dokumenterer ikke i sig selv SQL-kompetence.",
+      "next_action": "Afklar SQL-niveau og rejser. Din erfaring med data og D365 dokumenterer ikke i sig selv SQL-kompetence.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.it-jobbank.dk/jobannonce/h1702337/it-technician-til-vores-it-project-service-team",
+      "application_url": "https://www.it-jobbank.dk/c?t=e6317442&ctx=w&source=jobtext",
+      "drive_verified": true,
+      "priority": "clarify",
+      "rank": 106,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Computerworld it-jobbank",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-cac",
+      "title": "Digital produktchef",
+      "company": "Aktieselskabet CARL CHRISTENSEN",
+      "place": "Brabrand",
+      "address": "Sintrupvej 12, Brabrand",
+      "drive_minutes": 40,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Sintrupvej%2012%2C%20Brabrand&travelmode=driving",
+      "deadline": "2026-11-30",
+      "deadline_label": "",
+      "hours": "Fuldtid",
+      "employment": "Fast",
+      "shifts": "Ikke nærmere oplyst",
+      "application_method": "Portal",
+      "contact": "Ingen navngiven kontakt i opslaget",
+      "match": 3,
+      "tracks": [
+        3
+      ],
+      "match_reason": "Brugerbehov, digitale værktøjer og forbindelsen mellem forretning og udvikling er relevante.",
+      "requirements": "Erfaring med produktansvar og softwareleverancer fra behov til lancering kræves. SaaS-erfaring er en fordel.",
+      "clarify": "Afklar om dine interne værktøjer/projekter giver tilstrækkeligt produktansvar. Ingen bestemt uddannelse krævet.",
+      "next_action": "Afklar om dine interne værktøjer/projekter giver tilstrækkeligt produktansvar. Ingen bestemt uddannelse krævet.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.it-jobbank.dk/jobannonce/h1713334/digital-produktchef-vaer-med-til-at-digitalisere-autobranchen",
+      "application_url": "https://www.it-jobbank.dk/c?t=e6382402&ctx=w",
+      "drive_verified": true,
+      "priority": "clarify",
+      "rank": 107,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Computerworld it-jobbank",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-grundfos-hvam",
+      "title": "Produktionsmedarbejder · montage og pressemaskiner",
+      "company": "JKS / Grundfos Hvam",
+      "place": "Hvam ved Aalestrup",
+      "address": "Gl. Viborgvej 79, Hvam, Aalestrup",
+      "drive_minutes": 36,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Gl.%20Viborgvej%2079%2C%20Hvam%2C%20Aalestrup&travelmode=driving",
+      "deadline": "2026-11-28",
+      "deadline_label": "",
+      "hours": "Fuldtid · præcist timetal afklares",
+      "employment": "Try & Hire-vikariat",
+      "shifts": "Man–tor 14.55–22.55 · fre 14.25–21.45",
+      "application_method": "Portal",
+      "contact": "Carina Vejlgaard Munkholm · 87 40 07 56 · cav@jks.dk",
+      "match": 4,
+      "tracks": [
+        2
+      ],
+      "match_reason": "Teknisk forståelse, kvalitet og praktisk lyst kan bruges. Produktionserfaring er ønskelig, men motivation vægtes højt.",
+      "requirements": "Stående/gående praktisk arbejde og straffeattest. Montage, indstilling og let vedligehold.",
+      "clarify": "Søg med din konkrete praktiske erfaring; afklar oplæring og pauser/timetal. Direkte maskinoperatørerfaring skal ikke påstås.",
+      "next_action": "Søg med din konkrete praktiske erfaring; afklar oplæring og pauser/timetal. Direkte maskinoperatørerfaring skal ikke påstås.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jks.dk/jobs/grundfos-i-hvam-soeger-dig-i-produktionen-til-et-try-hire-vikariat-paa-aftenhold-159906",
+      "application_url": "https://www.jks.dk/jobs/grundfos-i-hvam-soeger-dig-i-produktionen-til-et-try-hire-vikariat-paa-aftenhold-159906",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 2.08,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "JKS",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-jks-metal-hobro",
+      "title": "Produktionsmedarbejder · mindre metalemner",
+      "company": "JKS / anonym kunde",
+      "place": "Hobro",
+      "address": "",
+      "drive_minutes": 30,
+      "drive_status": "Foreløbigt byskøn; faktisk arbejdsadresse skal bekræftes",
+      "route_url": "",
+      "deadline": "2026-11-28",
+      "deadline_label": "",
+      "hours": "37 t · fuldtid",
+      "employment": "Try & Hire",
+      "shifts": "Man–tor 15.05–23.35 · fre 14.35–19.35",
+      "application_method": "Portal",
+      "contact": "Jonas Bonnerup · 87 11 37 59 · jonbo@jks.dk",
+      "match": 3,
+      "tracks": [
+        2
+      ],
+      "match_reason": "Teknisk interesse, detaljesans og kvalitetsarbejde er relevante indgange.",
+      "requirements": "Truckcertifikat er et krav og er ikke dokumenteret i din profil. Aktiv arbejdsdag med mange skridt.",
+      "clarify": "Afklar certifikatmulighed og faktisk arbejdsadresse. Kontaktemail er til spørgsmål; ansøgning skal via portal.",
+      "next_action": "Afklar certifikatmulighed og faktisk arbejdsadresse. Kontaktemail er til spørgsmål; ansøgning skal via portal.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jks.dk/jobs/produktionsmedarbejder-med-god-fysik-og-truckcertifikat-soeges-til-aftenhold-i-hobro-160813",
+      "application_url": "https://www.jks.dk/jobs/produktionsmedarbejder-med-god-fysik-og-truckcertifikat-soeges-til-aftenhold-i-hobro-160813",
+      "drive_verified": false,
+      "priority": "clarify",
+      "rank": 109,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "JKS",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-beredskab",
+      "title": "Rekrutterings- og kommunikationsmedarbejder",
+      "company": "Beredskab & Sikkerhed",
+      "place": "Randers SØ",
+      "address": "Ny Havnevej 20, Randers",
+      "drive_minutes": 16,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Ny%20Havnevej%2020%2C%20Randers&travelmode=driving",
+      "deadline": "2026-11-27T17:00",
+      "deadline_label": "",
+      "hours": "37 t · fuldtid",
+      "employment": "Fast",
+      "shifts": "Flextid · eftermiddags-/aftenaktiviteter · stationsbesøg",
+      "application_method": "Portal",
+      "contact": "Maria Lilleøre Nielsen · 92 43 77 45 · ønsker SMS før opkald",
+      "match": 4,
+      "tracks": [
+        1,
+        3
+      ],
+      "match_reason": "Relationsarbejde, marketing, salg og digital formidling mødes i rekruttering og fastholdelse af brandfolk/frivillige.",
+      "requirements": "Ingen bestemt uddannelse; stærk kommunikation, initiativ, selvstændighed og tilfredsstillende straffeattest.",
+      "clarify": "Søg med konkrete eksempler på formidling og samarbejde. Afklar omfang af kørsel til stationer og aftenarbejde. Start februar.",
+      "next_action": "Søg med konkrete eksempler på formidling og samarbejde. Afklar omfang af kørsel til stationer og aftenarbejde. Start februar.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jobindex.dk/jobannonce/h1714169/kan-du-skaffe-kollegaerne-til-dem-der-redder-liv",
+      "application_url": "https://www.jobindex.dk/c?t=e6386515&ctx=w&source=jobtext",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 2.1,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Jobindex",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-bilco",
+      "title": "Kontorassistent · Škoda, SEAT og CUPRA",
+      "company": "Bilco A/S Randers",
+      "place": "Randers SØ",
+      "address": "Grenåvej 36, Randers",
+      "drive_minutes": 14,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Gren%C3%A5vej%2036%2C%20Randers&travelmode=driving",
+      "deadline": "2026-11-22",
+      "deadline_label": "",
+      "hours": "25 t · deltid",
+      "employment": "Fast",
+      "shifts": "Ikke præciseret",
+      "application_method": "Portal",
+      "contact": "Tomas Støvring · 40 73 37 27",
+      "match": 3,
+      "tracks": [
+        3
+      ],
+      "match_reason": "Kundeservice, struktur og administrative systemer har godt overlap med din kommercielle erfaring.",
+      "requirements": "Let bogføring, fakturering og afstemning; gerne Microsoft AX. Bogføringserfaring er ikke dokumenteret.",
+      "clarify": "Ring om oplæring i økonomiopgaver og placering af de 25 timer. D365-erfaring er ikke automatisk AX-bogføring.",
+      "next_action": "Ring om oplæring i økonomiopgaver og placering af de 25 timer. D365-erfaring er ikke automatisk AX-bogføring.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jobindex.dk/jobannonce/h1713358/kontorassistent-paa-deltid-til-koda-seat-cupra-randers",
+      "application_url": "https://www.jobindex.dk/c?t=e6382418&ctx=w&source=jobtext",
+      "drive_verified": true,
+      "priority": "clarify",
+      "rank": 111,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "part",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Jobindex",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-dc-masterdata",
+      "title": "Product Master Data Administrator",
+      "company": "Danish Crown Foods",
+      "place": "Randers SV",
+      "address": "Danish Crown Vej 1, Randers",
+      "drive_minutes": 20,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Danish%20Crown%20Vej%201%2C%20Randers&travelmode=driving",
+      "deadline": "",
+      "deadline_label": "Snarest muligt · løbende samtaler",
+      "hours": "Timetal ikke oplyst · afklar fuldtid",
+      "employment": "Ikke udtrykkeligt oplyst",
+      "shifts": "Ikke oplyst",
+      "application_method": "Portal",
+      "contact": "Mette Baltzer Thomsen · 21 68 56 32 / Kim Tovgaard · 40 56 89 76",
+      "match": 5,
+      "tracks": [
+        2,
+        3
+      ],
+      "match_reason": "Produktdata, ERP, dokumentation og koordinering på tværs af produktion og salg matcher din Amcor-baggrund meget tæt.",
+      "requirements": "ERP-erfaring, gerne SAP; masterdata eller beslægtet produktions-/planlægningserfaring. Ingen bestemt uddannelse krævet.",
+      "clarify": "Søg med konkrete produktdata- og proceseksempler. Afklar SAP-oplæring, timetal, cost-strukturer og ansættelsesvilkår.",
+      "next_action": "Søg med konkrete produktdata- og proceseksempler. Afklar SAP-oplæring, timetal, cost-strukturer og ansættelsesvilkår.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://jobs.danishcrown.com/job/Randers-SV-Product-Master-Data-Administrator-8940/1449258333/",
+      "application_url": "https://jobs.danishcrown.com/talentcommunity/apply/1449258333/?locale=da_DK",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 2.12,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Danish Crown",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-vpk",
+      "title": "Customer Service Agent · B2B-emballage",
+      "company": "VPK Packaging",
+      "place": "Randers NØ",
+      "address": "Mirabellevej 16, Randers",
+      "drive_minutes": 7,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Mirabellevej%2016%2C%20Randers&travelmode=driving",
+      "deadline": "",
+      "deadline_label": "Snarest muligt · løbende samtaler",
+      "hours": "Fuldtid",
+      "employment": "Fast",
+      "shifts": "Ikke præciseret",
+      "application_method": "Portal",
+      "contact": "Heidi Kristensen · 23 48 07 03",
+      "match": 5,
+      "tracks": [
+        2,
+        3
+      ],
+      "match_reason": "Emballagebranchen, kundeservice, tilbud, produktionskoordinering og data ligger meget tæt på din dokumenterede erfaring.",
+      "requirements": "Handels-/supply chain-baggrund og relevant erfaring. Rutine i Excel, SAP og portaler ønskes; introduktion og systemtræning tilbydes.",
+      "clarify": "Søg med eksempler fra Amcor/Berry. Beskriv dit faktiske ERP-niveau; påstå ikke SAP-rutine uden belæg.",
+      "next_action": "Søg med eksempler fra Amcor/Berry. Beskriv dit faktiske ERP-niveau; påstå ikke SAP-rutine uden belæg.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jobindex.dk/jobannonce/h1708935/professionel-customer-service-agent-til-at-styrke-salget-af-baeredygtig-boelgepapemballage-til-b2b",
+      "application_url": "https://www.jobindex.dk/c?t=e6353471&ctx=w&source=jobtext",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 2.13,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Jobindex",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-soh-assistent",
+      "title": "Tværgående assistent · Svalevej",
+      "company": "Specialområde Hjerneskade, Region Midtjylland",
+      "place": "Randers SØ",
+      "address": "Svalevej 5, Randers",
+      "drive_minutes": 23,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Svalevej%205%2C%20Randers&travelmode=driving",
+      "deadline": "2026-11-18",
+      "deadline_label": "",
+      "hours": "37 t · fuldtid",
+      "employment": "Fast",
+      "shifts": "Dag",
+      "application_method": "Portal",
+      "contact": "Susanne Brochmann Hansen · 51 89 12 28 · hverdage 8–15",
+      "match": 4,
+      "tracks": [
+        1,
+        3
+      ],
+      "match_reason": "Koordinering, indkøb, dokumentation og IT i socialområdet kombinerer dine kommercielle og sociale erfaringer.",
+      "requirements": "Administrativ uddannelse ønskes. E-Dok/ESDH og administration af beboermidler er ikke dokumenterede kompetencer.",
+      "clarify": "Afklar om handelsuddannelse og erfaring kan bruges. Start senest 1/1; samtaler 20. og 24. november.",
+      "next_action": "Afklar om handelsuddannelse og erfaring kan bruges. Start senest 1/1; samtaler 20. og 24. november.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://midtjob.dk/ad/tvaergaende-assistent-til-svalevej-specialomrade-hjerneskade-en-central-rolle-t/i6hzxf/da",
+      "application_url": "https://midtjob.dk/apply/tvaergaende-assistent-til-svalevej-specialomrade-hjerneskade-en-central-rolle-t/i6hzxf",
+      "drive_verified": true,
+      "priority": "clarify",
+      "rank": 114,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Midtjob",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-boggade",
+      "title": "Medarbejder til boggade",
+      "company": "Centrum Bogbinderi",
+      "place": "Randers NV",
+      "address": "Agerskellet 36, Randers",
+      "drive_minutes": 10,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Agerskellet%2036%2C%20Randers&travelmode=driving",
+      "deadline": "",
+      "deadline_label": "Snarest muligt · løbende samtaler",
+      "hours": "Fuldtid",
+      "employment": "Fast",
+      "shifts": "Dag · enkelte uger aften",
+      "application_method": "Portal",
+      "contact": "Ingen navngiven kontakt i opslaget",
+      "match": 4,
+      "tracks": [
+        2,
+        3
+      ],
+      "match_reason": "Praktisk teknisk arbejde, maskinindstilling og kvalitet er en konkret indgang til produktion.",
+      "requirements": "Brancheerfaring er en fordel, ikke et krav. Ansvar for en del af boggaden i et team.",
+      "clarify": "Søg med et kort skriv og CV. Afklar de fysiske opgaver, maskinoplæring og de lejlighedsvise aftenuger.",
+      "next_action": "Søg med et kort skriv og CV. Afklar de fysiske opgaver, maskinoplæring og de lejlighedsvise aftenuger.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jobindex.dk/jobannonce/h1711163/medarbejder-til-vores-boggade",
+      "application_url": "https://www.jobindex.dk/c?t=e6367560&ctx=w&source=jobtext",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 115,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Jobindex",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-skaere",
+      "title": "Medarbejder til skæremaskiner",
+      "company": "Centrum Bogbinderi",
+      "place": "Randers NV",
+      "address": "Agerskellet 36, Randers",
+      "drive_minutes": 10,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Agerskellet%2036%2C%20Randers&travelmode=driving",
+      "deadline": "",
+      "deadline_label": "Snarest muligt · løbende samtaler",
+      "hours": "Fuldtid",
+      "employment": "Fast",
+      "shifts": "Dag · enkelte uger aften",
+      "application_method": "Portal",
+      "contact": "Ingen navngiven kontakt i opslaget",
+      "match": 4,
+      "tracks": [
+        2,
+        3
+      ],
+      "match_reason": "Beregning, programmering/indstilling og praktisk kvalitet passer godt til kombinationen af teknik og detaljesans.",
+      "requirements": "Grundig oplæring tilbydes. Erfaring er ikke et krav; god fysik, omhu og selvstændighed kræves.",
+      "clarify": "Søg med et kort skriv og CV. Afklar de fysiske opgaver, maskinoplæring og de lejlighedsvise aftenuger.",
+      "next_action": "Søg med et kort skriv og CV. Afklar de fysiske opgaver, maskinoplæring og de lejlighedsvise aftenuger.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jobindex.dk/jobannonce/h1711159/medarbejder-til-vores-skaeremaskiner",
+      "application_url": "https://www.jobindex.dk/c?t=e6367555&ctx=w&source=jobtext",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 116,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "full",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Jobindex",
+      "batch": "other-portals-2026-11-07"
+    },
+    {
+      "id": "external-woodstep",
+      "title": "TrappeARKITEKT-trainee · 2 års oplæring",
+      "company": "WOOD STEP",
+      "place": "Havndal",
+      "address": "Hvilhusevej 36, Havndal",
+      "drive_minutes": 18,
+      "drive_status": "Google Maps · Tag af sted nu · 7/11 2026",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Hvilhusevej%2036%2C%20Havndal&travelmode=driving",
+      "deadline": "",
+      "deadline_label": "Snarest muligt · løbende samtaler",
+      "hours": "Fuldtid · trainee",
+      "employment": "2-årigt traineeforløb",
+      "shifts": "Kontor/showroom + kundebesøg i hele landet",
+      "application_method": "Mail: jacob@woodstep.dk",
+      "contact": "Jacob Ravn · 87 10 44 59 · jacob@woodstep.dk",
+      "match": 4,
+      "tracks": [
+        2,
+        3
+      ],
+      "match_reason": "XLByg-erfaring, tegninger, design og teknisk salg passer til den annoncerede indgang fra trælast.",
+      "requirements": "Teknisk/bygningsfaglig erfaring, tegning og kundedialog. Fast løn under oplæring; dette er ikke en bekræftet EUV-/voksenlærlingeaftale.",
+      "clarify": "Afklar dit erfaringsniveau og landsdækkende kundekørsel. Løn under forløbet og efterfølgende bonus/firmabil beskrives i annoncen.",
+      "next_action": "Afklar dit erfaringsniveau og landsdækkende kundekørsel. Løn under forløbet og efterfølgende bonus/firmabil beskrives i annoncen.",
+      "education_dialogue": false,
+      "education_agreement_confirmed": false,
+      "checked_on": "2026-11-07",
+      "source_url": "https://www.jobindex.dk/jobannonce/h1708883/bliv-trappearkitekt-trainee-hos-en-af-danmarks-stoerste-leverandoerer-af-traetrapper",
+      "application_url": "mailto:jacob@woodstep.dk",
+      "drive_verified": true,
+      "priority": "apply",
+      "rank": 117,
+      "deadline_source": "Det læste opslag; tom dato betyder løbende frist uden slutdato",
+      "workload": "training",
+      "vacancy_status": "Opslag tilgængeligt ved kontrol 7/11 2026; kan blive besat før fristen",
+      "source_portal": "Jobindex",
+      "batch": "other-portals-2026-11-07"
     }
   ]
 };
