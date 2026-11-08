@@ -1,0 +1,60 @@
+/* Owner edits: private local drafts; explicit authenticated, conflict-checked publication. */
+(() => {
+ 'use strict';
+ const $=id=>document.getElementById(id),code=new URL(location.href).searchParams.get('code');
+ const repo='https://api.github.com/repos/sorenfroststaal/Extruda';
+ if(!/^[A-Za-z0-9]{4,12}$/.test(code||'')){ $('status').textContent='Åbn redigeringen fra en ansøgningsside med en gyldig sidekode.';return; }
+ const url='https://extruda.dk/'+code+'/',key='extruda-page-editor-v1-'+code;
+ let doc,baseSha='',history=[],busy=false,selected='';
+ const parse=html=>new DOMParser().parseFromString(html,'text/html');
+ const say=text=>$('status').textContent=text;
+ const encode=text=>{let s='';const b=new TextEncoder().encode(text);for(let i=0;i<b.length;i+=32768)s+=String.fromCharCode(...b.subarray(i,i+32768));return btoa(s);};
+ const decode=s=>new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g,'')),c=>c.charCodeAt(0)));
+ const apiPath=repo+'/contents/'+encodeURIComponent(code)+'/index.html';
+ function validate(d){if(!d.body.classList.contains('shared-application')||d.querySelectorAll('main .sheet').length!==2)throw Error('Filen er ikke en ansøgningsside med to sider.');}
+ function clean(d){
+  d.querySelectorAll('script').forEach(n=>{if(!/^https:\/\/extruda\.dk\/(js\/extruda-ui|jobwizard\/public-refresh)\.js(?:\?|$)/.test(new URL(n.getAttribute('src')||'',d.querySelector('base')?.href||url).href))n.remove();});
+  d.querySelectorAll('*').forEach(n=>[...n.attributes].forEach(a=>{if(/^on/i.test(a.name)||a.name==='srcdoc'||((a.name==='href'||a.name==='src')&&/^\s*(javascript|vbscript):/i.test(a.value)))n.removeAttribute(a.name);}));
+ }
+ function blocks(){return [...doc.querySelectorAll('main .identity,main .cv-page-heading,main .application-answer,main .application-position,main .application-track,main .section-card,main .job-row,main .skill-row,main .portrait,main .footer,main .full-site,main .cv-compact-list dt,main .cv-compact-list dd')];}
+ function identify(){blocks().forEach((n,i)=>{if(!n.dataset.editId)n.dataset.editId='item-'+i+'-'+crypto.randomUUID();});}
+ function checkpoint(){history.push(doc.documentElement.outerHTML);if(history.length>40)history.shift();$('undo').disabled=false;}
+ function current(){return blocks().find(n=>n.dataset.editId===selected);}
+ function label(n){return (n.hidden?'Skjult · ':'')+(n.classList.contains('portrait')?'Foto':(n.querySelector('h2,h3')?.textContent||n.textContent).trim().replace(/\s+/g,' ').slice(0,95));}
+ function html(forPreview=false){const d=parse(doc.documentElement.outerHTML);d.querySelectorAll('[hidden]').forEach(n=>n.remove());d.querySelectorAll('[data-edit-id]').forEach(n=>n.removeAttribute('data-edit-id'));d.querySelectorAll('[data-source-job],[data-source-skill]').forEach(n=>{n.removeAttribute('data-source-job');n.removeAttribute('data-source-skill');});d.querySelectorAll('script[src*="public-refresh"]').forEach(n=>n.remove());d.querySelectorAll('.identity.has-portrait').forEach(n=>{if(!n.querySelector('.portrait'))n.classList.remove('has-portrait');});d.querySelectorAll('.cv-columns.has-share-box').forEach(n=>{if(!n.querySelector('.share-card'))n.classList.remove('has-share-box');});
+  if(forPreview){d.querySelectorAll('script').forEach(n=>n.remove());const style=d.createElement('style');style.textContent='html,body{overflow-x:hidden}.sheet{height:auto!important;min-height:297mm;overflow:visible!important}.sheet-content{transform:none!important}@media(max-width:800px){.sheet{width:100%!important;min-height:0;padding:20px!important}.sheet-content{width:auto!important}.cv-columns{grid-template-columns:1fr!important}.application-position-row{display:block!important}.application-tracks{margin-bottom:16px}.footer{position:static!important}.identity{flex-wrap:wrap}}';d.head.append(style);}
+  return '<!doctype html>'+d.documentElement.outerHTML;
+ }
+ function preview(){$('preview').srcdoc=html(true);}
+ function updateList(){identify();const list=$('block');list.replaceChildren();for(const n of blocks()){const o=new Option(label(n),n.dataset.editId);list.add(o);}if(!blocks().some(n=>n.dataset.editId===selected))selected=blocks()[0]?.dataset.editId||'';list.value=selected;list.disabled=false;}
+ function showFields(){const n=current(),holder=$('fields');holder.replaceChildren();$('visible').checked=n&&!n.hidden;$('visible').disabled=!n;$('remove').disabled=!n;
+  if(!n)return;let nodes=[...n.querySelectorAll('h1,h2,h3,p,li,strong,span,small,dt,dd,time,a')].filter(t=>!t.closest('.skill-rating')&&!t.querySelector('h1,h2,h3,p,li,strong,span,small,dt,dd,time,a,img,svg'));
+  if(n.matches('h1,h2,h3,p,a,dt,dd')) nodes=[n];
+  for(const t of nodes){const l=document.createElement('label');l.textContent=t.tagName.match(/^H/)?'Overskrift':'Tekst';const input=document.createElement(t.tagName.match(/^H/)?'input':'textarea');input.value=t.textContent;if(input.tagName==='TEXTAREA')input.rows=Math.max(2,Math.min(9,Math.ceil(input.value.length/65)));let editing=false;input.addEventListener('blur',()=>{editing=false;});input.addEventListener('input',()=>{if(!editing){checkpoint();editing=true;}t.textContent=input.value;updateList();preview();say('Ændringer i kladde. Gem, eller gennemse før publicering.');});l.append(input);holder.append(l);if(t.tagName==='A'){const linkLabel=document.createElement('label'),link=document.createElement('input');linkLabel.textContent='Linkadresse';link.value=t.href;link.onchange=()=>{try{const next=new URL(link.value);if(!['https:','mailto:','tel:'].includes(next.protocol))throw Error();checkpoint();t.href=next.href;preview();say('Link ændret i kladden.');}catch{link.value=t.href;say('Brug en gyldig https-, mailto- eller tel-adresse.');}};linkLabel.append(link);holder.append(linkLabel);}}
+  if(!nodes.length){const p=document.createElement('p');p.textContent='Dette element kan skjules eller slettes. Færdighedsniveauer bevares.';holder.append(p);}
+ }
+ function refresh(){updateList();showFields();preview();for(const id of ['save','download','review','add'])$(id).disabled=false;$('restore').disabled=!localStorage.getItem(key);}
+ $('block').onchange=()=>{selected=$('block').value;showFields();};
+ $('visible').onchange=()=>{checkpoint();current().hidden=!$('visible').checked;updateList();preview();say('Visning ændret i kladden.');};
+ $('remove').onclick=()=>{if(!current())return;checkpoint();current().remove();refresh();say('Indhold slettet fra kladden. Du kan fortryde.');};
+ $('undo').onclick=()=>{if(!history.length)return;doc=parse(history.pop());refresh();$('undo').disabled=!history.length;say('Seneste ændring fortrudt.');};
+ $('add').onclick=()=>{if(!$('new-heading').value.trim()&&!$('new-text').value.trim())return;checkpoint();const s=doc.createElement('section'),heading=doc.createElement($('page').value==='0'?'h3':'h2');s.className=$('page').value==='0'?'application-answer':'section-card';heading.textContent=$('new-heading').value;s.append(heading);for(const text of $('new-text').value.split(/\n\s*\n/)){const p=doc.createElement('p');p.textContent=text;s.append(p);}const parent=$('page').value==='0'?doc.querySelector('.application-answer-area'):doc.querySelector('.cv-columns>div');parent.append(s);identify();selected=s.dataset.editId;refresh();say('Nyt afsnit tilføjet til kladden.');};
+ function draft(){return {format:'extruda-page-edit-v1',code,baseSha,savedAt:new Date().toISOString(),html:doc.documentElement.outerHTML};}
+ function openDraft(d){if(d.format!=='extruda-page-edit-v1'||d.code!==code||typeof d.html!=='string')throw Error('Kladden hører ikke til denne side.');const next=parse(d.html);validate(next);clean(next);checkpoint();doc=next;baseSha=d.baseSha||'';refresh();say('Kladde åbnet. Den offentlige side er ikke ændret.');}
+ $('save').onclick=()=>{try{localStorage.setItem(key,JSON.stringify(draft()));$('restore').disabled=false;say('Kladde gemt i denne browser. Hent en filkopi for sikker opbevaring.');}catch{say('Browseren kunne ikke gemme kladden. Brug Hent kladde.');}};
+ $('restore').onclick=()=>{try{openDraft(JSON.parse(localStorage.getItem(key)));}catch(e){say(e.message);}};
+ $('download').onclick=()=>{const a=document.createElement('a'),u=URL.createObjectURL(new Blob([JSON.stringify(draft(),null,2)],{type:'application/json'}));a.href=u;a.download='extruda-'+code+'-redigering.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),60000);say('Kladde hentet som fil.');};
+ $('import').onchange=async()=>{try{const f=$('import').files[0];if(!f)return;if(f.size>12000000)throw Error('Kladden er for stor.');openDraft(JSON.parse(await f.text()));}catch(e){say(e.message);}finally{$('import').value='';}};
+ $('review').onclick=()=>{$('review-text').textContent='Du opdaterer '+url+' med den viste kladde. QR og adresse bliver de samme. Valgt CV-indhold fastholdes i denne redigerede udgave.';$('token').value='';$('publish-status').textContent='';$('publish').showModal();};
+ $('cancel').onclick=()=>{if(!busy)$('publish').close();};$('publish').addEventListener('close',()=>{$('token').value='';});$('publish').addEventListener('cancel',e=>{if(busy)e.preventDefault();});
+ const failure=r=>r.status===409||r.status===422?'Siden er ændret siden din kladde. Hent din kladde, genindlæs den aktuelle side og overfør rettelserne. Intet er overskrevet.':r.status===401||r.status===403?'GitHub afviste adgangen. Kontrollér nøgle og repository-tilladelser.':'GitHub-fejl '+r.status+'. Kladden er bevaret.';
+ $('confirm').onclick=async()=>{if(busy)return;let token=$('token').value.trim();if(!token){$('publish-status').textContent='Indsæt din egen GitHub-adgangsnøgle.';return;}busy=true;$('confirm').disabled=true;$('cancel').disabled=true;let committed=false;
+  try{const headers={Accept:'application/vnd.github+json',Authorization:'Bearer '+token,'X-GitHub-Api-Version':'2026-03-10'};const r=await fetch(apiPath+'?ref=main',{headers,cache:'no-store'});if(!r.ok)throw Error(failure(r));const file=await r.json();if(file.type!=='file'||file.path!==code+'/index.html'||file.sha!==baseSha)throw Error('Siden er ændret siden indlæsning. Gem din kladde som fil og genindlæs siden før publicering. Intet er overskrevet.');
+   const marker=crypto.randomUUID();let out=html();out=out.replace(/<meta\s+name="extruda-publication"[^>]*>/gi,'').replace('</head>','<meta name="extruda-publication" content="'+marker+'"></head>');const result=await fetch(apiPath,{method:'PUT',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify({message:'Update selected application '+code,branch:'main',sha:baseSha,content:encode(out)})});if(!result.ok)throw Error(failure(result));const saved=await result.json();baseSha=saved.content.sha;committed=true;token='';$('token').value='';$('publish-status').textContent='Gemt hos GitHub. Venter på at siden bliver opdateret…';let live=false;
+   for(let i=0;i<36;i++){await new Promise(r=>setTimeout(r,4000));try{const check=await fetch(url+'?revision='+marker,{cache:'no-store'});if(check.ok&&(await check.text()).includes('content="'+marker+'"')){live=true;break;}}catch{}}
+   const message=live?'Ændringerne er bekræftet online: '+url:'Ændringerne er gemt hos GitHub, men endnu ikke bekræftet online. Vent og åbn '+url;$('publish-status').textContent=message;say(message);
+  }catch(e){$('publish-status').textContent=committed?'Siden er gemt hos GitHub; onlinekontrollen blev afbrudt. Åbn '+url:'Publiceringen blev afbrudt: '+e.message+' Kontrollér siden før genforsøg.';}finally{token='';$('token').value='';busy=false;$('confirm').disabled=false;$('cancel').disabled=false;}
+ };
+ $('address').textContent='Side '+code+' · '+url;
+ (async()=>{try{const r=await fetch(apiPath+'?ref=main',{cache:'no-store'});if(!r.ok)throw Error(failure(r));const file=await r.json();if(file.type!=='file'||!file.content)throw Error('Siden kunne ikke indlæses fra GitHub.');baseSha=file.sha;doc=parse(decode(file.content));validate(doc);clean(doc);refresh();say('Siden er klar til redigering. Den offentlige udgave ændres først, når du publicerer.');}catch(e){say(e.message);}})();
+})();

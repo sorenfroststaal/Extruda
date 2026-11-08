@@ -90,7 +90,7 @@ window.JobSearchData = {
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
       "source_portal": "Jobnet",
       "application_id": "0001",
-      "sharing_url": "https://extruda.dk/0001",
+      "sharing_url": "https://extruda.dk/0001/",
       "package_ready": true,
       "package_folder": "0001_Sødisbakke_Omsorgsmedhjælper-Bøgedal_2026-11-12"
     },
@@ -130,7 +130,7 @@ window.JobSearchData = {
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
       "source_portal": "Jobnet",
       "application_id": "0007",
-      "sharing_url": "https://extruda.dk/0007",
+      "sharing_url": "https://extruda.dk/0007/",
       "package_ready": true,
       "package_folder": "0007_Trekløveret_Omsorgsmedhjælper_2026-11-22"
     },
@@ -204,7 +204,10 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "full",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0022",
+      "package_ready": true,
+      "package_folder": "0022_Regnbuen_Pædagogmedhjælper-assistent_2026-11-11"
     },
     {
       "id": "e029c3ac-c796-4799-964c-f422644fc8e9",
@@ -276,7 +279,10 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "full",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0011",
+      "package_ready": true,
+      "package_folder": "0011_Farvervænget_Pædagogmedhjælper-vuggestue_2026-11-08"
     },
     {
       "id": "9336376f-defd-4ebe-8d92-0e52cea7767b",
@@ -456,7 +462,10 @@ window.JobSearchData = {
       "deadline_source": "Arbejdsgiverside / Jobnet – se afklaring",
       "workload": "full",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Arbejdsgiver / oprindelig screening"
+      "source_portal": "Arbejdsgiver / oprindelig screening",
+      "application_id": "0012",
+      "package_ready": true,
+      "package_folder": "0012_Sparekassen-Kronjylland_IT-supporter_2026-11-08"
     },
     {
       "id": "648dc687-6bbf-4774-bb6a-17a1e3f8a63b",
@@ -600,7 +609,10 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "full",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0013",
+      "package_ready": true,
+      "package_folder": "0013_Autismecenter-Randers_Mestringsvejleder_2026-11-08"
     },
     {
       "id": "d68a9e9c-71b4-4716-a4d2-26193c1ebc4c",
@@ -819,7 +831,10 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "full",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0019",
+      "package_ready": true,
+      "package_folder": "0019_Sødisbakke_Konsulent-socialfaglig-dokumentation_2026-11-10"
     },
     {
       "id": "ebbfcf7e-cc58-411b-bb29-2bd222214d76",
@@ -1072,7 +1087,10 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "full",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0015",
+      "package_ready": true,
+      "package_folder": "0015_Fjordvang_Teknisk-servicemedarbejder_2026-11-09"
     },
     {
       "id": "83d62761-d8b4-44fe-8749-1d6aebdc5bf2",
@@ -1112,7 +1130,7 @@ window.JobSearchData = {
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
       "source_portal": "Jobnet",
       "application_id": "0002",
-      "sharing_url": "https://extruda.dk/0002",
+      "sharing_url": "https://extruda.dk/0002/",
       "package_ready": true,
       "package_folder": "0002_UngSyddjurs_Klubmedarbejder-Mørke_2026-11-23"
     },
@@ -1439,7 +1457,10 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "part",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0016",
+      "package_ready": true,
+      "package_folder": "0016_Olivia-Danmark_Aflaster-Hinnerup_2026-11-09"
     },
     {
       "id": "a107a4de-a96a-424d-be61-934036c21166",
@@ -1476,7 +1497,10 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "part",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0017",
+      "package_ready": true,
+      "package_folder": "0017_Hadsund-Skole_Skole-og-SFO-pædagog_2026-11-09"
     },
     {
       "id": "9ec182be-bf84-4c19-9e4b-0215a1b11b6d",
@@ -1512,7 +1536,10 @@ window.JobSearchData = {
       "deadline_source": "Jobnet",
       "workload": "full",
       "vacancy_status": "Fundet 7/11 2026 – kan lukkes før fristen",
-      "source_portal": "Jobnet"
+      "source_portal": "Jobnet",
+      "application_id": "0018",
+      "package_ready": true,
+      "package_folder": "0018_Bjerringbro-Skole_Pædagog-skole-og-SFO_2026-11-09"
     },
     {
       "id": "0e05972e-29c6-4765-a8de-dc0300b0bc36",
@@ -1771,7 +1798,7 @@ window.JobSearchData = {
       "source_portal": "Randers Kommune",
       "batch": "other-portals-2026-11-07",
       "application_id": "0006",
-      "sharing_url": "https://extruda.dk/0006",
+      "sharing_url": "https://extruda.dk/0006/",
       "package_ready": true,
       "package_folder": "0006_Trekløverskolen_Pædagogmedhjælper-flyver_2026-11-16"
     },
@@ -1814,7 +1841,7 @@ window.JobSearchData = {
       "source_portal": "Randers Kommune",
       "batch": "other-portals-2026-11-07",
       "application_id": "0008",
-      "sharing_url": "https://extruda.dk/0008",
+      "sharing_url": "https://extruda.dk/0008/",
       "package_ready": true,
       "package_folder": "0008_Lene-Bredahls-Gade_Aktivitet-og-samvær_2026-12-01"
     },
@@ -1972,7 +1999,7 @@ window.JobSearchData = {
       "source_portal": "Jobindex",
       "batch": "other-portals-2026-11-07",
       "application_id": "0009",
-      "sharing_url": "https://extruda.dk/0009",
+      "sharing_url": "https://extruda.dk/0009/",
       "package_ready": true,
       "package_folder": "0009_Shoe-d-vision_IT-Supporter_2026-12-11"
     },
@@ -2091,7 +2118,7 @@ window.JobSearchData = {
       "source_portal": "JKS",
       "batch": "other-portals-2026-11-07",
       "application_id": "0010",
-      "sharing_url": "https://extruda.dk/0010",
+      "sharing_url": "https://extruda.dk/0010/",
       "package_ready": true,
       "package_folder": "0010_JKS-Grundfos-Hvam_Produktionsmedarbejder_2026-11-28"
     },
@@ -2518,7 +2545,10 @@ window.JobSearchData = {
       "priority": "reserve",
       "rank": 71,
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
-      "batch": "recheck-2026-11-07"
+      "batch": "recheck-2026-11-07",
+      "application_id": "0014",
+      "package_ready": true,
+      "package_folder": "0014_Munkholmskolen_Pædagogisk-afdelingsleder_2026-11-08"
     },
     {
       "id": "recheck-treklover-paedagog",
@@ -2857,7 +2887,10 @@ window.JobSearchData = {
       "priority": "clarify",
       "rank": 80,
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
-      "batch": "recheck-2026-11-07"
+      "batch": "recheck-2026-11-07",
+      "application_id": "0020",
+      "package_ready": true,
+      "package_folder": "0020_Randers-Kommune_IT-supportelev_2026-11-10"
     },
     {
       "id": "recheck-optima",
@@ -3083,7 +3116,7 @@ window.JobSearchData = {
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
       "batch": "recheck-2026-11-07",
       "application_id": "0003",
-      "sharing_url": "https://extruda.dk/0003",
+      "sharing_url": "https://extruda.dk/0003/",
       "package_ready": true,
       "package_folder": "0003_Lene-Bredahls-Gade_Vikar-botilbud_2026-12-01"
     },
@@ -3203,7 +3236,7 @@ window.JobSearchData = {
       "education_opportunity_confirmed": true,
       "education_opportunity": "Opslaget tilbyder mulighed for merituddannelsen til pædagog. Adgang og vilkår skal aftales individuelt.",
       "application_id": "0004",
-      "sharing_url": "https://extruda.dk/0004",
+      "sharing_url": "https://extruda.dk/0004/",
       "package_ready": true,
       "package_folder": "0004_Hostruphøj_Pædagogisk-medarbejder_løbende"
     },
@@ -3397,7 +3430,7 @@ window.JobSearchData = {
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
       "batch": "recheck-2026-11-07",
       "application_id": "0005",
-      "sharing_url": "https://extruda.dk/0005",
+      "sharing_url": "https://extruda.dk/0005/",
       "package_ready": true,
       "package_folder": "0005_BN-Skilte_Salgs-og-projektkoordinator_løbende"
     },
@@ -3624,7 +3657,10 @@ window.JobSearchData = {
       "priority": "clarify",
       "rank": 100,
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
-      "batch": "recheck-2026-11-07"
+      "batch": "recheck-2026-11-07",
+      "application_id": "0021",
+      "package_ready": true,
+      "package_folder": "0021_Hadsund-Skole_Teknisk-servicemedarbejder_2026-11-10"
     },
     {
       "id": "recheck-rosendal-paed",

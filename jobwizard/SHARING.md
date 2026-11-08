@@ -53,3 +53,11 @@ QR: vendored qrcode-generator 1.4.4, Kazuhiko Arase, MIT. Hentet fra
 https://unpkg.com/qrcode-generator@1.4.4/qrcode.js. Biblioteket kører lokalt;
 ingen QR-tjeneste modtager link, ansøgning eller persondata. Hvis biblioteket
 mangler, vises linket fortsat, men ingen QR-kode.
+
+## Redigering af en eksisterende underside
+
+`editor.html?code=0001` åbner den eksisterende offentlige HTML fra GitHub. Tekst kan ændres, afsnit tilføjes, og elementer skjules eller slettes med fortryd. Kladden kan gemmes i browseren, hentes som privat JSON og indlæses igen. Den indeholder ingen adgangsnøgle og må ikke publiceres i repositoryet.
+
+Brugeren gennemser forhåndsvisningen og publicerer udtrykkeligt med sin egen kortlivede GitHub-token. Kun den valgte eksisterende `<kode>/index.html` på main kan opdateres. Den oprindelige blob-SHA skal passe; samtidige ændringer afvises. Adresse og QR bevares, og tidligere udgaver findes i GitHubs historik. Nøglen sendes kun til api.github.com og gemmes aldrig. Ingen delte eller miljøbaserede nøgler bruges.
+
+Redigerede udgaver fastholder det valgte CV-indhold: automatisk opdatering fra arbejdslivssiden fjernes, så brugerens tekstrettelser ikke overskrives ved åbning. Eksisterende PDF og lokale mapper opdateres ikke automatisk. Publicering verificeres med en ny markør, før den kaldes online. Oprettelse af nye sidekoder beholder sin create-only-regel.
