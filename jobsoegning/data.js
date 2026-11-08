@@ -207,7 +207,8 @@ window.JobSearchData = {
       "source_portal": "Jobnet",
       "application_id": "0022",
       "package_ready": true,
-      "package_folder": "0022_Regnbuen_Pædagogmedhjælper-assistent_2026-11-11"
+      "package_folder": "0022_Regnbuen_Pædagogmedhjælper-assistent_2026-11-11",
+      "sharing_url": "https://extruda.dk/0022/"
     },
     {
       "id": "e029c3ac-c796-4799-964c-f422644fc8e9",
@@ -282,7 +283,8 @@ window.JobSearchData = {
       "source_portal": "Jobnet",
       "application_id": "0011",
       "package_ready": true,
-      "package_folder": "0011_Farvervænget_Pædagogmedhjælper-vuggestue_2026-11-08"
+      "package_folder": "0011_Farvervænget_Pædagogmedhjælper-vuggestue_2026-11-08",
+      "sharing_url": "https://extruda.dk/0011/"
     },
     {
       "id": "9336376f-defd-4ebe-8d92-0e52cea7767b",
@@ -465,7 +467,8 @@ window.JobSearchData = {
       "source_portal": "Arbejdsgiver / oprindelig screening",
       "application_id": "0012",
       "package_ready": true,
-      "package_folder": "0012_Sparekassen-Kronjylland_IT-supporter_2026-11-08"
+      "package_folder": "0012_Sparekassen-Kronjylland_IT-supporter_2026-11-08",
+      "sharing_url": "https://extruda.dk/0012/"
     },
     {
       "id": "648dc687-6bbf-4774-bb6a-17a1e3f8a63b",
@@ -612,7 +615,8 @@ window.JobSearchData = {
       "source_portal": "Jobnet",
       "application_id": "0013",
       "package_ready": true,
-      "package_folder": "0013_Autismecenter-Randers_Mestringsvejleder_2026-11-08"
+      "package_folder": "0013_Autismecenter-Randers_Mestringsvejleder_2026-11-08",
+      "sharing_url": "https://extruda.dk/0013/"
     },
     {
       "id": "d68a9e9c-71b4-4716-a4d2-26193c1ebc4c",
@@ -834,7 +838,8 @@ window.JobSearchData = {
       "source_portal": "Jobnet",
       "application_id": "0019",
       "package_ready": true,
-      "package_folder": "0019_Sødisbakke_Konsulent-socialfaglig-dokumentation_2026-11-10"
+      "package_folder": "0019_Sødisbakke_Konsulent-socialfaglig-dokumentation_2026-11-10",
+      "sharing_url": "https://extruda.dk/0019/"
     },
     {
       "id": "ebbfcf7e-cc58-411b-bb29-2bd222214d76",
@@ -1090,7 +1095,8 @@ window.JobSearchData = {
       "source_portal": "Jobnet",
       "application_id": "0015",
       "package_ready": true,
-      "package_folder": "0015_Fjordvang_Teknisk-servicemedarbejder_2026-11-09"
+      "package_folder": "0015_Fjordvang_Teknisk-servicemedarbejder_2026-11-09",
+      "sharing_url": "https://extruda.dk/0015/"
     },
     {
       "id": "83d62761-d8b4-44fe-8749-1d6aebdc5bf2",
@@ -1460,7 +1466,8 @@ window.JobSearchData = {
       "source_portal": "Jobnet",
       "application_id": "0016",
       "package_ready": true,
-      "package_folder": "0016_Olivia-Danmark_Aflaster-Hinnerup_2026-11-09"
+      "package_folder": "0016_Olivia-Danmark_Aflaster-Hinnerup_2026-11-09",
+      "sharing_url": "https://extruda.dk/0016/"
     },
     {
       "id": "a107a4de-a96a-424d-be61-934036c21166",
@@ -1500,7 +1507,8 @@ window.JobSearchData = {
       "source_portal": "Jobnet",
       "application_id": "0017",
       "package_ready": true,
-      "package_folder": "0017_Hadsund-Skole_Skole-og-SFO-pædagog_2026-11-09"
+      "package_folder": "0017_Hadsund-Skole_Skole-og-SFO-pædagog_2026-11-09",
+      "sharing_url": "https://extruda.dk/0017/"
     },
     {
       "id": "9ec182be-bf84-4c19-9e4b-0215a1b11b6d",
@@ -1539,7 +1547,8 @@ window.JobSearchData = {
       "source_portal": "Jobnet",
       "application_id": "0018",
       "package_ready": true,
-      "package_folder": "0018_Bjerringbro-Skole_Pædagog-skole-og-SFO_2026-11-09"
+      "package_folder": "0018_Bjerringbro-Skole_Pædagog-skole-og-SFO_2026-11-09",
+      "sharing_url": "https://extruda.dk/0018/"
     },
     {
       "id": "0e05972e-29c6-4765-a8de-dc0300b0bc36",
@@ -2548,7 +2557,8 @@ window.JobSearchData = {
       "batch": "recheck-2026-11-07",
       "application_id": "0014",
       "package_ready": true,
-      "package_folder": "0014_Munkholmskolen_Pædagogisk-afdelingsleder_2026-11-08"
+      "package_folder": "0014_Munkholmskolen_Pædagogisk-afdelingsleder_2026-11-08",
+      "sharing_url": "https://extruda.dk/0014/"
     },
     {
       "id": "recheck-treklover-paedagog",
@@ -2890,7 +2900,8 @@ window.JobSearchData = {
       "batch": "recheck-2026-11-07",
       "application_id": "0020",
       "package_ready": true,
-      "package_folder": "0020_Randers-Kommune_IT-supportelev_2026-11-10"
+      "package_folder": "0020_Randers-Kommune_IT-supportelev_2026-11-10",
+      "sharing_url": "https://extruda.dk/0020/"
     },
     {
       "id": "recheck-optima",
@@ -3660,7 +3671,8 @@ window.JobSearchData = {
       "batch": "recheck-2026-11-07",
       "application_id": "0021",
       "package_ready": true,
-      "package_folder": "0021_Hadsund-Skole_Teknisk-servicemedarbejder_2026-11-10"
+      "package_folder": "0021_Hadsund-Skole_Teknisk-servicemedarbejder_2026-11-10",
+      "sharing_url": "https://extruda.dk/0021/"
     },
     {
       "id": "recheck-rosendal-paed",
