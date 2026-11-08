@@ -167,3 +167,5 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .application-template .application-vision{margin-right:calc(16px * var(--fit))}
 
 .application-template .application-vision,.application-template.vision-dark-ink .application-vision{color:#fff}
+
+.edit-existing-panel{padding:20px 24px;border:2px solid #28645f;border-radius:16px;background:#f5f0e8;margin:20px 0}.edit-existing-panel h2{color:#28645f;margin-top:0}.edit-existing-panel p{max-width:900px}.edit-existing-panel input{display:block;margin-top:8px}@media print{.edit-existing-panel{display:none}}
