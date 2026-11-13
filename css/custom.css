@@ -1,8 +1,8 @@
 @font-face {
-    font-family: "Nunito";
-    src: url("../Assets/Fonts/Nunito-Variable.woff2") format("woff2");
+    font-family: "Manrope";
+    src: url("../Assets/Fonts/Manrope-Variable.woff") format("woff");
     font-style: normal;
-    font-weight: 200 1000;
+    font-weight: 200 800;
     font-display: swap;
 }
 
@@ -50,7 +50,7 @@ h4,
 h5,
 h6 {
     color: var(--ex-graphite);
-    font-family: "Nunito", system-ui, sans-serif;
+    font-family: "Manrope", system-ui, sans-serif;
     font-weight: 800;
     letter-spacing: 0;
     text-transform: none;
@@ -404,7 +404,7 @@ section.resume-section {
 }
 
 .project-title strong {
-    font-family: "Nunito", system-ui, sans-serif;
+    font-family: "Manrope", system-ui, sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 1.25;
@@ -653,7 +653,7 @@ section.resume-section {
 
 .carousel-figure figcaption > strong {
     color: var(--ex-graphite);
-    font-family: "Nunito", system-ui, sans-serif;
+    font-family: "Manrope", system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.25;
 }
@@ -1235,7 +1235,7 @@ section.resume-section {
 .work-track[open] > summary > .work-track-mark::after { transform: translate(-50%, -50%) rotate(0); }
 .work-track summary:hover,
 .work-track summary:focus-visible { background: rgba(38, 107, 105, .08); }
-.work-track summary:focus-visible { outline: 3px solid var(--ex-focus); outline-offset: -3px; }
+.work-track summary:focus-visible { outline: 3px solid var(--ex-focus, var(--ui-focus)); outline-offset: -3px; }
 .work-track-details { display: grid; gap: 0; padding: 0 1.5rem 1.5rem; }
 .work-track-details section { padding: 1.1rem 0; border-top: 1px solid var(--ex-border); }
 .work-track-details h4 { margin-bottom: .45rem; font-size: 1rem; }
@@ -1297,7 +1297,7 @@ section.resume-section {
 .cv-disclosure summary:focus-visible { background: rgba(38, 107, 105, .08); }
 .profile-disclosure summary:focus-visible,
 .cv-job summary:focus-visible,
-.cv-disclosure summary:focus-visible { outline: 3px solid var(--ex-focus); outline-offset: -3px; }
+.cv-disclosure summary:focus-visible { outline: 3px solid var(--ex-focus, var(--ui-focus)); outline-offset: -3px; }
 .cv-compact-list { display: grid; gap: 0; margin: 0; }
 .cv-compact-list > div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; padding: .8rem 0; border-top: 1px solid var(--ex-border); }
 .cv-compact-list > div:last-child { border-bottom: 1px solid var(--ex-border); }
@@ -1406,7 +1406,7 @@ section.resume-section {
 .work-group-disclosure > summary { display: grid; grid-template-columns: 64px minmax(0, 1fr) 2.25rem; align-items: center; gap: 16px; padding: 24px; min-height: 96px; cursor: pointer; list-style: none; }
 .work-group-disclosure > summary::-webkit-details-marker { display: none; }
 .work-group-disclosure > summary strong { font-size: 24px; }
-.work-group-disclosure > summary:focus-visible { outline: 3px solid var(--ex-focus); outline-offset: -3px; }
+.work-group-disclosure > summary:focus-visible { outline: 3px solid var(--ex-focus, var(--ui-focus)); outline-offset: -3px; }
 .work-group-disclosure[open] > summary .work-track-mark::after { transform: translate(-50%, -50%) rotate(0); }
 .work-group-content { padding: 0 24px 24px; }
 .work-group-content > .work-tracks { margin: 0; }

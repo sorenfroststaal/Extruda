@@ -13,7 +13,8 @@ const uiIconGroups=[
   {da:'Navigation',en:'Navigation',names:['arrow-left','arrow-right','chevron-down','chevron-right','external-link','globe','grid','home','menu','search']},
   {da:'Handlinger',en:'Actions',names:['check','close','copy','delete','download','edit','link','minus','play','plus','refresh','settings','share','upload']},
   {da:'Indhold og værktøjer',en:'Content and tools',names:['archive','calculator','calendar','code','community','convert','files','guides','images','notes','pdf','tasks','tools']},
-  {da:'Status, sikkerhed og tema',en:'Status, safety and theme',names:['help','info','lock','moon','sun','warning']}
+  {da:'Status, sikkerhed og tema',en:'Status, safety and theme',names:['help','info','lock','moon','sun','warning']},
+  {da:'Sociale links',en:'Social links',names:['github','instagram','linkedin','youtube']}
 ];
 
 function humanise(name){return name.replace(/^extruda-dk-/,'extruda.dk · ').replace(/^extruda-/,'').replaceAll('-',' ');}

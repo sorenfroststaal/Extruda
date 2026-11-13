@@ -28,7 +28,7 @@ function renderList(){
   });
 }
 
-function measure(text,size){canvas.font=`800 ${size}px Nunito`;return canvas.measureText(text).width;}
+function measure(text,size){canvas.font=`800 ${size}px Manrope`;return canvas.measureText(text).width;}
 function cardMarkup(card){
   const w=state.cardWidth,h=state.cardHeight;
   const colors={petrol:['#edf4f1','#28645F'],apricot:['#f8e5d8','#343B3B'],mono:['#ffffff','#000000']};
@@ -43,13 +43,13 @@ function cardMarkup(card){
   const totalHeight=iconSize+iconGap+textBlock;
   const top=(h-totalHeight)/2;
   const icon=hasIcon?`<g transform="translate(${(w-iconSize)/2} ${top}) scale(${iconSize/24})" color="${ink}">${symbols[card.icon]}</g>`:'';
-  const text=fitted.lines.map((line,i)=>`<text x="${w/2}" y="${top+iconSize+iconGap+fitted.fontSize*(.94+i*1.25)}" text-anchor="middle" fill="${ink}" font-family="Nunito, sans-serif" font-size="${fitted.fontSize}" font-weight="800">${escapeXml(line)}</text>`).join('');
+  const text=fitted.lines.map((line,i)=>`<text x="${w/2}" y="${top+iconSize+iconGap+fitted.fontSize*(.94+i*1.25)}" text-anchor="middle" fill="${ink}" font-family="Manrope, sans-serif" font-size="${fitted.fontSize}" font-weight="800">${escapeXml(line)}</text>`).join('');
   return `<g transform="translate(${card.x} ${card.y})"><rect x="0" y="0" width="${w}" height="${h}" fill="${bg}" stroke="#343B3B" stroke-width="0.2"/>${icon}${text}</g>`;
 }
 function sheetMarkup(cards,index,plan,standalone=false){
-  const font=standalone&&embeddedFont?`<style>@font-face{font-family:Nunito;src:url(data:font/woff2;base64,${embeddedFont}) format('woff2');font-weight:200 1000}</style>`:'';
+  const font=standalone&&embeddedFont?`<style>@font-face{font-family:Manrope;src:url(data:font/woff;base64,${embeddedFont}) format('woff');font-weight:200 800}</style>`:'';
   const {pageWidth:w,pageHeight:h,pages}=plan;
-  return `<svg xmlns="http://www.w3.org/2000/svg" class="sheet" width="${w}mm" height="${h}mm" viewBox="0 0 ${w} ${h}" role="img" aria-label="Printark ${index+1} af ${pages.length}, ${cards.length} kort">${font}<title>Open Planner · ark ${index+1} af ${pages.length}</title><rect width="${w}" height="${h}" fill="white"/>${cards.map(cardMarkup).join('')}<g fill="#343B3B" font-family="Nunito, sans-serif" font-size="2.7"><text x="10" y="${h-13}">Open Planner · ${state.cardWidth} × ${state.cardHeight} mm</text><text x="10" y="${h-8}">Ark ${index+1} / ${pages.length} · A4 · print 100 %</text><path d="M${w-60} ${h-10}h50m-50-1.5v3m50-3v3" stroke="#343B3B" stroke-width=".25" fill="none"/><text x="${w-35}" y="${h-5}" text-anchor="middle">Kontrolmål: 50 mm</text></g></svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" class="sheet" width="${w}mm" height="${h}mm" viewBox="0 0 ${w} ${h}" role="img" aria-label="Printark ${index+1} af ${pages.length}, ${cards.length} kort">${font}<title>Open Planner · ark ${index+1} af ${pages.length}</title><rect width="${w}" height="${h}" fill="white"/>${cards.map(cardMarkup).join('')}<g fill="#343B3B" font-family="Manrope, sans-serif" font-size="2.7"><text x="10" y="${h-13}">Open Planner · ${state.cardWidth} × ${state.cardHeight} mm</text><text x="10" y="${h-8}">Ark ${index+1} / ${pages.length} · A4 · print 100 %</text><path d="M${w-60} ${h-10}h50m-50-1.5v3m50-3v3" stroke="#343B3B" stroke-width=".25" fill="none"/><text x="${w-35}" y="${h-5}" text-anchor="middle">Kontrolmål: 50 mm</text></g></svg>`;
 }
 
 function render(){
@@ -79,7 +79,7 @@ function download(content,name,type){const blob=new Blob([content],{type});const
 async function downloadSheet(index){
   if(!latest)return;
   try{
-    if(!embeddedFont){const res=await fetch('./assets/fonts/Nunito-Variable.woff2');if(!res.ok)throw new Error('Fonten kunne ikke hentes. Prøv igen.');const bytes=new Uint8Array(await res.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));embeddedFont=btoa(binary);}
+    if(!embeddedFont){const res=await fetch('./assets/fonts/Manrope-Variable.woff');if(!res.ok)throw new Error('Fonten kunne ikke hentes. Prøv igen.');const bytes=new Uint8Array(await res.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));embeddedFont=btoa(binary);}
     if(!latest)return;
     download('<?xml version="1.0" encoding="UTF-8"?>\n'+sheetMarkup(latest.pages[index],index,latest,true),`open-planner-ark-${index+1}.svg`,'image/svg+xml;charset=utf-8');
   }catch(error){showError(error.message);}
@@ -97,7 +97,7 @@ async function init(){
   const response=await fetch('./assets/icons/ui-sprite.svg');if(!response.ok)throw new Error('Ikonerne kunne ikke hentes. Genindlæs siden.');
   const sprite=new DOMParser().parseFromString(await response.text(),'image/svg+xml');
   for(const [key] of Object.entries(ICONS))if(key!=='none'){const symbol=sprite.getElementById(key);if(!symbol)throw new Error(`Ikonet ${key} mangler.`);symbols[key]=symbol.innerHTML;}
-  await document.fonts.load('800 16px Nunito');await document.fonts.ready;
+  await document.fonts.load('800 16px Manrope');await document.fonts.ready;
   try{const saved=localStorage.getItem(storageKey);if(saved)state=validate(JSON.parse(saved));}catch{feedback('Et tidligere gemt sæt kunne ikke åbnes. Du starter med ugedagene.');}
   DAYS.forEach((day,i)=>{const label=document.createElement('label');const box=document.createElement('input');box.type='checkbox';box.value=day;box.checked=true;box.setAttribute('aria-label',day);label.append(box,document.createTextNode(['Man','Tir','Ons','Tor','Fre','Lør','Søn'][i]));$('weekdays').append(label);});
   for(const [key,label]of Object.entries(ICONS))$('icon').add(new Option(label,key));

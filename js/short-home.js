@@ -1,4 +1,6 @@
-/* Silent introduction on entry, never on returning; no browser storage. */
+/* Silent introduction on the first visit only. After it has been shown, the
+   key extruda-intro-seen in localStorage stops it from playing again. If
+   storage is blocked, the old behaviour applies: once per new entry. */
 (() => {
  'use strict';
  const destinations = {
@@ -14,7 +16,13 @@
  let internalReturn = false;
  try { internalReturn = Boolean(document.referrer) && new URL(document.referrer).origin === location.origin; }
  catch { /* An unavailable referrer does not prevent normal navigation. */ }
- if (!dialog || location.hash || navigation?.type === 'back_forward' || internalReturn || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ const introKey = 'extruda-intro-seen';
+ let seenBefore = false;
+ try { seenBefore = localStorage.getItem(introKey) === '1'; }
+ catch { /* Blocked storage: fall back to showing it once per entry. */ }
+ if (!dialog || seenBefore || location.hash || navigation?.type === 'back_forward' || internalReturn || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ try { localStorage.setItem(introKey, '1'); }
+ catch { /* Not remembered; nothing else depends on it. */ }
  const video = dialog.querySelector('video');
  const skip = dialog.querySelector('button');
  let closed = false;
