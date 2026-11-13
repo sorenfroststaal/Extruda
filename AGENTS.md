@@ -31,6 +31,12 @@ unrelated products merely to apply these rules.
   not an arbitrary field count. Use disclosure only for optional settings or
   supporting help. Never nest disclosures or hide required form sections in
   tabs. Keep format, branding and colour mode visible before export.
+- Never use a brand colour directly as a text colour. Text uses the theme pair:
+  primary/link #28645F (light) and #9DC7BA (dark). Muted petrol #619B98 is for
+  logos and graphics only; a petrol surface with white text uses #467B78.
+  Third-party logos keep their colours on a white plate in dark mode. Run
+  `node design-system/tests/contrast.cjs` after any colour, theme or page change;
+  it scans every page in light and dark mode and also runs in CI.
 - Use the existing cream/graphite/petrol/apricot tokens and local Inter/Nunito
   fonts. Use 24 px panel padding (20 px mobile), 24 px between groups, 16 px
   between fields, 8 px from label to field, 8 px control radius and 12 px panel

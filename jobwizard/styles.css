@@ -153,7 +153,7 @@ main{padding:32px;max-width:1200px}main>h1{font:800 32px Nunito;margin:0}.builde
 .application-template.vision-dark-ink .application-vision{color:#182625}
 .application-template.accent-light-ink .application-position{color:#fff}
 /* Align the intro edge with the visible first track icon, and let the artwork bleed. */
-.application-template .application-vision{margin-left:calc(16px * var(--fit));background:#619b98;color:#182625;overflow:visible}
+.application-template .application-vision{margin-left:calc(16px * var(--fit));background:#467b78;color:#182625;overflow:visible}
 .application-template .application-vision.has-portrait{padding-left:calc(14px * var(--space,var(--fit)))}
 .application-template .application-vision.has-portrait::before{content:"";float:left;width:calc(100px * var(--fit));height:calc(44px * var(--fit));margin-right:calc(10px * var(--space,var(--fit)))}
 .application-template .application-vision.has-ronaldo .application-vision-copy{margin-right:calc(150px * var(--fit))}
