@@ -1,4 +1,4 @@
-name: Kontrast
+name: Tests
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  contrast:
+  tests:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -26,3 +26,11 @@ jobs:
         env:
           EXTRUDA_BROWSER_CHANNEL: chromium
         run: node design-system/tests/contrast.cjs
+      - name: Check header controls on 10 pages (language, theme, About, keyboard, mobile)
+        env:
+          EXTRUDA_BROWSER_CHANNEL: chromium
+        run: node design-system/tests/header.cjs
+      - name: Check reference app, home page and Projekter
+        env:
+          EXTRUDA_BROWSER_CHANNEL: chromium
+        run: node design-system/tests/browser.cjs

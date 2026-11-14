@@ -44,7 +44,7 @@ unrelated products merely to apply these rules.
   text fields are at least 48 px high. All interactive targets are at least
   44 × 44 px. Do not add decorative shadows or nested cards.
 - Headings use Manrope, the same typeface as the wordmark (local file
-  `Assets/Fonts/Manrope-Variable.woff`, 200–800). Focus rings are #28645F in
+  `Assets/Fonts/Manrope-Variable.woff2`, 200–800). Focus rings are #28645F in
   light and cream #F5F0E8 in dark mode; apricot never marks focus, so it can
   keep meaning warning. Icons, including social links, come from the local SVG
   library; do not load icon fonts or UI frameworks from a CDN.
