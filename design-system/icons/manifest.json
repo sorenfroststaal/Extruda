@@ -4,8 +4,8 @@
   "counts": {
     "logos": 39,
     "appIcons": 45,
-    "uiIcons": 43,
-    "total": 127
+    "uiIcons": 47,
+    "total": 131
   },
   "appIconVariants": [
     "color",
@@ -16,7 +16,8 @@
     "navigation",
     "actions",
     "content-tools",
-    "status-safety-theme"
+    "status-safety-theme",
+    "social"
   ],
   "domainLogoVariants": [
     "color",
@@ -27,5 +28,8 @@
     "petrol",
     "teal",
     "apricot"
-  ]
+  ],
+  "uiIconLicences": {
+    "github, instagram, linkedin, youtube": "Lucide 0.400.0, ISC (icons/ui/LICENSE-lucide.txt); stroke width adjusted to 1.75"
+  }
 }

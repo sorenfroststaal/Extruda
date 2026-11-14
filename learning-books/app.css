@@ -21,7 +21,7 @@ body{padding:0!important}body:not(.has-book) .live-preview{position:sticky;top:1
 /* Workbench: choose, inspect, then print. Workbook styling stays independent. */
 .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .skip-link{position:absolute;left:20px;top:-100px;z-index:20;background:white;padding:12px;border:2px solid #28645f}.skip-link:focus{top:12px}
-:is(button,a,input,select,summary,label.file-button):focus-visible{outline:3px solid #28645f;outline-offset:3px}
+:is(button,a,input,select,summary,label.file-button):focus-visible{outline:3px solid var(--ui-focus,#28645f);outline-offset:3px}
 button,input,select{font:inherit}button{font-size:14px}input,select{border-radius:12px}
 .app-header{padding:16px 32px;min-height:72px}.app-header nav{gap:16px}
 main{padding-bottom:0}.workspace-intro{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:8px 0 24px;min-height:116px}.workspace-intro h1{font-size:32px;line-height:1.15;margin:4px 0 8px}.workspace-intro p{margin:0;font-size:14px}.project-help{max-width:360px;font-size:13px;position:relative;align-self:start;margin-top:16px}.project-help summary{cursor:pointer;text-align:right;color:#28645f}.project-help[open]{padding:16px;background:white;border:1px solid #d9d5cd;border-radius:12px}.project-help p{font-size:13px;margin:8px 0}

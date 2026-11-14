@@ -43,7 +43,7 @@ function renderList(){
   });
 }
 
-function measure(text,size){canvas.font=`800 ${size}px Nunito`;return canvas.measureText(text).width;}
+function measure(text,size){canvas.font=`800 ${size}px Manrope`;return canvas.measureText(text).width;}
 function cardMarkup(card,index,standalone=false,settings=state){
   const w=settings.cardWidth,h=settings.cardHeight;
   const imageHref=settings.includeMetadata===false&&metadataFreeImages.has(card.image)?metadataFreeImages.get(card.image):standalone?(imageCache.get(card.image)||card.image):card.image;
@@ -62,11 +62,11 @@ function cardMarkup(card,index,standalone=false,settings=state){
   const icon=hasIcon?`<g transform="translate(${(w-visualSize)/2} ${top}) scale(${visualSize/24})" color="${ink}">${symbols[card.icon]}</g>`:'';
   const clipId=`dish-photo-${index}`;
   const photo=hasImage?`<defs><clipPath id="${clipId}"><circle cx="${w/2}" cy="${top+visualSize/2}" r="${visualSize/2}"/></clipPath></defs><image href="${escapeXml(imageHref)}" x="${(w-visualSize)/2}" y="${top}" width="${visualSize}" height="${visualSize}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${clipId})"/><circle cx="${w/2}" cy="${top+visualSize/2}" r="${visualSize/2}" fill="none" stroke="${ink}" stroke-width="0.45"/>`:'';
-  const text=fitted.lines.map((line,i)=>`<text x="${w/2}" y="${top+visualSize+visualGap+fitted.fontSize*(.94+i*1.25)}" text-anchor="middle" fill="${ink}" font-family="Nunito, sans-serif" font-size="${fitted.fontSize}" font-weight="800">${escapeXml(line)}</text>`).join('');
+  const text=fitted.lines.map((line,i)=>`<text x="${w/2}" y="${top+visualSize+visualGap+fitted.fontSize*(.94+i*1.25)}" text-anchor="middle" fill="${ink}" font-family="Manrope, sans-serif" font-size="${fitted.fontSize}" font-weight="800">${escapeXml(line)}</text>`).join('');
   return `<g transform="translate(${card.x} ${card.y})"><rect x="0" y="0" width="${w}" height="${h}" fill="${bg}" stroke="#343B3B" stroke-width="0.2"/>${photo}${icon}${text}</g>`;
 }
 function sheetMarkup(cards,index,plan,standalone=false,settings=state){
-  const font=standalone&&embeddedFont?`<style>@font-face{font-family:Nunito;src:url(data:font/woff2;base64,${embeddedFont}) format('woff2');font-weight:200 1000}</style>`:'';
+  const font=standalone&&embeddedFont?`<style>@font-face{font-family:Manrope;src:url(data:font/woff;base64,${embeddedFont}) format('woff');font-weight:200 800}</style>`:'';
   return buildSheet({cards,index,plan,state:settings,font,renderCard:(card,id)=>cardMarkup(card,id,standalone,settings)});
 }
 
@@ -97,7 +97,7 @@ async function downloadSheet(index){
   if(!latest)return;
   try{
     const settings=validate(state),plan=layout(settings);if(!plan.pages[index])return;
-    if(!embeddedFont){const res=await fetch('./assets/fonts/Nunito-Variable.woff2');if(!res.ok)throw new Error('Fonten kunne ikke hentes. Prøv igen.');const bytes=new Uint8Array(await res.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));embeddedFont=btoa(binary);}
+    if(!embeddedFont){const res=await fetch('./assets/fonts/Manrope-Variable.woff');if(!res.ok)throw new Error('Fonten kunne ikke hentes. Prøv igen.');const bytes=new Uint8Array(await res.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));embeddedFont=btoa(binary);}
     const sources=[...new Set(plan.pages[index].map(card=>card.image).filter(Boolean))];for(const source of sources){await cacheImage(source);if(!settings.includeMetadata)await stripImageMetadata(source);}
     download('<?xml version="1.0" encoding="UTF-8"?>\n'+sheetMarkup(plan.pages[index],index,plan,true,settings),`open-planner-ark-${index+1}.svg`,'image/svg+xml;charset=utf-8');
   }catch(error){showError(error.message);}
@@ -235,7 +235,7 @@ async function init(){
   $('print').disabled=true;
   const response=await fetch('./assets/icons/ui-sprite.svg');if(!response.ok)throw new Error('Ikonerne kunne ikke hentes. Genindlæs siden.');
   const sprite=new DOMParser().parseFromString(await response.text(),'image/svg+xml');for(const [key] of Object.entries(ICONS))if(key!=='none'){const symbol=sprite.getElementById(key);if(!symbol)throw new Error(`Ikonet ${key} mangler.`);symbols[key]=symbol.innerHTML;}
-  await document.fonts.load('800 16px Nunito');await document.fonts.ready;
+  await document.fonts.load('800 16px Manrope');await document.fonts.ready;
   state.cards=[];
   try{const saved=localStorage.getItem(storageKey);if(saved)state=validate(JSON.parse(saved));}catch{feedback('Et tidligere gemt sæt kunne ikke åbnes. Tilføj kort for at begynde.');}
   DAYS.forEach((day,i)=>{const label=document.createElement('label');const box=document.createElement('input');box.type='checkbox';box.value=day;box.checked=true;box.setAttribute('aria-label',day);label.append(box,document.createTextNode(['Man','Tir','Ons','Tor','Fre','Lør','Søn'][i]));$('weekdays').append(label);});

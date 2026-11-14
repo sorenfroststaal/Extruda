@@ -32,8 +32,14 @@ appens indstillinger. Siderne indlæses fra lokale projektfiler via browserens
 testrouting; der bruges ingen ekstern oversættelsestjeneste.
 
 `contrast.cjs` starter en midlertidig lokal server og scanner synlig tekst,
-links, knapper, labels og overskrifter på hovedsiderne i både lyst og mørkt
-tema. Almindelig tekst kræver mindst 4,5:1; stor tekst mindst 3:1. Testen
+links, knapper, labels og overskrifter på alle sider i både lyst og mørkt
+tema. Siderne findes automatisk, så nye sider kommer med uden ændringer i
+testen; de nummererede ansøgningssider springes over, fordi de henter deres
+stilark fra extruda.dk. Testen kontrollerer også, at arbejdsgiverlogoer står på
+en lys plade, og at hver pille i slogan-SVG'erne har mindst 4,5:1 mellem fyld
+og tekst. `EXTRUDA_ROUTES=/,/arbejdsliv/` begrænser kørslen til udvalgte sider.
+Testen kører automatisk på GitHub ved hvert push og hver pull request
+(`.github/workflows/contrast.yml`). Almindelig tekst kræver mindst 4,5:1; stor tekst mindst 3:1. Testen
 åbner alle fold-ud-afsnit og forstår også CSS `color(srgb ...)` fra
 `color-mix()`. Kør den efter enhver
 ændring af farvetokens, temaer, knapper, links, ikoner eller flader.

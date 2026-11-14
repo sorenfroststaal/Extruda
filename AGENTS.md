@@ -31,13 +31,24 @@ unrelated products merely to apply these rules.
   not an arbitrary field count. Use disclosure only for optional settings or
   supporting help. Never nest disclosures or hide required form sections in
   tabs. Keep format, branding and colour mode visible before export.
-- Use the existing cream/graphite/petrol/apricot tokens and local Inter/Nunito
+- Never use a brand colour directly as a text colour. Text uses the theme pair:
+  primary/link #28645F (light) and #9DC7BA (dark). Muted petrol #619B98 is for
+  logos and graphics only; a petrol surface with white text uses #467B78.
+  Third-party logos keep their colours on a white plate in dark mode. Run
+  `node design-system/tests/contrast.cjs` after any colour, theme or page change;
+  it scans every page in light and dark mode and also runs in CI.
+- Use the existing cream/graphite/petrol/apricot tokens and local Inter/Manrope
   fonts. Use 24 px panel padding (20 px mobile), 24 px between groups, 16 px
   between fields, 8 px from label to field, 8 px control radius and 12 px panel
   radius; small labels 4 px and large feature panels 16 px. Main buttons and
   text fields are at least 48 px high. All interactive targets are at least
   44 × 44 px. Do not add decorative shadows or nested cards.
-- Tool titles: Nunito 32 px desktop / 28 px mobile; section headings 24 / 22 px;
+- Headings use Manrope, the same typeface as the wordmark (local file
+  `Assets/Fonts/Manrope-Variable.woff`, 200–800). Focus rings are #28645F in
+  light and cream #F5F0E8 in dark mode; apricot never marks focus, so it can
+  keep meaning warning. Icons, including social links, come from the local SVG
+  library; do not load icon fonts or UI frameworks from a CDN.
+- Tool titles: Manrope 32 px desktop / 28 px mobile; section headings 24 / 22 px;
   body Inter 16 px; labels 14 px; help 13 px. Reserve large hero type for landing
   pages. Give buttons visible text; use SVG icons from the local library.
 - Support Danish and English, light and dark themes, keyboard operation,
