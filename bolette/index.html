@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Opkrævningslovens § 19 b, stk. 2, forklaret med animation, slidere og eksempler: hvornår kan Skatteforvaltningen inddrage en virksomheds registrering på grund af urigtige fakturaer?">
+    <meta name="author" content="Søren Frost Staal">
+    <meta name="theme-color" content="#F5F0E8">
+    <title>Opkrævningsloven § 19 b, stk. 2 · Extruda</title>
+    <link rel="icon" type="image/svg+xml" href="../Assets/Brand/favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="../Assets/Img/favicon.ico">
+    <link rel="stylesheet" href="../css/extruda-ui.css?v=20261114e">
+    <link rel="stylesheet" href="page.css?v=1">
+    <script defer src="../js/extruda-ui.js?v=2.2"></script>
+    <script defer src="page.js?v=1"></script>
+</head>
+<body>
+<a class="skip-link" href="#indhold">Spring til indhold</a>
+<header class="bo-header"><div class="bo-header-inner"><a class="bo-brand" href="../" aria-label="Extruda · forside"><img src="../Assets/Brand/extruda-dk-logo-horizontal-color.svg" alt="extruda.dk" class="brand-logo-color"><img src="../Assets/Brand/extruda-dk-logo-horizontal-white.svg" alt="" class="brand-logo-white"></a><div data-extruda-controls></div></div></header>
+<template id="extruda-about">
+    <p data-da="Siden forklarer opkrævningslovens § 19 b, stk. 2. Den er en generel forklaring pr. november 2026 og ikke juridisk rådgivning. Eksempler og regnestykker er opdigtede." data-en="This page explains section 19 b(2) of the Danish Tax Collection Act. It is a general explanation as of November 2026, not legal advice. Examples and calculations are fictional.">Siden forklarer opkrævningslovens § 19 b, stk. 2. Den er en generel forklaring pr. november 2026 og ikke juridisk rådgivning. Eksempler og regnestykker er opdigtede.</p>
+    <p data-da="Det, du vælger med slidere og knapper, bliver i den åbne side. Det gemmes ikke og sendes ikke nogen steder. Siden henter kun filer fra extruda.dk og har ingen eksterne afhængigheder." data-en="What you choose with sliders and buttons stays in the open page. It is not saved and not sent anywhere. The page only loads files from extruda.dk and has no external dependencies.">Det, du vælger med slidere og knapper, bliver i den åbne side. Det gemmes ikke og sendes ikke nogen steder. Siden henter kun filer fra extruda.dk og har ingen eksterne afhængigheder.</p>
+    <p data-da="Indholdet findes kun på dansk, fordi det handler om dansk lovtekst." data-en="The content is in Danish only, because it deals with Danish legal text.">Indholdet findes kun på dansk, fordi det handler om dansk lovtekst.</p>
+</template>
+<main class="wrap" id="indhold">
+
+<section class="hero">
+  <a class="back" href="../">← Til forsiden</a>
+  <h1>Opkrævningsloven § 19 b, stk. 2</h1>
+  <p class="lede">Bruger eller udsteder en virksomhed fakturaer med urigtigt indhold, kan Skatteforvaltningen tage dens registrering for moms, A-skat og andre skatter og afgifter fra den.</p>
+  <div class="facts">
+    <div><span class="label">Hvad</span><b>Inddragelse af registrering</b><span class="small muted">Stk. 2 handler kun om at inddrage. Stk. 1 giver også adgang til at nægte en registrering.</span></div>
+    <div><span class="label">Hvornår</span><b>Fra 1. januar 2024</b><span class="small muted">Gælder kun oplysninger afgivet og fakturaer udstedt fra den dato.</span></div>
+    <div><span class="label">Krav</span><b>Forsæt eller grov uagtsomhed</b><span class="small muted">Almindelige fejl er ikke nok.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Sådan ser et typisk forløb ud</h2>
+  <p class="col muted">Et opdigtet eksempel med to virksomheder. Fakturaen er den samme hele vejen. Følg den trin for trin.</p>
+  <div class="bench">
+    <div class="stage">
+      <div class="node" id="n0"><b>Virksomhed B</b><span>udsteder fakturaen</span><span class="reg" id="r0">registreret</span></div>
+      <div class="node" id="n1"><b>Virksomhed A</b><span>bruger den til fradrag</span><span class="reg" id="r1">registreret</span></div>
+      <div class="node" id="n2"><b>Skatte­forvalt­ningen</b><span>modtager angivelsen</span></div>
+    </div>
+    <div class="track" aria-hidden="true">
+      <div class="inv" id="inv">FAKTURA 1047<i></i>Nedrivning<br>200.000,00<br>Moms 25 %<br>50.000,00<span class="stp">URIGTIG</span></div>
+    </div>
+    <div class="caption" aria-live="polite"><span class="n" id="capN">5</span><p id="capT"></p></div>
+    <div class="row">
+      <button class="btn primary" id="play" type="button">Afspil forfra</button>
+      <button class="btn" id="prev" type="button" aria-label="Forrige trin">←</button>
+      <button class="btn" id="next" type="button" aria-label="Næste trin">→</button>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Loven, ord for ord</h2>
+  <p class="col muted">Tryk på de markerede ord for at se, hvad de betyder.</p>
+  <div class="bench col">
+  <div class="law col">
+    <b>Stk. 2.</b> Told- og skatteforvaltningen <span role="button" tabindex="0" data-k="kan">kan</span> endvidere <span role="button" tabindex="0" data-k="inddrage">inddrage</span> en virksomheds registrering for skatter og afgifter m.v., hvis virksomheden eller <span role="button" tabindex="0" data-k="vegne">nogen på dennes vegne</span> <span role="button" tabindex="0" data-k="tilregn">forsætlig eller groft uagtsomt</span>
+    <ol>
+      <li>har afgivet urigtige oplysninger <span role="button" tabindex="0" data-k="brug">til brug for angivelse eller indberetning</span> af beløb omfattet af § 2, stk. 1, 4. pkt., på baggrund af en faktura med et <span role="button" tabindex="0" data-k="urigtig">urigtigt indhold</span> eller <span role="button" tabindex="0" data-k="anden">anden urigtig dokumentation</span> for levering eller aftagelse af varer eller ydelser eller</li>
+      <li>har udstedt en faktura med et urigtigt indhold eller anden urigtig dokumentation for levering eller aftagelse af varer eller ydelser, hvis dokumentationen er <span role="button" tabindex="0" data-k="egnet">egnet til at blive anvendt som grundlag</span> for opgørelsen af en virksomheds skatter eller afgifter m.v.</li>
+    </ol>
+  </div>
+  </div>
+  <div class="gloss col" aria-live="polite"><span class="label" id="gK"></span><p id="gT"></p></div>
+</section>
+
+<section>
+  <h2>To veje ind i bestemmelsen</h2>
+  <div class="two">
+    <div><span class="label">Nr. 1 · brugeren</span><h3>Virksomheden, der bruger fakturaen</h3><p>Den har afgivet urigtige oplysninger til sin angivelse eller indberetning, og oplysningerne bygger på en urigtig faktura eller anden urigtig dokumentation. Typisk: købsmoms af en faktura for arbejde, der ikke er leveret.</p></div>
+    <div><span class="label">Nr. 2 · udstederen</span><h3>Virksomheden, der udsteder fakturaen</h3><p>Den har selv lavet den urigtige faktura. Det er nok, at fakturaen er egnet til at indgå i en virksomheds opgørelse af skat eller afgift. Det gælder, uanset om udstederen selv bruger den eller sælger den videre.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Prøv en sag</h2>
+  <p class="col muted">Skru på forholdene og se, om betingelserne er opfyldt. Eksemplerne er opdigtede og forenklede. I en rigtig sag foretager Skatteforvaltningen altid en konkret vurdering.</p>
+  <div class="row" id="presets">
+    <button class="btn" type="button" data-p="fiktiv">Fiktiv underleverandør</button>
+    <button class="btn" type="button" data-p="fabrik">Fakturafabrik</button>
+    <button class="btn" type="button" data-p="taste">Tastefejl</button>
+    <button class="btn" type="button" data-p="dato">Forkert dato uden betydning</button>
+    <button class="btn" type="button" data-p="gammel">Faktura fra 2023</button>
+  </div>
+  <div class="bench">
+    <div class="build">
+      <div>
+        <div class="field"><span class="label">Virksomhedens rolle</span>
+          <div class="row"><button class="btn" id="role1" type="button" aria-pressed="true">Bruger fakturaen (nr. 1)</button><button class="btn" id="role2" type="button" aria-pressed="false">Udsteder fakturaen (nr. 2)</button></div>
+        </div>
+        <div class="field"><label class="label" for="cont">Fakturaens indhold</label>
+          <select id="cont">
+            <option value="fiktiv">Varen eller ydelsen er aldrig leveret</option>
+            <option value="belob">Leveret, men med forkert beløb</option>
+            <option value="dato">Leveret, men med forkert dato</option>
+            <option value="ok">Indholdet er rigtigt</option>
+          </select>
+        </div>
+        <div class="field"><label class="label" for="betyd" id="betydL">Betydning for skatten</label>
+          <select id="betyd">
+            <option value="1">Fejlen påvirker opgørelsen af skat eller afgift</option>
+            <option value="0">Fejlen kan ikke påvirke opgørelsen</option>
+          </select>
+        </div>
+        <div class="field"><label class="label" for="skyld">Tilregnelse: <output id="skyldO"></output></label>
+          <input type="range" id="skyld" min="0" max="3" step="1" value="3">
+          <div class="scale" id="scale"><span>Undskyldelig fejl</span><span>Simpel uagtsomhed</span><span>Grov uagtsomhed</span><span>Forsæt</span></div>
+          <p class="small muted" id="skyldT"></p>
+        </div>
+        <div class="field"><label class="label" for="dato"><span id="datoL">Oplysningen afgivet</span>: <output id="datoO"></output></label>
+          <input type="range" id="dato" min="0" max="17" step="1" value="10">
+          <p class="small muted">Skalaen går fra juli 2023 til december 2024. Skæringsdatoen er 1. januar 2024.</p>
+        </div>
+      </div>
+      <div>
+        <span class="label">Betingelserne</span>
+        <ul class="checks" id="checks"></ul>
+        <div class="verdict" id="verdict" aria-live="polite"><b id="vH"></b><p class="small" id="vT"></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Hvad en urigtig faktura betyder i moms</h2>
+  <p class="col muted">Loven sætter ingen beløbsgrænse. Regnestykket viser kun, hvor meget købsmoms der står på spil i et opdigtet eksempel med 25 % moms.</p>
+  <div class="bench">
+    <div class="build">
+      <div class="field"><label class="label" for="bel">Fakturabeløb ekskl. moms: <output id="belO"></output></label>
+        <input type="range" id="bel" min="10000" max="1000000" step="10000" value="200000"></div>
+      <div class="field"><label class="label" for="and">Andel uden reel levering: <output id="andO"></output></label>
+        <input type="range" id="and" min="0" max="100" step="5" value="100"></div>
+    </div>
+    <div class="bar" role="img" aria-label="Fordeling af fakturaen på reel og ikke-reel levering"><div class="fake" id="bF"></div><div class="real" id="bR"></div></div>
+    <div class="nums">
+      <div><span class="small muted">Moms på fakturaen</span><b id="mT"></b></div>
+      <div><span class="small muted"><span class="key key-fake"></span>Købsmoms uden reel levering</span><b id="mF"></b></div>
+      <div><span class="small muted"><span class="key key-real"></span>Købsmoms af reel levering</span><b id="mR"></b></div>
+    </div>
+    <p class="small muted">Til sammenligning: I SKM2026.316.LSR havde selskabet angivet indgående moms på i alt 588.664 kr., og Landsskatteretten stadfæstede inddragelsen af momsregistreringen.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Efter inddragelsen: fem år med skærpet opmærksomhed</h2>
+  <p class="col">En inddragelse efter § 19 b følger med videre. I fem år kan den være grundlag for et krav om sikkerhedsstillelse efter § 11, stk. 2, hvis driften konkret vurderes at indebære en nærliggende risiko for tab for staten.</p>
+  <div class="bench">
+    <div class="field"><label class="label" for="aar">Tid siden inddragelsen: <output id="aarO"></output></label>
+      <input type="range" id="aar" min="0" max="8" step="1" value="2"></div>
+    <div class="years" id="years" aria-hidden="true"></div>
+    <p id="aarT" aria-live="polite"></p>
+    <div class="two">
+      <div><span class="label">§ 11, stk. 2, nr. 2</span><p class="small">Samme virksomhed, samme registreringsforhold: virksomheden har selv fået registreringen inddraget inden for de seneste fem år.</p></div>
+      <div><span class="label">§ 11, stk. 2, nr. 3</span><p class="small">Ny virksomhed, samme personer: en ejer eller et ledelsesmedlem havde samme rolle i en anden virksomhed, der fik samme type registrering inddraget inden for de seneste fem år.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Sådan er reglen brugt i praksis</h2>
+  <div class="cases">
+    <article><span class="label">SKM2026.316.LSR</span><h3>Fakturaer uden dokumenteret samhandel</h3><p class="small">Selskabet havde angivet købsmoms på baggrund af fakturaer fra to underleverandører. Samhandlen var ikke dokumenteret, og anpartshaveren vidste, at ydelserne ikke var leveret. Landsskatteretten fandt forholdet mindst groft uagtsomt og stadfæstede inddragelsen efter stk. 2, nr. 1.</p></article>
+    <article><span class="label">SKM2026.465.LSR</span><h3>Spørgsmål om opsættende virkning</h3><p class="small">Skattestyrelsen havde inddraget et selskabs registrering for moms, A-skat og AM-bidrag efter stk. 2, nr. 1, fordi selskabet efter styrelsens opfattelse havde angivet købsmoms af fiktive fakturaer. Sagen for Landsskatteretten handlede om, hvorvidt klagen skulle have opsættende virkning.</p></article>
+    <article><span class="label">Straffesag er ikke en betingelse</span><h3>Uafhængig af § 17</h3><p class="small">Forsæt og grov uagtsomhed forstås som i lovens straffebestemmelse. Registreringen kan alligevel inddrages, selv om der ikke er rejst straffesag, eller virksomheden er frifundet, fordi beviskravene er forskellige.</p></article>
+  </div>
+</section>
+
+<footer>
+  <span class="label">Kilder</span>
+  <ul class="src">
+    <li><a href="https://www.retsinformation.dk/eli/lta/2024/1040">Opkrævningsloven, lovbekendtgørelse nr. 1040 af 13. september 2024</a> (Retsinformation)</li>
+    <li><a href="https://info.skat.dk/data.aspx?oid=2387315">Den juridiske vejledning 2026-2, afsnit A.D.9.4.1.5</a> (Skatteforvaltningen)</li>
+    <li><a href="https://info.skat.dk/data.aspx?oid=2461551&vid=0">SKM2026.316.LSR</a> og <a href="https://info.skat.dk/data.aspx?oid=2462661&vid=0">SKM2026.465.LSR</a> (Landsskatteretten)</li>
+  </ul>
+  <p class="small muted">Stk. 2 blev indsat ved lov nr. 1795 af 28. december 2023. Siden er en generel forklaring pr. november 2026 og ikke juridisk rådgivning. Eksempler og regnestykker er opdigtede. Står du i en konkret sag, så tal med en advokat eller revisor.</p>
+</footer>
+</main>
+</body>
+</html>
