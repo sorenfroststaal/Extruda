@@ -56,6 +56,11 @@ unrelated products merely to apply these rules.
   user is using, and name every storage key in that page's About area.
   Installers get a .sha256 file and the checksum on their page
   (`design-system/tests/downloads.cjs` checks it).
+- Every project shows its status with the shared `.ex-status` badge
+  (css/extruda-ui.css) in the Projekter list and on its project page:
+  Eksperiment (dashed border), Prøveversion (solid border), Klar til brug
+  (filled) or På pause (dotted, muted). Text and shape carry the meaning, never
+  colour alone; include the hidden "Status: " prefix for screen readers.
 - Tool titles: Manrope 32 px desktop / 28 px mobile; section headings 24 / 22 px;
   body Inter 16 px; labels 14 px; help 13 px. Reserve large hero type for landing
   pages. Give buttons visible text; use SVG icons from the local library.

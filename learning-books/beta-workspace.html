@@ -74,6 +74,14 @@ footer{padding:12px 32px 16px;font-size:11px}
 @media(min-width:992px){.ex-home-header{margin-left:17rem}}
 @media(max-width:991px){.ex-home-header{margin-top:0;padding-top:16px}}
 @media(max-width:640px){.ex-controls-header{gap:16px}.ex-controls-header>.ex-utilities{margin-left:0;flex-basis:100%;justify-content:flex-end}.ex-home-header{padding:12px 20px}.ex-utility-panel{position:fixed;top:auto;right:20px;margin-top:8px}.ex-about-dialog{padding:20px}.ex-about-heading{gap:12px}.ex-about-heading h2{font-size:22px}}
+/* Projektstatus: altid tekst + form (fyldt, fuld kant, stiplet, prikket), aldrig kun farve. */
+.ex-status{display:inline-flex;align-items:center;width:fit-content;align-self:flex-start;min-height:24px;padding:2px 8px;border:1px solid var(--ui-text);border-radius:4px;font:600 13px/1.4 Inter,system-ui,sans-serif;color:var(--ui-text);background:transparent;white-space:nowrap;vertical-align:middle}
+.ex-status[data-status=ready]{background:var(--ui-action);border-color:var(--ui-action);color:#fff}
+[data-theme=dark] .ex-status[data-status=ready]{color:#182625}
+.ex-status[data-status=experiment]{border-style:dashed}
+.ex-status[data-status=paused]{border-style:dotted;border-color:var(--ui-muted);color:var(--ui-muted)}
+.ex-status-line{margin:0 0 12px}
+.ex-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 @media print{.ex-utilities,.ex-home-header,.ex-about-dialog{display:none!important}}
 
 /* Theme migration for existing pages. Printed sheets retain their own colours. */
