@@ -97,7 +97,8 @@ const local=relative=>pathToFileURL(path.join(root,relative)).href;
     await page.locator('#setup-cancel').click();
     assert(await page.locator('#setup-next').isEnabled(),'Cancelled setup can recover');
     await page.locator('#setup-next').click();
-    await page.waitForURL('**#setup-3');
+    // Same-page hash change: check location directly (waitForURL misses it in some Playwright versions).
+    await page.waitForFunction(()=>location.hash==='#setup-3');
     await page.locator('#setup-next').click();
     await page.locator('#app-view').waitFor();
 
