@@ -14,6 +14,7 @@ body.compact-site { padding: 0; min-height: 100vh; min-height: 100dvh; display: 
 .short-home-main, .compact-destination { width: min(960px, calc(100% - 64px)); margin: 0 auto; padding: 40px 0 48px; }
 .short-intro { width: 100%; max-width: 640px; container-type: inline-size; }
 .short-intro h1 { width: 100%; font-size: clamp(28px, 7.5cqi, 48px); line-height: 1.15; margin: 0 0 24px; color: #28645F; }
+[data-theme="dark"] .short-intro h1 { color: #9DC7BA; }
 .short-intro p { font-size: 16px; line-height: 1.6; margin: 0; max-width: none; }
 .short-slogan { display: block; width: 100%; max-width: 640px; }
 .short-slogan img { display: block; width: 100%; height: auto; }
@@ -23,7 +24,7 @@ body.compact-site { padding: 0; min-height: 100vh; min-height: 100dvh; display: 
 .short-choice:last-child { border-bottom: 1px solid var(--ui-border); }
 .short-choice img { display: block; width: 48px; height: 48px; }
 .short-choice > span:nth-child(2) { display: grid; gap: 8px; min-width: 0; }
-.short-choice strong { font-family: Nunito, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; }
+.short-choice strong { font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; }
 .short-choice small { font-size: 16px; line-height: 1.5; color: var(--ui-muted); }
 .short-arrow { display: grid; place-items: center; font-size: 26px; color: var(--ui-action); }
 .short-choice:hover, .short-choice:focus-visible { color: var(--ui-text); background: rgba(38,107,105,.08); }
@@ -62,7 +63,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) { .intro-dialog { display: none!important; } }
 
-.compact-destination .work-aside { background: #619b98; color: #fff; padding: 24px; border: 0; border-radius: 12px; box-sizing: border-box; }
+.compact-destination .work-aside { background: #467B78; color: #fff; padding: 24px; border: 0; border-radius: 12px; box-sizing: border-box; }
 .compact-destination .work-aside p,
 .compact-destination .work-aside em { color: #fff; }
 .compact-destination .work-aside-icon { filter: none; }
@@ -130,7 +131,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .cv-job-skills a:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
 
 .cv-skill-categories { display: grid; gap: 32px; }
-.compact-destination .cv-skill-category > h3 { font: 800 20px/1.3 Nunito,sans-serif; margin: 0 0 16px; color: var(--ui-text); }
+.compact-destination .cv-skill-category > h3 { font: 800 20px/1.3 Manrope,sans-serif; margin: 0 0 16px; color: var(--ui-text); }
 
 .profile-disclosure-content h4 { margin: 24px 0 8px; }
 .profile-disclosure-content h4:first-child { margin-top: 0; }
@@ -151,10 +152,10 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .cv-education-row { display: grid; grid-template-columns: 7rem minmax(0,1fr); align-items: center; gap: 1rem; min-height: 4.75rem; padding: 1rem 1.25rem; border: 1px solid var(--ex-border); border-radius: 1rem; background: rgba(255,255,255,.42); }
 .cv-education-row img { width: 7rem; height: 3.5rem; object-fit: contain; padding: .5rem; }
 .cv-education-row > div { display: grid; gap: .2rem; min-width: 0; }
-.cv-education-row strong { font: 800 18px/1.4 Nunito,sans-serif; }
+.cv-education-row strong { font: 800 18px/1.4 Manrope,sans-serif; }
 .cv-education-row small { font-size: 16px; color: var(--ui-muted); }
 [data-theme="dark"] .cv-education-row { background: #2d3535; border-color: #667371; }
-[data-theme="dark"] .cv-education-row img { filter: brightness(0) invert(1); }
+[data-theme="dark"] .cv-education-row img { background: #FFFFFF; border-radius: 8px; }
 @media(max-width:720px) { .cv-education-row { grid-template-columns: 4.5rem minmax(0,1fr); gap: .65rem; padding: 1rem; } .cv-education-row img { width: 4.5rem; padding: .35rem; } }
 .compact-destination .cv-job > summary { grid-template-columns: 6.5rem 7rem minmax(0,1fr) 2.25rem; }
 .compact-destination .cv-job > summary > .cv-row-period { display: block; }
@@ -177,7 +178,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-destination .cv-job > summary .cv-job-title,
 .compact-destination .cv-education-row .cv-row-period { font-family: Inter, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.5; text-transform: none; letter-spacing: normal; }
 .compact-destination .cv-job > summary .cv-row-copy strong,
-.compact-destination .cv-education-row strong { font-family: Nunito, sans-serif; font-size: 18px; font-weight: 800; line-height: 1.4; text-transform: none; letter-spacing: normal; }/* Repeated CV items share the same surface as the employment cards. */
+.compact-destination .cv-education-row strong { font-family: Manrope, sans-serif; font-size: 18px; font-weight: 800; line-height: 1.4; text-transform: none; letter-spacing: normal; }/* Repeated CV items share the same surface as the employment cards. */
 .compact-destination .cv-skill-ratings > li{background:var(--ui-surface)}
 .compact-destination .cv-compact-list{gap:12px}
 .compact-destination .cv-compact-list > div{padding:12px 16px;border:1px solid var(--ui-border);border-radius:8px;background:var(--ui-surface)}
@@ -236,4 +237,20 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .work-page .compact-destination .work-aside{padding:16px;gap:12px;font-size:14px}
  .work-page .compact-destination .work-aside-copy>p:first-child{font-size:15px}
  .work-page .compact-destination #work .work-vision{margin-block:24px}
+}
+
+/* Ens synlig fokus på alle links, knapper og fold-ud: petrol i lyst tema, creme i mørkt. */
+.compact-site :is(a, button):focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
+.compact-site summary:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: -3px; }
+
+/* Arbejdsliv: kun den yderste gruppe er en kasse. Fold-ud indeni er rækker,
+   adskilt af en tynd linje, så siden ikke bliver kasser i kasser.
+   Strukturen og fokusmarkeringen er uændret. */
+.work-page .work-group-disclosure :is(.cv-disclosures, .cv-jobs, .work-tracks) { gap: 0; }
+.work-page .work-group-disclosure :is(.cv-disclosure, .profile-disclosure, .work-track, .cv-job) {
+  border: 0;
+  border-top: 1px solid var(--ui-border);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }

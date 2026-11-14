@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "Nunito";
-    src: url("../Assets/Fonts/Nunito-Variable.woff2") format("woff2");
-    font-weight: 200 1000;
+    font-family: "Manrope";
+    src: url("../Assets/Fonts/Manrope-Variable.woff") format("woff");
+    font-weight: 200 800;
     font-display: swap;
 }
 
@@ -23,7 +23,7 @@
 .project-page h1,
 .project-page h2,
 .project-page h3 {
-    font-family: "Nunito", system-ui, sans-serif;
+    font-family: "Manrope", system-ui, sans-serif;
     font-weight: 800;
 }
 
