@@ -132,3 +132,6 @@
     .project-page .project-mark { max-width: 20rem; }
     .project-page .project-gallery { grid-template-columns: 1fr; }
 }
+
+/* Checksum ved downloads: lange tal må bryde, og skrives med fast bredde. */
+.checksum code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; overflow-wrap: anywhere; }

@@ -55,3 +55,15 @@ node design-system/tools/bundle-header.cjs
 Det indlejrer de fælles kilder i Learning Books' fire selvstændige HTML-filer,
 så download stadig virker uden tilstødende filer. Andre sider bruger kilderne
 direkte fra `js/` og `css/`.
+
+## Sikkerhedspolitik og downloads
+
+`node design-system/tools/csp.cjs` skriver en Content-Security-Policy i alle
+offentlige sider: kun sidens egne scripts (inline-scripts tilladt via
+SHA-256-hash), ingen forbindelser ud af huset undtagen api.github.com for
+Jobwizard, ingen plugins og ingen ændring af base-URL. Kør værktøjet igen, når
+et inline-script ændres (fx efter `bundle-header.cjs`); `--check` fejler, hvis en
+side mangler eller har en forældet politik. `downloads.cjs` kontrollerer, at
+installationsfilerne matcher deres .sha256-fil og den checksum, projektsiden
+viser. Begge kører i CI.
+

@@ -155,7 +155,8 @@ const local=relative=>pathToFileURL(path.join(root,relative)).href;
     // and the local script (js/extruda-site.js) runs disclosures and image switching.
     const external=[];
     page.on('request',request=>{if(/^https?:/.test(request.url()))external.push(request.url());});
-    await page.addInitScript(()=>{try{localStorage.setItem('extruda-intro-seen','1');}catch{}});
+    await page.emulateMedia({reducedMotion:'reduce'}); // skip the intro animation; it stores nothing
+
     await page.goto(local('index.html'));
     assert(await page.locator('.short-choice').count()===3,'Home page shows three destinations');
     for(const choice of await page.locator('.short-choice').all())assert(await choice.isVisible(),'Destination visible');

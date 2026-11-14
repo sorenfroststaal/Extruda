@@ -1,0 +1,13 @@
+# Holder GitHub Actions opdateret. Actions er låst til bestemte commits (SHA);
+# Dependabot opretter en pull request, når der kommer en ny version, så testene
+# kører, før noget ændres. Sitet har ingen npm-afhængigheder at følge.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "CI"
