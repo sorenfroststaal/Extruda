@@ -242,3 +242,15 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 /* Ens synlig fokus på alle links, knapper og fold-ud: petrol i lyst tema, creme i mørkt. */
 .compact-site :is(a, button):focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
 .compact-site summary:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: -3px; }
+
+/* Arbejdsliv: kun den yderste gruppe er en kasse. Fold-ud indeni er rækker,
+   adskilt af en tynd linje, så siden ikke bliver kasser i kasser.
+   Strukturen og fokusmarkeringen er uændret. */
+.work-page .work-group-disclosure :is(.cv-disclosures, .cv-jobs, .work-tracks) { gap: 0; }
+.work-page .work-group-disclosure :is(.cv-disclosure, .profile-disclosure, .work-track, .cv-job) {
+  border: 0;
+  border-top: 1px solid var(--ui-border);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
