@@ -2,6 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5WX2GUyMdg03Hx1D5H0pXTX57VAWFwpv3sGrJaLpN3Q='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="referrer" content="no-referrer">
@@ -77,7 +78,7 @@ ul.conf{padding-left:20px}ul.conf li{margin-bottom:8px}
 <p data-da="Indholdet på denne side er krypteret med AES-256-GCM. Nøglen udledes af adgangskoden med PBKDF2-SHA-256 (600.000 runder). Den offentlige fil på extruda.dk indeholder kun krypteret tekst. Dekrypteringen sker i din browser, og adgangskoden sendes ingen steder hen." data-en="The content of this page is encrypted with AES-256-GCM. The key is derived from the password with PBKDF2-SHA-256 (600,000 rounds). The public file on extruda.dk contains only ciphertext. Decryption happens in your browser and the password is not sent anywhere."></p>
 <p data-da="Svar på de åbne spørgsmål gemmes kun lokalt i denne browser (localStorage), ukrypteret, og deles ikke med nogen. Brug 'Kopiér svar' eller 'Hent svar' for at tage dem med. Indholdet findes kun på dansk." data-en="Answers to the open questions are stored only locally in this browser (localStorage), unencrypted, and are not shared. Use 'Copy answers' or 'Download answers' to take them with you. The content is in Danish only."></p>
 <p data-da="Ingen eksterne afhængigheder. Kræver en moderne browser med Web Crypto. Siden er en sammenfatning af sagens akter og ikke juridisk rådgivning." data-en="No external dependencies. Requires a modern browser with Web Crypto. The page summarises case documents and is not legal advice."></p>
-</template>
+<p data-da="Lagringsnøgle: Svarene ligger under taf-svar-v1 i localStorage. Intet sendes til en server. Du kan slette det ved at slette browserens webstedsdata for extruda.dk." data-en="Storage key: The answers are kept under taf-svar-v1 in localStorage. Nothing is sent to a server. You can delete it by clearing your browser’s site data for extruda.dk.">Lagringsnøgle: Svarene ligger under taf-svar-v1 i localStorage. Intet sendes til en server. Du kan slette det ved at slette browserens webstedsdata for extruda.dk.</p></template>
 <main class="taf" id="app">
 <form class="lock" id="lock" autocomplete="off">
 <h1>Beskyttet side</h1>

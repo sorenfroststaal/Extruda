@@ -48,6 +48,14 @@ unrelated products merely to apply these rules.
   light and cream #F5F0E8 in dark mode; apricot never marks focus, so it can
   keep meaning warning. Icons, including social links, come from the local SVG
   library; do not load icon fonts or UI frameworks from a CDN.
+- Every public page carries a Content-Security-Policy <meta> written by
+  `node design-system/tools/csp.cjs` (own scripts only, inline scripts by hash,
+  no external connections except api.github.com for Jobwizard). Run it after
+  changing any inline script, e.g. after bundle-header.cjs; CI runs it with
+  `--check`. Store nothing in the browser without a user action or a tool the
+  user is using, and name every storage key in that page's About area.
+  Installers get a .sha256 file and the checksum on their page
+  (`design-system/tests/downloads.cjs` checks it).
 - Tool titles: Manrope 32 px desktop / 28 px mobile; section headings 24 / 22 px;
   body Inter 16 px; labels 14 px; help 13 px. Reserve large hero type for landing
   pages. Give buttons visible text; use SVG icons from the local library.
