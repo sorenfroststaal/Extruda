@@ -97,7 +97,8 @@ const local=relative=>pathToFileURL(path.join(root,relative)).href;
     await page.locator('#setup-cancel').click();
     assert(await page.locator('#setup-next').isEnabled(),'Cancelled setup can recover');
     await page.locator('#setup-next').click();
-    await page.waitForURL('**#setup-3');
+    // Same-page hash change: check location directly (waitForURL misses it in some Playwright versions).
+    await page.waitForFunction(()=>location.hash==='#setup-3');
     await page.locator('#setup-next').click();
     await page.locator('#app-view').waitFor();
 
@@ -150,25 +151,31 @@ const local=relative=>pathToFileURL(path.join(root,relative)).href;
     const anchors=await page.evaluate(()=>[...document.querySelectorAll('a[href^="#"]')].filter(a=>!document.getElementById(a.hash.slice(1))).map(a=>a.hash));
     assert(anchors.length===0,'Reference anchors exist: '+anchors.join(','));
 
-    // Home page keeps essential project information visible even without JS/CDNs.
-    await page.route('https://use.fontawesome.com/**',route=>route.fulfill({contentType:'text/javascript',body:''}));
-    if(process.env.EXTRUDA_BOOTSTRAP_FILE)await page.route('https://cdn.jsdelivr.net/**',route=>route.fulfill({contentType:'text/javascript',body:fs.readFileSync(process.env.EXTRUDA_BOOTSTRAP_FILE)}));
+    // Home page and Projekter: everything local (no CDNs), destinations and projects visible,
+    // and the local script (js/extruda-site.js) runs disclosures and image switching.
+    const external=[];
+    page.on('request',request=>{if(/^https?:/.test(request.url()))external.push(request.url());});
+    await page.addInitScript(()=>{try{localStorage.setItem('extruda-intro-seen','1');}catch{}});
     await page.goto(local('index.html'));
-    assert(await page.locator('.project-overview').count()===5,'Five visible project summaries');
-    assert(await page.locator('.project-overview.collapse').count()===0,'No outer collapse layer');
-    for(const item of await page.locator('.project-overview').all()){
-      assert(await item.locator('.project-preview').isVisible(),'Project purpose visible');
-      assert(await item.locator('.project-actions,.goldfish-download').first().isVisible(),'Project destination visible');
-    }
-    if(await page.evaluate(()=>Boolean(window.bootstrap))){
-      await page.locator('.project-more-toggle').first().click();
-      await page.locator('#arrayDetails.show').waitFor();
-      await page.locator('.navbar-toggler').click();
-      await page.locator('#navbarResponsive.show').waitFor();
-      await page.locator('#navbarResponsive .nav-link').first().focus();await page.keyboard.press('Escape');
-      await page.waitForFunction(()=>!document.getElementById('navbarResponsive').classList.contains('show'));
-    }
+    assert(await page.locator('.short-choice').count()===3,'Home page shows three destinations');
+    for(const choice of await page.locator('.short-choice').all())assert(await choice.isVisible(),'Destination visible');
+    assert(await page.locator('h1').count()===1,'Home page has one main heading');
+    await page.goto(local('projekter/index.html'));
+    assert(await page.locator('h1').count()===1,'Projekter has one main heading');
+    const names=await page.locator('.project-title strong').allTextContents();
+    assert(JSON.stringify(names)===JSON.stringify(['Array Lamp Shade','Mobile as Webcam','Goldfish (FreeCAD)','Learning Books','Open Planner']),'Project names: '+names.join(', '));
+    const toggle=page.locator('[data-bs-toggle="collapse"]').first();
+    const target=page.locator(await toggle.getAttribute('data-bs-target'));
+    assert(!(await target.isVisible()),'Project details start closed');
+    await toggle.click();
+    assert(await target.isVisible()&&await toggle.getAttribute('aria-expanded')==='true','Project details open with the local script');
+    const carousel=target.locator('.carousel[id]').first();
+    const id=await carousel.getAttribute('id');
+    assert(await page.locator(`[data-bs-slide="prev"][data-bs-target="#${id}"]`).isDisabled(),'Image switching does not wrap at the first image');
+    await toggle.click();
+    assert(!(await target.isVisible()),'Project details close again');
+    assert(external.length===0,'No external requests: '+external.join(', '));
     assert(errors.length===0,errors.join('\n'));
-    console.log(`PASS: ${combinations} responsive/language/theme/pattern combinations; form errors, drafts, review edits, history, wizard, menu, export content, reference and homepage.`);
+    console.log(`PASS: ${combinations} responsive/language/theme/pattern combinations; form errors, drafts, review edits, history, wizard, menu, export content, reference, home page and Projekter.`);
   }finally{await browser.close();}
 })().catch(error=>{console.error(error.stack);process.exit(1);});

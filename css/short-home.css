@@ -26,7 +26,7 @@ body.compact-site { padding: 0; min-height: 100vh; min-height: 100dvh; display: 
 .short-choice > span:nth-child(2) { display: grid; gap: 8px; min-width: 0; }
 .short-choice strong { font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; }
 .short-choice small { font-size: 16px; line-height: 1.5; color: var(--ui-muted); }
-.short-arrow { display: grid; place-items: center; font-size: 26px; color: var(--ui-action); }
+.short-arrow { display: grid; place-items: center; font-size: 24px; color: var(--ui-action); }
 .short-choice:hover, .short-choice:focus-visible { color: var(--ui-text); background: rgba(38,107,105,.08); }
 [data-theme="dark"] .short-choice:hover, [data-theme="dark"] .short-choice:focus-visible { background: rgba(157,199,186,.1); }
 .short-facts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 104px; }
@@ -57,7 +57,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .short-slogan img { aspect-ratio: 230 / 156; }
  .short-choice { grid-template-columns: 44px minmax(0, 1fr) 32px; gap: 12px; }
  .short-choice img { width: 44px; height: 44px; }
- .short-choice strong { font-size: 20px; }
+ .short-choice strong { font-size: 18px; }
  .short-facts { grid-template-columns: 1fr; gap: 32px; }
  .compact-site #contact { padding: 40px 20px; }
 }
@@ -142,7 +142,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 .compact-destination .work-track-details p + p { margin-top: 16px; }
 
 .compact-site .contact-links a { width: 48px; height: 48px; min-height: 48px; padding: 0; justify-content: center; border-radius: 50%; gap: 0; }
-.compact-site .contact-links a svg, .compact-site .contact-links a i { width: 20px; height: 20px; font-size: 20px; }
+.compact-site .contact-links a svg { width: 20px; height: 20px; }
 
 .compact-site .contact-email { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; border: 1px solid rgba(245,240,232,.24); border-radius: 50%; color: #f5f0e8; background: transparent; }
 .compact-site .contact-email:hover { border-color: #619B98; color: #182625; background: #619B98; }
@@ -196,7 +196,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
 /* Compact career layout on phones; summaries remain large touch targets. */
 @media(max-width:650px){
  .work-page .compact-destination{width:calc(100% - 32px);padding-top:20px;padding-bottom:32px}
- .work-page .compact-destination>h1{font-size:26px;line-height:1.25;margin-bottom:24px}
+ .work-page .compact-destination>h1{font-size:28px;line-height:1.25;margin-bottom:24px}
  .work-page #work>.resume-section-content{gap:24px}
  .work-page .work-group-content{padding:0 10px 10px}
  .work-page .work-group-disclosure>summary,
@@ -214,7 +214,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .work-page .cv-disclosure-content,.work-page .profile-disclosure-content{padding:10px 8px}
  .work-page .profile-records>.cv-disclosures,.work-page .cv-jobs,.work-page .work-tracks{gap:8px}
  .work-page .compact-destination .cv-job>summary{grid-template-columns:48px minmax(0,1fr) 32px;gap:6px 10px;padding:10px;min-height:76px;align-items:center}
- .work-page .compact-destination .cv-job>summary>.cv-row-period{grid-column:1 / 3;grid-row:1;font-size:12px;line-height:1.4}
+ .work-page .compact-destination .cv-job>summary>.cv-row-period{grid-column:1 / 3;grid-row:1;font-size:13px;line-height:1.4}
  .work-page .compact-destination .cv-job>summary>.work-track-mark{grid-column:3;grid-row:1;justify-self:end}
  .work-page .compact-destination .cv-job>summary>img{grid-column:1;grid-row:2;width:48px;height:36px;padding:0;object-fit:contain}
  .work-page .compact-destination .cv-job>summary>.cv-row-copy{grid-column:2 / -1;grid-row:2;gap:3px;overflow-wrap:anywhere}
@@ -222,7 +222,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .work-page .compact-destination .cv-job>summary .cv-job-title{font-size:13px;line-height:1.4;white-space:normal;overflow-wrap:anywhere}
  .work-page .compact-destination .cv-job>summary .cv-row-copy small{font-size:13px;line-height:1.4}
  .work-page .cv-education-row{grid-template-columns:48px minmax(0,1fr);padding:10px;gap:6px 10px;min-height:76px}
- .work-page .cv-education-row>.cv-row-period{grid-column:1 / -1;font-size:12px}
+ .work-page .cv-education-row>.cv-row-period{grid-column:1 / -1;font-size:13px}
  .work-page .cv-education-row img{width:48px;height:36px;padding:0}
  .work-page .compact-destination .cv-education-row strong{font-size:16px;line-height:1.3}
  .work-page .person-section{padding:12px;font-size:14px;line-height:1.5}
@@ -235,7 +235,7 @@ body:has(.intro-dialog[open]) { overflow: hidden; }
  .work-page .skill-hex{width:18px;height:20px}
  .work-page .work-track-details{padding:0 12px 12px;font-size:14px;line-height:1.5}
  .work-page .compact-destination .work-aside{padding:16px;gap:12px;font-size:14px}
- .work-page .compact-destination .work-aside-copy>p:first-child{font-size:15px}
+ .work-page .compact-destination .work-aside-copy>p:first-child{font-size:16px}
  .work-page .compact-destination #work .work-vision{margin-block:24px}
 }
 
