@@ -2,7 +2,6 @@
 @font-face{font-family:Manrope;src:url('../Assets/Fonts/Manrope-Variable.woff2') format('woff2');font-weight:200 800;font-display:swap}
 @font-face{font-family:Inter;src:url('../Assets/Fonts/Inter-Variable.woff2') format('woff2');font-weight:100 900;font-display:swap}
 :root{color-scheme:light;--bg:#F5F0E8;--surface:#fff;--soft:#EDE9E1;--text:#343B3B;--muted:#586361;--border:#D9D5CD;--field:#667371;--action:#28645F;--action-text:#fff;--focus:#28645F;--error:#A43636}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#252C2C;--surface:#343B3B;--soft:#2D3535;--text:#F5F0E8;--muted:#C1CBC7;--border:#667371;--field:#899693;--action:#9DC7BA;--action-text:#182625;--focus:#F5F0E8;--error:#F0AAA6}}
 [data-theme=dark]{color-scheme:dark;--bg:#252C2C;--surface:#343B3B;--soft:#2D3535;--text:#F5F0E8;--muted:#C1CBC7;--border:#667371;--field:#899693;--action:#9DC7BA;--action-text:#182625;--focus:#F5F0E8;--error:#F0AAA6}
 
 *{box-sizing:border-box}

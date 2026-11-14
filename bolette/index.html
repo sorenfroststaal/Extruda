@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" data-default-theme="light">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
@@ -11,9 +11,9 @@
     <link rel="icon" type="image/svg+xml" href="../Assets/Brand/favicon.svg">
     <link rel="alternate icon" type="image/x-icon" href="../Assets/Img/favicon.ico">
     <link rel="stylesheet" href="../css/extruda-ui.css?v=20261114e">
-    <link rel="stylesheet" href="page.css?v=1">
-    <script defer src="../js/extruda-ui.js?v=2.2"></script>
-    <script defer src="page.js?v=1"></script>
+    <link rel="stylesheet" href="page.css?v=2">
+    <script defer src="../js/extruda-ui.js?v=2.3"></script>
+    <script defer src="page.js?v=2"></script>
 </head>
 <body>
 <a class="skip-link" href="#indhold">Spring til indhold</a>
@@ -38,19 +38,19 @@
 
 <section>
   <h2>Sådan ser et typisk forløb ud</h2>
-  <p class="col muted">Et opdigtet eksempel med to virksomheder. Fakturaen er den samme hele vejen. Følg den trin for trin.</p>
+  <p class="col muted">Et opdigtet eksempel med to virksomheder. Fakturaen går fra venstre mod højre. Tryk Afspil, eller gå frem et trin ad gangen.</p>
   <div class="bench">
     <div class="stage">
-      <div class="node" id="n0"><b>Virksomhed B</b><span>udsteder fakturaen</span><span class="reg" id="r0">registreret</span></div>
-      <div class="node" id="n1"><b>Virksomhed A</b><span>bruger den til fradrag</span><span class="reg" id="r1">registreret</span></div>
+      <div class="node" id="n0"><b>Udsteder</b><span>laver fakturaen</span><span class="reg" id="r0">registreret</span></div>
+      <div class="node" id="n1"><b>Køber</b><span>bruger den til fradrag</span><span class="reg" id="r1">registreret</span></div>
       <div class="node" id="n2"><b>Skatte­forvalt­ningen</b><span>modtager angivelsen</span></div>
     </div>
     <div class="track" aria-hidden="true">
       <div class="inv" id="inv">FAKTURA 1047<i></i>Nedrivning<br>200.000,00<br>Moms 25 %<br>50.000,00<span class="stp">URIGTIG</span></div>
     </div>
-    <div class="caption" aria-live="polite"><span class="n" id="capN">5</span><p id="capT"></p></div>
+    <div class="caption" aria-live="polite"><span class="n" id="capN">1</span><p id="capT"></p></div>
     <div class="row">
-      <button class="btn primary" id="play" type="button">Afspil forfra</button>
+      <button class="btn primary" id="play" type="button">Afspil</button>
       <button class="btn" id="prev" type="button" aria-label="Forrige trin">←</button>
       <button class="btn" id="next" type="button" aria-label="Næste trin">→</button>
       <div class="dots" id="dots"></div>

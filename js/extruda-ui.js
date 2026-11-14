@@ -9,7 +9,7 @@
   brandImages.forEach(n => n.dataset.originalSrc = n.getAttribute('src'));
   const media = matchMedia('(prefers-color-scheme: dark)');
   const key = 'extruda-ui-preferences';
-  let prefs = { language: root.lang === 'en' ? 'en' : 'da', theme: 'system' };
+  let prefs = { language: root.lang === 'en' ? 'en' : 'da', theme: root.dataset.defaultTheme === 'light' ? 'light' : 'system' };
   let storageAvailable = true;
   try {
     const saved = JSON.parse(localStorage.getItem(key) || 'null');
