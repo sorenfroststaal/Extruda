@@ -5,21 +5,22 @@ var kr=function(n){return Math.round(n).toLocaleString('da-DK')+' kr.'};
 
 /* ---------- forløb ---------- */
 var steps=[
- {pos:0,t:'Virksomhed B udsteder en faktura på 200.000 kr. plus moms for nedrivningsarbejde, som aldrig er udført. Her kan stk. 2, nr. 2, komme i spil.'},
- {pos:1,t:'Virksomhed A bogfører fakturaen og tager 50.000 kr. i købsmoms med på sin momsangivelse. Her kan stk. 2, nr. 1, komme i spil.'},
- {pos:2,t:'Angivelsen lander hos Skatteforvaltningen, som udtager virksomheden til kontrol.'},
+ {pos:0,t:'Udstederen laver en faktura på 200.000 kr. plus moms for nedrivningsarbejde, som aldrig er udført. Her kan stk. 2, nr. 2, komme i spil.'},
+ {pos:1,t:'Køberen bogfører fakturaen og tager 50.000 kr. i købsmoms med på sin momsangivelse. Her kan stk. 2, nr. 1, komme i spil.'},
+ {pos:2,t:'Angivelsen lander hos Skatteforvaltningen, som udtager køberen til kontrol.'},
  {pos:2,stamp:1,t:'Kontrollen viser, at der ikke er leveret noget. Fakturaen har et urigtigt indhold, og begge virksomheder vidste det.'},
- {pos:2,stamp:1,gone:1,t:'Skatteforvaltningen kan nu inddrage registreringen hos både A, der brugte fakturaen, og B, der udstedte den.'}
+ {pos:2,stamp:1,gone:1,t:'Skatteforvaltningen kan nu inddrage registreringen hos både udstederen, der lavede fakturaen, og køberen, der brugte den.'}
 ];
-var cur=steps.length-1,timer=null,inv=$('inv'),dots=$('dots');
+var cur=0,timer=null,inv=$('inv'),dots=$('dots');
 steps.forEach(function(_,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Trin '+(i+1));b.onclick=function(){stop();show(i)};dots.appendChild(b)});
 function show(i){cur=i;var s=steps[i];
   inv.style.left=['16.66%','50%','83.33%'][s.pos];
   inv.classList.toggle('stamped',!!s.stamp);
-  [0,1,2].forEach(function(k){$('n'+k).classList.toggle('on',k===s.pos||(s.gone&&k<2))});
+  [0,1,2].forEach(function(k){$('n'+k).classList.toggle('on',s.gone?k<2:k===s.pos)});
   ['r0','r1'].forEach(function(id){$(id).classList.toggle('gone',!!s.gone);$(id).textContent=s.gone?'inddraget':'registreret'});
   $('capN').textContent=i+1;$('capT').textContent=s.t;
   [].forEach.call(dots.children,function(d,k){d.classList.toggle('cur',k===i)});
+  $('play').textContent=i===0?'Afspil':'Afspil forfra';
 }
 function stop(){if(timer){clearInterval(timer);timer=null}}
 $('play').onclick=function(){stop();show(0);timer=setInterval(function(){if(cur>=steps.length-1){stop();return}show(cur+1)},2800)};
