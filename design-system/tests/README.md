@@ -39,7 +39,9 @@ stilark fra extruda.dk. Testen kontrollerer også, at arbejdsgiverlogoer står p
 en lys plade, og at hver pille i slogan-SVG'erne har mindst 4,5:1 mellem fyld
 og tekst. `EXTRUDA_ROUTES=/,/arbejdsliv/` begrænser kørslen til udvalgte sider.
 Testen kører automatisk på GitHub ved hvert push og hver pull request
-(`.github/workflows/contrast.yml`). Almindelig tekst kræver mindst 4,5:1; stor tekst mindst 3:1. Testen
+(`.github/workflows/contrast.yml`) sammen med `header.cjs` og `browser.cjs`.
+`browser.cjs` kontrollerer også, at forsiden og Projekter ikke henter noget
+udefra, at projektnavnene er rigtige, og at fold-ud og billedskift virker. Almindelig tekst kræver mindst 4,5:1; stor tekst mindst 3:1. Testen
 åbner alle fold-ud-afsnit og forstår også CSS `color(srgb ...)` fra
 `color-mix()`. Kør den efter enhver
 ændring af farvetokens, temaer, knapper, links, ikoner eller flader.

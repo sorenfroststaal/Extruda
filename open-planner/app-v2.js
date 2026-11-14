@@ -62,7 +62,7 @@ function cardMarkup(card,index,standalone=false){
   return `<g transform="translate(${card.x} ${card.y})"><rect x="0" y="0" width="${w}" height="${h}" fill="${bg}" stroke="#343B3B" stroke-width="0.2"/>${photo}${icon}${text}</g>`;
 }
 function sheetMarkup(cards,index,plan,standalone=false){
-  const font=standalone&&embeddedFont?`<style>@font-face{font-family:Manrope;src:url(data:font/woff;base64,${embeddedFont}) format('woff');font-weight:200 800}</style>`:'';
+  const font=standalone&&embeddedFont?`<style>@font-face{font-family:Manrope;src:url(data:font/woff2;base64,${embeddedFont}) format('woff2');font-weight:200 800}</style>`:'';
   const {pageWidth:w,pageHeight:h,pages}=plan;
   return `<svg xmlns="http://www.w3.org/2000/svg" class="sheet" width="${w}mm" height="${h}mm" viewBox="0 0 ${w} ${h}" role="img" aria-label="Printark ${index+1} af ${pages.length}, ${cards.length} kort">${font}<title>Open Planner · ark ${index+1} af ${pages.length}</title><rect width="${w}" height="${h}" fill="white"/>${cards.map((card,cardIndex)=>cardMarkup(card,`${index}-${cardIndex}`,standalone)).join('')}<g fill="#343B3B" font-family="Manrope, sans-serif" font-size="2.7"><text x="10" y="${h-13}">Open Planner · ${state.cardWidth} × ${state.cardHeight} mm</text><text x="10" y="${h-8}">Ark ${index+1} / ${pages.length} · A4 · print 100 %</text><path d="M${w-60} ${h-10}h50m-50-1.5v3m50-3v3" stroke="#343B3B" stroke-width=".25" fill="none"/><text x="${w-35}" y="${h-5}" text-anchor="middle">Kontrolmål: 50 mm</text></g></svg>`;
 }
@@ -88,7 +88,7 @@ async function cacheImage(source){if(!source||imageCache.has(source))return;if(s
 async function downloadSheet(index){
   if(!latest)return;
   try{
-    if(!embeddedFont){const res=await fetch('./assets/fonts/Manrope-Variable.woff');if(!res.ok)throw new Error('Fonten kunne ikke hentes. Prøv igen.');const bytes=new Uint8Array(await res.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));embeddedFont=btoa(binary);}
+    if(!embeddedFont){const res=await fetch('./assets/fonts/Manrope-Variable.woff2');if(!res.ok)throw new Error('Fonten kunne ikke hentes. Prøv igen.');const bytes=new Uint8Array(await res.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));embeddedFont=btoa(binary);}
     await Promise.all([...new Set(latest.pages[index].map(card=>card.image).filter(Boolean))].map(cacheImage));
     if(!latest)return;
     download('<?xml version="1.0" encoding="UTF-8"?>\n'+sheetMarkup(latest.pages[index],index,latest,true),`open-planner-ark-${index+1}.svg`,'image/svg+xml;charset=utf-8');

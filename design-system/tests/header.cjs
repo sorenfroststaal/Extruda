@@ -9,7 +9,7 @@ const assert = (condition, message) => {if (!condition) throw Error(message);};
 const pages = ['index.html','design-system/index.html','design-system/dummy/index.html','open-planner/index.html','learning-books/index.html','learning-books/app.html','learning-books/beta-0.2.html','learning-books/beta-ux.html','learning-books/beta-workspace.html','arraylampshade/index.html'];
 const mime = {'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.woff2':'font/woff2','.png':'image/png','.jpg':'image/jpeg'};
 (async () => {
-  const browser = await chromium.launch({channel:'chrome',headless:true});
+  const browser = await chromium.launch({channel:process.env.EXTRUDA_BROWSER_CHANNEL || 'chrome',headless:true});
   try {
     const context = await browser.newContext({reducedMotion:'reduce'});
     const page = await context.newPage();
@@ -49,7 +49,8 @@ const mime = {'.html':'text/html','.js':'text/javascript','.mjs':'text/javascrip
       const info = page.locator('[data-utility=info]');
       await info.click();
       assert(await page.locator('.ex-about-dialog').isVisible(),file+': about opens');
-      assert((await page.locator('.ex-about-content').innerText()).includes('Dependencies'),file+': dependency information');
+      // The details may sit in a closed disclosure (summary first, details on request), so read all text, not only what is expanded.
+      assert((await page.locator('.ex-about-content').textContent()).includes('Dependencies'),file+': dependency information');
       await page.keyboard.press('Escape');
       assert(await info.evaluate(n => n === document.activeElement),file+': dialog restores focus');
       await page.reload();

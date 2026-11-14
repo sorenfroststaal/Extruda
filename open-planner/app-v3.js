@@ -1,8 +1,8 @@
 import {DAYS,ICONS,DEFAULT,MAX_CARDS,validate,layout,escapeXml,fitText} from './model.mjs?v=20261027-db1';
 import {validateDatabase,normalizeDish,slugify,dishToCard,portableDatabase} from './catalog.mjs?v=20261027-db1';
-import {foodMarkup} from './food.mjs?v=20261027-db1';
+import {foodMarkup} from './food.mjs?v=20261114c';
 import {DatabaseFileSession} from './database-file.mjs?v=20261027-db1';
-import {sheetMarkup as buildSheet} from './sheet.mjs?v=20261027-db1';
+import {sheetMarkup as buildSheet} from './sheet.mjs?v=20261114c';
 
 const $=id=>document.getElementById(id);
 const storageKey='extruda-open-planner-v1';
@@ -66,7 +66,7 @@ function cardMarkup(card,index,standalone=false,settings=state){
   return `<g transform="translate(${card.x} ${card.y})"><rect x="0" y="0" width="${w}" height="${h}" fill="${bg}" stroke="#343B3B" stroke-width="0.2"/>${photo}${icon}${text}</g>`;
 }
 function sheetMarkup(cards,index,plan,standalone=false,settings=state){
-  const font=standalone&&embeddedFont?`<style>@font-face{font-family:Manrope;src:url(data:font/woff;base64,${embeddedFont}) format('woff');font-weight:200 800}</style>`:'';
+  const font=standalone&&embeddedFont?`<style>@font-face{font-family:Manrope;src:url(data:font/woff2;base64,${embeddedFont}) format('woff2');font-weight:200 800}</style>`:'';
   return buildSheet({cards,index,plan,state:settings,font,renderCard:(card,id)=>cardMarkup(card,id,standalone,settings)});
 }
 
@@ -97,7 +97,7 @@ async function downloadSheet(index){
   if(!latest)return;
   try{
     const settings=validate(state),plan=layout(settings);if(!plan.pages[index])return;
-    if(!embeddedFont){const res=await fetch('./assets/fonts/Manrope-Variable.woff');if(!res.ok)throw new Error('Fonten kunne ikke hentes. Prøv igen.');const bytes=new Uint8Array(await res.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));embeddedFont=btoa(binary);}
+    if(!embeddedFont){const res=await fetch('./assets/fonts/Manrope-Variable.woff2');if(!res.ok)throw new Error('Fonten kunne ikke hentes. Prøv igen.');const bytes=new Uint8Array(await res.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));embeddedFont=btoa(binary);}
     const sources=[...new Set(plan.pages[index].map(card=>card.image).filter(Boolean))];for(const source of sources){await cacheImage(source);if(!settings.includeMetadata)await stripImageMetadata(source);}
     download('<?xml version="1.0" encoding="UTF-8"?>\n'+sheetMarkup(plan.pages[index],index,plan,true,settings),`open-planner-ark-${index+1}.svg`,'image/svg+xml;charset=utf-8');
   }catch(error){showError(error.message);}
