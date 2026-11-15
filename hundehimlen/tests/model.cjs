@@ -1,0 +1,18 @@
+const assert = require('node:assert/strict');
+const { calculate, valid } = require('../model.js');
+const example = {capacity:10,days:365,occupancy:50,price:330,variable:60,fixed:12000,debt:8000,owner:20000};
+const result = calculate(example);
+assert.equal(result.revenue, 40150);
+assert.ok(Math.abs(result.contribution - 31025) < 0.000001);
+assert.ok(Math.abs(result.remaining + 8975) < 0.000001);
+assert.ok(Math.abs(result.breakEven - 64.4641418211) < 0.0001);
+assert.equal(calculate({...example, occupancy:0}).remaining, -40000);
+assert.equal(calculate({...example, price:0}).breakEven, null);
+assert.ok(calculate({...example, capacity:1}).breakEven > 100);
+assert.equal(calculate({...example, fixed:0,debt:0,owner:0}).breakEven, 0);
+assert.equal(valid({...example, days:0}), false);
+assert.equal(valid({...example, capacity:1.5}), false);
+assert.equal(valid({...example, occupancy:101}), false);
+assert.equal(valid({...example, price:NaN}), false);
+assert.throws(() => calculate({...example, price:Infinity}));
+console.log('Model verified: VAT, contribution, cash balance, break-even, zero sales, impossible coverage and invalid inputs.');
