@@ -914,7 +914,8 @@
       "source_portal": "Jobnet",
       "application_id": "0027",
       "package_folder": "0027_Sødisbakke_Erfaren-vagtplanlægger_2026-11-16",
-      "package_ready": true
+      "package_ready": true,
+      "sharing_url": "https://extruda.dk/0027/"
     },
     {
       "id": "1e372152-d7af-4ba4-8f16-171fde091baa",
@@ -1590,7 +1591,8 @@
       "source_portal": "Jobnet",
       "application_id": "0028",
       "package_folder": "0028_Aarhus-Universitet_Power-Platform-konsulent_2026-11-16",
-      "package_ready": true
+      "package_ready": true,
+      "sharing_url": "https://extruda.dk/0028/"
     },
     {
       "id": "b3c47ca5-6d63-4915-b599-23a5ec388403",
@@ -1629,7 +1631,8 @@
       "source_portal": "Jobnet",
       "application_id": "0025",
       "package_folder": "0025_SundK_IT-support-og-indkøb_2026-11-15",
-      "package_ready": true
+      "package_ready": true,
+      "sharing_url": "https://extruda.dk/0025/"
     },
     {
       "id": "ac56c45a-a91c-4b75-bbe1-dbf954ed23f8",
@@ -1980,7 +1983,8 @@
       "batch": "other-portals-2026-11-07",
       "application_id": "0029",
       "package_folder": "0029_Bostedet-Høvejen_Pædagog-Hus-4_2026-11-16",
-      "package_ready": true
+      "package_ready": true,
+      "sharing_url": "https://extruda.dk/0029/"
     },
     {
       "id": "external-shoe",
@@ -2610,7 +2614,8 @@
       "batch": "recheck-2026-11-07",
       "application_id": "0030",
       "package_folder": "0030_Trekløverskolen_Pædagog-Borup-Byvej_2026-11-16",
-      "package_ready": true
+      "package_ready": true,
+      "sharing_url": "https://extruda.dk/0030/"
     },
     {
       "id": "recheck-midgaard",
@@ -2878,7 +2883,8 @@
       "batch": "recheck-2026-11-07",
       "application_id": "0026",
       "package_folder": "0026_Randers-Kommune_BBR-medarbejder_2026-11-15",
-      "package_ready": true
+      "package_ready": true,
+      "sharing_url": "https://extruda.dk/0026/"
     },
     {
       "id": "recheck-it-elev",
@@ -3575,7 +3581,8 @@
       "batch": "recheck-2026-11-07",
       "application_id": "0031",
       "package_folder": "0031_Mariagerfjord-Kommune_Indsatspædagog-PPR_2026-11-16",
-      "package_ready": true
+      "package_ready": true,
+      "sharing_url": "https://extruda.dk/0031/"
     },
     {
       "id": "recheck-region-bi",
