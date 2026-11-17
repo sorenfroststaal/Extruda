@@ -29,7 +29,7 @@
  function draftHtml(){
   const lang=$('#output-language').value;
   const parts=[...document.querySelectorAll('.sheet')].map(page=>{
-   const copy=page.cloneNode(true);copy.removeAttribute('style');
+   const copy=page.cloneNode(true);copy.removeAttribute('style');copy.querySelectorAll('[contenteditable]').forEach(n=>{n.removeAttribute('contenteditable');n.removeAttribute('aria-label');});
    for(const prop of ['--output-primary','--output-accent','--output-paper'])copy.style.setProperty(prop,page.style.getPropertyValue(prop));
    copy.classList.remove('overfull');copy.querySelectorAll('[style]').forEach(n=>{if(n!==copy)n.removeAttribute('style')});
    copy.querySelectorAll('img').forEach(img=>img.src=img.src);
