@@ -24,7 +24,7 @@
       "https://lommepenge.sparkron.dk/-/media/sparekassenkronjylland/pdf-filer/tilgaengelighed/tilgngelighedserklring_sparekassen_kronjylland.pdf?rev=a670ab4e96814cf793f75621d3c1d5fa"
     ],
     "schema": "extruda-jobsearch-v1",
-    "count": 103,
+    "count": 104,
     "publication": "Offentlig side med noindex/nofollow. Alle med linket og GitHub-adgang til det offentlige repo kan læse data. Ingen adgangsbeskyttelse.",
     "expansion": {
       "date": "2026-11-07",
@@ -3990,6 +3990,44 @@
       "checked_on": "2026-11-15",
       "batch": "screening-2026-11-15",
       "vacancy_status": "Opslag kontrolleret 15/11 2026"
+    },
+    {
+      "id": "jobindex-h1716903",
+      "application_id": "0032",
+      "package_ready": true,
+      "sharing_url": "https://extruda.dk/Nordlux/",
+      "package_folder": "0032_Nordlux_Digitalization-Specialist_2026-11-30",
+      "title": "Digitalization Specialist",
+      "company": "Nordlux Group",
+      "place": "Aalborg",
+      "address": "Nordlux Group, Aalborg",
+      "drive_minutes": null,
+      "drive_verified": false,
+      "drive_status": "Køretid fra Spentrup ikke kontrolleret",
+      "route_url": "https://www.google.com/maps/dir/Spentrup/Nordlux+Aalborg/",
+      "deadline": "2026-11-30",
+      "hours": "37 t · fuldtid",
+      "workload": "full",
+      "employment": "Fast",
+      "shifts": "Arbejdstid afklares",
+      "contact": "Lars Pedersen · 40 98 98 96",
+      "match": 4,
+      "tracks": [
+        2,
+        3
+      ],
+      "match_reason": "Produktdata, praktisk digitalisering og erfaring fra produktion og handel. Eget lampedesign giver en konkret forbindelse til produkterne.",
+      "requirements": "Interesse for ERP og D365, grundlæggende økonomiforståelse samt dansk og engelsk.",
+      "clarify": "Oplæring i D365 og transport til Aalborg.",
+      "next_action": "Send ansøgning og CV mærket Digitalization Specialist. Løbende samtaler.",
+      "checked_on": "2026-11-17",
+      "source_url": "https://www.jobindex.dk/jobannonce/h1716903/digitalization-specialist-soeges-til-nordlux-group-i-aalborg",
+      "application_method": "Mail: job@nordlux.com",
+      "application_url": "mailto:job@nordlux.com?subject=Digitalization%20Specialist",
+      "source_portal": "Jobindex",
+      "priority": "apply",
+      "rank": 1,
+      "vacancy_status": "Opslag læst 17/11 2026"
     }
   ]
 }
