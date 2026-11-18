@@ -2532,7 +2532,9 @@ window.JobSearchData = {
       "priority": "clarify",
       "rank": 70,
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
-      "batch": "recheck-2026-11-07"
+      "batch": "recheck-2026-11-07",
+      "application_id": "0033",
+      "sharing_url": "https://extruda.dk/0033/"
     },
     {
       "id": "recheck-munk-leder",
