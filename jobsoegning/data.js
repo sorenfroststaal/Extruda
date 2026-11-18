@@ -2534,7 +2534,9 @@ window.JobSearchData = {
       "vacancy_status": "Opslag læst ved genkontrol 7/11 2026; kan blive besat før fristen",
       "batch": "recheck-2026-11-07",
       "application_id": "0033",
-      "sharing_url": "https://extruda.dk/0033/"
+      "sharing_url": "https://extruda.dk/0033/",
+      "package_folder": "0033_Munkholmskolen_Socialfaglig-koordinator_2026-11-18",
+      "package_ready": true
     },
     {
       "id": "recheck-munk-leder",
