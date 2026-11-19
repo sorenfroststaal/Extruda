@@ -37,3 +37,6 @@
 .shared-application .identity .slogan{max-width:none}
 .shared-application .identity .slogan{width:0;min-width:100%}
 @media(max-width:380px){.shared-application .identity h1{font-size:clamp(24px,8.4vw,33.8px)}}
+
+/* Preserve the original colours of employer and education logos in both themes. */
+.shared-application img[src*="Assets/cv/"]{background:#fff;padding:3px;border-radius:4px;box-sizing:border-box}
