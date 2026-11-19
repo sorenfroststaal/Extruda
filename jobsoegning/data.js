@@ -1,7 +1,7 @@
 window.JobSearchData = {
   "metadata": {
     "title": "Jobsøgning · udvidet prioritering",
-    "date": "2026-11-15",
+    "date": "2026-11-19",
     "origin": "Spentrup by – ingen privat gadeadresse",
     "max_drive_minutes": 45,
     "recurring_automation": false,
@@ -24,7 +24,7 @@ window.JobSearchData = {
       "https://lommepenge.sparkron.dk/-/media/sparekassenkronjylland/pdf-filer/tilgaengelighed/tilgngelighedserklring_sparekassen_kronjylland.pdf?rev=a670ab4e96814cf793f75621d3c1d5fa"
     ],
     "schema": "extruda-jobsearch-v1",
-    "count": 104,
+    "count": 108,
     "publication": "Offentlig side med noindex/nofollow. Alle med linket og GitHub-adgang til det offentlige repo kan læse data. Ingen adgangsbeskyttelse.",
     "expansion": {
       "date": "2026-11-07",
@@ -39,7 +39,7 @@ window.JobSearchData = {
       ],
       "limitations": "Geografiske portalfiltre er discovery, ikke bevis for 45 minutters køretid. Ingen komplet kontrol af LinkedIn eller alle arbejdsgivere. Ukendt slutdato vises som løbende frist."
     },
-    "latest_batch": "screening-2026-11-15",
+    "latest_batch": "screening-2026-11-19",
     "screening_policy": "Opgaverelevans først. Uddannelseskrav må ikke alene udelukke et opslag. Uddannelses-, erfarings- og certifikatgab beskrives særskilt; relevans er ikke bevis for adgang til stillingen.",
     "recheck": {
       "date": "2026-11-07",
@@ -51,6 +51,12 @@ window.JobSearchData = {
         "Særskilt vurdering af krav til uddannelse, faktisk erfaring, certifikater og skiftende arbejdssteder"
       ],
       "limitations": "Bred genkontrol, ikke garanti for alle relevante jobs på nettet. Byskøn og virksomhedsadresser uden kendt afdeling er ikke verificerede arbejdsruter. Specialiserede roller med opgaveoverlap er med som reserver."
+    },
+    "latest_screening": {
+      "date": "2026-11-19",
+      "added": 4,
+      "coverage": "Randers og Mariagerfjord arbejdsgiversider, suppleret med søgning efter IT, teknik og produktion. Dubletter kontrolleret mod den eksisterende liste.",
+      "limitations": "Afgrænset screening, ikke udtømmende. Nye køretider er skøn og markeret som ukontrollerede."
     }
   },
   "jobs": [
@@ -4032,6 +4038,145 @@ window.JobSearchData = {
       "priority": "apply",
       "rank": 1,
       "vacancy_status": "Opslag læst 17/11 2026"
+    },
+    {
+      "id": "randers-167971",
+      "title": "Administrativ medarbejder · Borgerservice og digitale guides",
+      "company": "Randers Kommune",
+      "place": "Borgerservice, Randers",
+      "address": "Borgerservice, Randers",
+      "drive_minutes": 20,
+      "drive_verified": false,
+      "drive_status": "Skøn fra Spentrup by; rute ikke målt",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Borgerservice%2C%20Randers&travelmode=driving",
+      "deadline": "2026-12-03",
+      "hours": "32 t/uge",
+      "workload": "part",
+      "employment": "Fast · se opslag",
+      "shifts": "Dag · præcis arbejdstid afklares",
+      "contact": "Martin Bengtson · 29 62 96 45",
+      "match": 4,
+      "tracks": [
+        3,
+        1
+      ],
+      "match_reason": "Kundeservice, rolig formidling og digitale arbejdsgange passer til omstilling, borgerhjælp og Selvbetjening.nu.",
+      "requirements": "Administrativ uddannelse og borgerbetjening ønskes. Din handelsuddannelse og serviceerfaring er relevante; kommunal erfaring er ikke dokumenteret.",
+      "clarify": "Fremhæv support, forklaring af systemer og forbedring af guides. Afklar om handelsuddannelsen opfylder forventningen.",
+      "next_action": "Fremhæv support, forklaring af systemer og forbedring af guides. Afklar om handelsuddannelsen opfylder forventningen.",
+      "source_url": "https://www.randers.dk/job/job-i-kommunen/administrativ-medarbejder-til-borgerservice-omstillingen-167971/",
+      "application_url": "https://portal.signatur.dk/ExtJobs/DefaultHosting/JobApplication.aspx?ClientId=1518&ERId=134804",
+      "application_method": "Portal",
+      "source_portal": "Randers Kommune",
+      "priority": "apply",
+      "rank": 135,
+      "checked_on": "2026-11-19",
+      "batch": "screening-2026-11-19",
+      "vacancy_status": "Opslag kontrolleret 19/11 2026; ansættelse kan ske før fristen"
+    },
+    {
+      "id": "randers-168528",
+      "title": "Pædagogmedhjælper / assistent · ny vuggestue Tirsdalen",
+      "company": "Randers Kommune · Dagtilbud Sydøst",
+      "place": "Rasmus Hougaardsvej 44C, 8960 Randers SØ",
+      "address": "Rasmus Hougaardsvej 44C, 8960 Randers SØ",
+      "drive_minutes": 25,
+      "drive_verified": false,
+      "drive_status": "Skøn fra Spentrup by; rute ikke målt",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Rasmus%20Hougaardsvej%2044C%2C%208960%20Randers%20S%C3%98&travelmode=driving",
+      "deadline": "2026-11-22",
+      "hours": "37 t/uge",
+      "workload": "full",
+      "employment": "Fast · se opslag",
+      "shifts": "Vuggestue · åbningstider afklares",
+      "contact": "Julie Gulløve · 52 50 98 55 · Julie.Kirk.Hedemann.Gullove@randers.dk",
+      "match": 3,
+      "tracks": [
+        1
+      ],
+      "match_reason": "Støtteerfaring, forældresamarbejde og anerkendende tilgang er relevante i en ny institution.",
+      "requirements": "Medhjælpere kan søge. Erfaring med 0–3-årige, opstart af vuggestue og fælles pædagogisk grundlag foretrækkes.",
+      "clarify": "Ring om din støtteerfaring kan bruges ved opstarten. Institutionsopstart er et erfaringsgab.",
+      "next_action": "Ring om din støtteerfaring kan bruges ved opstarten. Institutionsopstart er et erfaringsgab.",
+      "source_url": "https://www.randers.dk/job/job-i-kommunen/paedagogiske-assistenter-og-paedagogmedhjaelpere-til-dagtilbud-sydoest-168528/",
+      "application_url": "https://portal.signatur.dk/ExtJobs/DefaultHosting/JobApplication.aspx?ClientId=1518&ERId=135252",
+      "application_method": "Portal",
+      "source_portal": "Randers Kommune",
+      "priority": "clarify",
+      "rank": 136,
+      "checked_on": "2026-11-19",
+      "batch": "screening-2026-11-19",
+      "vacancy_status": "Opslag kontrolleret 19/11 2026; ansættelse kan ske før fristen"
+    },
+    {
+      "id": "randers-168620",
+      "title": "Pædagogmedhjælpere · Birkebo, Overvænget og Langå",
+      "company": "Randers Kommune · Dagtilbud Sydvest",
+      "place": "Randers, Hornbæk, Svenstrup og Langå · børnehus afklares",
+      "address": "Randers, Hornbæk, Svenstrup og Langå · børnehus afklares",
+      "drive_minutes": 30,
+      "drive_verified": false,
+      "drive_status": "Skøn fra Spentrup by; rute ikke målt",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Randers%2C%20Hornb%C3%A6k%2C%20Svenstrup%20og%20Lang%C3%A5%20%C2%B7%20b%C3%B8rnehus%20afklares&travelmode=driving",
+      "deadline": "2026-12-01",
+      "hours": "Deltid · timetal afklares",
+      "workload": "part",
+      "employment": "Fast · se opslag",
+      "shifts": "Vuggestue og børnehave · konkrete vagter afklares",
+      "contact": "Langå: Stine Rosenkvist Christiansen · 21 66 97 84",
+      "match": 4,
+      "tracks": [
+        1
+      ],
+      "match_reason": "Støttekontaktarbejde, inklusion og samarbejde med familier passer til relationer og deltagelsesmuligheder i små grupper.",
+      "requirements": "Der søges medhjælpere med lyst til pædagogik og børns udvikling. Planlægning af aktiviteter og mødestabilitet vægtes.",
+      "clarify": "Afklar børnehus, aldersgruppe, timetal og start 1/1 eller 1/2. Køretid er et områdeskøn.",
+      "next_action": "Afklar børnehus, aldersgruppe, timetal og start 1/1 eller 1/2. Køretid er et områdeskøn.",
+      "source_url": "https://www.randers.dk/job/job-i-kommunen/paedagogmedhjaelpere-til-boernehuset-birkebo-overvaenget-og-langaa-168620/",
+      "application_url": "https://portal.signatur.dk/ExtJobs/DefaultHosting/JobApplication.aspx?ClientId=1518&ERId=135329",
+      "application_method": "Portal",
+      "source_portal": "Randers Kommune",
+      "priority": "apply",
+      "rank": 137,
+      "checked_on": "2026-11-19",
+      "batch": "screening-2026-11-19",
+      "vacancy_status": "Opslag kontrolleret 19/11 2026; ansættelse kan ske før fristen"
+    },
+    {
+      "id": "mariagerfjord-solgaven-sebimp",
+      "title": "Teknisk servicemedarbejder · Plejehjem Solgaven",
+      "company": "Mariagerfjord Kommune",
+      "place": "Amerikavej 19–21B, 9500 Hobro",
+      "address": "Amerikavej 19–21B, 9500 Hobro",
+      "drive_minutes": 30,
+      "drive_verified": false,
+      "drive_status": "Skøn fra Spentrup by; rute ikke målt",
+      "route_url": "https://www.google.com/maps/dir/?api=1&origin=Spentrup&destination=Amerikavej%2019%E2%80%9321B%2C%209500%20Hobro&travelmode=driving",
+      "deadline": "2026-11-23",
+      "hours": "Fuldtid · timetal ikke præciseret",
+      "workload": "full",
+      "employment": "Fast · se opslag",
+      "shifts": "Dag · fleksibel drift og vintervedligehold",
+      "contact": "Kristina Helenius Dalsgaard · 97 11 55 02",
+      "match": 3,
+      "tracks": [
+        2,
+        3,
+        1
+      ],
+      "match_reason": "Teknisk installation, sikkerhed, leverandørkontakt og menneskelig kontakt giver overlap med bygningernes drift.",
+      "requirements": "Håndværksuddannelse og/eller ejendomsservicetekniker ønskes. Kørekort kræves og er bekræftet. ABA-ansvar skal afklares.",
+      "clarify": "Ring om din tekniske erhvervserfaring kan erstatte uddannelsen. Afklar ABA-oplæring og kørsel i kommunen.",
+      "next_action": "Ring om din tekniske erhvervserfaring kan erstatte uddannelsen. Afklar ABA-oplæring og kørsel i kommunen.",
+      "source_url": "https://mariagerfjord.career.emply.com/ad/teknisk-servicemedarbejder-ejendomsserviceteknikker-til-plejehjem-solgaven/sebimp/da",
+      "application_url": "https://mariagerfjord.career.emply.com/ad/teknisk-servicemedarbejder-ejendomsserviceteknikker-til-plejehjem-solgaven/sebimp/da",
+      "application_method": "Portal",
+      "source_portal": "Mariagerfjord Kommune",
+      "priority": "clarify",
+      "rank": 138,
+      "checked_on": "2026-11-19",
+      "batch": "screening-2026-11-19",
+      "vacancy_status": "Opslag kontrolleret 19/11 2026; ansættelse kan ske før fristen"
     }
   ]
 };
