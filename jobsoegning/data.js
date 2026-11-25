@@ -4224,7 +4224,7 @@ window.JobSearchData = {
       "application_id": "0034",
       "package_ready": true,
       "package_folder": "0034_EL-Recycling_Uopfordret-praktik_2026-11-25",
-      "sharing_url": ""
+      "sharing_url": "https://extruda.dk/0034/"
     },
     {
       "id": "uopfordret-stu-randers-hald",
@@ -4268,7 +4268,7 @@ window.JobSearchData = {
       "application_id": "0035",
       "package_ready": true,
       "package_folder": "0035_STU-Randers-Hald_Uopfordret-praktik_2026-11-25",
-      "sharing_url": ""
+      "sharing_url": "https://extruda.dk/0035/"
     },
     {
       "id": "uopfordret-soedisbakke-aktiviteter",
@@ -4311,7 +4311,7 @@ window.JobSearchData = {
       "application_id": "0036",
       "package_ready": true,
       "package_folder": "0036_Soedisbakke-Aktiviteter_Uopfordret-praktik_2026-11-25",
-      "sharing_url": ""
+      "sharing_url": "https://extruda.dk/0036/"
     },
     {
       "id": "uopfordret-habitus-groenkaervej",
@@ -4354,7 +4354,7 @@ window.JobSearchData = {
       "application_id": "0037",
       "package_ready": true,
       "package_folder": "0037_Habitus-Groenkaervej_Uopfordret-praktik_2026-11-25",
-      "sharing_url": ""
+      "sharing_url": "https://extruda.dk/0037/"
     },
     {
       "id": "uopfordret-bostedet-neptunvej",
@@ -4397,7 +4397,7 @@ window.JobSearchData = {
       "application_id": "0038",
       "package_ready": true,
       "package_folder": "0038_Bostedet-Neptunvej_Uopfordret-praktik_2026-11-25",
-      "sharing_url": ""
+      "sharing_url": "https://extruda.dk/0038/"
     }
   ]
 };

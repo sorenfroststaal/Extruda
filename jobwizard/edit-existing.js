@@ -27,7 +27,7 @@
   const sections=[...page.querySelectorAll('.application-answer')];
   const headings=[/^Hvorfor |^Why /,/^Hvad kan jeg tilbyde fagligt|^What can I contribute (as|professionally)/,/^Hvad kan jeg tilbyde som kollega|^What can I contribute as a colleague/,/^Hvad skal der til|^What do I need/,/^Hvad kan stå i vejen|^What could prevent/];
   for(let i=0;i<5;i++){const section=sections.find(n=>n.dataset.applicationSection===String(i))||sections.find(n=>headings[i].test(text(n.querySelector('h3')))&&(i!==1||!/^What can I contribute as a colleague/.test(text(n.querySelector('h3')))));s['application-section-'+i+'-show']=!!section;s['application-section-'+i]=paragraphs(section);}
-  s['application-company']=text(sections.find(n=>/^Hvorfor |^Why /.test(text(n.querySelector('h3'))))?.querySelector('h3')).replace(/^(Hvorfor|Why) /,'').replace(/\?$/,'');
+  s['application-company']=app?.dataset.applicationCompany||text(sections.find(n=>/^Hvorfor |^Why /.test(text(n.querySelector('h3'))))?.querySelector('h3')).replace(/^(Hvorfor|Why) /,'').replace(/\?$/,'');
   s['application-heading-show']=!!page.querySelector('.application-document-title');s.title=text(page.querySelector('.application-document-title'))||'Ansøgning';s.letter=app?paragraphs(page.querySelector('.application-answer-area')):[...page.querySelectorAll('.letter')].map(prose).join('\n\n');
   s['application-track-details']=!!page.querySelector('.application-template + .section-card');
   source.querySelectorAll('[id^="skill-"]').forEach(n=>s[n.id]=false);page.querySelectorAll('[data-source-skill]').forEach(n=>s[n.dataset.sourceSkill]=true);
